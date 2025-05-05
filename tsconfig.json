@@ -1,7 +1,16 @@
 {
   "files": [],
   "compilerOptions": {
-    "types": ["@types/node"]
+    "types": ["@types/node"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
   },
   "references": [
     { "path": "./tsconfig.app.json" },

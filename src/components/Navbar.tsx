@@ -19,7 +19,7 @@ type MenuType = {
   items: MenuItemType[];
 };
 
-export default function NavbarPlexicus() {
+export const NavbarPlexicus=()=> {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);

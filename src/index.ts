@@ -1,1 +1,1 @@
-import NavbarPlexicus from "./components/Navbar";
+export {NavbarPlexicus} from "./components/Navbar"
