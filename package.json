@@ -2,27 +2,38 @@
   "name": "shared-ui",
   "private": true,
   "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "git@github.com:prasetya12/shared-ui.git",
   "exports": {
-  ".": {
-    "import": "./dist/index.js"
-  }
-},
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js"
+    }
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "lib": "vite build --lib --entry=src/index.ts --name=MyComponentLib"
+    "lib": "vite build --lib --entry=src/index.ts --name=MyComponentLib",
+    "rollup": "rollup -c"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.5",
+    "ajv": "^8.17.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.2.0",
-    "tailwindcss": "^4.1.5"
+    "tailwindcss": "^4.1.5",
+    "vite-plugin-dts": "^4.5.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
