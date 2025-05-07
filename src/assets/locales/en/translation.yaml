@@ -1,0 +1,86 @@
+nav:
+  product: "Product"
+  pricing: "Pricing"
+  solutions: "Solutions"
+  developers: "Developers"
+  resources: "Resources"
+  contact: "Contact"
+  languages: "Languages"
+  login: "Login"
+  get_started: "Get Started"
+  product_menu:
+    aspm_overview: 
+      title: "ASPM Overview"
+      description: "Complete application security protection"
+    use_cases: 
+      title: "Use Cases"
+      description: "Real-world implementation examples"
+    benefits: 
+      title: "Benefits"
+      description: "See how Plexicus transforms security'"
+  solution_menu:
+    fintech: 
+      title: "Fintech"
+      description: "Security solutions for financial technology"
+    healthtech: 
+       title: "HealthTech"
+       description: "HIPAA compliant security solutions"
+    legaltech: 
+       title: "HRTech"
+       description: "Secure HR and employee management systems"
+    hrtech: 
+       title: "Legal Tech"
+       description: "Security for legal technology platforms"
+    group_companies: 
+       title: "Group Companies"
+       description: "Solutions for corporate groups and holdings"
+    startups: 
+       title: "Startups"
+       description: "Scalable security for growing companies"
+    enterprise: 
+       title: "Enterprise"
+       description: "Comprehensive security for large organizations"
+    agencies: 
+       title: "Agencies"
+       description: "Security for digital and marketing agencies"
+    mobile_apps: 
+       title: "Mobile Apps"
+       description: "Security for iOS and Android applications"
+    manufacturing: 
+       title: "Manufacturing"
+       description: "Security for industrial and IoT systems"
+    government: 
+       title: "Governments"
+       description: "Security solutions for government agencies"
+    retailtech: 
+       title: "RetailTech"
+       description: "Security for e-commerce and retail platforms"
+  developers_menu:
+    documentations: 
+      title: "Documentation"
+      description: "Technical guides and references"
+    github_actions: 
+      title: "GitHub Action"
+      description: "Automate security in your CI/CD pipeline"
+    github_apps: 
+      title: "GitHub App"
+      description: "Integrate Plexicus with your repositories"
+    api_references: 
+      title: "API Reference"
+      description: "Comprehensive API documentation"
+  resources_menu:
+    blog: 
+      title: "Blog"
+      description: "Latest news and security insights"
+    youtube_channel: 
+      title: "YouTube Channel"
+      description: "Video tutorials and webinars"
+    branding_assets: 
+      title: "Branding Assets"
+      description: "Logos and brand guidelines"
+    feature_request: 
+      title: "Feature Requests"
+      description: "Submit and vote on new features"
+    changelogs: 
+      title: "Changelogs"
+      description: "Latest product updates"

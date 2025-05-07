@@ -2,6 +2,9 @@ import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { Button } from './ui/button';
 import Link from './ui/link';
 
+import { useTranslation } from 'react-i18next';
+import  '../i18n';
+
 // Change Spanish comments and variable names to English
 
 // Extract types to improve maintainability
@@ -19,11 +22,24 @@ type MenuType = {
   items: MenuItemType[];
 };
 
-export const NavbarPlexicus=()=> {
+export const NavbarPlexicus = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const FULL_SITE_URL = `http://localhost:7000`
+
+    const { t,i18n } = useTranslation();
+
+  useEffect(() => {
+    const lang = window.location.pathname.split('/')[1];
+    // Get the first segment of the path (e.g., "en" from "/en/home")
+    console.log(lang, 'a')
+    if (['en', 'es'].includes(lang)) {
+      console.log(lang, 'a')
+
+      i18n.changeLanguage(lang);
+    }
+  }, []);
 
   // const pathname = usePathname()
 
@@ -100,13 +116,13 @@ export const NavbarPlexicus=()=> {
 
   const menus: Record<string, MenuType> = {
     products: {
-      title: 'Product',
+      title: t('nav.product'),
       shortTitle: 'Product',
       image: 'product-diagram',
       items: [
         {
-          title: 'ASPM Overview',
-          description: 'Complete application security protection',
+          title: t('nav.product_menu.aspm_overview.title'),
+          description: t('nav.product_menu.aspm_overview.description'),
           href: '/products/aspm',
           icon: (
             <svg
@@ -179,7 +195,7 @@ export const NavbarPlexicus=()=> {
       ],
     },
     solutions: {
-      title: 'Solutions',
+      title:  t('nav.solutions'),
       shortTitle: 'Solutions',
       image: 'solutions-diagram',
       items: [
@@ -474,7 +490,7 @@ export const NavbarPlexicus=()=> {
       ],
     },
     developers: {
-      title: 'Developers',
+      title: t('nav.developers'),
       shortTitle: 'Developers',
       image: 'developers-diagram',
       items: [
@@ -576,7 +592,7 @@ export const NavbarPlexicus=()=> {
       ],
     },
     resources: {
-      title: 'Resources',
+      title: t('nav.resources'),
       shortTitle: 'Resources',
       image: 'resources-diagram',
       items: [
@@ -853,7 +869,7 @@ export const NavbarPlexicus=()=> {
             href="/pricing"
             className="text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap"
           >
-            Pricing
+            {t('nav.pricing')}
           </Link>
           {Object.entries(menus)
             .filter(([key]) => key === 'solutions' || key === 'developers' || key === 'resources')
@@ -897,7 +913,7 @@ export const NavbarPlexicus=()=> {
             Contact
           </Link>
         </nav>
-
+        
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/login"
@@ -1522,7 +1538,6 @@ export const NavbarPlexicus=()=> {
             <Link href="/contact" className="block py-2 text-sm font-medium" onClick={() => setMenuOpen(false)}>
               Contact
             </Link>
-
             <div className="pt-4 border-t border-gray-100">
               <Button className="w-full bg-gradient-primary" onClick={() => setMenuOpen(false)}>
                 Get Started
@@ -1534,3 +1549,69 @@ export const NavbarPlexicus=()=> {
     </header>
   );
 }
+
+
+const languages = [
+  { code: 'en', label: 'English' },
+  { code: 'es', label: 'Spanish' },
+  { code: 'fr', label: 'French' },
+  { code: 'de', label: 'German' },
+  { code: 'it', label: 'Italian' },
+  { code: 'jp', label: 'Japanese' },
+];
+
+const SelectLanguage = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
+
+  const handleChange = (e:any) => {
+    setSelectedLanguage(e.target.value);
+  };
+
+  return (
+    <div className="relative inline-block text-left">
+      <button
+        type="button"
+        className="inline-flex justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        id="menu-button"
+        aria-expanded="true"
+        aria-haspopup="true"
+      >
+        {languages.find((lang) => lang.code === selectedLanguage)?.label}
+        <svg
+          className="w-5 h-5 ml-2 -mr-1"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+
+      <div
+        className="absolute right-0 z-10 mt-2 origin-top-right rounded-md shadow-lg w-40 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="menu-button"
+      >
+        <div className="py-1" role="none">
+          {languages.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => setSelectedLanguage(lang.code)}
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+              role="menuitem"
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
