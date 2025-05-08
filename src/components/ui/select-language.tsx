@@ -27,13 +27,16 @@ export function SelectLanguage() {
         // </>
         <>
             <div className="relative inline-flex items-center w-[150px]">
-                <Globe className="absolute left-2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                <Globe className="absolute  text-muted-foreground pointer-events-none" style={{left:1,paddingLeft:4,width:22}}/>
                 <select
                     defaultValue="en"
-                    className="appearance-none w-full pl-8 pr-6 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring dark:bg-gray-900 dark:text-white dark:border-gray-700"
+                    className="appearance-none w-full  pr-6 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring dark:bg-gray-900 dark:text-white dark:border-gray-700"
+                    style={{paddingLeft:28}}
                 >
                     <option value="en">English</option>
+                    <option value="es">Spanish</option>
                     <option value="id">Indonesia</option>
+
                 </select>
                 <svg
                     className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground"
