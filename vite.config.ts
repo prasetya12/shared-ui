@@ -7,24 +7,26 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  resolve:{
+  resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [react(), tailwindcss(),dts(),yaml()],
-  build:{
-    lib:{
+  plugins: [react(), tailwindcss(), dts(), yaml()],
+  build: {
+    lib: {
       entry: './src/index.ts',
       name: 'NavbarPlexicus',
       fileName: (format) => `index.${format}.js`,
     },
-    rollupOptions:{
-      external: ['react', 'react-dom'],
+    rollupOptions: {
+      external: ['react', 'react-dom', "@radix-ui/react-select", "lucide-react"],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          '@radix-ui/react-select': 'SelectPrimitive',
+          'lucide-react': 'lucideReact',
         },
       },
     }
