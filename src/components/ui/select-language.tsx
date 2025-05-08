@@ -5,7 +5,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "../ui/select"
-import { LANGUAGES, DEFAULT_LANGUAGE } from "../../contants/LanguageData"
+import {  DEFAULT_LANGUAGE } from "../../contants/LanguageData"
 import { Globe } from "lucide-react"
 export function SelectLanguage() {
     return (
