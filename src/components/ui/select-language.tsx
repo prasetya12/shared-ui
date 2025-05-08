@@ -15,9 +15,13 @@ export function SelectLanguage() {
                     <Globe className="text-gray-600 w-5"/><SelectValue placeholder="Theme" />
                 </SelectTrigger>
                 <SelectContent>
-                    {LANGUAGES.map((lang, index) => (
+                <SelectItem value="en" key={0}>English</SelectItem>
+                <SelectItem value="id" key={1}>Indonesia</SelectItem>
+
+
+                    {/* {LANGUAGES.map((lang, index) => (
                         <SelectItem value={lang.code} key={index}>{lang.name}</SelectItem>
-                    ))}
+                    ))} */}
                 </SelectContent>
             </Select>
         </>
