@@ -1,37 +1,42 @@
-// import {
-//     Select,
-//     SelectContent,
-//     SelectItem,
-//     SelectTrigger,
-//     SelectValue,
-// } from "../ui/select"
-// import { DEFAULT_LANGUAGE } from "../../contants/LanguageData"
+
 import { Globe } from "lucide-react"
+import { useEffect } from "react";
 export function SelectLanguage() {
+     const changeLanguage = (language:string) => {
+    localStorage.setItem('scrollPosition', String(window?.scrollY));
+    const currentPath = window.location.pathname;
+    // Check if the current path already has a language prefix
+    const currentLanguageMatch = currentPath.match(/^\/([a-z]{2})\//);
+
+    // If a language prefix exists, replace it with the new language, otherwise add it
+    const newPath = currentLanguageMatch
+      ? currentPath.replace(/^\/[a-z]{2}\//, `/${language}/`)  // Replace existing language prefix
+      : `/${language}${currentPath}`;  // Add language prefix for paths without one
+
+    // Redirect to the new language path
+    window.location.href = newPath;
+  };
+  
+  useEffect(() => {
+    const savedScrollPosition = localStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+      localStorage.removeItem('scrollPosition');  // Clean up after restoring
+    }
+  }, []);
+
+  const currentLang = window.location.pathname.match(/^\/([a-z]{2})\//)?.[1] || "en";
+
     return (
-        // <>
-        //     <Select defaultValue={DEFAULT_LANGUAGE.code}>
-        //         <SelectTrigger className="w-[150px] px-2 ">
-        //             <Globe className="text-gray-600 w-5"/><SelectValue placeholder="Theme" />
-        //         </SelectTrigger>
-        //         <SelectContent>
-        //         <SelectItem value="en" key={0}>English</SelectItem>
-        //         <SelectItem value="id" key={1}>Indonesia</SelectItem>
-
-
-        //             {/* {LANGUAGES.map((lang, index) => (
-        //                 <SelectItem value={lang.code} key={index}>{lang.name}</SelectItem>
-        //             ))} */}
-        //         </SelectContent>
-        //     </Select>
-        // </>
+       
         <>
             <div className="relative inline-flex items-center w-[150px]">
                 <Globe className="absolute  text-muted-foreground pointer-events-none" style={{left:1,paddingLeft:6,width:22}}/>
                 <select
-                    defaultValue="en"
+                    defaultValue={currentLang}
                     className="appearance-none w-full  pr-6 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring dark:bg-gray-900 dark:text-white dark:border-gray-700"
                     style={{paddingLeft:30}}
+                    onChange={(e)=>changeLanguage(e.target.value)}
                     
                 >
                     <option value="en">English</option>
