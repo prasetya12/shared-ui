@@ -117,7 +117,7 @@ export const NavbarPlexicus = () => {
   const menus: Record<string, MenuType> = {
     products: {
       title: t('nav.product'),
-      shortTitle: 'Product',
+      shortTitle: t('nav.product'),
       image: 'product-diagram',
       items: [
         {
@@ -145,8 +145,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Benefits',
-          description: 'See how Plexicus transforms security',
+          title: t('nav.product_menu.benefits.title'),
+          description:  t('nav.product_menu.benefits.description'),
           href: '/products/benefits',
           icon: (
             <svg
@@ -169,8 +169,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Use Cases',
-          description: 'Real-world implementation examples',
+          title: t('nav.product_menu.use_cases.title'),
+          description: t('nav.product_menu.use_cases.description'),
           href: '/products/use-cases',
           icon: (
             <svg
@@ -196,12 +196,12 @@ export const NavbarPlexicus = () => {
     },
     solutions: {
       title:  t('nav.solutions'),
-      shortTitle: 'Solutions',
+      shortTitle: t('nav.solutions'),
       image: 'solutions-diagram',
       items: [
         {
-          title: 'FinTech',
-          description: 'Security solutions for financial technology',
+          title: t('nav.solution_menu.fintech.title'),
+          description: t('nav.solution_menu.fintech.description'),
           href: '/solutions/fintech',
           icon: (
             <svg
@@ -223,8 +223,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'HealthTech',
-          description: 'HIPAA compliant security solutions',
+          title: t('nav.solution_menu.healthtech.title'),
+          description: t('nav.solution_menu.healthtech.description'),
           href: '/solutions/healthtech',
           icon: (
             <svg
@@ -245,8 +245,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'HRTech',
-          description: 'Secure HR and employee management systems',
+          title: t('nav.solution_menu.hrtech.title'),
+          description: t('nav.solution_menu.hrtech.description'),
           href: '/solutions/hrtech',
           icon: (
             <svg
@@ -270,8 +270,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Legal Tech',
-          description: 'Security for legal technology platforms',
+          title: t('nav.solution_menu.legaltech.title'),
+          description: t('nav.solution_menu.legaltech.description'),
           href: '/solutions/legaltech',
           icon: (
             <svg
@@ -293,8 +293,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Group Companies',
-          description: 'Solutions for corporate groups and holdings',
+          title: t('nav.solution_menu.group_companies.title'),
+          description: t('nav.solution_menu.group_companies.description'),
           href: '/solutions/group-companies',
           icon: (
             <svg
@@ -316,8 +316,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Agencies',
-          description: 'Security for digital and marketing agencies',
+          title: t('nav.solution_menu.agencies.title'),
+          description: t('nav.solution_menu.agencies.description'),
           href: '/solutions/agencies',
           icon: (
             <svg
@@ -339,8 +339,8 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Startups',
-          description: 'Scalable security for growing companies',
+         title: t('nav.solution_menu.startups.title'),
+          description: t('nav.solution_menu.startups.description'),
           href: '/solutions/startups',
           icon: (
             <svg
@@ -1550,68 +1550,3 @@ export const NavbarPlexicus = () => {
   );
 }
 
-
-const languages = [
-  { code: 'en', label: 'English' },
-  { code: 'es', label: 'Spanish' },
-  { code: 'fr', label: 'French' },
-  { code: 'de', label: 'German' },
-  { code: 'it', label: 'Italian' },
-  { code: 'jp', label: 'Japanese' },
-];
-
-const SelectLanguage = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
-
-  const handleChange = (e:any) => {
-    setSelectedLanguage(e.target.value);
-  };
-
-  return (
-    <div className="relative inline-block text-left">
-      <button
-        type="button"
-        className="inline-flex justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        id="menu-button"
-        aria-expanded="true"
-        aria-haspopup="true"
-      >
-        {languages.find((lang) => lang.code === selectedLanguage)?.label}
-        <svg
-          className="w-5 h-5 ml-2 -mr-1"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-
-      <div
-        className="absolute right-0 z-10 mt-2 origin-top-right rounded-md shadow-lg w-40 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-        role="menu"
-        aria-orientation="vertical"
-        aria-labelledby="menu-button"
-      >
-        <div className="py-1" role="none">
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => setSelectedLanguage(lang.code)}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-              role="menuitem"
-            >
-              {lang.label}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
