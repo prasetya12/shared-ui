@@ -27,11 +27,12 @@ export function SelectLanguage() {
         // </>
         <>
             <div className="relative inline-flex items-center w-[150px]">
-                <Globe className="absolute  text-muted-foreground pointer-events-none" style={{left:1,paddingLeft:4,width:22}}/>
+                <Globe className="absolute  text-muted-foreground pointer-events-none" style={{left:1,paddingLeft:6,width:22}}/>
                 <select
                     defaultValue="en"
                     className="appearance-none w-full  pr-6 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring dark:bg-gray-900 dark:text-white dark:border-gray-700"
-                    style={{paddingLeft:28}}
+                    style={{paddingLeft:30}}
+                    
                 >
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
@@ -39,11 +40,12 @@ export function SelectLanguage() {
 
                 </select>
                 <svg
-                    className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground"
+                    className="pointer-events-none absolute  top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    style={{right:3,marginRight:4}}
                 >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
