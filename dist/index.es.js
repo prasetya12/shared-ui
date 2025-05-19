@@ -6232,7 +6232,7 @@ function ns() {
     localStorage.setItem("scrollPosition", String(window == null ? void 0 : window.scrollY));
     const i = window.location.pathname;
     let a = i.match(/^\/([a-z]{2})\//) ? i.replace(/^\/[a-z]{2}\//, `/${r}/`) : `/${r}${i}`;
-    a = a.startsWith("/en/") ? a.replace(/^\/en/, "") : a, window.location.href = a;
+    a = a.startsWith("/en/") ? a.replace(/^\/en/, "") : a, console.log({ newPath: a }), window.location.href = a;
   };
   ie(() => {
     const r = localStorage.getItem("scrollPosition");
