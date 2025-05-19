@@ -185,24 +185,24 @@ function Ft() {
       }), Object.freeze && (Object.freeze(p.props), Object.freeze(p)), p;
     }
     function u(p, j, O, L, T, G, oe, z) {
-      var D = j.children;
-      if (D !== void 0)
+      var W = j.children;
+      if (W !== void 0)
         if (L)
-          if (Y(D)) {
-            for (L = 0; L < D.length; L++)
-              h(D[L]);
-            Object.freeze && Object.freeze(D);
+          if (Y(W)) {
+            for (L = 0; L < W.length; L++)
+              h(W[L]);
+            Object.freeze && Object.freeze(W);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else h(D);
+        else h(W);
       if (Q.call(j, "key")) {
-        D = n(p);
+        W = n(p);
         var q = Object.keys(j).filter(function(he) {
           return he !== "key";
         });
-        L = 0 < q.length ? "{key: someKey, " + q.join(": ..., ") + ": ...}" : "{key: someKey}", X[D + L] || (q = 0 < q.length ? "{" + q.join(": ..., ") + ": ...}" : "{}", console.error(
+        L = 0 < q.length ? "{key: someKey, " + q.join(": ..., ") + ": ...}" : "{key: someKey}", X[W + L] || (q = 0 < q.length ? "{" + q.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -210,22 +210,22 @@ React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
           L,
-          D,
+          W,
           q,
-          D
-        ), X[D + L] = !0);
+          W
+        ), X[W + L] = !0);
       }
-      if (D = null, O !== void 0 && (t(O), D = "" + O), a(j) && (t(j.key), D = "" + j.key), "key" in j) {
+      if (W = null, O !== void 0 && (t(O), W = "" + O), a(j) && (t(j.key), W = "" + j.key), "key" in j) {
         O = {};
         for (var te in j)
           te !== "key" && (O[te] = j[te]);
       } else O = j;
-      return D && l(
+      return W && l(
         O,
         typeof p == "function" ? p.displayName || p.name || "Unknown" : p
       ), d(
         p,
-        D,
+        W,
         G,
         T,
         i(),
@@ -323,7 +323,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
     ] : d;
   }, []);
   return Je(n, a, c, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
-}, Ue = "-", Dt = (n) => {
+}, Ue = "-", Wt = (n) => {
   const e = Ut(n), {
     conflictingClassGroups: t,
     conflictingClassGroupModifiers: r
@@ -331,7 +331,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
   return {
     getClassGroupId: (a) => {
       const l = a.split(Ue);
-      return l[0] === "" && l.length !== 1 && l.shift(), xt(l, e) || Wt(a);
+      return l[0] === "" && l.length !== 1 && l.shift(), xt(l, e) || Dt(a);
     },
     getConflictingClassGroupIds: (a, l) => {
       const c = t[a] || [];
@@ -351,7 +351,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
   return (a = e.validators.find(({
     validator: l
   }) => l(o))) == null ? void 0 : a.classGroupId;
-}, qe = /^\[(.+)\]$/, Wt = (n) => {
+}, qe = /^\[(.+)\]$/, Dt = (n) => {
   if (qe.test(n)) {
     const e = qe.exec(n)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
     if (t)
@@ -485,7 +485,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
   cache: Ht(n.cacheSize),
   parseClassName: Yt(n),
   sortModifiers: qt(n),
-  ...Dt(n)
+  ...Wt(n)
 }), Zt = /\s+/, Qt = (n, e) => {
   const {
     parseClassName: t,
@@ -562,7 +562,7 @@ function tr(n, ...e) {
     return o(er.apply(null, arguments));
   };
 }
-const W = (n) => {
+const D = (n) => {
   const e = (t) => t[n] || [];
   return e.isThemeGetter = !0, e;
 }, wt = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, bt = /^\((?:(\w[\w-]*):)?(.+)\)$/i, rr = /^\d+\/\d+$/, sr = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ir = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, nr = /^(rgba?|hsla?|hwb|(ok)?(lab|lch))\(.+\)$/, or = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, ar = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (n) => rr.test(n), C = (n) => !!n && !Number.isNaN(Number(n)), re = (n) => !!n && Number.isInteger(Number(n)), Me = (n) => n.endsWith("%") && C(n.slice(0, -1)), ee = (n) => sr.test(n), lr = () => !0, cr = (n) => (
@@ -577,7 +577,7 @@ const W = (n) => {
   const r = bt.exec(n);
   return r ? r[1] ? e(r[1]) : t : !1;
 }, jt = (n) => n === "position" || n === "percentage", kt = (n) => n === "image" || n === "url", St = (n) => n === "length" || n === "size" || n === "bg-size", Ct = (n) => n === "length", yr = (n) => n === "number", wr = (n) => n === "family-name", Lt = (n) => n === "shadow", br = () => {
-  const n = W("color"), e = W("font"), t = W("text"), r = W("font-weight"), i = W("tracking"), o = W("leading"), a = W("breakpoint"), l = W("container"), c = W("spacing"), d = W("radius"), u = W("shadow"), h = W("inset-shadow"), m = W("text-shadow"), x = W("drop-shadow"), g = W("blur"), f = W("perspective"), k = W("aspect"), E = W("ease"), P = W("animate"), $ = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], M = () => [
+  const n = D("color"), e = D("font"), t = D("text"), r = D("font-weight"), i = D("tracking"), o = D("leading"), a = D("breakpoint"), l = D("container"), c = D("spacing"), d = D("radius"), u = D("shadow"), h = D("inset-shadow"), m = D("text-shadow"), x = D("drop-shadow"), g = D("blur"), f = D("perspective"), k = D("aspect"), E = D("ease"), P = D("animate"), $ = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], M = () => [
     "center",
     "top",
     "bottom",
@@ -611,7 +611,7 @@ const W = (n) => {
     d,
     b,
     w
-  ], T = () => ["", C, ge, se], G = () => ["solid", "dashed", "dotted", "double"], oe = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], z = () => [C, Me, Qe, Ze], D = () => [
+  ], T = () => ["", C, ge, se], G = () => ["solid", "dashed", "dotted", "double"], oe = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], z = () => [C, Me, Qe, Ze], W = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
@@ -2298,7 +2298,7 @@ const W = (n) => {
        * @see https://tailwindcss.com/docs/blur
        */
       blur: [{
-        blur: D()
+        blur: W()
       }],
       /**
        * Brightness
@@ -2388,7 +2388,7 @@ const W = (n) => {
        * @see https://tailwindcss.com/docs/backdrop-blur
        */
       "backdrop-blur": [{
-        "backdrop-blur": D()
+        "backdrop-blur": W()
       }],
       /**
        * Backdrop Brightness
@@ -3154,7 +3154,7 @@ const A = ({ href: n, children: e, className: t = "", target: r = "_self", rel: 
   "&#x2F;": "/",
   "&#47;": "/"
 }, Rr = (n) => Or[n], Pr = (n) => n.replace(Nr, Rr);
-let De = {
+let We = {
   bindI18n: "languageChanged",
   bindI18nStore: "",
   transEmptyNodeValue: "",
@@ -3165,11 +3165,11 @@ let De = {
   unescape: Pr
 };
 const Er = (n = {}) => {
-  De = {
-    ...De,
+  We = {
+    ...We,
     ...n
   };
-}, Mr = () => De;
+}, Mr = () => We;
 let Ot;
 const Tr = (n) => {
   Ot = n;
@@ -3259,7 +3259,7 @@ const _r = (n, e) => {
   n.forEach((r) => {
     e[r] && (t[r] = e[r]);
   });
-}, Dr = /###/g, st = (n) => n && n.indexOf("###") > -1 ? n.replace(Dr, ".") : n, it = (n) => !n || S(n), xe = (n, e, t) => {
+}, Wr = /###/g, st = (n) => n && n.indexOf("###") > -1 ? n.replace(Wr, ".") : n, it = (n) => !n || S(n), xe = (n, e, t) => {
   const r = S(e) ? e.split(".") : e;
   let i = 0;
   for (; i < r.length - 1; ) {
@@ -3284,7 +3284,7 @@ const _r = (n, e) => {
   for (; l.obj === void 0 && a.length; )
     o = `${a[a.length - 1]}.${o}`, a = a.slice(0, a.length - 1), l = xe(n, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${o}`] < "u" && (l.obj = void 0);
   l.obj[`${l.k}.${o}`] = t;
-}, Wr = (n, e, t, r) => {
+}, Dr = (n, e, t, r) => {
   const {
     obj: i,
     k: o
@@ -3337,7 +3337,7 @@ const Yr = [" ", ",", "?", "!", ";"], Jr = new Kr(20), qr = (n, e, t) => {
     a > 0 && !i.test(n.substring(0, a)) && (o = !0);
   }
   return o;
-}, We = (n, e, t = ".") => {
+}, De = (n, e, t = ".") => {
   if (!n) return;
   if (n[e])
     return Object.prototype.hasOwnProperty.call(n, e) ? n[e] : void 0;
@@ -3456,7 +3456,7 @@ class ot extends Ee {
     let l;
     e.indexOf(".") > -1 ? l = e.split(".") : (l = [e, t], r && (Array.isArray(r) ? l.push(...r) : S(r) && o ? l.push(...r.split(o)) : l.push(r)));
     const c = Ne(this.data, l);
-    return !c && !t && !r && e.indexOf(".") > -1 && (e = l[0], t = l[1], r = l.slice(2).join(".")), c || !a || !S(r) ? c : We((u = (d = this.data) == null ? void 0 : d[e]) == null ? void 0 : u[t], r, o);
+    return !c && !t && !r && e.indexOf(".") > -1 && (e = l[0], t = l[1], r = l.slice(2).join(".")), c || !a || !S(r) ? c : De((u = (d = this.data) == null ? void 0 : d[e]) == null ? void 0 : u[t], r, o);
   }
   addResource(e, t, r, i, o = {
     silent: !1
@@ -3897,7 +3897,7 @@ class Zr {
 }
 const ht = (n, e, t, r = ".", i = !0) => {
   let o = Ur(n, e, t);
-  return !o && i && S(t) && (o = We(n, t, r), o === void 0 && (o = We(e, t, r))), o;
+  return !o && i && S(t) && (o = De(n, t, r), o === void 0 && (o = De(e, t, r))), o;
 }, Ae = (n) => n.replace(/\$/g, "$$$$");
 class Qr {
   constructor(e = {}) {
@@ -4168,7 +4168,7 @@ class ss extends Ee {
     }), this.state[e] = t ? -1 : 2, t && r && (this.state[e] = 0);
     const l = {};
     this.queue.forEach((c) => {
-      Wr(c.loaded, [o], a), rs(c, e), t && c.errors.push(t), c.pendingCount === 0 && !c.done && (Object.keys(c.loaded).forEach((d) => {
+      Dr(c.loaded, [o], a), rs(c, e), t && c.errors.push(t), c.pendingCount === 0 && !c.done && (Object.keys(c.loaded).forEach((d) => {
         l[d] || (l[d] = {});
         const u = c.loaded[d];
         u.length && u.forEach((h) => {
@@ -6230,8 +6230,9 @@ function ns() {
   var t;
   const n = (r) => {
     localStorage.setItem("scrollPosition", String(window == null ? void 0 : window.scrollY));
-    const i = window.location.pathname, a = i.match(/^\/([a-z]{2})\//) ? i.replace(/^\/[a-z]{2}\//, `/${r}/`) : `/${r}${i}`;
-    window.location.href = a;
+    const i = window.location.pathname;
+    let a = i.match(/^\/([a-z]{2})\//) ? i.replace(/^\/[a-z]{2}\//, `/${r}/`) : `/${r}${i}`;
+    a = a.startsWith("/en/") ? a.replace(/^\/en/, "") : a, window.location.href = a;
   };
   ie(() => {
     const r = localStorage.getItem("scrollPosition");

@@ -9,11 +9,12 @@ export function SelectLanguage() {
     const currentLanguageMatch = currentPath.match(/^\/([a-z]{2})\//);
 
     // If a language prefix exists, replace it with the new language, otherwise add it
-    const newPath = currentLanguageMatch
+    let newPath = currentLanguageMatch
       ? currentPath.replace(/^\/[a-z]{2}\//, `/${language}/`)  // Replace existing language prefix
       : `/${language}${currentPath}`;  // Add language prefix for paths without one
 
     // Redirect to the new language path
+    newPath = newPath.startsWith('/en/') ? newPath.replace(/^\/en/, '') : newPath
     window.location.href = newPath;
   };
   
