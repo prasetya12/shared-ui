@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "prepare": "tsc -b && vite build",
+    "prepare": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "lib": "vite build --lib --entry=src/index.ts --name=MyComponentLib",
