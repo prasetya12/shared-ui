@@ -1,86 +1,38 @@
 nav:
-  product: "Producto"
   pricing: "Precios"
-  solutions: "Soluciones"
-  developers: "Desarrolladores"
-  resources: "Recursos"
   contact: "Contacto"
   languages: "Idiomas"
   login: "Iniciar sesión"
-  get_started: "Empezar"
-  product_menu:
-    aspm_overview: 
-      title: "Visión general de ASPM"
-      description: "Protección completa de seguridad de aplicaciones"
-    use_cases: 
-      title: "Casos de uso"
-      description: "Ejemplos de implementación en el mundo real"
-    benefits: 
-      title: "Beneficios"
-      description: "Mira cómo Plexicus transforma la seguridad"
-  solution_menu:
-    fintech: 
-      title: "Fintech"
-      description: "Soluciones de seguridad para tecnología financiera"
-    healthtech: 
-       title: "HealthTech"
-       description: "Soluciones de seguridad compatibles con HIPAA"
-    legaltech: 
-       title: "HRTech"
-       description: "Sistemas seguros de gestión de recursos humanos y empleados"
-    hrtech: 
-       title: "Legal Tech"
-       description: "Seguridad para plataformas de tecnología legal"
-    group_companies: 
-       title: "Empresas del grupo"
-       description: "Soluciones para grupos corporativos y holdings"
-    startups: 
-       title: "Startups"
-       description: "Seguridad escalable para empresas en crecimiento"
-    enterprise: 
-       title: "Empresas"
-       description: "Seguridad integral para grandes organizaciones"
-    agencies: 
-       title: "Agencias"
-       description: "Seguridad para agencias digitales y de marketing"
-    mobile_apps: 
-       title: "Aplicaciones móviles"
-       description: "Seguridad para aplicaciones iOS y Android"
-    manufacturing: 
-       title: "Manufactura"
-       description: "Seguridad para sistemas industriales e IoT"
-    government: 
-       title: "Gobiernos"
-       description: "Soluciones de seguridad para agencias gubernamentales"
-    retailtech: 
-       title: "RetailTech"
-       description: "Seguridad para plataformas de comercio electrónico y minoristas"
-  developers_menu:
-    documentations: 
-      title: "Documentación"
-      description: "Guías técnicas y referencias"
-    github_actions: 
-      title: "Acciones de GitHub"
-      description: "Automatiza la seguridad en tu pipeline CI/CD"
-    github_apps: 
-      title: "Aplicación de GitHub"
-      description: "Integra Plexicus con tus repositorios"
-    api_references: 
-      title: "Referencia API"
-      description: "Documentación API completa"
-  resources_menu:
-    blog: 
-      title: "Blog"
-      description: "Últimas noticias y conocimientos sobre seguridad"
-    youtube_channel: 
-      title: "Canal de YouTube"
-      description: "Tutoriales en video y seminarios web"
-    branding_assets: 
-      title: "Recursos de marca"
-      description: "Logos y pautas de marca"
-    feature_request: 
-      title: "Solicitudes de características"
-      description: "Envía y vota por nuevas funciones"
-    changelogs: 
-      title: "Registros de cambios"
-      description: "Últimas actualizaciones del producto"
+  get_started: "Comenzar"
+  product:
+    title: "Producto"
+    aspm_overview: "Descripción general de ASPM"
+    use_cases: "Casos de uso"
+    benefits: "Beneficios"
+  solutions:
+    title: "Soluciones"
+    fintech: "Fintech"
+    healthtech: "HealthTech"
+    legaltech: "LegalTech"
+    hrtech: "HRTech"
+    group_companies: "Compañías del grupo"
+    startups: "Startups"
+    enterprise: "Empresa"
+    agencies: "Agencias"
+    mobile_apps: "Aplicaciones móviles"
+    manufacturing: "Manufactura"
+    government: "Gobierno"
+    retailtech: "RetailTech"
+  developers:
+    title: "Desarrolladores"
+    documentations: "Documentaciones"
+    github_actions: "Acciones de Github"
+    github_apps: "Aplicaciones de Github"
+    api_references: "Referencias de API"
+  resources:
+    title: "Recursos"
+    blog: "Blog"
+    youtube_channel: "Canal de Youtube"
+    branding_assets: "Recursos de marca"
+    feature_request: "Solicitud de características"
+    changelogs: "Registros de cambios"

@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import Link from './ui/link';
 
 import { useTranslation } from 'react-i18next';
-import  '../i18n';
+import '../i18n';
 
 // Change Spanish comments and variable names to English
 
@@ -20,25 +20,32 @@ type MenuType = {
   shortTitle: string;
   image: string;
   items: MenuItemType[];
+  link?: string;
 };
-
-export const NavbarPlexicus = () => {
+type NavbarProps = {
+  lang: string,
+  fullSiteUrl?: string,
+  fullBlogurl?: string
+}
+export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'localhost:8000', fullBlogurl = 'localhost:9000' }: NavbarProps) => {
+  const [lang, setLang] = useState("/");
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const FULL_SITE_URL = `http://localhost:7000`
+  const FULL_SITE_URL = fullSiteUrl
 
-    const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    const lang = window.location.pathname.split('/')[1];
-    // Get the first segment of the path (e.g., "en" from "/en/home")
-    console.log(lang, 'a')
-    if (['en', 'es'].includes(lang)) {
-      console.log(lang, 'a')
-
-      i18n.changeLanguage(lang);
+    console.log(lang, currentLang)
+    i18n.changeLanguage(currentLang);
+    if (currentLang !== 'en') {
+      setLang(`/${currentLang}/`)
+      console.log('not en')
+    } else {
+      setLang("/")
     }
+    console.log(lang, currentLang)
   }, []);
 
   // const pathname = usePathname()
@@ -116,14 +123,14 @@ export const NavbarPlexicus = () => {
 
   const menus: Record<string, MenuType> = {
     products: {
-      title: t('nav.product'),
-      shortTitle: t('nav.product'),
+      title: t('nav.product.title') as string,
+      shortTitle: 'Product',
       image: 'product-diagram',
       items: [
         {
-          title: t('nav.product_menu.aspm_overview.title'),
-          description: t('nav.product_menu.aspm_overview.description'),
-          href: '/products/aspm',
+          title: t('nav.product.aspm_overview'),
+          description: 'Complete application security protection',
+          href: `${lang}products/aspm`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -145,9 +152,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: t('nav.product_menu.benefits.title'),
-          description:  t('nav.product_menu.benefits.description'),
-          href: '/products/benefits',
+          title: t('nav.product.benefits'),
+          description: 'See how Plexicus transforms security',
+          href: `${lang}products/benefits`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -169,9 +176,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: t('nav.product_menu.use_cases.title'),
-          description: t('nav.product_menu.use_cases.description'),
-          href: '/products/use-cases',
+          title: t('nav.product.use_cases'),
+          description: 'Real-world implementation examples',
+          href: `${lang}products/use-cases`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -195,14 +202,15 @@ export const NavbarPlexicus = () => {
       ],
     },
     solutions: {
-      title:  t('nav.solutions'),
-      shortTitle: t('nav.solutions'),
+      title: t('nav.solutions.title'),
+      link: '/solutions',
+      shortTitle: 'Solutions',
       image: 'solutions-diagram',
       items: [
         {
-          title: t('nav.solution_menu.fintech.title'),
-          description: t('nav.solution_menu.fintech.description'),
-          href: '/solutions/fintech',
+          title: t('nav.solutions.fintech'),
+          description: 'Security solutions for financial technology',
+          href: `${lang}solutions/fintech-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -223,9 +231,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: t('nav.solution_menu.healthtech.title'),
-          description: t('nav.solution_menu.healthtech.description'),
-          href: '/solutions/healthtech',
+          title: t('nav.solutions.healthtech'),
+          description: 'HIPAA compliant security solutions',
+          href: `${lang}solutions/healthcare-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -245,34 +253,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: t('nav.solution_menu.hrtech.title'),
-          description: t('nav.solution_menu.hrtech.description'),
-          href: '/solutions/hrtech',
-          icon: (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-primary"
-              aria-hidden="true"
-            >
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          ),
-        },
-        {
-          title: t('nav.solution_menu.legaltech.title'),
-          description: t('nav.solution_menu.legaltech.description'),
-          href: '/solutions/legaltech',
+          title: t('nav.solutions.hrtech'),
+          description: 'Security for legal technology platforms',
+          href: `${lang}solutions/hrtech-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -293,9 +276,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: t('nav.solution_menu.group_companies.title'),
-          description: t('nav.solution_menu.group_companies.description'),
-          href: '/solutions/group-companies',
+          title: t('nav.solutions.group_companies'),
+          description: 'Solutions for corporate groups and holdings',
+          href: `${lang}solutions/group-companies-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -316,9 +299,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: t('nav.solution_menu.agencies.title'),
-          description: t('nav.solution_menu.agencies.description'),
-          href: '/solutions/agencies',
+          title: t('nav.solutions.agencies'),
+          description: 'Security for digital and marketing agencies',
+          href: `${lang}solutions/agencies-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -339,9 +322,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-         title: t('nav.solution_menu.startups.title'),
-          description: t('nav.solution_menu.startups.description'),
-          href: '/solutions/startups',
+          title: t('nav.solutions.startups'),
+          description: 'Scalable security for growing companies',
+          href: `${lang}solutions/startup-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -364,9 +347,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Enterprise',
+          title: t('nav.solutions.enterprise'),
           description: 'Comprehensive security for large organizations',
-          href: '/solutions/enterprise',
+          href: `${lang}solutions/enterprise-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -393,9 +376,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Mobile Apps',
+          title: t('nav.solutions.mobile_apps'),
           description: 'Security for iOS and Android applications',
-          href: '/solutions/mobile-apps',
+          href: `${lang}solutions/mobile-app-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -416,9 +399,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Manufacturing',
+          title: t('nav.solutions.manufacturing'),
           description: 'Security for industrial and IoT systems',
-          href: '/solutions/manufacturing',
+          href: `${lang}solutions/manufacturing-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -438,9 +421,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Governments',
+          title: t('nav.solutions.government'),
           description: 'Security solutions for government agencies',
-          href: '/solutions/governments',
+          href: `${lang}solutions/government-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -464,9 +447,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'RetailTech',
+          title: t('nav.solutions.retailtech'),
           description: 'Security for e-commerce and retail platforms',
-          href: '/solutions/retailtech',
+          href: `${lang}solutions/retailtech-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -490,12 +473,12 @@ export const NavbarPlexicus = () => {
       ],
     },
     developers: {
-      title: t('nav.developers'),
+      title: t('nav.developers.title'),
       shortTitle: 'Developers',
       image: 'developers-diagram',
       items: [
         {
-          title: 'Documentation',
+          title: t('nav.developers.documentations'),
           description: 'Technical guides and references',
           href: 'https://docs.plexicus.com/',
           icon: (
@@ -521,7 +504,7 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'API Reference',
+          title: t('nav.developers.api_references'),
           description: 'Comprehensive API documentation',
           href: 'https://docs.plexicus.com/getting-started/introduction',
           icon: (
@@ -545,7 +528,7 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'GitHub App',
+          title: t('nav.developers.github_apps'),
           description: 'Integrate Plexicus with your repositories',
           href: 'https://github.com/apps/plexicus',
           icon: (
@@ -568,7 +551,7 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'GitHub Action',
+          title: t('nav.developers.github_apps'),
           description: 'Automate security in your CI/CD pipeline',
           href: 'https://github.com/marketplace/actions/plexicus-runner-action',
           icon: (
@@ -592,14 +575,14 @@ export const NavbarPlexicus = () => {
       ],
     },
     resources: {
-      title: t('nav.resources'),
+      title: t('nav.resources.title'),
       shortTitle: 'Resources',
       image: 'resources-diagram',
       items: [
         {
-          title: 'Blog',
+          title: t('nav.resources.blog'),
           description: 'Latest news and security insights',
-          href: '/blog',
+          href: fullBlogurl,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -620,7 +603,7 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'YouTube Channel',
+          title: t('nav.resources.youtube_channel'),
           description: 'Video tutorials and webinars',
           href: 'https://youtube.com/channel/UCzrotvBZ3dcb7mhI55ExHBQ/',
           icon: (
@@ -643,9 +626,9 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Branding Assets',
+          title: t('nav.resources.branding_assets'),
           description: 'Logos and brand guidelines',
-          href: '/resources/branding',
+          href: `${lang}resources/branding`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -662,7 +645,7 @@ export const NavbarPlexicus = () => {
             >
               <path d="M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" />
               <path d="m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" />
-              <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1L6.5 8.5" />
+              <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" />
               <path d="m3.5 13.5 5-5" />
               <path d="m5 19 5-5" />
               <path d="m17.5 6.5-5 5" />
@@ -671,7 +654,7 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Changelogs',
+          title: t('nav.resources.changelogs'),
           description: 'Latest product updates',
           href: 'https://plexicus.canny.io/changelog',
           icon: (
@@ -694,7 +677,7 @@ export const NavbarPlexicus = () => {
           ),
         },
         {
-          title: 'Feature Requests',
+          title: t('nav.resources.feature_request'),
           description: 'Submit and vote on new features',
           href: 'https://plexicus.canny.io/feature-requests',
           icon: (
@@ -721,7 +704,7 @@ export const NavbarPlexicus = () => {
         {
           title: 'Plexicus vs. ArmorCode',
           description: 'See how Plexicus compares',
-          href: '/compare/armorcode',
+          href: `${lang}compare/armorcode`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -748,7 +731,7 @@ export const NavbarPlexicus = () => {
         {
           title: 'Plexicus vs. Apiiro',
           description: 'Feature comparison',
-          href: '/compare/apiiro',
+          href: `${lang}compare/apiiro`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -775,7 +758,7 @@ export const NavbarPlexicus = () => {
         {
           title: 'Plexicus vs. Legit Security',
           description: 'Side-by-side comparison',
-          href: '/compare/legit-security',
+          href: `${lang}compare/legit-security`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -814,7 +797,7 @@ export const NavbarPlexicus = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center gap-2">
-          <Link href={FULL_SITE_URL} className="flex items-center gap-2 overflow-visible" aria-label="Plexicus Home">
+          <Link href={`${FULL_SITE_URL}${lang}`} className="flex items-center gap-2 overflow-visible" aria-label="Plexicus Home">
             <div className="relative w-auto h-14 flex items-center">
               <img
                 src="/images/plexicus-logo-white.png"
@@ -866,7 +849,7 @@ export const NavbarPlexicus = () => {
               </div>
             ))}
           <Link
-            href="/pricing"
+            href={`${lang}pricing`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap"
           >
             {t('nav.pricing')}
@@ -907,22 +890,22 @@ export const NavbarPlexicus = () => {
               </div>
             ))}
           <Link
-            href="/contact"
+            href={`${lang}contact`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap"
           >
             Contact
           </Link>
         </nav>
-        
+
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/login"
             className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
           >
-            Login
+            {t('nav.login')}
           </Link>
           <Button className="bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap">
-            Get Started
+            {t('nav.get_started')}
           </Button>
         </div>
 

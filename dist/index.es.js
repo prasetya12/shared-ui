@@ -1,7 +1,7 @@
-import * as At from "react";
-import Ie, { createContext as It, useContext as $t, useCallback as Se, useState as Ce, useRef as Le, useEffect as ie } from "react";
-import { Globe as zt } from "lucide-react";
-var be = { exports: {} }, fe = {};
+import * as $t from "react";
+import $e, { createContext as zt, useContext as It, useCallback as Ce, useState as xe, useRef as Ne, useEffect as ie } from "react";
+import { Globe as Ft } from "lucide-react";
+var ve = { exports: {} }, fe = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -44,165 +44,165 @@ var pe = {};
  * LICENSE file in the root directory of this source tree.
  */
 var He;
-function Ft() {
+function Bt() {
   return He || (He = 1, process.env.NODE_ENV !== "production" && function() {
-    function n(p) {
-      if (p == null) return null;
-      if (typeof p == "function")
-        return p.$$typeof === R ? null : p.displayName || p.name || null;
-      if (typeof p == "string") return p;
-      switch (p) {
-        case f:
+    function n(f) {
+      if (f == null) return null;
+      if (typeof f == "function")
+        return f.$$typeof === M ? null : f.displayName || f.name || null;
+      if (typeof f == "string") return f;
+      switch (f) {
+        case v:
           return "Fragment";
-        case E:
+        case A:
           return "Profiler";
-        case k:
+        case C:
           return "StrictMode";
-        case _:
+        case O:
           return "Suspense";
-        case H:
+        case B:
           return "SuspenseList";
-        case N:
+        case R:
           return "Activity";
       }
-      if (typeof p == "object")
-        switch (typeof p.tag == "number" && console.error(
+      if (typeof f == "object")
+        switch (typeof f.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
-        ), p.$$typeof) {
-          case g:
+        ), f.$$typeof) {
+          case p:
             return "Portal";
-          case $:
-            return (p.displayName || "Context") + ".Provider";
-          case P:
-            return (p._context.displayName || "Context") + ".Consumer";
-          case M:
-            var j = p.render;
-            return p = p.displayName, p || (p = j.displayName || j.name || "", p = p !== "" ? "ForwardRef(" + p + ")" : "ForwardRef"), p;
+          case T:
+            return (f.displayName || "Context") + ".Provider";
+          case E:
+            return (f._context.displayName || "Context") + ".Consumer";
+          case g:
+            var k = f.render;
+            return f = f.displayName, f || (f = k.displayName || k.name || "", f = f !== "" ? "ForwardRef(" + f + ")" : "ForwardRef"), f;
           case F:
-            return j = p.displayName || null, j !== null ? j : n(p.type) || "Memo";
+            return k = f.displayName || null, k !== null ? k : n(f.type) || "Memo";
           case y:
-            j = p._payload, p = p._init;
+            k = f._payload, f = f._init;
             try {
-              return n(p(j));
+              return n(f(k));
             } catch {
             }
         }
       return null;
     }
-    function e(p) {
-      return "" + p;
+    function e(f) {
+      return "" + f;
     }
-    function t(p) {
+    function t(f) {
       try {
-        e(p);
-        var j = !1;
+        e(f);
+        var k = !1;
       } catch {
-        j = !0;
+        k = !0;
       }
-      if (j) {
-        j = console;
-        var O = j.error, L = typeof Symbol == "function" && Symbol.toStringTag && p[Symbol.toStringTag] || p.constructor.name || "Object";
-        return O.call(
-          j,
+      if (k) {
+        k = console;
+        var P = k.error, L = typeof Symbol == "function" && Symbol.toStringTag && f[Symbol.toStringTag] || f.constructor.name || "Object";
+        return P.call(
+          k,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           L
-        ), e(p);
+        ), e(f);
       }
     }
-    function r(p) {
-      if (p === f) return "<>";
-      if (typeof p == "object" && p !== null && p.$$typeof === y)
+    function r(f) {
+      if (f === v) return "<>";
+      if (typeof f == "object" && f !== null && f.$$typeof === y)
         return "<...>";
       try {
-        var j = n(p);
-        return j ? "<" + j + ">" : "<...>";
+        var k = n(f);
+        return k ? "<" + k + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
     function i() {
-      var p = U.A;
-      return p === null ? null : p.getOwner();
+      var f = G.A;
+      return f === null ? null : f.getOwner();
     }
     function o() {
       return Error("react-stack-top-frame");
     }
-    function a(p) {
-      if (Q.call(p, "key")) {
-        var j = Object.getOwnPropertyDescriptor(p, "key").get;
-        if (j && j.isReactWarning) return !1;
+    function a(f) {
+      if (Q.call(f, "key")) {
+        var k = Object.getOwnPropertyDescriptor(f, "key").get;
+        if (k && k.isReactWarning) return !1;
       }
-      return p.key !== void 0;
+      return f.key !== void 0;
     }
-    function l(p, j) {
-      function O() {
+    function l(f, k) {
+      function P() {
         J || (J = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
-          j
+          k
         ));
       }
-      O.isReactWarning = !0, Object.defineProperty(p, "key", {
-        get: O,
+      P.isReactWarning = !0, Object.defineProperty(f, "key", {
+        get: P,
         configurable: !0
       });
     }
     function c() {
-      var p = n(this.type);
-      return I[p] || (I[p] = !0, console.error(
+      var f = n(this.type);
+      return I[f] || (I[f] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
-      )), p = this.props.ref, p !== void 0 ? p : null;
+      )), f = this.props.ref, f !== void 0 ? f : null;
     }
-    function d(p, j, O, L, T, G, oe, z) {
-      return O = G.ref, p = {
+    function d(f, k, P, L, $, H, oe, _) {
+      return P = H.ref, f = {
         $$typeof: x,
-        type: p,
-        key: j,
-        props: G,
-        _owner: T
-      }, (O !== void 0 ? O : null) !== null ? Object.defineProperty(p, "ref", {
+        type: f,
+        key: k,
+        props: H,
+        _owner: $
+      }, (P !== void 0 ? P : null) !== null ? Object.defineProperty(f, "ref", {
         enumerable: !1,
         get: c
-      }) : Object.defineProperty(p, "ref", { enumerable: !1, value: null }), p._store = {}, Object.defineProperty(p._store, "validated", {
+      }) : Object.defineProperty(f, "ref", { enumerable: !1, value: null }), f._store = {}, Object.defineProperty(f._store, "validated", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: 0
-      }), Object.defineProperty(p, "_debugInfo", {
+      }), Object.defineProperty(f, "_debugInfo", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: null
-      }), Object.defineProperty(p, "_debugStack", {
+      }), Object.defineProperty(f, "_debugStack", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: oe
-      }), Object.defineProperty(p, "_debugTask", {
+      }), Object.defineProperty(f, "_debugTask", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: z
-      }), Object.freeze && (Object.freeze(p.props), Object.freeze(p)), p;
+        value: _
+      }), Object.freeze && (Object.freeze(f.props), Object.freeze(f)), f;
     }
-    function u(p, j, O, L, T, G, oe, z) {
-      var W = j.children;
-      if (W !== void 0)
+    function h(f, k, P, L, $, H, oe, _) {
+      var D = k.children;
+      if (D !== void 0)
         if (L)
-          if (Y(W)) {
-            for (L = 0; L < W.length; L++)
-              h(W[L]);
-            Object.freeze && Object.freeze(W);
+          if (Y(D)) {
+            for (L = 0; L < D.length; L++)
+              u(D[L]);
+            Object.freeze && Object.freeze(D);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else h(W);
-      if (Q.call(j, "key")) {
-        W = n(p);
-        var q = Object.keys(j).filter(function(he) {
+        else u(D);
+      if (Q.call(k, "key")) {
+        D = n(f);
+        var q = Object.keys(k).filter(function(he) {
           return he !== "key";
         });
-        L = 0 < q.length ? "{key: someKey, " + q.join(": ..., ") + ": ...}" : "{key: someKey}", X[W + L] || (q = 0 < q.length ? "{" + q.join(": ..., ") + ": ...}" : "{}", console.error(
+        L = 0 < q.length ? "{key: someKey, " + q.join(": ..., ") + ": ...}" : "{key: someKey}", X[D + L] || (q = 0 < q.length ? "{" + q.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -210,77 +210,77 @@ React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
           L,
-          W,
+          D,
           q,
-          W
-        ), X[W + L] = !0);
+          D
+        ), X[D + L] = !0);
       }
-      if (W = null, O !== void 0 && (t(O), W = "" + O), a(j) && (t(j.key), W = "" + j.key), "key" in j) {
-        O = {};
-        for (var te in j)
-          te !== "key" && (O[te] = j[te]);
-      } else O = j;
-      return W && l(
-        O,
-        typeof p == "function" ? p.displayName || p.name || "Unknown" : p
+      if (D = null, P !== void 0 && (t(P), D = "" + P), a(k) && (t(k.key), D = "" + k.key), "key" in k) {
+        P = {};
+        for (var te in k)
+          te !== "key" && (P[te] = k[te]);
+      } else P = k;
+      return D && l(
+        P,
+        typeof f == "function" ? f.displayName || f.name || "Unknown" : f
       ), d(
-        p,
-        W,
-        G,
-        T,
+        f,
+        D,
+        H,
+        $,
         i(),
-        O,
+        P,
         oe,
-        z
+        _
       );
     }
-    function h(p) {
-      typeof p == "object" && p !== null && p.$$typeof === x && p._store && (p._store.validated = 1);
+    function u(f) {
+      typeof f == "object" && f !== null && f.$$typeof === x && f._store && (f._store.validated = 1);
     }
-    var m = Ie, x = Symbol.for("react.transitional.element"), g = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), k = Symbol.for("react.strict_mode"), E = Symbol.for("react.profiler"), P = Symbol.for("react.consumer"), $ = Symbol.for("react.context"), M = Symbol.for("react.forward_ref"), _ = Symbol.for("react.suspense"), H = Symbol.for("react.suspense_list"), F = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), N = Symbol.for("react.activity"), R = Symbol.for("react.client.reference"), U = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Q = Object.prototype.hasOwnProperty, Y = Array.isArray, V = console.createTask ? console.createTask : function() {
+    var m = $e, x = Symbol.for("react.transitional.element"), p = Symbol.for("react.portal"), v = Symbol.for("react.fragment"), C = Symbol.for("react.strict_mode"), A = Symbol.for("react.profiler"), E = Symbol.for("react.consumer"), T = Symbol.for("react.context"), g = Symbol.for("react.forward_ref"), O = Symbol.for("react.suspense"), B = Symbol.for("react.suspense_list"), F = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), R = Symbol.for("react.activity"), M = Symbol.for("react.client.reference"), G = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Q = Object.prototype.hasOwnProperty, Y = Array.isArray, W = console.createTask ? console.createTask : function() {
       return null;
     };
     m = {
-      "react-stack-bottom-frame": function(p) {
-        return p();
+      "react-stack-bottom-frame": function(f) {
+        return f();
       }
     };
-    var J, I = {}, B = m["react-stack-bottom-frame"].bind(
+    var J, I = {}, V = m["react-stack-bottom-frame"].bind(
       m,
       o
-    )(), v = V(r(o)), X = {};
-    pe.Fragment = f, pe.jsx = function(p, j, O, L, T) {
-      var G = 1e4 > U.recentlyCreatedOwnerStacks++;
-      return u(
-        p,
-        j,
-        O,
+    )(), j = W(r(o)), X = {};
+    pe.Fragment = v, pe.jsx = function(f, k, P, L, $) {
+      var H = 1e4 > G.recentlyCreatedOwnerStacks++;
+      return h(
+        f,
+        k,
+        P,
         !1,
         L,
-        T,
-        G ? Error("react-stack-top-frame") : B,
-        G ? V(r(p)) : v
+        $,
+        H ? Error("react-stack-top-frame") : V,
+        H ? W(r(f)) : j
       );
-    }, pe.jsxs = function(p, j, O, L, T) {
-      var G = 1e4 > U.recentlyCreatedOwnerStacks++;
-      return u(
-        p,
-        j,
-        O,
+    }, pe.jsxs = function(f, k, P, L, $) {
+      var H = 1e4 > G.recentlyCreatedOwnerStacks++;
+      return h(
+        f,
+        k,
+        P,
         !0,
         L,
-        T,
-        G ? Error("react-stack-top-frame") : B,
-        G ? V(r(p)) : v
+        $,
+        H ? Error("react-stack-top-frame") : V,
+        H ? W(r(f)) : j
       );
     };
   }()), pe;
 }
 var Ke;
-function Bt() {
-  return Ke || (Ke = 1, process.env.NODE_ENV === "production" ? be.exports = _t() : be.exports = Ft()), be.exports;
+function Vt() {
+  return Ke || (Ke = 1, process.env.NODE_ENV === "production" ? ve.exports = _t() : ve.exports = Bt()), ve.exports;
 }
-var s = Bt();
+var s = Vt();
 function gt(n) {
   var e, t, r = "";
   if (typeof n == "string" || typeof n == "number") r += n;
@@ -294,44 +294,44 @@ function mt() {
   for (var n, e, t = 0, r = "", i = arguments.length; t < i; t++) (n = arguments[t]) && (e = gt(n)) && (r && (r += " "), r += e);
   return r;
 }
-const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, Vt = (n, e) => (t) => {
+const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, Wt = (n, e) => (t) => {
   var r;
   if ((e == null ? void 0 : e.variants) == null) return Je(n, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
   const { variants: i, defaultVariants: o } = e, a = Object.keys(i).map((d) => {
-    const u = t == null ? void 0 : t[d], h = o == null ? void 0 : o[d];
-    if (u === null) return null;
-    const m = Ye(u) || Ye(h);
+    const h = t == null ? void 0 : t[d], u = o == null ? void 0 : o[d];
+    if (h === null) return null;
+    const m = Ye(h) || Ye(u);
     return i[d][m];
-  }), l = t && Object.entries(t).reduce((d, u) => {
-    let [h, m] = u;
-    return m === void 0 || (d[h] = m), d;
-  }, {}), c = e == null || (r = e.compoundVariants) === null || r === void 0 ? void 0 : r.reduce((d, u) => {
-    let { class: h, className: m, ...x } = u;
-    return Object.entries(x).every((g) => {
-      let [f, k] = g;
-      return Array.isArray(k) ? k.includes({
+  }), l = t && Object.entries(t).reduce((d, h) => {
+    let [u, m] = h;
+    return m === void 0 || (d[u] = m), d;
+  }, {}), c = e == null || (r = e.compoundVariants) === null || r === void 0 ? void 0 : r.reduce((d, h) => {
+    let { class: u, className: m, ...x } = h;
+    return Object.entries(x).every((p) => {
+      let [v, C] = p;
+      return Array.isArray(C) ? C.includes({
         ...o,
         ...l
-      }[f]) : {
+      }[v]) : {
         ...o,
         ...l
-      }[f] === k;
+      }[v] === C;
     }) ? [
       ...d,
-      h,
+      u,
       m
     ] : d;
   }, []);
   return Je(n, a, c, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
-}, Ue = "-", Wt = (n) => {
-  const e = Ut(n), {
+}, Ue = "-", Dt = (n) => {
+  const e = Gt(n), {
     conflictingClassGroups: t,
     conflictingClassGroupModifiers: r
   } = n;
   return {
     getClassGroupId: (a) => {
       const l = a.split(Ue);
-      return l[0] === "" && l.length !== 1 && l.shift(), xt(l, e) || Dt(a);
+      return l[0] === "" && l.length !== 1 && l.shift(), xt(l, e) || Ut(a);
     },
     getConflictingClassGroupIds: (a, l) => {
       const c = t[a] || [];
@@ -351,13 +351,13 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
   return (a = e.validators.find(({
     validator: l
   }) => l(o))) == null ? void 0 : a.classGroupId;
-}, qe = /^\[(.+)\]$/, Dt = (n) => {
+}, qe = /^\[(.+)\]$/, Ut = (n) => {
   if (qe.test(n)) {
     const e = qe.exec(n)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
     if (t)
       return "arbitrary.." + t;
   }
-}, Ut = (n) => {
+}, Gt = (n) => {
   const {
     theme: e,
     classGroups: t
@@ -366,9 +366,9 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
     validators: []
   };
   for (const i in t)
-    $e(t[i], r, i, e);
+    ze(t[i], r, i, e);
   return r;
-}, $e = (n, e, t, r) => {
+}, ze = (n, e, t, r) => {
   n.forEach((i) => {
     if (typeof i == "string") {
       const o = i === "" ? e : Xe(e, i);
@@ -376,8 +376,8 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
       return;
     }
     if (typeof i == "function") {
-      if (Gt(i)) {
-        $e(i(r), e, t, r);
+      if (Ht(i)) {
+        ze(i(r), e, t, r);
         return;
       }
       e.validators.push({
@@ -387,7 +387,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
       return;
     }
     Object.entries(i).forEach(([o, a]) => {
-      $e(a, Xe(e, o), t, r);
+      ze(a, Xe(e, o), t, r);
     });
   });
 }, Xe = (n, e) => {
@@ -398,7 +398,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
       validators: []
     }), t = t.nextPart.get(r);
   }), t;
-}, Gt = (n) => n.isThemeGetter, Ht = (n) => {
+}, Ht = (n) => n.isThemeGetter, Kt = (n) => {
   if (n < 1)
     return {
       get: () => {
@@ -422,7 +422,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
       t.has(o) ? t.set(o, a) : i(o, a);
     }
   };
-}, ze = "!", _e = ":", Kt = _e.length, Yt = (n) => {
+}, Ie = "!", Fe = ":", Yt = Fe.length, Jt = (n) => {
   const {
     prefix: e,
     experimentalParseClassName: t
@@ -430,30 +430,30 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
   let r = (i) => {
     const o = [];
     let a = 0, l = 0, c = 0, d;
-    for (let g = 0; g < i.length; g++) {
-      let f = i[g];
+    for (let p = 0; p < i.length; p++) {
+      let v = i[p];
       if (a === 0 && l === 0) {
-        if (f === _e) {
-          o.push(i.slice(c, g)), c = g + Kt;
+        if (v === Fe) {
+          o.push(i.slice(c, p)), c = p + Yt;
           continue;
         }
-        if (f === "/") {
-          d = g;
+        if (v === "/") {
+          d = p;
           continue;
         }
       }
-      f === "[" ? a++ : f === "]" ? a-- : f === "(" ? l++ : f === ")" && l--;
+      v === "[" ? a++ : v === "]" ? a-- : v === "(" ? l++ : v === ")" && l--;
     }
-    const u = o.length === 0 ? i : i.substring(c), h = Jt(u), m = h !== u, x = d && d > c ? d - c : void 0;
+    const h = o.length === 0 ? i : i.substring(c), u = qt(h), m = u !== h, x = d && d > c ? d - c : void 0;
     return {
       modifiers: o,
       hasImportantModifier: m,
-      baseClassName: h,
+      baseClassName: u,
       maybePostfixModifierPosition: x
     };
   };
   if (e) {
-    const i = e + _e, o = r;
+    const i = e + Fe, o = r;
     r = (a) => a.startsWith(i) ? o(a.substring(i.length)) : {
       isExternal: !0,
       modifiers: [],
@@ -470,7 +470,7 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
     });
   }
   return r;
-}, Jt = (n) => n.endsWith(ze) ? n.substring(0, n.length - 1) : n.startsWith(ze) ? n.substring(1) : n, qt = (n) => {
+}, qt = (n) => n.endsWith(Ie) ? n.substring(0, n.length - 1) : n.startsWith(Ie) ? n.substring(1) : n, Xt = (n) => {
   const e = Object.fromEntries(n.orderSensitiveModifiers.map((r) => [r, !0]));
   return (r) => {
     if (r.length <= 1)
@@ -481,57 +481,57 @@ const Ye = (n) => typeof n == "boolean" ? `${n}` : n === 0 ? "0" : n, Je = mt, V
       a[0] === "[" || e[a] ? (i.push(...o.sort(), a), o = []) : o.push(a);
     }), i.push(...o.sort()), i;
   };
-}, Xt = (n) => ({
-  cache: Ht(n.cacheSize),
-  parseClassName: Yt(n),
-  sortModifiers: qt(n),
-  ...Wt(n)
-}), Zt = /\s+/, Qt = (n, e) => {
+}, Zt = (n) => ({
+  cache: Kt(n.cacheSize),
+  parseClassName: Jt(n),
+  sortModifiers: Xt(n),
+  ...Dt(n)
+}), Qt = /\s+/, er = (n, e) => {
   const {
     parseClassName: t,
     getClassGroupId: r,
     getConflictingClassGroupIds: i,
     sortModifiers: o
-  } = e, a = [], l = n.trim().split(Zt);
+  } = e, a = [], l = n.trim().split(Qt);
   let c = "";
   for (let d = l.length - 1; d >= 0; d -= 1) {
-    const u = l[d], {
-      isExternal: h,
+    const h = l[d], {
+      isExternal: u,
       modifiers: m,
       hasImportantModifier: x,
-      baseClassName: g,
-      maybePostfixModifierPosition: f
-    } = t(u);
-    if (h) {
-      c = u + (c.length > 0 ? " " + c : c);
+      baseClassName: p,
+      maybePostfixModifierPosition: v
+    } = t(h);
+    if (u) {
+      c = h + (c.length > 0 ? " " + c : c);
       continue;
     }
-    let k = !!f, E = r(k ? g.substring(0, f) : g);
-    if (!E) {
-      if (!k) {
-        c = u + (c.length > 0 ? " " + c : c);
+    let C = !!v, A = r(C ? p.substring(0, v) : p);
+    if (!A) {
+      if (!C) {
+        c = h + (c.length > 0 ? " " + c : c);
         continue;
       }
-      if (E = r(g), !E) {
-        c = u + (c.length > 0 ? " " + c : c);
+      if (A = r(p), !A) {
+        c = h + (c.length > 0 ? " " + c : c);
         continue;
       }
-      k = !1;
+      C = !1;
     }
-    const P = o(m).join(":"), $ = x ? P + ze : P, M = $ + E;
-    if (a.includes(M))
+    const E = o(m).join(":"), T = x ? E + Ie : E, g = T + A;
+    if (a.includes(g))
       continue;
-    a.push(M);
-    const _ = i(E, k);
-    for (let H = 0; H < _.length; ++H) {
-      const F = _[H];
-      a.push($ + F);
+    a.push(g);
+    const O = i(A, C);
+    for (let B = 0; B < O.length; ++B) {
+      const F = O[B];
+      a.push(T + F);
     }
-    c = u + (c.length > 0 ? " " + c : c);
+    c = h + (c.length > 0 ? " " + c : c);
   }
   return c;
 };
-function er() {
+function tr() {
   let n = 0, e, t, r = "";
   for (; n < arguments.length; )
     (e = arguments[n++]) && (t = yt(e)) && (r && (r += " "), r += t);
@@ -545,39 +545,39 @@ const yt = (n) => {
     n[r] && (e = yt(n[r])) && (t && (t += " "), t += e);
   return t;
 };
-function tr(n, ...e) {
+function rr(n, ...e) {
   let t, r, i, o = a;
   function a(c) {
-    const d = e.reduce((u, h) => h(u), n());
-    return t = Xt(d), r = t.cache.get, i = t.cache.set, o = l, l(c);
+    const d = e.reduce((h, u) => u(h), n());
+    return t = Zt(d), r = t.cache.get, i = t.cache.set, o = l, l(c);
   }
   function l(c) {
     const d = r(c);
     if (d)
       return d;
-    const u = Qt(c, t);
-    return i(c, u), u;
+    const h = er(c, t);
+    return i(c, h), h;
   }
   return function() {
-    return o(er.apply(null, arguments));
+    return o(tr.apply(null, arguments));
   };
 }
-const D = (n) => {
+const U = (n) => {
   const e = (t) => t[n] || [];
   return e.isThemeGetter = !0, e;
-}, wt = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, bt = /^\((?:(\w[\w-]*):)?(.+)\)$/i, rr = /^\d+\/\d+$/, sr = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ir = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, nr = /^(rgba?|hsla?|hwb|(ok)?(lab|lch))\(.+\)$/, or = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, ar = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (n) => rr.test(n), C = (n) => !!n && !Number.isNaN(Number(n)), re = (n) => !!n && Number.isInteger(Number(n)), Me = (n) => n.endsWith("%") && C(n.slice(0, -1)), ee = (n) => sr.test(n), lr = () => !0, cr = (n) => (
+}, wt = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, bt = /^\((?:(\w[\w-]*):)?(.+)\)$/i, sr = /^\d+\/\d+$/, ir = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, nr = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, or = /^(rgba?|hsla?|hwb|(ok)?(lab|lch))\(.+\)$/, ar = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, lr = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (n) => sr.test(n), N = (n) => !!n && !Number.isNaN(Number(n)), re = (n) => !!n && Number.isInteger(Number(n)), Me = (n) => n.endsWith("%") && N(n.slice(0, -1)), ee = (n) => ir.test(n), cr = () => !0, dr = (n) => (
   // `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
   // For example, `hsl(0 0% 0%)` would be classified as a length without this check.
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
-  ir.test(n) && !nr.test(n)
-), vt = () => !1, dr = (n) => or.test(n), ur = (n) => ar.test(n), hr = (n) => !w(n) && !b(n), fr = (n) => de(n, St, vt), w = (n) => wt.test(n), se = (n) => de(n, Ct, cr), Te = (n) => de(n, yr, C), Ze = (n) => de(n, jt, vt), pr = (n) => de(n, kt, ur), ve = (n) => de(n, Lt, dr), b = (n) => bt.test(n), ge = (n) => ue(n, Ct), gr = (n) => ue(n, wr), Qe = (n) => ue(n, jt), mr = (n) => ue(n, St), xr = (n) => ue(n, kt), je = (n) => ue(n, Lt, !0), de = (n, e, t) => {
+  nr.test(n) && !or.test(n)
+), vt = () => !1, ur = (n) => ar.test(n), hr = (n) => lr.test(n), fr = (n) => !w(n) && !b(n), pr = (n) => de(n, St, vt), w = (n) => wt.test(n), se = (n) => de(n, Ct, dr), Te = (n) => de(n, wr, N), Ze = (n) => de(n, jt, vt), gr = (n) => de(n, kt, hr), je = (n) => de(n, Nt, ur), b = (n) => bt.test(n), ge = (n) => ue(n, Ct), mr = (n) => ue(n, br), Qe = (n) => ue(n, jt), xr = (n) => ue(n, St), yr = (n) => ue(n, kt), ke = (n) => ue(n, Nt, !0), de = (n, e, t) => {
   const r = wt.exec(n);
   return r ? r[1] ? e(r[1]) : t(r[2]) : !1;
 }, ue = (n, e, t = !1) => {
   const r = bt.exec(n);
   return r ? r[1] ? e(r[1]) : t : !1;
-}, jt = (n) => n === "position" || n === "percentage", kt = (n) => n === "image" || n === "url", St = (n) => n === "length" || n === "size" || n === "bg-size", Ct = (n) => n === "length", yr = (n) => n === "number", wr = (n) => n === "family-name", Lt = (n) => n === "shadow", br = () => {
-  const n = D("color"), e = D("font"), t = D("text"), r = D("font-weight"), i = D("tracking"), o = D("leading"), a = D("breakpoint"), l = D("container"), c = D("spacing"), d = D("radius"), u = D("shadow"), h = D("inset-shadow"), m = D("text-shadow"), x = D("drop-shadow"), g = D("blur"), f = D("perspective"), k = D("aspect"), E = D("ease"), P = D("animate"), $ = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], M = () => [
+}, jt = (n) => n === "position" || n === "percentage", kt = (n) => n === "image" || n === "url", St = (n) => n === "length" || n === "size" || n === "bg-size", Ct = (n) => n === "length", wr = (n) => n === "number", br = (n) => n === "family-name", Nt = (n) => n === "shadow", vr = () => {
+  const n = U("color"), e = U("font"), t = U("text"), r = U("font-weight"), i = U("tracking"), o = U("leading"), a = U("breakpoint"), l = U("container"), c = U("spacing"), d = U("radius"), h = U("shadow"), u = U("inset-shadow"), m = U("text-shadow"), x = U("drop-shadow"), p = U("blur"), v = U("perspective"), C = U("aspect"), A = U("ease"), E = U("animate"), T = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], g = () => [
     "center",
     "top",
     "bottom",
@@ -595,15 +595,15 @@ const D = (n) => {
     "bottom-left",
     // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
     "left-bottom"
-  ], _ = () => [...M(), b, w], H = () => ["auto", "hidden", "clip", "visible", "scroll"], F = () => ["auto", "contain", "none"], y = () => [b, w, c], N = () => [ae, "full", "auto", ...y()], R = () => [re, "none", "subgrid", b, w], U = () => ["auto", {
+  ], O = () => [...g(), b, w], B = () => ["auto", "hidden", "clip", "visible", "scroll"], F = () => ["auto", "contain", "none"], y = () => [b, w, c], R = () => [ae, "full", "auto", ...y()], M = () => [re, "none", "subgrid", b, w], G = () => ["auto", {
     span: ["full", re, b, w]
-  }, re, b, w], Q = () => [re, "auto", b, w], Y = () => ["auto", "min", "max", "fr", b, w], V = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], J = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], I = () => ["auto", ...y()], B = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...y()], v = () => [n, b, w], X = () => [...M(), Qe, Ze, {
+  }, re, b, w], Q = () => [re, "auto", b, w], Y = () => ["auto", "min", "max", "fr", b, w], W = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], J = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], I = () => ["auto", ...y()], V = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...y()], j = () => [n, b, w], X = () => [...g(), Qe, Ze, {
     position: [b, w]
-  }], p = () => ["no-repeat", {
+  }], f = () => ["no-repeat", {
     repeat: ["", "x", "y", "space", "round"]
-  }], j = () => ["auto", "cover", "contain", mr, fr, {
+  }], k = () => ["auto", "cover", "contain", xr, pr, {
     size: [b, w]
-  }], O = () => [Me, ge, se], L = () => [
+  }], P = () => [Me, ge, se], L = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
@@ -611,14 +611,14 @@ const D = (n) => {
     d,
     b,
     w
-  ], T = () => ["", C, ge, se], G = () => ["solid", "dashed", "dotted", "double"], oe = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], z = () => [C, Me, Qe, Ze], W = () => [
+  ], $ = () => ["", N, ge, se], H = () => ["solid", "dashed", "dotted", "double"], oe = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], _ = () => [N, Me, Qe, Ze], D = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
-    g,
+    p,
     b,
     w
-  ], q = () => ["none", C, b, w], te = () => ["none", C, b, w], he = () => [C, b, w], we = () => [ae, "full", ...y()];
+  ], q = () => ["none", N, b, w], te = () => ["none", N, b, w], he = () => [N, b, w], be = () => [ae, "full", ...y()];
   return {
     cacheSize: 500,
     theme: {
@@ -626,18 +626,18 @@ const D = (n) => {
       aspect: ["video"],
       blur: [ee],
       breakpoint: [ee],
-      color: [lr],
+      color: [cr],
       container: [ee],
       "drop-shadow": [ee],
       ease: ["in", "out", "in-out"],
-      font: [hr],
+      font: [fr],
       "font-weight": ["thin", "extralight", "light", "normal", "medium", "semibold", "bold", "extrabold", "black"],
       "inset-shadow": [ee],
       leading: ["none", "tight", "snug", "normal", "relaxed", "loose"],
       perspective: ["dramatic", "near", "normal", "midrange", "distant", "none"],
       radius: [ee],
       shadow: [ee],
-      spacing: ["px", C],
+      spacing: ["px", N],
       text: [ee],
       "text-shadow": [ee],
       tracking: ["tighter", "tight", "normal", "wide", "wider", "widest"]
@@ -651,7 +651,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/aspect-ratio
        */
       aspect: [{
-        aspect: ["auto", "square", ae, w, b, k]
+        aspect: ["auto", "square", ae, w, b, C]
       }],
       /**
        * Container
@@ -664,21 +664,21 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/columns
        */
       columns: [{
-        columns: [C, w, b, l]
+        columns: [N, w, b, l]
       }],
       /**
        * Break After
        * @see https://tailwindcss.com/docs/break-after
        */
       "break-after": [{
-        "break-after": $()
+        "break-after": T()
       }],
       /**
        * Break Before
        * @see https://tailwindcss.com/docs/break-before
        */
       "break-before": [{
-        "break-before": $()
+        "break-before": T()
       }],
       /**
        * Break Inside
@@ -742,28 +742,28 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/object-position
        */
       "object-position": [{
-        object: _()
+        object: O()
       }],
       /**
        * Overflow
        * @see https://tailwindcss.com/docs/overflow
        */
       overflow: [{
-        overflow: H()
+        overflow: B()
       }],
       /**
        * Overflow X
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-x": [{
-        "overflow-x": H()
+        "overflow-x": B()
       }],
       /**
        * Overflow Y
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-y": [{
-        "overflow-y": H()
+        "overflow-y": B()
       }],
       /**
        * Overscroll Behavior
@@ -796,63 +796,63 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       inset: [{
-        inset: N()
+        inset: R()
       }],
       /**
        * Right / Left
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-x": [{
-        "inset-x": N()
+        "inset-x": R()
       }],
       /**
        * Top / Bottom
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-y": [{
-        "inset-y": N()
+        "inset-y": R()
       }],
       /**
        * Start
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       start: [{
-        start: N()
+        start: R()
       }],
       /**
        * End
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       end: [{
-        end: N()
+        end: R()
       }],
       /**
        * Top
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       top: [{
-        top: N()
+        top: R()
       }],
       /**
        * Right
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       right: [{
-        right: N()
+        right: R()
       }],
       /**
        * Bottom
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       bottom: [{
-        bottom: N()
+        bottom: R()
       }],
       /**
        * Left
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       left: [{
-        left: N()
+        left: R()
       }],
       /**
        * Visibility
@@ -895,21 +895,21 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/flex
        */
       flex: [{
-        flex: [C, ae, "auto", "initial", "none", w]
+        flex: [N, ae, "auto", "initial", "none", w]
       }],
       /**
        * Flex Grow
        * @see https://tailwindcss.com/docs/flex-grow
        */
       grow: [{
-        grow: ["", C, b, w]
+        grow: ["", N, b, w]
       }],
       /**
        * Flex Shrink
        * @see https://tailwindcss.com/docs/flex-shrink
        */
       shrink: [{
-        shrink: ["", C, b, w]
+        shrink: ["", N, b, w]
       }],
       /**
        * Order
@@ -923,14 +923,14 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/grid-template-columns
        */
       "grid-cols": [{
-        "grid-cols": R()
+        "grid-cols": M()
       }],
       /**
        * Grid Column Start / End
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-start-end": [{
-        col: U()
+        col: G()
       }],
       /**
        * Grid Column Start
@@ -951,14 +951,14 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/grid-template-rows
        */
       "grid-rows": [{
-        "grid-rows": R()
+        "grid-rows": M()
       }],
       /**
        * Grid Row Start / End
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-start-end": [{
-        row: U()
+        row: G()
       }],
       /**
        * Grid Row Start
@@ -1021,7 +1021,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/justify-content
        */
       "justify-content": [{
-        justify: [...V(), "normal"]
+        justify: [...W(), "normal"]
       }],
       /**
        * Justify Items
@@ -1042,7 +1042,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/align-content
        */
       "align-content": [{
-        content: ["normal", ...V()]
+        content: ["normal", ...W()]
       }],
       /**
        * Align Items
@@ -1067,7 +1067,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/place-content
        */
       "place-content": [{
-        "place-content": V()
+        "place-content": W()
       }],
       /**
        * Place Items
@@ -1242,14 +1242,14 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/width#setting-both-width-and-height
        */
       size: [{
-        size: B()
+        size: V()
       }],
       /**
        * Width
        * @see https://tailwindcss.com/docs/width
        */
       w: [{
-        w: [l, "screen", ...B()]
+        w: [l, "screen", ...V()]
       }],
       /**
        * Min-Width
@@ -1261,7 +1261,7 @@ const D = (n) => {
           "screen",
           /** Deprecated. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
           "none",
-          ...B()
+          ...V()
         ]
       }],
       /**
@@ -1279,7 +1279,7 @@ const D = (n) => {
           {
             screen: [a]
           },
-          ...B()
+          ...V()
         ]
       }],
       /**
@@ -1287,21 +1287,21 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/height
        */
       h: [{
-        h: ["screen", "lh", ...B()]
+        h: ["screen", "lh", ...V()]
       }],
       /**
        * Min-Height
        * @see https://tailwindcss.com/docs/min-height
        */
       "min-h": [{
-        "min-h": ["screen", "lh", "none", ...B()]
+        "min-h": ["screen", "lh", "none", ...V()]
       }],
       /**
        * Max-Height
        * @see https://tailwindcss.com/docs/max-height
        */
       "max-h": [{
-        "max-h": ["screen", "lh", ...B()]
+        "max-h": ["screen", "lh", ...V()]
       }],
       // ------------------
       // --- Typography ---
@@ -1342,7 +1342,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/font-family
        */
       "font-family": [{
-        font: [gr, w, e]
+        font: [mr, w, e]
       }],
       /**
        * Font Variant Numeric
@@ -1386,7 +1386,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/line-clamp
        */
       "line-clamp": [{
-        "line-clamp": [C, "none", b, Te]
+        "line-clamp": [N, "none", b, Te]
       }],
       /**
        * Line Height
@@ -1433,14 +1433,14 @@ const D = (n) => {
        * @see https://v3.tailwindcss.com/docs/placeholder-color
        */
       "placeholder-color": [{
-        placeholder: v()
+        placeholder: j()
       }],
       /**
        * Text Color
        * @see https://tailwindcss.com/docs/text-color
        */
       "text-color": [{
-        text: v()
+        text: j()
       }],
       /**
        * Text Decoration
@@ -1452,28 +1452,28 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/text-decoration-style
        */
       "text-decoration-style": [{
-        decoration: [...G(), "wavy"]
+        decoration: [...H(), "wavy"]
       }],
       /**
        * Text Decoration Thickness
        * @see https://tailwindcss.com/docs/text-decoration-thickness
        */
       "text-decoration-thickness": [{
-        decoration: [C, "from-font", "auto", b, se]
+        decoration: [N, "from-font", "auto", b, se]
       }],
       /**
        * Text Decoration Color
        * @see https://tailwindcss.com/docs/text-decoration-color
        */
       "text-decoration-color": [{
-        decoration: v()
+        decoration: j()
       }],
       /**
        * Text Underline Offset
        * @see https://tailwindcss.com/docs/text-underline-offset
        */
       "underline-offset": [{
-        "underline-offset": [C, "auto", b, w]
+        "underline-offset": [N, "auto", b, w]
       }],
       /**
        * Text Transform
@@ -1577,14 +1577,14 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/background-repeat
        */
       "bg-repeat": [{
-        bg: p()
+        bg: f()
       }],
       /**
        * Background Size
        * @see https://tailwindcss.com/docs/background-size
        */
       "bg-size": [{
-        bg: j()
+        bg: k()
       }],
       /**
        * Background Image
@@ -1597,56 +1597,56 @@ const D = (n) => {
           }, re, b, w],
           radial: ["", b, w],
           conic: [re, b, w]
-        }, xr, pr]
+        }, yr, gr]
       }],
       /**
        * Background Color
        * @see https://tailwindcss.com/docs/background-color
        */
       "bg-color": [{
-        bg: v()
+        bg: j()
       }],
       /**
        * Gradient Color Stops From Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-from-pos": [{
-        from: O()
+        from: P()
       }],
       /**
        * Gradient Color Stops Via Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-via-pos": [{
-        via: O()
+        via: P()
       }],
       /**
        * Gradient Color Stops To Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-to-pos": [{
-        to: O()
+        to: P()
       }],
       /**
        * Gradient Color Stops From
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-from": [{
-        from: v()
+        from: j()
       }],
       /**
        * Gradient Color Stops Via
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-via": [{
-        via: v()
+        via: j()
       }],
       /**
        * Gradient Color Stops To
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-to": [{
-        to: v()
+        to: j()
       }],
       // ---------------
       // --- Borders ---
@@ -1761,70 +1761,70 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w": [{
-        border: T()
+        border: $()
       }],
       /**
        * Border Width X
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-x": [{
-        "border-x": T()
+        "border-x": $()
       }],
       /**
        * Border Width Y
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-y": [{
-        "border-y": T()
+        "border-y": $()
       }],
       /**
        * Border Width Start
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-s": [{
-        "border-s": T()
+        "border-s": $()
       }],
       /**
        * Border Width End
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-e": [{
-        "border-e": T()
+        "border-e": $()
       }],
       /**
        * Border Width Top
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-t": [{
-        "border-t": T()
+        "border-t": $()
       }],
       /**
        * Border Width Right
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-r": [{
-        "border-r": T()
+        "border-r": $()
       }],
       /**
        * Border Width Bottom
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-b": [{
-        "border-b": T()
+        "border-b": $()
       }],
       /**
        * Border Width Left
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-l": [{
-        "border-l": T()
+        "border-l": $()
       }],
       /**
        * Divide Width X
        * @see https://tailwindcss.com/docs/border-width#between-children
        */
       "divide-x": [{
-        "divide-x": T()
+        "divide-x": $()
       }],
       /**
        * Divide Width X Reverse
@@ -1836,7 +1836,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/border-width#between-children
        */
       "divide-y": [{
-        "divide-y": T()
+        "divide-y": $()
       }],
       /**
        * Divide Width Y Reverse
@@ -1848,112 +1848,112 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/border-style
        */
       "border-style": [{
-        border: [...G(), "hidden", "none"]
+        border: [...H(), "hidden", "none"]
       }],
       /**
        * Divide Style
        * @see https://tailwindcss.com/docs/border-style#setting-the-divider-style
        */
       "divide-style": [{
-        divide: [...G(), "hidden", "none"]
+        divide: [...H(), "hidden", "none"]
       }],
       /**
        * Border Color
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color": [{
-        border: v()
+        border: j()
       }],
       /**
        * Border Color X
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-x": [{
-        "border-x": v()
+        "border-x": j()
       }],
       /**
        * Border Color Y
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-y": [{
-        "border-y": v()
+        "border-y": j()
       }],
       /**
        * Border Color S
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-s": [{
-        "border-s": v()
+        "border-s": j()
       }],
       /**
        * Border Color E
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-e": [{
-        "border-e": v()
+        "border-e": j()
       }],
       /**
        * Border Color Top
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-t": [{
-        "border-t": v()
+        "border-t": j()
       }],
       /**
        * Border Color Right
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-r": [{
-        "border-r": v()
+        "border-r": j()
       }],
       /**
        * Border Color Bottom
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-b": [{
-        "border-b": v()
+        "border-b": j()
       }],
       /**
        * Border Color Left
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-l": [{
-        "border-l": v()
+        "border-l": j()
       }],
       /**
        * Divide Color
        * @see https://tailwindcss.com/docs/divide-color
        */
       "divide-color": [{
-        divide: v()
+        divide: j()
       }],
       /**
        * Outline Style
        * @see https://tailwindcss.com/docs/outline-style
        */
       "outline-style": [{
-        outline: [...G(), "none", "hidden"]
+        outline: [...H(), "none", "hidden"]
       }],
       /**
        * Outline Offset
        * @see https://tailwindcss.com/docs/outline-offset
        */
       "outline-offset": [{
-        "outline-offset": [C, b, w]
+        "outline-offset": [N, b, w]
       }],
       /**
        * Outline Width
        * @see https://tailwindcss.com/docs/outline-width
        */
       "outline-w": [{
-        outline: ["", C, ge, se]
+        outline: ["", N, ge, se]
       }],
       /**
        * Outline Color
        * @see https://tailwindcss.com/docs/outline-color
        */
       "outline-color": [{
-        outline: v()
+        outline: j()
       }],
       // ---------------
       // --- Effects ---
@@ -1967,9 +1967,9 @@ const D = (n) => {
           // Deprecated since Tailwind CSS v4.0.0
           "",
           "none",
-          u,
-          je,
-          ve
+          h,
+          ke,
+          je
         ]
       }],
       /**
@@ -1977,28 +1977,28 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-shadow-color
        */
       "shadow-color": [{
-        shadow: v()
+        shadow: j()
       }],
       /**
        * Inset Box Shadow
        * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-shadow
        */
       "inset-shadow": [{
-        "inset-shadow": ["none", h, je, ve]
+        "inset-shadow": ["none", u, ke, je]
       }],
       /**
        * Inset Box Shadow Color
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-shadow-color
        */
       "inset-shadow-color": [{
-        "inset-shadow": v()
+        "inset-shadow": j()
       }],
       /**
        * Ring Width
        * @see https://tailwindcss.com/docs/box-shadow#adding-a-ring
        */
       "ring-w": [{
-        ring: T()
+        ring: $()
       }],
       /**
        * Ring Width Inset
@@ -2012,7 +2012,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-ring-color
        */
       "ring-color": [{
-        ring: v()
+        ring: j()
       }],
       /**
        * Ring Offset Width
@@ -2021,7 +2021,7 @@ const D = (n) => {
        * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
        */
       "ring-offset-w": [{
-        "ring-offset": [C, se]
+        "ring-offset": [N, se]
       }],
       /**
        * Ring Offset Color
@@ -2030,42 +2030,42 @@ const D = (n) => {
        * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
        */
       "ring-offset-color": [{
-        "ring-offset": v()
+        "ring-offset": j()
       }],
       /**
        * Inset Ring Width
        * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-ring
        */
       "inset-ring-w": [{
-        "inset-ring": T()
+        "inset-ring": $()
       }],
       /**
        * Inset Ring Color
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-ring-color
        */
       "inset-ring-color": [{
-        "inset-ring": v()
+        "inset-ring": j()
       }],
       /**
        * Text Shadow
        * @see https://tailwindcss.com/docs/text-shadow
        */
       "text-shadow": [{
-        "text-shadow": ["none", m, je, ve]
+        "text-shadow": ["none", m, ke, je]
       }],
       /**
        * Text Shadow Color
        * @see https://tailwindcss.com/docs/text-shadow#setting-the-shadow-color
        */
       "text-shadow-color": [{
-        "text-shadow": v()
+        "text-shadow": j()
       }],
       /**
        * Opacity
        * @see https://tailwindcss.com/docs/opacity
        */
       opacity: [{
-        opacity: [C, b, w]
+        opacity: [N, b, w]
       }],
       /**
        * Mix Blend Mode
@@ -2100,106 +2100,106 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/mask-image
        */
       "mask-image-linear-pos": [{
-        "mask-linear": [C]
+        "mask-linear": [N]
       }],
       "mask-image-linear-from-pos": [{
-        "mask-linear-from": z()
+        "mask-linear-from": _()
       }],
       "mask-image-linear-to-pos": [{
-        "mask-linear-to": z()
+        "mask-linear-to": _()
       }],
       "mask-image-linear-from-color": [{
-        "mask-linear-from": v()
+        "mask-linear-from": j()
       }],
       "mask-image-linear-to-color": [{
-        "mask-linear-to": v()
+        "mask-linear-to": j()
       }],
       "mask-image-t-from-pos": [{
-        "mask-t-from": z()
+        "mask-t-from": _()
       }],
       "mask-image-t-to-pos": [{
-        "mask-t-to": z()
+        "mask-t-to": _()
       }],
       "mask-image-t-from-color": [{
-        "mask-t-from": v()
+        "mask-t-from": j()
       }],
       "mask-image-t-to-color": [{
-        "mask-t-to": v()
+        "mask-t-to": j()
       }],
       "mask-image-r-from-pos": [{
-        "mask-r-from": z()
+        "mask-r-from": _()
       }],
       "mask-image-r-to-pos": [{
-        "mask-r-to": z()
+        "mask-r-to": _()
       }],
       "mask-image-r-from-color": [{
-        "mask-r-from": v()
+        "mask-r-from": j()
       }],
       "mask-image-r-to-color": [{
-        "mask-r-to": v()
+        "mask-r-to": j()
       }],
       "mask-image-b-from-pos": [{
-        "mask-b-from": z()
+        "mask-b-from": _()
       }],
       "mask-image-b-to-pos": [{
-        "mask-b-to": z()
+        "mask-b-to": _()
       }],
       "mask-image-b-from-color": [{
-        "mask-b-from": v()
+        "mask-b-from": j()
       }],
       "mask-image-b-to-color": [{
-        "mask-b-to": v()
+        "mask-b-to": j()
       }],
       "mask-image-l-from-pos": [{
-        "mask-l-from": z()
+        "mask-l-from": _()
       }],
       "mask-image-l-to-pos": [{
-        "mask-l-to": z()
+        "mask-l-to": _()
       }],
       "mask-image-l-from-color": [{
-        "mask-l-from": v()
+        "mask-l-from": j()
       }],
       "mask-image-l-to-color": [{
-        "mask-l-to": v()
+        "mask-l-to": j()
       }],
       "mask-image-x-from-pos": [{
-        "mask-x-from": z()
+        "mask-x-from": _()
       }],
       "mask-image-x-to-pos": [{
-        "mask-x-to": z()
+        "mask-x-to": _()
       }],
       "mask-image-x-from-color": [{
-        "mask-x-from": v()
+        "mask-x-from": j()
       }],
       "mask-image-x-to-color": [{
-        "mask-x-to": v()
+        "mask-x-to": j()
       }],
       "mask-image-y-from-pos": [{
-        "mask-y-from": z()
+        "mask-y-from": _()
       }],
       "mask-image-y-to-pos": [{
-        "mask-y-to": z()
+        "mask-y-to": _()
       }],
       "mask-image-y-from-color": [{
-        "mask-y-from": v()
+        "mask-y-from": j()
       }],
       "mask-image-y-to-color": [{
-        "mask-y-to": v()
+        "mask-y-to": j()
       }],
       "mask-image-radial": [{
         "mask-radial": [b, w]
       }],
       "mask-image-radial-from-pos": [{
-        "mask-radial-from": z()
+        "mask-radial-from": _()
       }],
       "mask-image-radial-to-pos": [{
-        "mask-radial-to": z()
+        "mask-radial-to": _()
       }],
       "mask-image-radial-from-color": [{
-        "mask-radial-from": v()
+        "mask-radial-from": j()
       }],
       "mask-image-radial-to-color": [{
-        "mask-radial-to": v()
+        "mask-radial-to": j()
       }],
       "mask-image-radial-shape": [{
         "mask-radial": ["circle", "ellipse"]
@@ -2211,22 +2211,22 @@ const D = (n) => {
         }]
       }],
       "mask-image-radial-pos": [{
-        "mask-radial-at": M()
+        "mask-radial-at": g()
       }],
       "mask-image-conic-pos": [{
-        "mask-conic": [C]
+        "mask-conic": [N]
       }],
       "mask-image-conic-from-pos": [{
-        "mask-conic-from": z()
+        "mask-conic-from": _()
       }],
       "mask-image-conic-to-pos": [{
-        "mask-conic-to": z()
+        "mask-conic-to": _()
       }],
       "mask-image-conic-from-color": [{
-        "mask-conic-from": v()
+        "mask-conic-from": j()
       }],
       "mask-image-conic-to-color": [{
-        "mask-conic-to": v()
+        "mask-conic-to": j()
       }],
       /**
        * Mask Mode
@@ -2254,14 +2254,14 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/mask-repeat
        */
       "mask-repeat": [{
-        mask: p()
+        mask: f()
       }],
       /**
        * Mask Size
        * @see https://tailwindcss.com/docs/mask-size
        */
       "mask-size": [{
-        mask: j()
+        mask: k()
       }],
       /**
        * Mask Type
@@ -2298,21 +2298,21 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/blur
        */
       blur: [{
-        blur: W()
+        blur: D()
       }],
       /**
        * Brightness
        * @see https://tailwindcss.com/docs/brightness
        */
       brightness: [{
-        brightness: [C, b, w]
+        brightness: [N, b, w]
       }],
       /**
        * Contrast
        * @see https://tailwindcss.com/docs/contrast
        */
       contrast: [{
-        contrast: [C, b, w]
+        contrast: [N, b, w]
       }],
       /**
        * Drop Shadow
@@ -2324,8 +2324,8 @@ const D = (n) => {
           "",
           "none",
           x,
-          je,
-          ve
+          ke,
+          je
         ]
       }],
       /**
@@ -2333,42 +2333,42 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/filter-drop-shadow#setting-the-shadow-color
        */
       "drop-shadow-color": [{
-        "drop-shadow": v()
+        "drop-shadow": j()
       }],
       /**
        * Grayscale
        * @see https://tailwindcss.com/docs/grayscale
        */
       grayscale: [{
-        grayscale: ["", C, b, w]
+        grayscale: ["", N, b, w]
       }],
       /**
        * Hue Rotate
        * @see https://tailwindcss.com/docs/hue-rotate
        */
       "hue-rotate": [{
-        "hue-rotate": [C, b, w]
+        "hue-rotate": [N, b, w]
       }],
       /**
        * Invert
        * @see https://tailwindcss.com/docs/invert
        */
       invert: [{
-        invert: ["", C, b, w]
+        invert: ["", N, b, w]
       }],
       /**
        * Saturate
        * @see https://tailwindcss.com/docs/saturate
        */
       saturate: [{
-        saturate: [C, b, w]
+        saturate: [N, b, w]
       }],
       /**
        * Sepia
        * @see https://tailwindcss.com/docs/sepia
        */
       sepia: [{
-        sepia: ["", C, b, w]
+        sepia: ["", N, b, w]
       }],
       /**
        * Backdrop Filter
@@ -2388,63 +2388,63 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/backdrop-blur
        */
       "backdrop-blur": [{
-        "backdrop-blur": W()
+        "backdrop-blur": D()
       }],
       /**
        * Backdrop Brightness
        * @see https://tailwindcss.com/docs/backdrop-brightness
        */
       "backdrop-brightness": [{
-        "backdrop-brightness": [C, b, w]
+        "backdrop-brightness": [N, b, w]
       }],
       /**
        * Backdrop Contrast
        * @see https://tailwindcss.com/docs/backdrop-contrast
        */
       "backdrop-contrast": [{
-        "backdrop-contrast": [C, b, w]
+        "backdrop-contrast": [N, b, w]
       }],
       /**
        * Backdrop Grayscale
        * @see https://tailwindcss.com/docs/backdrop-grayscale
        */
       "backdrop-grayscale": [{
-        "backdrop-grayscale": ["", C, b, w]
+        "backdrop-grayscale": ["", N, b, w]
       }],
       /**
        * Backdrop Hue Rotate
        * @see https://tailwindcss.com/docs/backdrop-hue-rotate
        */
       "backdrop-hue-rotate": [{
-        "backdrop-hue-rotate": [C, b, w]
+        "backdrop-hue-rotate": [N, b, w]
       }],
       /**
        * Backdrop Invert
        * @see https://tailwindcss.com/docs/backdrop-invert
        */
       "backdrop-invert": [{
-        "backdrop-invert": ["", C, b, w]
+        "backdrop-invert": ["", N, b, w]
       }],
       /**
        * Backdrop Opacity
        * @see https://tailwindcss.com/docs/backdrop-opacity
        */
       "backdrop-opacity": [{
-        "backdrop-opacity": [C, b, w]
+        "backdrop-opacity": [N, b, w]
       }],
       /**
        * Backdrop Saturate
        * @see https://tailwindcss.com/docs/backdrop-saturate
        */
       "backdrop-saturate": [{
-        "backdrop-saturate": [C, b, w]
+        "backdrop-saturate": [N, b, w]
       }],
       /**
        * Backdrop Sepia
        * @see https://tailwindcss.com/docs/backdrop-sepia
        */
       "backdrop-sepia": [{
-        "backdrop-sepia": ["", C, b, w]
+        "backdrop-sepia": ["", N, b, w]
       }],
       // --------------
       // --- Tables ---
@@ -2513,28 +2513,28 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/transition-duration
        */
       duration: [{
-        duration: [C, "initial", b, w]
+        duration: [N, "initial", b, w]
       }],
       /**
        * Transition Timing Function
        * @see https://tailwindcss.com/docs/transition-timing-function
        */
       ease: [{
-        ease: ["linear", "initial", E, b, w]
+        ease: ["linear", "initial", A, b, w]
       }],
       /**
        * Transition Delay
        * @see https://tailwindcss.com/docs/transition-delay
        */
       delay: [{
-        delay: [C, b, w]
+        delay: [N, b, w]
       }],
       /**
        * Animation
        * @see https://tailwindcss.com/docs/animation
        */
       animate: [{
-        animate: ["none", P, b, w]
+        animate: ["none", E, b, w]
       }],
       // ------------------
       // --- Transforms ---
@@ -2551,14 +2551,14 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/perspective
        */
       perspective: [{
-        perspective: [f, b, w]
+        perspective: [v, b, w]
       }],
       /**
        * Perspective Origin
        * @see https://tailwindcss.com/docs/perspective-origin
        */
       "perspective-origin": [{
-        "perspective-origin": _()
+        "perspective-origin": O()
       }],
       /**
        * Rotate
@@ -2654,7 +2654,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/transform-origin
        */
       "transform-origin": [{
-        origin: _()
+        origin: O()
       }],
       /**
        * Transform Style
@@ -2668,28 +2668,28 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/translate
        */
       translate: [{
-        translate: we()
+        translate: be()
       }],
       /**
        * Translate X
        * @see https://tailwindcss.com/docs/translate
        */
       "translate-x": [{
-        "translate-x": we()
+        "translate-x": be()
       }],
       /**
        * Translate Y
        * @see https://tailwindcss.com/docs/translate
        */
       "translate-y": [{
-        "translate-y": we()
+        "translate-y": be()
       }],
       /**
        * Translate Z
        * @see https://tailwindcss.com/docs/translate
        */
       "translate-z": [{
-        "translate-z": we()
+        "translate-z": be()
       }],
       /**
        * Translate None
@@ -2704,7 +2704,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/accent-color
        */
       accent: [{
-        accent: v()
+        accent: j()
       }],
       /**
        * Appearance
@@ -2718,7 +2718,7 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/just-in-time-mode#caret-color-utilities
        */
       "caret-color": [{
-        caret: v()
+        caret: j()
       }],
       /**
        * Color Scheme
@@ -2964,21 +2964,21 @@ const D = (n) => {
        * @see https://tailwindcss.com/docs/fill
        */
       fill: [{
-        fill: ["none", ...v()]
+        fill: ["none", ...j()]
       }],
       /**
        * Stroke Width
        * @see https://tailwindcss.com/docs/stroke-width
        */
       "stroke-w": [{
-        stroke: [C, ge, se, Te]
+        stroke: [N, ge, se, Te]
       }],
       /**
        * Stroke
        * @see https://tailwindcss.com/docs/stroke
        */
       stroke: [{
-        stroke: ["none", ...v()]
+        stroke: ["none", ...j()]
       }],
       // ---------------------
       // --- Accessibility ---
@@ -3046,11 +3046,11 @@ const D = (n) => {
     },
     orderSensitiveModifiers: ["*", "**", "after", "backdrop", "before", "details-content", "file", "first-letter", "first-line", "marker", "placeholder", "selection"]
   };
-}, vr = /* @__PURE__ */ tr(br);
-function jr(...n) {
-  return vr(mt(n));
+}, jr = /* @__PURE__ */ rr(vr);
+function kr(...n) {
+  return jr(mt(n));
 }
-const kr = Vt(
+const Sr = Wt(
   "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none data-[state=open]:bg-secondary/50",
   {
     variants: {
@@ -3075,11 +3075,11 @@ const kr = Vt(
       size: "default"
     }
   }
-), Fe = At.forwardRef(
-  ({ className: n, variant: e, size: t, asChild: r = !1, ...i }, o) => /* @__PURE__ */ s.jsx("button", { className: jr(kr({ variant: e, size: t, className: n })), ref: o, ...i })
+), _e = $t.forwardRef(
+  ({ className: n, variant: e, size: t, asChild: r = !1, ...i }, o) => /* @__PURE__ */ s.jsx("button", { className: kr(Sr({ variant: e, size: t, className: n })), ref: o, ...i })
 );
-Fe.displayName = "Button";
-const A = ({ href: n, children: e, className: t = "", target: r = "_self", rel: i = "noopener noreferrer", onClick: o }) => {
+_e.displayName = "Button";
+const z = ({ href: n, children: e, className: t = "", target: r = "_self", rel: i = "noopener noreferrer", onClick: o }) => {
   const a = (l) => {
     r !== "_blank" && (l.preventDefault(), window.location.href = n), o && o(l);
   };
@@ -3095,7 +3095,7 @@ const A = ({ href: n, children: e, className: t = "", target: r = "_self", rel: 
       children: e
     }
   );
-}, Sr = (n, e, t, r) => {
+}, Cr = (n, e, t, r) => {
   var o, a, l, c;
   const i = [t, {
     code: e,
@@ -3105,8 +3105,8 @@ const A = ({ href: n, children: e, className: t = "", target: r = "_self", rel: 
     return n.services.logger.forward(i, "warn", "react-i18next::", !0);
   ne(i[0]) && (i[0] = `react-i18next:: ${i[0]}`), (c = (l = n == null ? void 0 : n.services) == null ? void 0 : l.logger) != null && c.warn ? n.services.logger.warn(...i) : console != null && console.warn && console.warn(...i);
 }, et = {}, Be = (n, e, t, r) => {
-  ne(t) && et[t] || (ne(t) && (et[t] = /* @__PURE__ */ new Date()), Sr(n, e, t, r));
-}, Nt = (n, e) => () => {
+  ne(t) && et[t] || (ne(t) && (et[t] = /* @__PURE__ */ new Date()), Cr(n, e, t, r));
+}, Lt = (n, e) => () => {
   if (n.isInitialized)
     e();
   else {
@@ -3118,13 +3118,13 @@ const A = ({ href: n, children: e, className: t = "", target: r = "_self", rel: 
     n.on("initialized", t);
   }
 }, Ve = (n, e, t) => {
-  n.loadNamespaces(e, Nt(n, t));
+  n.loadNamespaces(e, Lt(n, t));
 }, tt = (n, e, t, r) => {
   if (ne(t) && (t = [t]), n.options.preload && n.options.preload.indexOf(e) > -1) return Ve(n, t, r);
   t.forEach((i) => {
     n.options.ns.indexOf(i) < 0 && n.options.ns.push(i);
-  }), n.loadLanguages(e, Nt(n, r));
-}, Cr = (n, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
+  }), n.loadLanguages(e, Lt(n, r));
+}, Nr = (n, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
   languages: e.languages
 }), !0) : e.hasLoadedNamespace(n, {
   lng: t.lng,
@@ -3132,7 +3132,7 @@ const A = ({ href: n, children: e, className: t = "", target: r = "_self", rel: 
     var o;
     if (((o = t.bindI18n) == null ? void 0 : o.indexOf("languageChanging")) > -1 && r.services.backendConnector.backend && r.isLanguageChangingTo && !i(r.isLanguageChangingTo, n)) return !1;
   }
-}), ne = (n) => typeof n == "string", Lr = (n) => typeof n == "object" && n !== null, Nr = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, Or = {
+}), ne = (n) => typeof n == "string", Lr = (n) => typeof n == "object" && n !== null, Or = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, Rr = {
   "&amp;": "&",
   "&#38;": "&",
   "&lt;": "<",
@@ -3153,7 +3153,7 @@ const A = ({ href: n, children: e, className: t = "", target: r = "_self", rel: 
   "&#8230;": "…",
   "&#x2F;": "/",
   "&#47;": "/"
-}, Rr = (n) => Or[n], Pr = (n) => n.replace(Nr, Rr);
+}, Pr = (n) => Rr[n], Er = (n) => n.replace(Or, Pr);
 let We = {
   bindI18n: "languageChanged",
   bindI18nStore: "",
@@ -3162,24 +3162,24 @@ let We = {
   transWrapTextNodes: "",
   transKeepBasicHtmlNodesFor: ["br", "strong", "i", "p"],
   useSuspense: !0,
-  unescape: Pr
+  unescape: Er
 };
-const Er = (n = {}) => {
+const Mr = (n = {}) => {
   We = {
     ...We,
     ...n
   };
-}, Mr = () => We;
+}, Tr = () => We;
 let Ot;
-const Tr = (n) => {
+const Ar = (n) => {
   Ot = n;
-}, Ar = () => Ot, Ir = {
+}, $r = () => Ot, zr = {
   type: "3rdParty",
   init(n) {
-    Er(n.options.react), Tr(n);
+    Mr(n.options.react), Ar(n);
   }
-}, $r = It();
-class zr {
+}, Ir = zt();
+class Fr {
   constructor() {
     this.usedNamespaces = {};
   }
@@ -3193,59 +3193,59 @@ class zr {
   }
 }
 const _r = (n, e) => {
-  const t = Le();
+  const t = Ne();
   return ie(() => {
     t.current = n;
   }, [n, e]), t.current;
-}, Rt = (n, e, t, r) => n.getFixedT(e, t, r), Fr = (n, e, t, r) => Se(Rt(n, e, t, r), [n, e, t, r]), Br = (n, e = {}) => {
-  var M, _, H, F;
+}, Rt = (n, e, t, r) => n.getFixedT(e, t, r), Br = (n, e, t, r) => Ce(Rt(n, e, t, r), [n, e, t, r]), Vr = (n, e = {}) => {
+  var g, O, B, F;
   const {
     i18n: t
   } = e, {
     i18n: r,
     defaultNS: i
-  } = $t($r) || {}, o = t || r || Ar();
-  if (o && !o.reportNamespaces && (o.reportNamespaces = new zr()), !o) {
+  } = It(Ir) || {}, o = t || r || $r();
+  if (o && !o.reportNamespaces && (o.reportNamespaces = new Fr()), !o) {
     Be(o, "NO_I18NEXT_INSTANCE", "useTranslation: You will need to pass in an i18next instance by using initReactI18next");
-    const y = (R, U) => ne(U) ? U : Lr(U) && ne(U.defaultValue) ? U.defaultValue : Array.isArray(R) ? R[R.length - 1] : R, N = [y, {}, !1];
-    return N.t = y, N.i18n = {}, N.ready = !1, N;
+    const y = (M, G) => ne(G) ? G : Lr(G) && ne(G.defaultValue) ? G.defaultValue : Array.isArray(M) ? M[M.length - 1] : M, R = [y, {}, !1];
+    return R.t = y, R.i18n = {}, R.ready = !1, R;
   }
-  (M = o.options.react) != null && M.wait && Be(o, "DEPRECATED_OPTION", "useTranslation: It seems you are still using the old wait option, you may migrate to the new useSuspense behaviour.");
+  (g = o.options.react) != null && g.wait && Be(o, "DEPRECATED_OPTION", "useTranslation: It seems you are still using the old wait option, you may migrate to the new useSuspense behaviour.");
   const a = {
-    ...Mr(),
+    ...Tr(),
     ...o.options.react,
     ...e
   }, {
     useSuspense: l,
     keyPrefix: c
   } = a;
-  let d = i || ((_ = o.options) == null ? void 0 : _.defaultNS);
-  d = ne(d) ? [d] : d || ["translation"], (F = (H = o.reportNamespaces).addUsedNamespaces) == null || F.call(H, d);
-  const u = (o.isInitialized || o.initializedStoreOnce) && d.every((y) => Cr(y, o, a)), h = Fr(o, e.lng || null, a.nsMode === "fallback" ? d : d[0], c), m = () => h, x = () => Rt(o, e.lng || null, a.nsMode === "fallback" ? d : d[0], c), [g, f] = Ce(m);
-  let k = d.join();
-  e.lng && (k = `${e.lng}${k}`);
-  const E = _r(k), P = Le(!0);
+  let d = i || ((O = o.options) == null ? void 0 : O.defaultNS);
+  d = ne(d) ? [d] : d || ["translation"], (F = (B = o.reportNamespaces).addUsedNamespaces) == null || F.call(B, d);
+  const h = (o.isInitialized || o.initializedStoreOnce) && d.every((y) => Nr(y, o, a)), u = Br(o, e.lng || null, a.nsMode === "fallback" ? d : d[0], c), m = () => u, x = () => Rt(o, e.lng || null, a.nsMode === "fallback" ? d : d[0], c), [p, v] = xe(m);
+  let C = d.join();
+  e.lng && (C = `${e.lng}${C}`);
+  const A = _r(C), E = Ne(!0);
   ie(() => {
     const {
       bindI18n: y,
-      bindI18nStore: N
+      bindI18nStore: R
     } = a;
-    P.current = !0, !u && !l && (e.lng ? tt(o, e.lng, d, () => {
-      P.current && f(x);
+    E.current = !0, !h && !l && (e.lng ? tt(o, e.lng, d, () => {
+      E.current && v(x);
     }) : Ve(o, d, () => {
-      P.current && f(x);
-    })), u && E && E !== k && P.current && f(x);
-    const R = () => {
-      P.current && f(x);
+      E.current && v(x);
+    })), h && A && A !== C && E.current && v(x);
+    const M = () => {
+      E.current && v(x);
     };
-    return y && (o == null || o.on(y, R)), N && (o == null || o.store.on(N, R)), () => {
-      P.current = !1, o && (y == null || y.split(" ").forEach((U) => o.off(U, R))), N && o && N.split(" ").forEach((U) => o.store.off(U, R));
+    return y && (o == null || o.on(y, M)), R && (o == null || o.store.on(R, M)), () => {
+      E.current = !1, o && (y == null || y.split(" ").forEach((G) => o.off(G, M))), R && o && R.split(" ").forEach((G) => o.store.off(G, M));
     };
-  }, [o, k]), ie(() => {
-    P.current && u && f(m);
-  }, [o, c, u]);
-  const $ = [g, o, u];
-  if ($.t = g, $.i18n = o, $.ready = u, u || !u && !l) return $;
+  }, [o, C]), ie(() => {
+    E.current && h && v(m);
+  }, [o, c, h]);
+  const T = [p, o, h];
+  if (T.t = p, T.i18n = o, T.ready = h, h || !h && !l) return T;
   throw new Promise((y) => {
     e.lng ? tt(o, e.lng, d, () => y()) : Ve(o, d, () => y());
   });
@@ -3255,11 +3255,11 @@ const _r = (n, e) => {
     n = r, e = i;
   });
   return t.resolve = n, t.reject = e, t;
-}, rt = (n) => n == null ? "" : "" + n, Vr = (n, e, t) => {
+}, rt = (n) => n == null ? "" : "" + n, Wr = (n, e, t) => {
   n.forEach((r) => {
     e[r] && (t[r] = e[r]);
   });
-}, Wr = /###/g, st = (n) => n && n.indexOf("###") > -1 ? n.replace(Wr, ".") : n, it = (n) => !n || S(n), xe = (n, e, t) => {
+}, Dr = /###/g, st = (n) => n && n.indexOf("###") > -1 ? n.replace(Dr, ".") : n, it = (n) => !n || S(n), ye = (n, e, t) => {
   const r = S(e) ? e.split(".") : e;
   let i = 0;
   for (; i < r.length - 1; ) {
@@ -3275,37 +3275,37 @@ const _r = (n, e) => {
   const {
     obj: r,
     k: i
-  } = xe(n, e, Object);
+  } = ye(n, e, Object);
   if (r !== void 0 || e.length === 1) {
     r[i] = t;
     return;
   }
-  let o = e[e.length - 1], a = e.slice(0, e.length - 1), l = xe(n, a, Object);
+  let o = e[e.length - 1], a = e.slice(0, e.length - 1), l = ye(n, a, Object);
   for (; l.obj === void 0 && a.length; )
-    o = `${a[a.length - 1]}.${o}`, a = a.slice(0, a.length - 1), l = xe(n, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${o}`] < "u" && (l.obj = void 0);
+    o = `${a[a.length - 1]}.${o}`, a = a.slice(0, a.length - 1), l = ye(n, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${o}`] < "u" && (l.obj = void 0);
   l.obj[`${l.k}.${o}`] = t;
-}, Dr = (n, e, t, r) => {
+}, Ur = (n, e, t, r) => {
   const {
     obj: i,
     k: o
-  } = xe(n, e, Object);
+  } = ye(n, e, Object);
   i[o] = i[o] || [], i[o].push(t);
-}, Ne = (n, e) => {
+}, Le = (n, e) => {
   const {
     obj: t,
     k: r
-  } = xe(n, e);
+  } = ye(n, e);
   if (t && Object.prototype.hasOwnProperty.call(t, r))
     return t[r];
-}, Ur = (n, e, t) => {
-  const r = Ne(n, t);
-  return r !== void 0 ? r : Ne(e, t);
+}, Gr = (n, e, t) => {
+  const r = Le(n, t);
+  return r !== void 0 ? r : Le(e, t);
 }, Pt = (n, e, t) => {
   for (const r in e)
     r !== "__proto__" && r !== "constructor" && (r in n ? S(n[r]) || n[r] instanceof String || S(e[r]) || e[r] instanceof String ? t && (n[r] = e[r]) : Pt(n[r], e[r], t) : n[r] = e[r]);
   return n;
 }, le = (n) => n.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-var Gr = {
+var Hr = {
   "&": "&amp;",
   "<": "&lt;",
   ">": "&gt;",
@@ -3313,8 +3313,8 @@ var Gr = {
   "'": "&#39;",
   "/": "&#x2F;"
 };
-const Hr = (n) => S(n) ? n.replace(/[&<>"'\/]/g, (e) => Gr[e]) : n;
-class Kr {
+const Kr = (n) => S(n) ? n.replace(/[&<>"'\/]/g, (e) => Hr[e]) : n;
+class Yr {
   constructor(e) {
     this.capacity = e, this.regExpMap = /* @__PURE__ */ new Map(), this.regExpQueue = [];
   }
@@ -3326,11 +3326,11 @@ class Kr {
     return this.regExpQueue.length === this.capacity && this.regExpMap.delete(this.regExpQueue.shift()), this.regExpMap.set(e, r), this.regExpQueue.push(e), r;
   }
 }
-const Yr = [" ", ",", "?", "!", ";"], Jr = new Kr(20), qr = (n, e, t) => {
+const Jr = [" ", ",", "?", "!", ";"], qr = new Yr(20), Xr = (n, e, t) => {
   e = e || "", t = t || "";
-  const r = Yr.filter((a) => e.indexOf(a) < 0 && t.indexOf(a) < 0);
+  const r = Jr.filter((a) => e.indexOf(a) < 0 && t.indexOf(a) < 0);
   if (r.length === 0) return !0;
-  const i = Jr.getRegExp(`(${r.map((a) => a === "?" ? "\\?" : a).join("|")})`);
+  const i = qr.getRegExp(`(${r.map((a) => a === "?" ? "\\?" : a).join("|")})`);
   let o = !i.test(n);
   if (!o) {
     const a = n.indexOf(t);
@@ -3357,7 +3357,7 @@ const Yr = [" ", ",", "?", "!", ";"], Jr = new Kr(20), qr = (n, e, t) => {
     i = a;
   }
   return i;
-}, Oe = (n) => n == null ? void 0 : n.replace("_", "-"), Xr = {
+}, Oe = (n) => n == null ? void 0 : n.replace("_", "-"), Zr = {
   type: "logger",
   log(n) {
     this.output("log", n);
@@ -3378,7 +3378,7 @@ class Re {
     this.init(e, t);
   }
   init(e, t = {}) {
-    this.prefix = t.prefix || "i18next:", this.logger = e || Xr, this.options = t, this.debug = t.debug;
+    this.prefix = t.prefix || "i18next:", this.logger = e || Zr, this.options = t, this.debug = t.debug;
   }
   log(...e) {
     return this.forward(e, "log", "", !0);
@@ -3451,12 +3451,12 @@ class ot extends Ee {
     t > -1 && this.options.ns.splice(t, 1);
   }
   getResource(e, t, r, i = {}) {
-    var d, u;
+    var d, h;
     const o = i.keySeparator !== void 0 ? i.keySeparator : this.options.keySeparator, a = i.ignoreJSONStructure !== void 0 ? i.ignoreJSONStructure : this.options.ignoreJSONStructure;
     let l;
     e.indexOf(".") > -1 ? l = e.split(".") : (l = [e, t], r && (Array.isArray(r) ? l.push(...r) : S(r) && o ? l.push(...r.split(o)) : l.push(r)));
-    const c = Ne(this.data, l);
-    return !c && !t && !r && e.indexOf(".") > -1 && (e = l[0], t = l[1], r = l.slice(2).join(".")), c || !a || !S(r) ? c : De((u = (d = this.data) == null ? void 0 : d[e]) == null ? void 0 : u[t], r, o);
+    const c = Le(this.data, l);
+    return !c && !t && !r && e.indexOf(".") > -1 && (e = l[0], t = l[1], r = l.slice(2).join(".")), c || !a || !S(r) ? c : De((h = (d = this.data) == null ? void 0 : d[e]) == null ? void 0 : h[t], r, o);
   }
   addResource(e, t, r, i, o = {
     silent: !1
@@ -3480,7 +3480,7 @@ class ot extends Ee {
   }) {
     let l = [e, t];
     e.indexOf(".") > -1 && (l = e.split("."), i = r, r = t, t = l[1]), this.addNamespaces(t);
-    let c = Ne(this.data, l) || {};
+    let c = Le(this.data, l) || {};
     a.skipCopy || (r = JSON.parse(JSON.stringify(r))), i ? Pt(c, r, o) : c = {
       ...c,
       ...r
@@ -3521,7 +3521,7 @@ var Et = {
 const at = {}, lt = (n) => !S(n) && typeof n != "boolean" && typeof n != "number";
 class Pe extends Ee {
   constructor(e, t = {}) {
-    super(), Vr(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = Z.create("translator");
+    super(), Wr(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = Z.create("translator");
   }
   changeLanguage(e) {
     e && (this.language = e);
@@ -3541,7 +3541,7 @@ class Pe extends Ee {
     r === void 0 && (r = ":");
     const i = t.keySeparator !== void 0 ? t.keySeparator : this.options.keySeparator;
     let o = t.ns || this.options.defaultNS || [];
-    const a = r && e.indexOf(r) > -1, l = !this.options.userDefinedKeySeparator && !t.keySeparator && !this.options.userDefinedNsSeparator && !t.nsSeparator && !qr(e, r, i);
+    const a = r && e.indexOf(r) > -1, l = !this.options.userDefinedKeySeparator && !t.keySeparator && !this.options.userDefinedNsSeparator && !t.nsSeparator && !Xr(e, r, i);
     if (a && !l) {
       const c = e.match(this.interpolator.nestingRegexp);
       if (c && c.length > 0)
@@ -3569,95 +3569,95 @@ class Pe extends Ee {
       key: l,
       namespaces: c
     } = this.extractFromKey(e[e.length - 1], i), d = c[c.length - 1];
-    let u = i.nsSeparator !== void 0 ? i.nsSeparator : this.options.nsSeparator;
-    u === void 0 && (u = ":");
-    const h = i.lng || this.language, m = i.appendNamespaceToCIMode || this.options.appendNamespaceToCIMode;
-    if ((h == null ? void 0 : h.toLowerCase()) === "cimode")
+    let h = i.nsSeparator !== void 0 ? i.nsSeparator : this.options.nsSeparator;
+    h === void 0 && (h = ":");
+    const u = i.lng || this.language, m = i.appendNamespaceToCIMode || this.options.appendNamespaceToCIMode;
+    if ((u == null ? void 0 : u.toLowerCase()) === "cimode")
       return m ? o ? {
-        res: `${d}${u}${l}`,
+        res: `${d}${h}${l}`,
         usedKey: l,
         exactUsedKey: l,
-        usedLng: h,
+        usedLng: u,
         usedNS: d,
         usedParams: this.getUsedParamsDetails(i)
-      } : `${d}${u}${l}` : o ? {
+      } : `${d}${h}${l}` : o ? {
         res: l,
         usedKey: l,
         exactUsedKey: l,
-        usedLng: h,
+        usedLng: u,
         usedNS: d,
         usedParams: this.getUsedParamsDetails(i)
       } : l;
     const x = this.resolve(e, i);
-    let g = x == null ? void 0 : x.res;
-    const f = (x == null ? void 0 : x.usedKey) || l, k = (x == null ? void 0 : x.exactUsedKey) || l, E = ["[object Number]", "[object Function]", "[object RegExp]"], P = i.joinArrays !== void 0 ? i.joinArrays : this.options.joinArrays, $ = !this.i18nFormat || this.i18nFormat.handleAsObject, M = i.count !== void 0 && !S(i.count), _ = Pe.hasDefaultValue(i), H = M ? this.pluralResolver.getSuffix(h, i.count, i) : "", F = i.ordinal && M ? this.pluralResolver.getSuffix(h, i.count, {
+    let p = x == null ? void 0 : x.res;
+    const v = (x == null ? void 0 : x.usedKey) || l, C = (x == null ? void 0 : x.exactUsedKey) || l, A = ["[object Number]", "[object Function]", "[object RegExp]"], E = i.joinArrays !== void 0 ? i.joinArrays : this.options.joinArrays, T = !this.i18nFormat || this.i18nFormat.handleAsObject, g = i.count !== void 0 && !S(i.count), O = Pe.hasDefaultValue(i), B = g ? this.pluralResolver.getSuffix(u, i.count, i) : "", F = i.ordinal && g ? this.pluralResolver.getSuffix(u, i.count, {
       ordinal: !1
-    }) : "", y = M && !i.ordinal && i.count === 0, N = y && i[`defaultValue${this.options.pluralSeparator}zero`] || i[`defaultValue${H}`] || i[`defaultValue${F}`] || i.defaultValue;
-    let R = g;
-    $ && !g && _ && (R = N);
-    const U = lt(R), Q = Object.prototype.toString.apply(R);
-    if ($ && R && U && E.indexOf(Q) < 0 && !(S(P) && Array.isArray(R))) {
+    }) : "", y = g && !i.ordinal && i.count === 0, R = y && i[`defaultValue${this.options.pluralSeparator}zero`] || i[`defaultValue${B}`] || i[`defaultValue${F}`] || i.defaultValue;
+    let M = p;
+    T && !p && O && (M = R);
+    const G = lt(M), Q = Object.prototype.toString.apply(M);
+    if (T && M && G && A.indexOf(Q) < 0 && !(S(E) && Array.isArray(M))) {
       if (!i.returnObjects && !this.options.returnObjects) {
         this.options.returnedObjectHandler || this.logger.warn("accessing an object - but returnObjects options is not enabled!");
-        const Y = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(f, R, {
+        const Y = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(v, M, {
           ...i,
           ns: c
         }) : `key '${l} (${this.language})' returned an object instead of string.`;
         return o ? (x.res = Y, x.usedParams = this.getUsedParamsDetails(i), x) : Y;
       }
       if (a) {
-        const Y = Array.isArray(R), V = Y ? [] : {}, J = Y ? k : f;
-        for (const I in R)
-          if (Object.prototype.hasOwnProperty.call(R, I)) {
-            const B = `${J}${a}${I}`;
-            _ && !g ? V[I] = this.translate(B, {
+        const Y = Array.isArray(M), W = Y ? [] : {}, J = Y ? C : v;
+        for (const I in M)
+          if (Object.prototype.hasOwnProperty.call(M, I)) {
+            const V = `${J}${a}${I}`;
+            O && !p ? W[I] = this.translate(V, {
               ...i,
-              defaultValue: lt(N) ? N[I] : void 0,
+              defaultValue: lt(R) ? R[I] : void 0,
               joinArrays: !1,
               ns: c
-            }) : V[I] = this.translate(B, {
+            }) : W[I] = this.translate(V, {
               ...i,
               joinArrays: !1,
               ns: c
-            }), V[I] === B && (V[I] = R[I]);
+            }), W[I] === V && (W[I] = M[I]);
           }
-        g = V;
+        p = W;
       }
-    } else if ($ && S(P) && Array.isArray(g))
-      g = g.join(P), g && (g = this.extendTranslation(g, e, i, r));
+    } else if (T && S(E) && Array.isArray(p))
+      p = p.join(E), p && (p = this.extendTranslation(p, e, i, r));
     else {
-      let Y = !1, V = !1;
-      !this.isValidLookup(g) && _ && (Y = !0, g = N), this.isValidLookup(g) || (V = !0, g = l);
-      const I = (i.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && V ? void 0 : g, B = _ && N !== g && this.options.updateMissing;
-      if (V || Y || B) {
-        if (this.logger.log(B ? "updateKey" : "missingKey", h, d, l, B ? N : g), a) {
-          const j = this.resolve(l, {
+      let Y = !1, W = !1;
+      !this.isValidLookup(p) && O && (Y = !0, p = R), this.isValidLookup(p) || (W = !0, p = l);
+      const I = (i.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && W ? void 0 : p, V = O && R !== p && this.options.updateMissing;
+      if (W || Y || V) {
+        if (this.logger.log(V ? "updateKey" : "missingKey", u, d, l, V ? R : p), a) {
+          const k = this.resolve(l, {
             ...i,
             keySeparator: !1
           });
-          j && j.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
+          k && k.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
         }
-        let v = [];
+        let j = [];
         const X = this.languageUtils.getFallbackCodes(this.options.fallbackLng, i.lng || this.language);
         if (this.options.saveMissingTo === "fallback" && X && X[0])
-          for (let j = 0; j < X.length; j++)
-            v.push(X[j]);
-        else this.options.saveMissingTo === "all" ? v = this.languageUtils.toResolveHierarchy(i.lng || this.language) : v.push(i.lng || this.language);
-        const p = (j, O, L) => {
-          var G;
-          const T = _ && L !== g ? L : I;
-          this.options.missingKeyHandler ? this.options.missingKeyHandler(j, d, O, T, B, i) : (G = this.backendConnector) != null && G.saveMissing && this.backendConnector.saveMissing(j, d, O, T, B, i), this.emit("missingKey", j, d, O, g);
+          for (let k = 0; k < X.length; k++)
+            j.push(X[k]);
+        else this.options.saveMissingTo === "all" ? j = this.languageUtils.toResolveHierarchy(i.lng || this.language) : j.push(i.lng || this.language);
+        const f = (k, P, L) => {
+          var H;
+          const $ = O && L !== p ? L : I;
+          this.options.missingKeyHandler ? this.options.missingKeyHandler(k, d, P, $, V, i) : (H = this.backendConnector) != null && H.saveMissing && this.backendConnector.saveMissing(k, d, P, $, V, i), this.emit("missingKey", k, d, P, p);
         };
-        this.options.saveMissing && (this.options.saveMissingPlurals && M ? v.forEach((j) => {
-          const O = this.pluralResolver.getSuffixes(j, i);
-          y && i[`defaultValue${this.options.pluralSeparator}zero`] && O.indexOf(`${this.options.pluralSeparator}zero`) < 0 && O.push(`${this.options.pluralSeparator}zero`), O.forEach((L) => {
-            p([j], l + L, i[`defaultValue${L}`] || N);
+        this.options.saveMissing && (this.options.saveMissingPlurals && g ? j.forEach((k) => {
+          const P = this.pluralResolver.getSuffixes(k, i);
+          y && i[`defaultValue${this.options.pluralSeparator}zero`] && P.indexOf(`${this.options.pluralSeparator}zero`) < 0 && P.push(`${this.options.pluralSeparator}zero`), P.forEach((L) => {
+            f([k], l + L, i[`defaultValue${L}`] || R);
           });
-        }) : p(v, l, N));
+        }) : f(j, l, R));
       }
-      g = this.extendTranslation(g, e, i, x, r), V && g === l && this.options.appendNamespaceToMissingKey && (g = `${d}${u}${l}`), (V || Y) && this.options.parseMissingKeyHandler && (g = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${d}${u}${l}` : l, Y ? g : void 0, i));
+      p = this.extendTranslation(p, e, i, x, r), W && p === l && this.options.appendNamespaceToMissingKey && (p = `${d}${h}${l}`), (W || Y) && this.options.parseMissingKeyHandler && (p = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${d}${h}${l}` : l, Y ? p : void 0, i));
     }
-    return o ? (x.res = g, x.usedParams = this.getUsedParamsDetails(i), x) : g;
+    return o ? (x.res = p, x.usedParams = this.getUsedParamsDetails(i), x) : p;
   }
   extendTranslation(e, t, r, i, o) {
     var c, d;
@@ -3676,19 +3676,19 @@ class Pe extends Ee {
           ...r.interpolation
         }
       });
-      const u = S(e) && (((d = r == null ? void 0 : r.interpolation) == null ? void 0 : d.skipOnVariables) !== void 0 ? r.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables);
-      let h;
-      if (u) {
+      const h = S(e) && (((d = r == null ? void 0 : r.interpolation) == null ? void 0 : d.skipOnVariables) !== void 0 ? r.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables);
+      let u;
+      if (h) {
         const x = e.match(this.interpolator.nestingRegexp);
-        h = x && x.length;
+        u = x && x.length;
       }
       let m = r.replace && !S(r.replace) ? r.replace : r;
       if (this.options.interpolation.defaultVariables && (m = {
         ...this.options.interpolation.defaultVariables,
         ...m
-      }), e = this.interpolator.interpolate(e, m, r.lng || this.language || i.usedLng, r), u) {
-        const x = e.match(this.interpolator.nestingRegexp), g = x && x.length;
-        h < g && (r.nest = !1);
+      }), e = this.interpolator.interpolate(e, m, r.lng || this.language || i.usedLng, r), h) {
+        const x = e.match(this.interpolator.nestingRegexp), p = x && x.length;
+        u < p && (r.nest = !1);
       }
       !r.lng && i && i.res && (r.lng = this.language || i.usedLng), r.nest !== !1 && (e = this.interpolator.nest(e, (...x) => (o == null ? void 0 : o[0]) === x[0] && !r.context ? (this.logger.warn(`It seems you are nesting recursively key: ${x[0]} in key: ${t[0]}`), null) : this.translate(...x, t), r)), r.interpolation && this.interpolator.reset();
     }
@@ -3705,32 +3705,32 @@ class Pe extends Ee {
     let r, i, o, a, l;
     return S(e) && (e = [e]), e.forEach((c) => {
       if (this.isValidLookup(r)) return;
-      const d = this.extractFromKey(c, t), u = d.key;
-      i = u;
-      let h = d.namespaces;
-      this.options.fallbackNS && (h = h.concat(this.options.fallbackNS));
-      const m = t.count !== void 0 && !S(t.count), x = m && !t.ordinal && t.count === 0, g = t.context !== void 0 && (S(t.context) || typeof t.context == "number") && t.context !== "", f = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
-      h.forEach((k) => {
-        var E, P;
-        this.isValidLookup(r) || (l = k, !at[`${f[0]}-${k}`] && ((E = this.utils) != null && E.hasLoadedNamespace) && !((P = this.utils) != null && P.hasLoadedNamespace(l)) && (at[`${f[0]}-${k}`] = !0, this.logger.warn(`key "${i}" for languages "${f.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), f.forEach(($) => {
-          var H;
+      const d = this.extractFromKey(c, t), h = d.key;
+      i = h;
+      let u = d.namespaces;
+      this.options.fallbackNS && (u = u.concat(this.options.fallbackNS));
+      const m = t.count !== void 0 && !S(t.count), x = m && !t.ordinal && t.count === 0, p = t.context !== void 0 && (S(t.context) || typeof t.context == "number") && t.context !== "", v = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
+      u.forEach((C) => {
+        var A, E;
+        this.isValidLookup(r) || (l = C, !at[`${v[0]}-${C}`] && ((A = this.utils) != null && A.hasLoadedNamespace) && !((E = this.utils) != null && E.hasLoadedNamespace(l)) && (at[`${v[0]}-${C}`] = !0, this.logger.warn(`key "${i}" for languages "${v.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), v.forEach((T) => {
+          var B;
           if (this.isValidLookup(r)) return;
-          a = $;
-          const M = [u];
-          if ((H = this.i18nFormat) != null && H.addLookupKeys)
-            this.i18nFormat.addLookupKeys(M, u, $, k, t);
+          a = T;
+          const g = [h];
+          if ((B = this.i18nFormat) != null && B.addLookupKeys)
+            this.i18nFormat.addLookupKeys(g, h, T, C, t);
           else {
             let F;
-            m && (F = this.pluralResolver.getSuffix($, t.count, t));
-            const y = `${this.options.pluralSeparator}zero`, N = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
-            if (m && (M.push(u + F), t.ordinal && F.indexOf(N) === 0 && M.push(u + F.replace(N, this.options.pluralSeparator)), x && M.push(u + y)), g) {
-              const R = `${u}${this.options.contextSeparator}${t.context}`;
-              M.push(R), m && (M.push(R + F), t.ordinal && F.indexOf(N) === 0 && M.push(R + F.replace(N, this.options.pluralSeparator)), x && M.push(R + y));
+            m && (F = this.pluralResolver.getSuffix(T, t.count, t));
+            const y = `${this.options.pluralSeparator}zero`, R = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
+            if (m && (g.push(h + F), t.ordinal && F.indexOf(R) === 0 && g.push(h + F.replace(R, this.options.pluralSeparator)), x && g.push(h + y)), p) {
+              const M = `${h}${this.options.contextSeparator}${t.context}`;
+              g.push(M), m && (g.push(M + F), t.ordinal && F.indexOf(R) === 0 && g.push(M + F.replace(R, this.options.pluralSeparator)), x && g.push(M + y));
             }
           }
-          let _;
-          for (; _ = M.pop(); )
-            this.isValidLookup(r) || (o = _, r = this.getResource($, k, _, t));
+          let O;
+          for (; O = g.pop(); )
+            this.isValidLookup(r) || (o = O, r = this.getResource(T, C, O, t));
         }));
       });
     }), {
@@ -3848,7 +3848,7 @@ const dt = {
     pluralCategories: ["one", "other"]
   })
 };
-class Zr {
+class Qr {
   constructor(e, t = {}) {
     this.languageUtils = e, this.options = t, this.logger = Z.create("pluralResolver"), this.pluralRulesCache = {};
   }
@@ -3896,10 +3896,10 @@ class Zr {
   }
 }
 const ht = (n, e, t, r = ".", i = !0) => {
-  let o = Ur(n, e, t);
+  let o = Gr(n, e, t);
   return !o && i && S(t) && (o = De(n, t, r), o === void 0 && (o = De(e, t, r))), o;
 }, Ae = (n) => n.replace(/\$/g, "$$$$");
-class Qr {
+class es {
   constructor(e = {}) {
     var t;
     this.logger = Z.create("interpolator"), this.options = e, this.format = ((t = e == null ? void 0 : e.interpolation) == null ? void 0 : t.format) || ((r) => r), this.init(e);
@@ -3917,17 +3917,17 @@ class Qr {
       suffix: l,
       suffixEscaped: c,
       formatSeparator: d,
-      unescapeSuffix: u,
-      unescapePrefix: h,
+      unescapeSuffix: h,
+      unescapePrefix: u,
       nestingPrefix: m,
       nestingPrefixEscaped: x,
-      nestingSuffix: g,
-      nestingSuffixEscaped: f,
-      nestingOptionsSeparator: k,
-      maxReplaces: E,
-      alwaysFormat: P
+      nestingSuffix: p,
+      nestingSuffixEscaped: v,
+      nestingOptionsSeparator: C,
+      maxReplaces: A,
+      alwaysFormat: E
     } = e.interpolation;
-    this.escape = t !== void 0 ? t : Hr, this.escapeValue = r !== void 0 ? r : !0, this.useRawValueToEscape = i !== void 0 ? i : !1, this.prefix = o ? le(o) : a || "{{", this.suffix = l ? le(l) : c || "}}", this.formatSeparator = d || ",", this.unescapePrefix = u ? "" : h || "-", this.unescapeSuffix = this.unescapePrefix ? "" : u || "", this.nestingPrefix = m ? le(m) : x || le("$t("), this.nestingSuffix = g ? le(g) : f || le(")"), this.nestingOptionsSeparator = k || ",", this.maxReplaces = E || 1e3, this.alwaysFormat = P !== void 0 ? P : !1, this.resetRegExp();
+    this.escape = t !== void 0 ? t : Kr, this.escapeValue = r !== void 0 ? r : !0, this.useRawValueToEscape = i !== void 0 ? i : !1, this.prefix = o ? le(o) : a || "{{", this.suffix = l ? le(l) : c || "}}", this.formatSeparator = d || ",", this.unescapePrefix = h ? "" : u || "-", this.unescapeSuffix = this.unescapePrefix ? "" : h || "", this.nestingPrefix = m ? le(m) : x || le("$t("), this.nestingSuffix = p ? le(p) : v || le(")"), this.nestingOptionsSeparator = C || ",", this.maxReplaces = A || 1e3, this.alwaysFormat = E !== void 0 ? E : !1, this.resetRegExp();
   }
   reset() {
     this.options && this.init(this.options);
@@ -3939,47 +3939,47 @@ class Qr {
   interpolate(e, t, r, i) {
     var x;
     let o, a, l;
-    const c = this.options && this.options.interpolation && this.options.interpolation.defaultVariables || {}, d = (g) => {
-      if (g.indexOf(this.formatSeparator) < 0) {
-        const P = ht(t, c, g, this.options.keySeparator, this.options.ignoreJSONStructure);
-        return this.alwaysFormat ? this.format(P, void 0, r, {
+    const c = this.options && this.options.interpolation && this.options.interpolation.defaultVariables || {}, d = (p) => {
+      if (p.indexOf(this.formatSeparator) < 0) {
+        const E = ht(t, c, p, this.options.keySeparator, this.options.ignoreJSONStructure);
+        return this.alwaysFormat ? this.format(E, void 0, r, {
           ...i,
           ...t,
-          interpolationkey: g
-        }) : P;
+          interpolationkey: p
+        }) : E;
       }
-      const f = g.split(this.formatSeparator), k = f.shift().trim(), E = f.join(this.formatSeparator).trim();
-      return this.format(ht(t, c, k, this.options.keySeparator, this.options.ignoreJSONStructure), E, r, {
+      const v = p.split(this.formatSeparator), C = v.shift().trim(), A = v.join(this.formatSeparator).trim();
+      return this.format(ht(t, c, C, this.options.keySeparator, this.options.ignoreJSONStructure), A, r, {
         ...i,
         ...t,
-        interpolationkey: k
+        interpolationkey: C
       });
     };
     this.resetRegExp();
-    const u = (i == null ? void 0 : i.missingInterpolationHandler) || this.options.missingInterpolationHandler, h = ((x = i == null ? void 0 : i.interpolation) == null ? void 0 : x.skipOnVariables) !== void 0 ? i.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables;
+    const h = (i == null ? void 0 : i.missingInterpolationHandler) || this.options.missingInterpolationHandler, u = ((x = i == null ? void 0 : i.interpolation) == null ? void 0 : x.skipOnVariables) !== void 0 ? i.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables;
     return [{
       regex: this.regexpUnescape,
-      safeValue: (g) => Ae(g)
+      safeValue: (p) => Ae(p)
     }, {
       regex: this.regexp,
-      safeValue: (g) => this.escapeValue ? Ae(this.escape(g)) : Ae(g)
-    }].forEach((g) => {
-      for (l = 0; o = g.regex.exec(e); ) {
-        const f = o[1].trim();
-        if (a = d(f), a === void 0)
-          if (typeof u == "function") {
-            const E = u(e, o, i);
-            a = S(E) ? E : "";
-          } else if (i && Object.prototype.hasOwnProperty.call(i, f))
+      safeValue: (p) => this.escapeValue ? Ae(this.escape(p)) : Ae(p)
+    }].forEach((p) => {
+      for (l = 0; o = p.regex.exec(e); ) {
+        const v = o[1].trim();
+        if (a = d(v), a === void 0)
+          if (typeof h == "function") {
+            const A = h(e, o, i);
+            a = S(A) ? A : "";
+          } else if (i && Object.prototype.hasOwnProperty.call(i, v))
             a = "";
-          else if (h) {
+          else if (u) {
             a = o[0];
             continue;
           } else
-            this.logger.warn(`missed to pass in variable ${f} for interpolating ${e}`), a = "";
+            this.logger.warn(`missed to pass in variable ${v} for interpolating ${e}`), a = "";
         else !S(a) && !this.useRawValueToEscape && (a = rt(a));
-        const k = g.safeValue(a);
-        if (e = e.replace(o[0], k), h ? (g.regex.lastIndex += a.length, g.regex.lastIndex -= o[0].length) : g.regex.lastIndex = 0, l++, l >= this.maxReplaces)
+        const C = p.safeValue(a);
+        if (e = e.replace(o[0], C), u ? (p.regex.lastIndex += a.length, p.regex.lastIndex -= o[0].length) : p.regex.lastIndex = 0, l++, l >= this.maxReplaces)
           break;
       }
     }), e;
@@ -3987,20 +3987,20 @@ class Qr {
   nest(e, t, r = {}) {
     let i, o, a;
     const l = (c, d) => {
-      const u = this.nestingOptionsSeparator;
-      if (c.indexOf(u) < 0) return c;
-      const h = c.split(new RegExp(`${u}[ ]*{`));
-      let m = `{${h[1]}`;
-      c = h[0], m = this.interpolate(m, a);
-      const x = m.match(/'/g), g = m.match(/"/g);
-      (((x == null ? void 0 : x.length) ?? 0) % 2 === 0 && !g || g.length % 2 !== 0) && (m = m.replace(/'/g, '"'));
+      const h = this.nestingOptionsSeparator;
+      if (c.indexOf(h) < 0) return c;
+      const u = c.split(new RegExp(`${h}[ ]*{`));
+      let m = `{${u[1]}`;
+      c = u[0], m = this.interpolate(m, a);
+      const x = m.match(/'/g), p = m.match(/"/g);
+      (((x == null ? void 0 : x.length) ?? 0) % 2 === 0 && !p || p.length % 2 !== 0) && (m = m.replace(/'/g, '"'));
       try {
         a = JSON.parse(m), d && (a = {
           ...d,
           ...a
         });
-      } catch (f) {
-        return this.logger.warn(`failed parsing options string in nesting for key ${c}`, f), `${c}${u}${m}`;
+      } catch (v) {
+        return this.logger.warn(`failed parsing options string in nesting for key ${c}`, v), `${c}${h}${m}`;
       }
       return a.defaultValue && a.defaultValue.indexOf(this.prefix) > -1 && delete a.defaultValue, c;
     };
@@ -4011,11 +4011,11 @@ class Qr {
       }, a = a.replace && !S(a.replace) ? a.replace : a, a.applyPostProcessor = !1, delete a.defaultValue;
       let d = !1;
       if (i[0].indexOf(this.formatSeparator) !== -1 && !/{.*}/.test(i[1])) {
-        const u = i[1].split(this.formatSeparator).map((h) => h.trim());
-        i[1] = u.shift(), c = u, d = !0;
+        const h = i[1].split(this.formatSeparator).map((u) => u.trim());
+        i[1] = h.shift(), c = h, d = !0;
       }
       if (o = t(l.call(this, i[1].trim(), a), a), o && i[0] === e && !S(o)) return o;
-      S(o) || (o = rt(o)), o || (this.logger.warn(`missed to resolve ${i[1]} for nesting ${e}`), o = ""), d && (o = c.reduce((u, h) => this.format(u, h, r.lng, {
+      S(o) || (o = rt(o)), o || (this.logger.warn(`missed to resolve ${i[1]} for nesting ${e}`), o = ""), d && (o = c.reduce((h, u) => this.format(h, u, r.lng, {
         ...r,
         interpolationkey: i[1].trim()
       }), o.trim())), e = e.replace(i[0], o), this.regexp.lastIndex = 0;
@@ -4023,7 +4023,7 @@ class Qr {
     return e;
   }
 }
-const es = (n) => {
+const ts = (n) => {
   let e = n.toLowerCase().trim();
   const t = {};
   if (n.indexOf("(") > -1) {
@@ -4032,8 +4032,8 @@ const es = (n) => {
     const i = r[1].substring(0, r[1].length - 1);
     e === "currency" && i.indexOf(":") < 0 ? t.currency || (t.currency = i.trim()) : e === "relativetime" && i.indexOf(":") < 0 ? t.range || (t.range = i.trim()) : i.split(";").forEach((a) => {
       if (a) {
-        const [l, ...c] = a.split(":"), d = c.join(":").trim().replace(/^'+|'+$/g, ""), u = l.trim();
-        t[u] || (t[u] = d), d === "false" && (t[u] = !1), d === "true" && (t[u] = !0), isNaN(d) || (t[u] = parseInt(d, 10));
+        const [l, ...c] = a.split(":"), d = c.join(":").trim().replace(/^'+|'+$/g, ""), h = l.trim();
+        t[h] || (t[h] = d), d === "false" && (t[h] = !1), d === "true" && (t[h] = !0), isNaN(d) || (t[h] = parseInt(d, 10));
       }
     });
   }
@@ -4054,7 +4054,7 @@ const es = (n) => {
     return l || (l = n(Oe(r), i), e[a] = l), l(t);
   };
 };
-class ts {
+class rs {
   constructor(e = {}) {
     this.logger = Z.create("formatter"), this.options = e, this.formats = {
       number: ce((t, r) => {
@@ -4108,17 +4108,17 @@ class ts {
       o[0] = [o[0], ...o.splice(1, l)].join(this.formatSeparator);
     }
     return o.reduce((l, c) => {
-      var h;
+      var u;
       const {
         formatName: d,
-        formatOptions: u
-      } = es(c);
+        formatOptions: h
+      } = ts(c);
       if (this.formats[d]) {
         let m = l;
         try {
-          const x = ((h = i == null ? void 0 : i.formatParams) == null ? void 0 : h[i.interpolationkey]) || {}, g = x.locale || x.lng || i.locale || i.lng || r;
-          m = this.formats[d](l, g, {
-            ...u,
+          const x = ((u = i == null ? void 0 : i.formatParams) == null ? void 0 : u[i.interpolationkey]) || {}, p = x.locale || x.lng || i.locale || i.lng || r;
+          m = this.formats[d](l, p, {
+            ...h,
             ...i,
             ...x
           });
@@ -4132,10 +4132,10 @@ class ts {
     }, e);
   }
 }
-const rs = (n, e) => {
+const ss = (n, e) => {
   n.pending[e] !== void 0 && (delete n.pending[e], n.pendingCount--);
 };
-class ss extends Ee {
+class is extends Ee {
   constructor(e, t, r, i = {}) {
     var o, a;
     super(), this.backend = e, this.store = t, this.services = r, this.languageUtils = r.languageUtils, this.options = i, this.logger = Z.create("backendConnector"), this.waitingReads = [], this.maxParallelReads = i.maxParallelReads || 10, this.readingCalls = 0, this.maxRetries = i.maxRetries >= 0 ? i.maxRetries : 5, this.retryTimeout = i.retryTimeout >= 1 ? i.retryTimeout : 350, this.state = {}, this.queue = [], (a = (o = this.backend) == null ? void 0 : o.init) == null || a.call(o, r, i.backend, i);
@@ -4143,11 +4143,11 @@ class ss extends Ee {
   queueLoad(e, t, r, i) {
     const o = {}, a = {}, l = {}, c = {};
     return e.forEach((d) => {
-      let u = !0;
-      t.forEach((h) => {
-        const m = `${d}|${h}`;
-        !r.reload && this.store.hasResourceBundle(d, h) ? this.state[m] = 2 : this.state[m] < 0 || (this.state[m] === 1 ? a[m] === void 0 && (a[m] = !0) : (this.state[m] = 1, u = !1, a[m] === void 0 && (a[m] = !0), o[m] === void 0 && (o[m] = !0), c[h] === void 0 && (c[h] = !0)));
-      }), u || (l[d] = !0);
+      let h = !0;
+      t.forEach((u) => {
+        const m = `${d}|${u}`;
+        !r.reload && this.store.hasResourceBundle(d, u) ? this.state[m] = 2 : this.state[m] < 0 || (this.state[m] === 1 ? a[m] === void 0 && (a[m] = !0) : (this.state[m] = 1, h = !1, a[m] === void 0 && (a[m] = !0), o[m] === void 0 && (o[m] = !0), c[u] === void 0 && (c[u] = !0)));
+      }), h || (l[d] = !0);
     }), (Object.keys(o).length || Object.keys(a).length) && this.queue.push({
       pending: a,
       pendingCount: Object.keys(a).length,
@@ -4168,11 +4168,11 @@ class ss extends Ee {
     }), this.state[e] = t ? -1 : 2, t && r && (this.state[e] = 0);
     const l = {};
     this.queue.forEach((c) => {
-      Dr(c.loaded, [o], a), rs(c, e), t && c.errors.push(t), c.pendingCount === 0 && !c.done && (Object.keys(c.loaded).forEach((d) => {
+      Ur(c.loaded, [o], a), ss(c, e), t && c.errors.push(t), c.pendingCount === 0 && !c.done && (Object.keys(c.loaded).forEach((d) => {
         l[d] || (l[d] = {});
-        const u = c.loaded[d];
-        u.length && u.forEach((h) => {
-          l[d][h] === void 0 && (l[d][h] = !0);
+        const h = c.loaded[d];
+        h.length && h.forEach((u) => {
+          l[d][u] === void 0 && (l[d][u] = !0);
         });
       }), c.done = !0, c.errors.length ? c.callback(c.errors) : c.callback());
     }), this.emit("loaded", l), this.queue = this.queue.filter((c) => !c.done);
@@ -4191,23 +4191,23 @@ class ss extends Ee {
       return;
     }
     this.readingCalls++;
-    const l = (d, u) => {
+    const l = (d, h) => {
       if (this.readingCalls--, this.waitingReads.length > 0) {
-        const h = this.waitingReads.shift();
-        this.read(h.lng, h.ns, h.fcName, h.tried, h.wait, h.callback);
+        const u = this.waitingReads.shift();
+        this.read(u.lng, u.ns, u.fcName, u.tried, u.wait, u.callback);
       }
-      if (d && u && i < this.maxRetries) {
+      if (d && h && i < this.maxRetries) {
         setTimeout(() => {
           this.read.call(this, e, t, r, i + 1, o * 2, a);
         }, o);
         return;
       }
-      a(d, u);
+      a(d, h);
     }, c = this.backend[r].bind(this.backend);
     if (c.length === 2) {
       try {
         const d = c(e, t);
-        d && typeof d.then == "function" ? d.then((u) => l(null, u)).catch(l) : l(null, d);
+        d && typeof d.then == "function" ? d.then((h) => l(null, h)).catch(l) : l(null, d);
       } catch (d) {
         l(d);
       }
@@ -4242,8 +4242,8 @@ class ss extends Ee {
   }
   saveMissing(e, t, r, i, o, a = {}, l = () => {
   }) {
-    var c, d, u, h, m;
-    if ((d = (c = this.services) == null ? void 0 : c.utils) != null && d.hasLoadedNamespace && !((h = (u = this.services) == null ? void 0 : u.utils) != null && h.hasLoadedNamespace(t))) {
+    var c, d, h, u, m;
+    if ((d = (c = this.services) == null ? void 0 : c.utils) != null && d.hasLoadedNamespace && !((u = (h = this.services) == null ? void 0 : h.utils) != null && u.hasLoadedNamespace(t))) {
       this.logger.warn(`did not save key "${r}" as the namespace "${t}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!");
       return;
     }
@@ -4252,16 +4252,16 @@ class ss extends Ee {
         const x = {
           ...a,
           isUpdate: o
-        }, g = this.backend.create.bind(this.backend);
-        if (g.length < 6)
+        }, p = this.backend.create.bind(this.backend);
+        if (p.length < 6)
           try {
-            let f;
-            g.length === 5 ? f = g(e, t, r, i, x) : f = g(e, t, r, i), f && typeof f.then == "function" ? f.then((k) => l(null, k)).catch(l) : l(null, f);
-          } catch (f) {
-            l(f);
+            let v;
+            p.length === 5 ? v = p(e, t, r, i, x) : v = p(e, t, r, i), v && typeof v.then == "function" ? v.then((C) => l(null, C)).catch(l) : l(null, v);
+          } catch (v) {
+            l(v);
           }
         else
-          g(e, t, r, i, l, x);
+          p(e, t, r, i, l, x);
       }
       !e || !e[0] || this.store.addResource(e[0], t, r, i);
     }
@@ -4326,17 +4326,17 @@ const ft = () => ({
 }), pt = (n) => {
   var e, t;
   return S(n.ns) && (n.ns = [n.ns]), S(n.fallbackLng) && (n.fallbackLng = [n.fallbackLng]), S(n.fallbackNS) && (n.fallbackNS = [n.fallbackNS]), ((t = (e = n.supportedLngs) == null ? void 0 : e.indexOf) == null ? void 0 : t.call(e, "cimode")) < 0 && (n.supportedLngs = n.supportedLngs.concat(["cimode"])), typeof n.initImmediate == "boolean" && (n.initAsync = n.initImmediate), n;
-}, ke = () => {
-}, is = (n) => {
+}, Se = () => {
+}, ns = (n) => {
   Object.getOwnPropertyNames(Object.getPrototypeOf(n)).forEach((t) => {
     typeof n[t] == "function" && (n[t] = n[t].bind(n));
   });
 };
-class ye extends Ee {
+class we extends Ee {
   constructor(e = {}, t) {
     if (super(), this.options = pt(e), this.services = {}, this.logger = Z, this.modules = {
       external: []
-    }, is(this), t && !this.isInitialized && !e.isClone) {
+    }, ns(this), t && !this.isInitialized && !e.isClone) {
       if (!this.options.initAsync)
         return this.init(e, t), this;
       setTimeout(() => {
@@ -4359,42 +4359,42 @@ class ye extends Ee {
     if (!this.options.isClone) {
       this.modules.logger ? Z.init(i(this.modules.logger), this.options) : Z.init(null, this.options);
       let d;
-      this.modules.formatter ? d = this.modules.formatter : d = ts;
-      const u = new ct(this.options);
+      this.modules.formatter ? d = this.modules.formatter : d = rs;
+      const h = new ct(this.options);
       this.store = new ot(this.options.resources, this.options);
-      const h = this.services;
-      h.logger = Z, h.resourceStore = this.store, h.languageUtils = u, h.pluralResolver = new Zr(u, {
+      const u = this.services;
+      u.logger = Z, u.resourceStore = this.store, u.languageUtils = h, u.pluralResolver = new Qr(h, {
         prepend: this.options.pluralSeparator,
         simplifyPluralSuffix: this.options.simplifyPluralSuffix
-      }), d && (!this.options.interpolation.format || this.options.interpolation.format === r.interpolation.format) && (h.formatter = i(d), h.formatter.init(h, this.options), this.options.interpolation.format = h.formatter.format.bind(h.formatter)), h.interpolator = new Qr(this.options), h.utils = {
+      }), d && (!this.options.interpolation.format || this.options.interpolation.format === r.interpolation.format) && (u.formatter = i(d), u.formatter.init(u, this.options), this.options.interpolation.format = u.formatter.format.bind(u.formatter)), u.interpolator = new es(this.options), u.utils = {
         hasLoadedNamespace: this.hasLoadedNamespace.bind(this)
-      }, h.backendConnector = new ss(i(this.modules.backend), h.resourceStore, h, this.options), h.backendConnector.on("*", (m, ...x) => {
+      }, u.backendConnector = new is(i(this.modules.backend), u.resourceStore, u, this.options), u.backendConnector.on("*", (m, ...x) => {
         this.emit(m, ...x);
-      }), this.modules.languageDetector && (h.languageDetector = i(this.modules.languageDetector), h.languageDetector.init && h.languageDetector.init(h, this.options.detection, this.options)), this.modules.i18nFormat && (h.i18nFormat = i(this.modules.i18nFormat), h.i18nFormat.init && h.i18nFormat.init(this)), this.translator = new Pe(this.services, this.options), this.translator.on("*", (m, ...x) => {
+      }), this.modules.languageDetector && (u.languageDetector = i(this.modules.languageDetector), u.languageDetector.init && u.languageDetector.init(u, this.options.detection, this.options)), this.modules.i18nFormat && (u.i18nFormat = i(this.modules.i18nFormat), u.i18nFormat.init && u.i18nFormat.init(this)), this.translator = new Pe(this.services, this.options), this.translator.on("*", (m, ...x) => {
         this.emit(m, ...x);
       }), this.modules.external.forEach((m) => {
         m.init && m.init(this);
       });
     }
-    if (this.format = this.options.interpolation.format, t || (t = ke), this.options.fallbackLng && !this.services.languageDetector && !this.options.lng) {
+    if (this.format = this.options.interpolation.format, t || (t = Se), this.options.fallbackLng && !this.services.languageDetector && !this.options.lng) {
       const d = this.services.languageUtils.getFallbackCodes(this.options.fallbackLng);
       d.length > 0 && d[0] !== "dev" && (this.options.lng = d[0]);
     }
     !this.services.languageDetector && !this.options.lng && this.logger.warn("init: no languageDetector is used and no lng is defined"), ["getResource", "hasResourceBundle", "getResourceBundle", "getDataByLanguage"].forEach((d) => {
-      this[d] = (...u) => this.store[d](...u);
+      this[d] = (...h) => this.store[d](...h);
     }), ["addResource", "addResources", "addResourceBundle", "removeResourceBundle"].forEach((d) => {
-      this[d] = (...u) => (this.store[d](...u), this);
+      this[d] = (...h) => (this.store[d](...h), this);
     });
     const l = me(), c = () => {
-      const d = (u, h) => {
-        this.isInitializing = !1, this.isInitialized && !this.initializedStoreOnce && this.logger.warn("init: i18next is already initialized. You should call init just once!"), this.isInitialized = !0, this.options.isClone || this.logger.log("initialized", this.options), this.emit("initialized", this.options), l.resolve(h), t(u, h);
+      const d = (h, u) => {
+        this.isInitializing = !1, this.isInitialized && !this.initializedStoreOnce && this.logger.warn("init: i18next is already initialized. You should call init just once!"), this.isInitialized = !0, this.options.isClone || this.logger.log("initialized", this.options), this.emit("initialized", this.options), l.resolve(u), t(h, u);
       };
       if (this.languages && !this.isInitialized) return d(null, this.t.bind(this));
       this.changeLanguage(this.options.lng, d);
     };
     return this.options.resources || !this.options.initAsync ? c() : setTimeout(c, 0), l;
   }
-  loadResources(e, t = ke) {
+  loadResources(e, t = Se) {
     var o, a;
     let r = t;
     const i = S(e) ? e : this.language;
@@ -4402,11 +4402,11 @@ class ye extends Ee {
       if ((i == null ? void 0 : i.toLowerCase()) === "cimode" && (!this.options.preload || this.options.preload.length === 0)) return r();
       const l = [], c = (d) => {
         if (!d || d === "cimode") return;
-        this.services.languageUtils.toResolveHierarchy(d).forEach((h) => {
-          h !== "cimode" && l.indexOf(h) < 0 && l.push(h);
+        this.services.languageUtils.toResolveHierarchy(d).forEach((u) => {
+          u !== "cimode" && l.indexOf(u) < 0 && l.push(u);
         });
       };
-      i ? c(i) : this.services.languageUtils.getFallbackCodes(this.options.fallbackLng).forEach((u) => c(u)), (a = (o = this.options.preload) == null ? void 0 : o.forEach) == null || a.call(o, (d) => c(d)), this.services.backendConnector.load(l, this.options.ns, (d) => {
+      i ? c(i) : this.services.languageUtils.getFallbackCodes(this.options.fallbackLng).forEach((h) => c(h)), (a = (o = this.options.preload) == null ? void 0 : o.forEach) == null || a.call(o, (d) => c(d)), this.services.backendConnector.load(l, this.options.ns, (d) => {
         !d && !this.resolvedLanguage && this.language && this.setResolvedLanguage(this.language), r(d);
       });
     } else
@@ -4414,7 +4414,7 @@ class ye extends Ee {
   }
   reloadResources(e, t, r) {
     const i = me();
-    return typeof e == "function" && (r = e, e = void 0), typeof t == "function" && (r = t, t = void 0), e || (e = this.languages), t || (t = this.options.ns), r || (r = ke), this.services.backendConnector.reload(e, t, (o) => {
+    return typeof e == "function" && (r = e, e = void 0), typeof t == "function" && (r = t, t = void 0), e || (e = this.languages), t || (t = this.options.ns), r || (r = Se), this.services.backendConnector.reload(e, t, (o) => {
       i.resolve(), r(o);
     }), i;
   }
@@ -4444,10 +4444,10 @@ class ye extends Ee {
     }, o = (l, c) => {
       c ? this.isLanguageChangingTo === e && (i(c), this.translator.changeLanguage(c), this.isLanguageChangingTo = void 0, this.emit("languageChanged", c), this.logger.log("languageChanged", c)) : this.isLanguageChangingTo = void 0, r.resolve((...d) => this.t(...d)), t && t(l, (...d) => this.t(...d));
     }, a = (l) => {
-      var u, h;
+      var h, u;
       !e && !l && this.services.languageDetector && (l = []);
       const c = S(l) ? l : l && l[0], d = this.store.hasLanguageSomeTranslations(c) ? c : this.services.languageUtils.getBestMatchFromCodes(S(l) ? [l] : l);
-      d && (this.language || i(d), this.translator.language || this.translator.changeLanguage(d), (h = (u = this.services.languageDetector) == null ? void 0 : u.cacheUserLanguage) == null || h.call(u, d)), this.loadResources(d, (m) => {
+      d && (this.language || i(d), this.translator.language || this.translator.changeLanguage(d), (u = (h = this.services.languageDetector) == null ? void 0 : h.cacheUserLanguage) == null || u.call(h, d)), this.loadResources(d, (m) => {
         o(m, d);
       });
     };
@@ -4460,8 +4460,8 @@ class ye extends Ee {
         ...a
       }, c.lng = c.lng || i.lng, c.lngs = c.lngs || i.lngs, c.ns = c.ns || i.ns, c.keyPrefix !== "" && (c.keyPrefix = c.keyPrefix || r || i.keyPrefix);
       const d = this.options.keySeparator || ".";
-      let u;
-      return c.keyPrefix && Array.isArray(o) ? u = o.map((h) => `${c.keyPrefix}${d}${h}`) : u = c.keyPrefix ? `${c.keyPrefix}${d}${o}` : o, this.t(u, c);
+      let h;
+      return c.keyPrefix && Array.isArray(o) ? h = o.map((u) => `${c.keyPrefix}${d}${u}`) : h = c.keyPrefix ? `${c.keyPrefix}${d}${o}` : o, this.t(h, c);
     };
     return S(e) ? i.lng = e : i.lngs = e, i.ns = t, i.keyPrefix = r, i;
   }
@@ -4516,16 +4516,16 @@ class ye extends Ee {
     return t.indexOf(r.getLanguagePartFromCode(e)) > -1 || e.toLowerCase().indexOf("-arab") > 1 ? "rtl" : "ltr";
   }
   static createInstance(e = {}, t) {
-    return new ye(e, t);
+    return new we(e, t);
   }
-  cloneInstance(e = {}, t = ke) {
+  cloneInstance(e = {}, t = Se) {
     const r = e.forkResourceStore;
     r && delete e.forkResourceStore;
     const i = {
       ...this.options,
       ...e,
       isClone: !0
-    }, o = new ye(i);
+    }, o = new we(i);
     if ((e.debug !== void 0 || e.prefix !== void 0) && (o.logger = o.logger.clone(e)), ["store", "services", "language"].forEach((l) => {
       o[l] = this[l];
     }), o.services = {
@@ -4535,9 +4535,9 @@ class ye extends Ee {
     }, r) {
       const l = Object.keys(this.store.data).reduce((c, d) => (c[d] = {
         ...this.store.data[d]
-      }, c[d] = Object.keys(c[d]).reduce((u, h) => (u[h] = {
-        ...c[d][h]
-      }, u), c[d]), c), {});
+      }, c[d] = Object.keys(c[d]).reduce((h, u) => (h[u] = {
+        ...c[d][u]
+      }, h), c[d]), c), {});
       o.store = new ot(l, i), o.services.resourceStore = o.store;
     }
     return o.translator = new Pe(o.services, i), o.translator.on("*", (l, ...c) => {
@@ -4556,8 +4556,8 @@ class ye extends Ee {
     };
   }
 }
-const K = ye.createInstance();
-K.createInstance = ye.createInstance;
+const K = we.createInstance();
+K.createInstance = we.createInstance;
 K.createInstance;
 K.dir;
 K.init;
@@ -4573,289 +4573,190 @@ K.hasLoadedNamespace;
 K.loadNamespaces;
 K.loadLanguages;
 var Mt = { nav: {
-  product: "Product",
   pricing: "Pricing",
-  solutions: "Solutions",
-  developers: "Developers",
-  resources: "Resources",
   contact: "Contact",
   languages: "Languages",
   login: "Login",
   get_started: "Get Started",
-  product_menu: {
-    aspm_overview: {
-      title: "ASPM Overview",
-      description: "Complete application security protection"
-    },
-    use_cases: {
-      title: "Use Cases",
-      description: "Real-world implementation examples"
-    },
-    benefits: {
-      title: "Benefits",
-      description: "See how Plexicus transforms security'"
-    }
+  product: {
+    title: "Product",
+    aspm_overview: "ASPM Overview",
+    use_cases: "Use Cases",
+    benefits: "Benefits"
   },
-  solution_menu: {
-    fintech: {
-      title: "Fintech",
-      description: "Security solutions for financial technology"
-    },
-    healthtech: {
-      title: "HealthTech",
-      description: "HIPAA compliant security solutions"
-    },
-    legaltech: {
-      title: "HRTech",
-      description: "Secure HR and employee management systems"
-    },
-    hrtech: {
-      title: "Legal Tech",
-      description: "Security for legal technology platforms"
-    },
-    group_companies: {
-      title: "Group Companies",
-      description: "Solutions for corporate groups and holdings"
-    },
-    startups: {
-      title: "Startups",
-      description: "Scalable security for growing companies"
-    },
-    enterprise: {
-      title: "Enterprise",
-      description: "Comprehensive security for large organizations"
-    },
-    agencies: {
-      title: "Agencies",
-      description: "Security for digital and marketing agencies"
-    },
-    mobile_apps: {
-      title: "Mobile Apps",
-      description: "Security for iOS and Android applications"
-    },
-    manufacturing: {
-      title: "Manufacturing",
-      description: "Security for industrial and IoT systems"
-    },
-    government: {
-      title: "Governments",
-      description: "Security solutions for government agencies"
-    },
-    retailtech: {
-      title: "RetailTech",
-      description: "Security for e-commerce and retail platforms"
-    }
+  solutions: {
+    title: "Solutions",
+    fintech: "Fintech",
+    healthtech: "HealthTech",
+    legaltech: "LegalTech",
+    hrtech: "HRTech",
+    group_companies: "Group Companies",
+    startups: "Startups",
+    enterprise: "Enterprise",
+    agencies: "Agencies",
+    mobile_apps: "Mobile Apps",
+    manufacturing: "Manufacturing",
+    government: "Government",
+    retailtech: "RetailTech"
   },
-  developers_menu: {
-    documentations: {
-      title: "Documentation",
-      description: "Technical guides and references"
-    },
-    github_actions: {
-      title: "GitHub Action",
-      description: "Automate security in your CI/CD pipeline"
-    },
-    github_apps: {
-      title: "GitHub App",
-      description: "Integrate Plexicus with your repositories"
-    },
-    api_references: {
-      title: "API Reference",
-      description: "Comprehensive API documentation"
-    }
+  developers: {
+    title: "Developers",
+    documentations: "Documentations",
+    github_actions: "Github Actions",
+    github_apps: "Github Apps",
+    api_references: "API References"
   },
-  resources_menu: {
-    blog: {
-      title: "Blog",
-      description: "Latest news and security insights"
-    },
-    youtube_channel: {
-      title: "YouTube Channel",
-      description: "Video tutorials and webinars"
-    },
-    branding_assets: {
-      title: "Branding Assets",
-      description: "Logos and brand guidelines"
-    },
-    feature_request: {
-      title: "Feature Requests",
-      description: "Submit and vote on new features"
-    },
-    changelogs: {
-      title: "Changelogs",
-      description: "Latest product updates"
-    }
+  resources: {
+    title: "Resources",
+    blog: "Blog",
+    youtube_channel: "Youtube Channel",
+    branding_assets: "Branding Assets",
+    feature_request: "Feature Request",
+    changelogs: "Changelogs"
   }
 } };
 Mt.nav;
 var Tt = { nav: {
-  product: "Producto",
   pricing: "Precios",
-  solutions: "Soluciones",
-  developers: "Desarrolladores",
-  resources: "Recursos",
   contact: "Contacto",
   languages: "Idiomas",
   login: "Iniciar sesión",
-  get_started: "Empezar",
-  product_menu: {
-    aspm_overview: {
-      title: "Visión general de ASPM",
-      description: "Protección completa de seguridad de aplicaciones"
-    },
-    use_cases: {
-      title: "Casos de uso",
-      description: "Ejemplos de implementación en el mundo real"
-    },
-    benefits: {
-      title: "Beneficios",
-      description: "Mira cómo Plexicus transforma la seguridad"
-    }
+  get_started: "Comenzar",
+  product: {
+    title: "Producto",
+    aspm_overview: "Descripción general de ASPM",
+    use_cases: "Casos de uso",
+    benefits: "Beneficios"
   },
-  solution_menu: {
-    fintech: {
-      title: "Fintech",
-      description: "Soluciones de seguridad para tecnología financiera"
-    },
-    healthtech: {
-      title: "HealthTech",
-      description: "Soluciones de seguridad compatibles con HIPAA"
-    },
-    legaltech: {
-      title: "HRTech",
-      description: "Sistemas seguros de gestión de recursos humanos y empleados"
-    },
-    hrtech: {
-      title: "Legal Tech",
-      description: "Seguridad para plataformas de tecnología legal"
-    },
-    group_companies: {
-      title: "Empresas del grupo",
-      description: "Soluciones para grupos corporativos y holdings"
-    },
-    startups: {
-      title: "Startups",
-      description: "Seguridad escalable para empresas en crecimiento"
-    },
-    enterprise: {
-      title: "Empresas",
-      description: "Seguridad integral para grandes organizaciones"
-    },
-    agencies: {
-      title: "Agencias",
-      description: "Seguridad para agencias digitales y de marketing"
-    },
-    mobile_apps: {
-      title: "Aplicaciones móviles",
-      description: "Seguridad para aplicaciones iOS y Android"
-    },
-    manufacturing: {
-      title: "Manufactura",
-      description: "Seguridad para sistemas industriales e IoT"
-    },
-    government: {
-      title: "Gobiernos",
-      description: "Soluciones de seguridad para agencias gubernamentales"
-    },
-    retailtech: {
-      title: "RetailTech",
-      description: "Seguridad para plataformas de comercio electrónico y minoristas"
-    }
+  solutions: {
+    title: "Soluciones",
+    fintech: "Fintech",
+    healthtech: "HealthTech",
+    legaltech: "LegalTech",
+    hrtech: "HRTech",
+    group_companies: "Compañías del grupo",
+    startups: "Startups",
+    enterprise: "Empresa",
+    agencies: "Agencias",
+    mobile_apps: "Aplicaciones móviles",
+    manufacturing: "Manufactura",
+    government: "Gobierno",
+    retailtech: "RetailTech"
   },
-  developers_menu: {
-    documentations: {
-      title: "Documentación",
-      description: "Guías técnicas y referencias"
-    },
-    github_actions: {
-      title: "Acciones de GitHub",
-      description: "Automatiza la seguridad en tu pipeline CI/CD"
-    },
-    github_apps: {
-      title: "Aplicación de GitHub",
-      description: "Integra Plexicus con tus repositorios"
-    },
-    api_references: {
-      title: "Referencia API",
-      description: "Documentación API completa"
-    }
+  developers: {
+    title: "Desarrolladores",
+    documentations: "Documentaciones",
+    github_actions: "Acciones de Github",
+    github_apps: "Aplicaciones de Github",
+    api_references: "Referencias de API"
   },
-  resources_menu: {
-    blog: {
-      title: "Blog",
-      description: "Últimas noticias y conocimientos sobre seguridad"
-    },
-    youtube_channel: {
-      title: "Canal de YouTube",
-      description: "Tutoriales en video y seminarios web"
-    },
-    branding_assets: {
-      title: "Recursos de marca",
-      description: "Logos y pautas de marca"
-    },
-    feature_request: {
-      title: "Solicitudes de características",
-      description: "Envía y vota por nuevas funciones"
-    },
-    changelogs: {
-      title: "Registros de cambios",
-      description: "Últimas actualizaciones del producto"
-    }
+  resources: {
+    title: "Recursos",
+    blog: "Blog",
+    youtube_channel: "Canal de Youtube",
+    branding_assets: "Recursos de marca",
+    feature_request: "Solicitud de características",
+    changelogs: "Registros de cambios"
   }
 } };
 Tt.nav;
-K.use(Ir).init({
+var At = { nav: {
+  pricing: "Prezzi",
+  contact: "Contatto",
+  languages: "Lingue",
+  login: "Accedi",
+  get_started: "Inizia",
+  product: {
+    title: "Prodotto",
+    aspm_overview: "Panoramica ASPM",
+    use_cases: "Casi d'uso",
+    benefits: "Benefici"
+  },
+  solutions: {
+    title: "Soluzioni",
+    fintech: "Fintech",
+    healthtech: "HealthTech",
+    legaltech: "LegalTech",
+    hrtech: "HRTech",
+    group_companies: "Gruppo di aziende",
+    startups: "Startups",
+    enterprise: "Azienda",
+    agencies: "Agenzie",
+    mobile_apps: "App mobili",
+    manufacturing: "Produzione",
+    government: "Governo",
+    retailtech: "RetailTech"
+  },
+  developers: {
+    title: "Sviluppatori",
+    documentations: "Documentazioni",
+    github_actions: "Azioni Github",
+    github_apps: "App Github",
+    api_references: "Riferimenti API"
+  },
+  resources: {
+    title: "Risorse",
+    blog: "Blog",
+    youtube_channel: "Canale Youtube",
+    branding_assets: "Asset di branding",
+    feature_request: "Richiesta di funzionalità",
+    changelogs: "Changelog"
+  }
+} };
+At.nav;
+const os = ["en", "es", "it"];
+K.use(zr).init({
   lng: "en",
-  supportedLngs: ["en", "es"],
+  supportedLngs: os,
   resources: {
     en: { translation: Mt },
-    es: { translation: Tt }
+    es: { translation: Tt },
+    it: { translation: At }
   },
   fallbackLng: "en",
   react: { useSuspense: !1 }
 });
-const ls = () => {
-  const [n, e] = Ce(!1), [t, r] = Ce(null), i = Le(null), o = "http://localhost:7000", { t: a, i18n: l } = Br();
+const ds = ({ lang: n, fullSiteUrl: e = "localhost:8000", fullBlogurl: t = "localhost:9000" }) => {
+  const [r, i] = xe("/"), [o, a] = xe(!1), [l, c] = xe(null), d = Ne(null), h = e, { t: u, i18n: m } = Vr();
   ie(() => {
-    const f = window.location.pathname.split("/")[1];
-    console.log(f, "a"), ["en", "es"].includes(f) && (console.log(f, "a"), l.changeLanguage(f));
+    console.log(r, n), m.changeLanguage(n), n !== "en" ? (i(`/${n}/`), console.log("not en")) : i("/"), console.log(r, n);
   }, []);
-  const [c, d] = Ce(!1);
+  const [x, p] = xe(!1);
   ie(() => {
-    const f = () => {
-      const k = window.scrollY;
-      d(k > 50);
+    const g = () => {
+      const O = window.scrollY;
+      p(O > 50);
     };
-    return window.addEventListener("scroll", f), f(), () => {
-      window.removeEventListener("scroll", f);
+    return window.addEventListener("scroll", g), g(), () => {
+      window.removeEventListener("scroll", g);
     };
   }, []);
-  const u = Se((f) => {
-    i.current && (clearTimeout(i.current), i.current = null), r(f);
-  }, []), h = Le([]), m = Se(() => {
-    const f = setTimeout(() => {
-      r(null);
+  const v = Ce((g) => {
+    d.current && (clearTimeout(d.current), d.current = null), c(g);
+  }, []), C = Ne([]), A = Ce(() => {
+    const g = setTimeout(() => {
+      c(null);
     }, 150);
-    i.current = f, h.current.push(f);
+    d.current = g, C.current.push(g);
   }, []);
   ie(() => () => {
-    i.current && clearTimeout(i.current), h.current.forEach(clearTimeout), h.current = [];
+    d.current && clearTimeout(d.current), C.current.forEach(clearTimeout), C.current = [];
   }, []);
-  const x = Se(
-    (f) => {
-      r(t === f ? null : f);
+  const E = Ce(
+    (g) => {
+      c(l === g ? null : g);
     },
-    [t]
-  ), g = {
+    [l]
+  ), T = {
     products: {
-      title: a("nav.product"),
-      shortTitle: a("nav.product"),
+      title: u("nav.product.title"),
+      shortTitle: "Product",
       image: "product-diagram",
       items: [
         {
-          title: a("nav.product_menu.aspm_overview.title"),
-          description: a("nav.product_menu.aspm_overview.description"),
-          href: "/products/aspm",
+          title: u("nav.product.aspm_overview"),
+          description: "Complete application security protection",
+          href: `${r}products/aspm`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -4879,9 +4780,9 @@ const ls = () => {
           )
         },
         {
-          title: a("nav.product_menu.benefits.title"),
-          description: a("nav.product_menu.benefits.description"),
-          href: "/products/benefits",
+          title: u("nav.product.benefits"),
+          description: "See how Plexicus transforms security",
+          href: `${r}products/benefits`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -4905,9 +4806,9 @@ const ls = () => {
           )
         },
         {
-          title: a("nav.product_menu.use_cases.title"),
-          description: a("nav.product_menu.use_cases.description"),
-          href: "/products/use-cases",
+          title: u("nav.product.use_cases"),
+          description: "Real-world implementation examples",
+          href: `${r}products/use-cases`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -4933,14 +4834,15 @@ const ls = () => {
       ]
     },
     solutions: {
-      title: a("nav.solutions"),
-      shortTitle: a("nav.solutions"),
+      title: u("nav.solutions.title"),
+      link: "/solutions",
+      shortTitle: "Solutions",
       image: "solutions-diagram",
       items: [
         {
-          title: a("nav.solution_menu.fintech.title"),
-          description: a("nav.solution_menu.fintech.description"),
-          href: "/solutions/fintech",
+          title: u("nav.solutions.fintech"),
+          description: "Security solutions for financial technology",
+          href: `${r}solutions/fintech-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -4963,9 +4865,9 @@ const ls = () => {
           )
         },
         {
-          title: a("nav.solution_menu.healthtech.title"),
-          description: a("nav.solution_menu.healthtech.description"),
-          href: "/solutions/healthtech",
+          title: u("nav.solutions.healthtech"),
+          description: "HIPAA compliant security solutions",
+          href: `${r}solutions/healthcare-solutions`,
           icon: /* @__PURE__ */ s.jsx(
             "svg",
             {
@@ -4985,36 +4887,9 @@ const ls = () => {
           )
         },
         {
-          title: a("nav.solution_menu.hrtech.title"),
-          description: a("nav.solution_menu.hrtech.description"),
-          href: "/solutions/hrtech",
-          icon: /* @__PURE__ */ s.jsxs(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: "24",
-              height: "24",
-              viewBox: "0 0 24 24",
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "2",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              className: "text-primary",
-              "aria-hidden": "true",
-              children: [
-                /* @__PURE__ */ s.jsx("path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
-                /* @__PURE__ */ s.jsx("circle", { cx: "9", cy: "7", r: "4" }),
-                /* @__PURE__ */ s.jsx("path", { d: "M22 21v-2a4 4 0 0 0-3-3.87" }),
-                /* @__PURE__ */ s.jsx("path", { d: "M16 3.13a4 4 0 0 1 0 7.75" })
-              ]
-            }
-          )
-        },
-        {
-          title: a("nav.solution_menu.legaltech.title"),
-          description: a("nav.solution_menu.legaltech.description"),
-          href: "/solutions/legaltech",
+          title: u("nav.solutions.hrtech"),
+          description: "Security for legal technology platforms",
+          href: `${r}solutions/hrtech-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5037,9 +4912,9 @@ const ls = () => {
           )
         },
         {
-          title: a("nav.solution_menu.group_companies.title"),
-          description: a("nav.solution_menu.group_companies.description"),
-          href: "/solutions/group-companies",
+          title: u("nav.solutions.group_companies"),
+          description: "Solutions for corporate groups and holdings",
+          href: `${r}solutions/group-companies-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5062,9 +4937,9 @@ const ls = () => {
           )
         },
         {
-          title: a("nav.solution_menu.agencies.title"),
-          description: a("nav.solution_menu.agencies.description"),
-          href: "/solutions/agencies",
+          title: u("nav.solutions.agencies"),
+          description: "Security for digital and marketing agencies",
+          href: `${r}solutions/agencies-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5087,9 +4962,9 @@ const ls = () => {
           )
         },
         {
-          title: a("nav.solution_menu.startups.title"),
-          description: a("nav.solution_menu.startups.description"),
-          href: "/solutions/startups",
+          title: u("nav.solutions.startups"),
+          description: "Scalable security for growing companies",
+          href: `${r}solutions/startup-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5114,9 +4989,9 @@ const ls = () => {
           )
         },
         {
-          title: "Enterprise",
+          title: u("nav.solutions.enterprise"),
           description: "Comprehensive security for large organizations",
-          href: "/solutions/enterprise",
+          href: `${r}solutions/enterprise-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5145,9 +5020,9 @@ const ls = () => {
           )
         },
         {
-          title: "Mobile Apps",
+          title: u("nav.solutions.mobile_apps"),
           description: "Security for iOS and Android applications",
-          href: "/solutions/mobile-apps",
+          href: `${r}solutions/mobile-app-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5170,9 +5045,9 @@ const ls = () => {
           )
         },
         {
-          title: "Manufacturing",
+          title: u("nav.solutions.manufacturing"),
           description: "Security for industrial and IoT systems",
-          href: "/solutions/manufacturing",
+          href: `${r}solutions/manufacturing-solutions`,
           icon: /* @__PURE__ */ s.jsx(
             "svg",
             {
@@ -5192,9 +5067,9 @@ const ls = () => {
           )
         },
         {
-          title: "Governments",
+          title: u("nav.solutions.government"),
           description: "Security solutions for government agencies",
-          href: "/solutions/governments",
+          href: `${r}solutions/government-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5220,9 +5095,9 @@ const ls = () => {
           )
         },
         {
-          title: "RetailTech",
+          title: u("nav.solutions.retailtech"),
           description: "Security for e-commerce and retail platforms",
-          href: "/solutions/retailtech",
+          href: `${r}solutions/retailtech-solutions`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5248,12 +5123,12 @@ const ls = () => {
       ]
     },
     developers: {
-      title: a("nav.developers"),
+      title: u("nav.developers.title"),
       shortTitle: "Developers",
       image: "developers-diagram",
       items: [
         {
-          title: "Documentation",
+          title: u("nav.developers.documentations"),
           description: "Technical guides and references",
           href: "https://docs.plexicus.com/",
           icon: /* @__PURE__ */ s.jsxs(
@@ -5281,7 +5156,7 @@ const ls = () => {
           )
         },
         {
-          title: "API Reference",
+          title: u("nav.developers.api_references"),
           description: "Comprehensive API documentation",
           href: "https://docs.plexicus.com/getting-started/introduction",
           icon: /* @__PURE__ */ s.jsxs(
@@ -5307,7 +5182,7 @@ const ls = () => {
           )
         },
         {
-          title: "GitHub App",
+          title: u("nav.developers.github_apps"),
           description: "Integrate Plexicus with your repositories",
           href: "https://github.com/apps/plexicus",
           icon: /* @__PURE__ */ s.jsxs(
@@ -5332,7 +5207,7 @@ const ls = () => {
           )
         },
         {
-          title: "GitHub Action",
+          title: u("nav.developers.github_apps"),
           description: "Automate security in your CI/CD pipeline",
           href: "https://github.com/marketplace/actions/plexicus-runner-action",
           icon: /* @__PURE__ */ s.jsx(
@@ -5356,14 +5231,14 @@ const ls = () => {
       ]
     },
     resources: {
-      title: a("nav.resources"),
+      title: u("nav.resources.title"),
       shortTitle: "Resources",
       image: "resources-diagram",
       items: [
         {
-          title: "Blog",
+          title: u("nav.resources.blog"),
           description: "Latest news and security insights",
-          href: "/blog",
+          href: t,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5386,7 +5261,7 @@ const ls = () => {
           )
         },
         {
-          title: "YouTube Channel",
+          title: u("nav.resources.youtube_channel"),
           description: "Video tutorials and webinars",
           href: "https://youtube.com/channel/UCzrotvBZ3dcb7mhI55ExHBQ/",
           icon: /* @__PURE__ */ s.jsxs(
@@ -5411,9 +5286,9 @@ const ls = () => {
           )
         },
         {
-          title: "Branding Assets",
+          title: u("nav.resources.branding_assets"),
           description: "Logos and brand guidelines",
-          href: "/resources/branding",
+          href: `${r}resources/branding`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5431,7 +5306,7 @@ const ls = () => {
               children: [
                 /* @__PURE__ */ s.jsx("path", { d: "M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" }),
                 /* @__PURE__ */ s.jsx("path", { d: "m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" }),
-                /* @__PURE__ */ s.jsx("path", { d: "m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1L6.5 8.5" }),
+                /* @__PURE__ */ s.jsx("path", { d: "m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" }),
                 /* @__PURE__ */ s.jsx("path", { d: "m3.5 13.5 5-5" }),
                 /* @__PURE__ */ s.jsx("path", { d: "m5 19 5-5" }),
                 /* @__PURE__ */ s.jsx("path", { d: "m17.5 6.5-5 5" }),
@@ -5441,7 +5316,7 @@ const ls = () => {
           )
         },
         {
-          title: "Changelogs",
+          title: u("nav.resources.changelogs"),
           description: "Latest product updates",
           href: "https://plexicus.canny.io/changelog",
           icon: /* @__PURE__ */ s.jsxs(
@@ -5466,7 +5341,7 @@ const ls = () => {
           )
         },
         {
-          title: "Feature Requests",
+          title: u("nav.resources.feature_request"),
           description: "Submit and vote on new features",
           href: "https://plexicus.canny.io/feature-requests",
           icon: /* @__PURE__ */ s.jsx(
@@ -5492,7 +5367,7 @@ const ls = () => {
         {
           title: "Plexicus vs. ArmorCode",
           description: "See how Plexicus compares",
-          href: "/compare/armorcode",
+          href: `${r}compare/armorcode`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5520,7 +5395,7 @@ const ls = () => {
         {
           title: "Plexicus vs. Apiiro",
           description: "Feature comparison",
-          href: "/compare/apiiro",
+          href: `${r}compare/apiiro`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5548,7 +5423,7 @@ const ls = () => {
         {
           title: "Plexicus vs. Legit Security",
           description: "Side-by-side comparison",
-          href: "/compare/legit-security",
+          href: `${r}compare/legit-security`,
           icon: /* @__PURE__ */ s.jsxs(
             "svg",
             {
@@ -5581,42 +5456,42 @@ const ls = () => {
     {
       className: "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
       style: {
-        background: c ? "#8220ff" : "transparent",
-        boxShadow: c ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
+        background: x ? "#8220ff" : "transparent",
+        boxShadow: x ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
         transition: "all 0.3s ease-in-out",
         minHeight: "64px"
       },
       children: [
         /* @__PURE__ */ s.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl", children: [
-          /* @__PURE__ */ s.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ s.jsx(A, { href: o, className: "flex items-center gap-2 overflow-visible", "aria-label": "Plexicus Home", children: /* @__PURE__ */ s.jsx("div", { className: "relative w-auto h-14 flex items-center", children: /* @__PURE__ */ s.jsx(
+          /* @__PURE__ */ s.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ s.jsx(z, { href: `${h}${r}`, className: "flex items-center gap-2 overflow-visible", "aria-label": "Plexicus Home", children: /* @__PURE__ */ s.jsx("div", { className: "relative w-auto h-14 flex items-center", children: /* @__PURE__ */ s.jsx(
             "img",
             {
               src: "/images/plexicus-logo-white.png",
               alt: "Plexicus Logo",
               className: "object-contain max-h-full max-w-none",
               style: {
-                maxWidth: c ? "180px" : "220px",
+                maxWidth: x ? "180px" : "220px",
                 transition: "max-width 0.3s ease-in-out"
               }
             }
           ) }) }) }),
           /* @__PURE__ */ s.jsxs("nav", { className: "hidden md:flex md:gap-4 lg:gap-6", "aria-label": "Main Navigation", children: [
-            Object.entries(g).filter(([f]) => f === "products").map(([f, k]) => /* @__PURE__ */ s.jsx(
+            Object.entries(T).filter(([g]) => g === "products").map(([g, O]) => /* @__PURE__ */ s.jsx(
               "div",
               {
                 className: "relative group",
-                onMouseEnter: () => u(f),
-                onMouseLeave: m,
+                onMouseEnter: () => v(g),
+                onMouseLeave: A,
                 children: /* @__PURE__ */ s.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
-                    "aria-expanded": t === f,
+                    "aria-expanded": l === g,
                     "aria-haspopup": "true",
-                    onClick: () => x(f),
+                    onClick: () => E(g),
                     children: [
-                      /* @__PURE__ */ s.jsx("span", { className: "hidden lg:inline", children: k.title }),
-                      /* @__PURE__ */ s.jsx("span", { className: "lg:hidden", children: k.shortTitle }),
+                      /* @__PURE__ */ s.jsx("span", { className: "hidden lg:inline", children: O.title }),
+                      /* @__PURE__ */ s.jsx("span", { className: "lg:hidden", children: O.shortTitle }),
                       /* @__PURE__ */ s.jsx(
                         "svg",
                         {
@@ -5629,7 +5504,7 @@ const ls = () => {
                           strokeWidth: "2",
                           strokeLinecap: "round",
                           strokeLinejoin: "round",
-                          className: `ml-1 transition-transform duration-200 ${t === f ? "transform rotate-180" : ""}`,
+                          className: `ml-1 transition-transform duration-200 ${l === g ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
                           children: /* @__PURE__ */ s.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
@@ -5638,32 +5513,32 @@ const ls = () => {
                   }
                 )
               },
-              f
+              g
             )),
             /* @__PURE__ */ s.jsx(
-              A,
+              z,
               {
-                href: "/pricing",
+                href: `${r}pricing`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
-                children: a("nav.pricing")
+                children: u("nav.pricing")
               }
             ),
-            Object.entries(g).filter(([f]) => f === "solutions" || f === "developers" || f === "resources").map(([f, k]) => /* @__PURE__ */ s.jsx(
+            Object.entries(T).filter(([g]) => g === "solutions" || g === "developers" || g === "resources").map(([g, O]) => /* @__PURE__ */ s.jsx(
               "div",
               {
                 className: "relative group",
-                onMouseEnter: () => u(f),
-                onMouseLeave: m,
+                onMouseEnter: () => v(g),
+                onMouseLeave: A,
                 children: /* @__PURE__ */ s.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
-                    "aria-expanded": t === f,
+                    "aria-expanded": l === g,
                     "aria-haspopup": "true",
-                    onClick: () => x(f),
+                    onClick: () => E(g),
                     children: [
-                      /* @__PURE__ */ s.jsx("span", { className: "hidden lg:inline", children: k.title }),
-                      /* @__PURE__ */ s.jsx("span", { className: "lg:hidden", children: k.shortTitle }),
+                      /* @__PURE__ */ s.jsx("span", { className: "hidden lg:inline", children: O.title }),
+                      /* @__PURE__ */ s.jsx("span", { className: "lg:hidden", children: O.shortTitle }),
                       /* @__PURE__ */ s.jsx(
                         "svg",
                         {
@@ -5676,7 +5551,7 @@ const ls = () => {
                           strokeWidth: "2",
                           strokeLinecap: "round",
                           strokeLinejoin: "round",
-                          className: `ml-1 transition-transform duration-200 ${t === f ? "transform rotate-180" : ""}`,
+                          className: `ml-1 transition-transform duration-200 ${l === g ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
                           children: /* @__PURE__ */ s.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
@@ -5685,12 +5560,12 @@ const ls = () => {
                   }
                 )
               },
-              f
+              g
             )),
             /* @__PURE__ */ s.jsx(
-              A,
+              z,
               {
-                href: "/contact",
+                href: `${r}contact`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
                 children: "Contact"
               }
@@ -5698,23 +5573,23 @@ const ls = () => {
           ] }),
           /* @__PURE__ */ s.jsxs("div", { className: "hidden md:flex items-center gap-4", children: [
             /* @__PURE__ */ s.jsx(
-              A,
+              z,
               {
                 href: "/login",
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap",
-                children: "Login"
+                children: u("nav.login")
               }
             ),
-            /* @__PURE__ */ s.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: "Get Started" })
+            /* @__PURE__ */ s.jsx(_e, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: u("nav.get_started") })
           ] }),
           /* @__PURE__ */ s.jsx(
             "button",
             {
               className: "flex md:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white",
-              onClick: () => e(!n),
-              "aria-label": n ? "Close menu" : "Open menu",
-              "aria-expanded": n,
-              children: n ? /* @__PURE__ */ s.jsxs(
+              onClick: () => a(!o),
+              "aria-label": o ? "Close menu" : "Open menu",
+              "aria-expanded": o,
+              children: o ? /* @__PURE__ */ s.jsxs(
                 "svg",
                 {
                   xmlns: "http://www.w3.org/2000/svg",
@@ -5757,12 +5632,12 @@ const ls = () => {
             }
           )
         ] }),
-        t && /* @__PURE__ */ s.jsxs(s.Fragment, { children: [
+        l && /* @__PURE__ */ s.jsxs(s.Fragment, { children: [
           /* @__PURE__ */ s.jsx(
             "div",
             {
               className: "fixed inset-0 bg-black/20 z-30",
-              onClick: () => r(null),
+              onClick: () => c(null),
               "aria-hidden": "true",
               style: { top: "64px" }
             }
@@ -5771,14 +5646,14 @@ const ls = () => {
             "div",
             {
               className: "absolute left-0 right-0 top-16 z-40 bg-white shadow-xl border-t border-gray-100 transition-all duration-300 transform",
-              onMouseEnter: () => u(t),
-              onMouseLeave: m,
+              onMouseEnter: () => v(l),
+              onMouseLeave: A,
               role: "menu",
-              "aria-labelledby": `menu-button-${t}`,
+              "aria-labelledby": `menu-button-${l}`,
               children: /* @__PURE__ */ s.jsx("div", { className: "container mx-auto py-8 px-4 md:px-6 max-w-7xl", children: /* @__PURE__ */ s.jsxs("div", { className: "flex flex-col md:flex-row", children: [
                 /* @__PURE__ */ s.jsxs("div", { className: "w-full md:w-1/3 pr-0 md:pr-8 mb-6 md:mb-0 flex flex-col", children: [
                   /* @__PURE__ */ s.jsx("div", { className: "relative h-36 md:h-40 w-full rounded-lg overflow-hidden bg-white border border-gray-100 mb-4", children: /* @__PURE__ */ s.jsxs("div", { className: "absolute inset-0 flex items-center justify-center", children: [
-                    t === "products" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
+                    l === "products" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -5921,7 +5796,7 @@ const ls = () => {
                         ]
                       }
                     ) }),
-                    t === "solutions" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
+                    l === "solutions" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -5968,7 +5843,7 @@ const ls = () => {
                         ]
                       }
                     ) }),
-                    t === "resources" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
+                    l === "resources" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6092,7 +5967,7 @@ const ls = () => {
                         ]
                       }
                     ) }),
-                    t === "developers" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
+                    l === "developers" && /* @__PURE__ */ s.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ s.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6147,45 +6022,45 @@ const ls = () => {
                     ) })
                   ] }) }),
                   /* @__PURE__ */ s.jsxs("div", { className: "bg-gray-50 rounded-lg p-4", children: [
-                    /* @__PURE__ */ s.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: g[t].title }),
-                    /* @__PURE__ */ s.jsx("p", { className: "text-gray-700", children: t === "products" ? "Explore our product" : t === "solutions" ? "Explore our solutions" : "Explore our resources" })
+                    /* @__PURE__ */ s.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: T[l].title }),
+                    /* @__PURE__ */ s.jsx("p", { className: "text-gray-700", children: l === "products" ? "Explore our product" : l === "solutions" ? "Explore our solutions" : "Explore our resources" })
                   ] })
                 ] }),
                 /* @__PURE__ */ s.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ s.jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: [
-                  g[t].items.filter((f) => t !== "resources" || !f.title.includes("vs.")).map((f, k) => /* @__PURE__ */ s.jsxs(
-                    A,
+                  T[l].items.filter((g) => l !== "resources" || !g.title.includes("vs.")).map((g, O) => /* @__PURE__ */ s.jsxs(
+                    z,
                     {
-                      href: f.href,
+                      href: g.href,
                       className: "flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors group",
-                      onClick: () => r(null),
+                      onClick: () => c(null),
                       children: [
-                        /* @__PURE__ */ s.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: f.icon }),
+                        /* @__PURE__ */ s.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: g.icon }),
                         /* @__PURE__ */ s.jsxs("div", { children: [
-                          /* @__PURE__ */ s.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: f.title }),
-                          /* @__PURE__ */ s.jsx("p", { className: "text-sm text-gray-600 mt-1", children: f.description })
+                          /* @__PURE__ */ s.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: g.title }),
+                          /* @__PURE__ */ s.jsx("p", { className: "text-sm text-gray-600 mt-1", children: g.description })
                         ] })
                       ]
                     },
-                    k
+                    O
                   )),
-                  t === "resources" && /* @__PURE__ */ s.jsx("div", { className: "col-span-1 sm:col-span-2 mt-4", children: /* @__PURE__ */ s.jsxs("div", { className: "bg-purple-50 p-4 rounded-lg border border-purple-100", children: [
+                  l === "resources" && /* @__PURE__ */ s.jsx("div", { className: "col-span-1 sm:col-span-2 mt-4", children: /* @__PURE__ */ s.jsxs("div", { className: "bg-purple-50 p-4 rounded-lg border border-purple-100", children: [
                     /* @__PURE__ */ s.jsx("h3", { className: "text-sm font-medium text-purple-800 mb-3", children: "Compare Plexicus" }),
-                    /* @__PURE__ */ s.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-3 gap-3", children: g.resources.items.filter(
-                      (f) => f.title === "Plexicus vs. ArmorCode" || f.title === "Plexicus vs. Apiiro" || f.title === "Plexicus vs. Legit Security"
-                    ).map((f, k) => /* @__PURE__ */ s.jsxs(
-                      A,
+                    /* @__PURE__ */ s.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-3 gap-3", children: T.resources.items.filter(
+                      (g) => g.title === "Plexicus vs. ArmorCode" || g.title === "Plexicus vs. Apiiro" || g.title === "Plexicus vs. Legit Security"
+                    ).map((g, O) => /* @__PURE__ */ s.jsxs(
+                      z,
                       {
-                        href: f.href,
+                        href: g.href,
                         className: "flex flex-col items-center p-3 rounded-lg bg-white hover:bg-purple-100 transition-colors text-center group",
-                        onClick: () => r(null),
+                        onClick: () => c(null),
                         children: [
-                          /* @__PURE__ */ s.jsx("div", { className: "w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-purple-200 transition-colors", children: Ie.cloneElement(f.icon, {
+                          /* @__PURE__ */ s.jsx("div", { className: "w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-purple-200 transition-colors", children: $e.cloneElement(g.icon, {
                             className: "w-5 h-5 text-purple-700"
                           }) }),
-                          /* @__PURE__ */ s.jsx("h4", { className: "font-medium text-sm text-gray-900 group-hover:text-purple-800 transition-colors", children: f.title })
+                          /* @__PURE__ */ s.jsx("h4", { className: "font-medium text-sm text-gray-900 group-hover:text-purple-800 transition-colors", children: g.title })
                         ]
                       },
-                      `compare-${k}`
+                      `compare-${O}`
                     )) })
                   ] }) })
                 ] }) })
@@ -6193,32 +6068,32 @@ const ls = () => {
             }
           )
         ] }),
-        n && /* @__PURE__ */ s.jsx("div", { className: "fixed inset-0 bg-black/20 z-40 lg:hidden", onClick: () => e(!1) }),
+        o && /* @__PURE__ */ s.jsx("div", { className: "fixed inset-0 bg-black/20 z-40 lg:hidden", onClick: () => a(!1) }),
         /* @__PURE__ */ s.jsx(
           "div",
           {
-            className: `md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${n ? "translate-x-0" : "translate-x-full"}`,
+            className: `md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${o ? "translate-x-0" : "translate-x-full"}`,
             style: { top: "64px", height: "calc(100vh - 64px)", overflow: "auto" },
             children: /* @__PURE__ */ s.jsx("div", { className: "overflow-y-auto h-full p-4 pb-20", children: /* @__PURE__ */ s.jsxs("div", { className: "space-y-4", children: [
-              Object.entries(g).map(([f, k]) => /* @__PURE__ */ s.jsxs("div", { className: "space-y-2", children: [
-                /* @__PURE__ */ s.jsx("h3", { className: "font-semibold", children: k.title }),
-                /* @__PURE__ */ s.jsx("div", { className: "grid grid-cols-1 gap-2", children: k.items.map((E, P) => /* @__PURE__ */ s.jsxs(
-                  A,
+              Object.entries(T).map(([g, O]) => /* @__PURE__ */ s.jsxs("div", { className: "space-y-2", children: [
+                /* @__PURE__ */ s.jsx("h3", { className: "font-semibold", children: O.title }),
+                /* @__PURE__ */ s.jsx("div", { className: "grid grid-cols-1 gap-2", children: O.items.map((B, F) => /* @__PURE__ */ s.jsxs(
+                  z,
                   {
-                    href: E.href,
+                    href: B.href,
                     className: "flex items-center p-2 rounded-md bg-gray-50 hover:bg-gray-100",
-                    onClick: () => e(!1),
+                    onClick: () => a(!1),
                     children: [
-                      /* @__PURE__ */ s.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: Ie.cloneElement(E.icon, { width: 16, height: 16 }) }),
-                      /* @__PURE__ */ s.jsx("span", { className: "text-sm", children: E.title })
+                      /* @__PURE__ */ s.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: $e.cloneElement(B.icon, { width: 16, height: 16 }) }),
+                      /* @__PURE__ */ s.jsx("span", { className: "text-sm", children: B.title })
                     ]
                   },
-                  P
+                  F
                 )) })
-              ] }, f)),
-              /* @__PURE__ */ s.jsx(A, { href: "/pricing", className: "block py-2 text-sm font-medium", onClick: () => e(!1), children: "Pricing" }),
-              /* @__PURE__ */ s.jsx(A, { href: "/contact", className: "block py-2 text-sm font-medium", onClick: () => e(!1), children: "Contact" }),
-              /* @__PURE__ */ s.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ s.jsx(Fe, { className: "w-full bg-gradient-primary", onClick: () => e(!1), children: "Get Started" }) })
+              ] }, g)),
+              /* @__PURE__ */ s.jsx(z, { href: "/pricing", className: "block py-2 text-sm font-medium", onClick: () => a(!1), children: "Pricing" }),
+              /* @__PURE__ */ s.jsx(z, { href: "/contact", className: "block py-2 text-sm font-medium", onClick: () => a(!1), children: "Contact" }),
+              /* @__PURE__ */ s.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ s.jsx(_e, { className: "w-full bg-gradient-primary", onClick: () => a(!1), children: "Get Started" }) })
             ] }) })
           }
         )
@@ -6226,7 +6101,7 @@ const ls = () => {
     }
   );
 };
-function ns() {
+function as() {
   var t;
   const n = (r) => {
     localStorage.setItem("scrollPosition", String(window == null ? void 0 : window.scrollY));
@@ -6240,7 +6115,7 @@ function ns() {
   }, []);
   const e = ((t = window.location.pathname.match(/^\/([a-z]{2})\//)) == null ? void 0 : t[1]) || "en";
   return /* @__PURE__ */ s.jsx(s.Fragment, { children: /* @__PURE__ */ s.jsxs("div", { className: "relative inline-flex items-center w-[150px]", children: [
-    /* @__PURE__ */ s.jsx(zt, { className: "absolute  text-muted-foreground pointer-events-none", style: { left: 1, paddingLeft: 6, width: 22 } }),
+    /* @__PURE__ */ s.jsx(Ft, { className: "absolute  text-muted-foreground pointer-events-none", style: { left: 1, paddingLeft: 6, width: 22 } }),
     /* @__PURE__ */ s.jsxs(
       "select",
       {
@@ -6251,7 +6126,7 @@ function ns() {
         children: [
           /* @__PURE__ */ s.jsx("option", { value: "en", children: "English" }),
           /* @__PURE__ */ s.jsx("option", { value: "es", children: "Spanish" }),
-          /* @__PURE__ */ s.jsx("option", { value: "id", children: "Indonesia" })
+          /* @__PURE__ */ s.jsx("option", { value: "it", children: "Italian" })
         ]
       }
     ),
@@ -6269,11 +6144,11 @@ function ns() {
     )
   ] }) });
 }
-function cs() {
+function us() {
   return /* @__PURE__ */ s.jsx("footer", { className: "bg-gray-50 border-t border-gray-200", children: /* @__PURE__ */ s.jsxs("div", { className: "container mx-auto px-4 md:px-6 pt-12 pb-6", children: [
     /* @__PURE__ */ s.jsxs("div", { className: "grid grid-cols-1 gap-8 lg:grid-cols-5", children: [
       /* @__PURE__ */ s.jsxs("div", { className: "lg:col-span-2", children: [
-        /* @__PURE__ */ s.jsx(A, { href: "/", className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ s.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus ASPM", className: "h-10 w-auto" }) }),
+        /* @__PURE__ */ s.jsx(z, { href: "/", className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ s.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus ASPM", className: "h-10 w-auto" }) }),
         /* @__PURE__ */ s.jsx("p", { className: "text-gray-600 mb-4 max-w-sm", children: "Elevate your cybersecurity strategy with Plexicus" }),
         /* @__PURE__ */ s.jsxs("div", { className: "flex gap-4", children: [
           /* @__PURE__ */ s.jsxs("a", { href: "#", className: "text-gray-400 hover:text-gray-500", children: [
@@ -6303,33 +6178,33 @@ function cs() {
             ) })
           ] })
         ] }),
-        /* @__PURE__ */ s.jsx("div", { className: "mt-6", children: /* @__PURE__ */ s.jsx(ns, {}) })
+        /* @__PURE__ */ s.jsx("div", { className: "mt-6", children: /* @__PURE__ */ s.jsx(as, {}) })
       ] }),
       /* @__PURE__ */ s.jsxs("div", { children: [
         /* @__PURE__ */ s.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: "Products" }),
         /* @__PURE__ */ s.jsxs("ul", { className: "space-y-2", children: [
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/products/aspm-overview", className: "text-gray-600 hover:text-gray-900", children: "ASPM Overview" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/products/benefits", className: "text-gray-600 hover:text-gray-900", children: "Benefits" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/products/use-cases", className: "text-gray-600 hover:text-gray-900", children: "Use Cases" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/pricing", className: "text-gray-600 hover:text-gray-900", children: "Pricing" }) })
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/products/aspm-overview", className: "text-gray-600 hover:text-gray-900", children: "ASPM Overview" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/products/benefits", className: "text-gray-600 hover:text-gray-900", children: "Benefits" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/products/use-cases", className: "text-gray-600 hover:text-gray-900", children: "Use Cases" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/pricing", className: "text-gray-600 hover:text-gray-900", children: "Pricing" }) })
         ] })
       ] }),
       /* @__PURE__ */ s.jsxs("div", { children: [
         /* @__PURE__ */ s.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: "Resources" }),
         /* @__PURE__ */ s.jsxs("ul", { className: "space-y-2", children: [
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/blog", className: "text-gray-600 hover:text-gray-900", children: "Blog" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/docs", className: "text-gray-600 hover:text-gray-900", children: "Documentation" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/case-studies", className: "text-gray-600 hover:text-gray-900", children: "Case Studies" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/security-resources", className: "text-gray-600 hover:text-gray-900", children: "Security Resources" }) })
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/blog", className: "text-gray-600 hover:text-gray-900", children: "Blog" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/docs", className: "text-gray-600 hover:text-gray-900", children: "Documentation" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/case-studies", className: "text-gray-600 hover:text-gray-900", children: "Case Studies" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/security-resources", className: "text-gray-600 hover:text-gray-900", children: "Security Resources" }) })
         ] })
       ] }),
       /* @__PURE__ */ s.jsxs("div", { children: [
         /* @__PURE__ */ s.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: "Company" }),
         /* @__PURE__ */ s.jsxs("ul", { className: "space-y-2", children: [
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/about", className: "text-gray-600 hover:text-gray-900", children: "About Us" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/contact", className: "text-gray-600 hover:text-gray-900", children: "Contact" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/careers", className: "text-gray-600 hover:text-gray-900", children: "Careers" }) }),
-          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(A, { href: "/privacy", className: "text-gray-600 hover:text-gray-900", children: "Privacy Policy" }) })
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/about", className: "text-gray-600 hover:text-gray-900", children: "About Us" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/contact", className: "text-gray-600 hover:text-gray-900", children: "Contact" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/careers", className: "text-gray-600 hover:text-gray-900", children: "Careers" }) }),
+          /* @__PURE__ */ s.jsx("li", { children: /* @__PURE__ */ s.jsx(z, { href: "/privacy", className: "text-gray-600 hover:text-gray-900", children: "Privacy Policy" }) })
         ] })
       ] })
     ] }),
@@ -6337,15 +6212,15 @@ function cs() {
       /* @__PURE__ */ s.jsxs("p", { className: "text-gray-500 text-sm", children: [
         "© 2025 PLEXICUS, LLC.",
         " ",
-        /* @__PURE__ */ s.jsx(A, { href: "/privacy", className: "underline hover:text-gray-700", children: "Privacy Policy" }),
+        /* @__PURE__ */ s.jsx(z, { href: "/privacy", className: "underline hover:text-gray-700", children: "Privacy Policy" }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ s.jsx(A, { href: "/management", className: "underline hover:text-gray-700", children: "Management Policy" }),
+        /* @__PURE__ */ s.jsx(z, { href: "/management", className: "underline hover:text-gray-700", children: "Management Policy" }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ s.jsx(A, { href: "/legal", className: "underline hover:text-gray-700", children: "Legal Notice" })
+        /* @__PURE__ */ s.jsx(z, { href: "/legal", className: "underline hover:text-gray-700", children: "Legal Notice" })
       ] }),
       /* @__PURE__ */ s.jsx("div", { children: /* @__PURE__ */ s.jsxs("div", { className: "inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200", children: [
         /* @__PURE__ */ s.jsx("svg", { className: "w-4 h-4 mr-1", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ s.jsx(
@@ -6364,7 +6239,7 @@ function cs() {
   ] }) });
 }
 export {
-  cs as FooterPlexicus,
-  ls as NavbarPlexicus,
-  ns as SelectLanguage
+  us as FooterPlexicus,
+  ds as NavbarPlexicus,
+  as as SelectLanguage
 };

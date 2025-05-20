@@ -43,7 +43,7 @@ export function SelectLanguage() {
                 >
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
-                    <option value="id">Indonesia</option>
+                    <option value="it">Italian</option>
 
                 </select>
                 <svg
