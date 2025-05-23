@@ -36,3 +36,37 @@ nav:
     branding_assets: "Asset di branding"
     feature_request: "Richiesta di funzionalità"
     changelogs: "Changelog"
+
+footer:
+  tagline: "Eleva la tua strategia di cybersecurity con Plexicus."
+  social_media:
+    twitter: "Twitter"
+    linkedin: "LinkedIn"
+    github: "GitHub"
+  sections:
+    products:
+      title: "Prodotti"
+      links:
+        aspm_overview: "Panoramica ASPM"
+        benefits: "Benefici"
+        use_cases: "Casi d'uso"
+        pricing: "Prezzi"
+    resources:
+      title: "Risorse"
+      links:
+        blog: "Blog"
+        documentation: "Documentazione"
+        case_studies: "Casi di studio"
+        security_resources: "Risorse di sicurezza"
+    company:
+      title: "Azienda"
+      links:
+        about_us: "Chi Siamo"
+        contact: "Contatti"
+        careers: "Carriere"
+        privacy_policy: "Informativa sulla privacy"
+  policies:
+    privacy_policy: "Informativa sulla privacy"
+    management_policy: "Politica di gestione"
+    legal_notice: "Note legali"
+  readiness: "Pronto SOC2 Tipo II"
