@@ -24,7 +24,7 @@ console.log(language)
       </div>
       <div className="h-screen"></div>
       <div className="mt-24">
-        <FooterPlexicus />
+        <FooterPlexicus lang={language}/>
       </div>
     </div>
   );
