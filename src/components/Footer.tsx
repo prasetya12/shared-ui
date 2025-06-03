@@ -3,6 +3,7 @@ import Link from './ui/link';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../i18n';
+import { getFullsiteUrl } from '../lib/utils';
 
 interface FooterProps {
   lang: string,
@@ -10,6 +11,8 @@ interface FooterProps {
   fullBlogUrl?: string
 }
 
+const API_URL_WEB = import.meta.env.VITE_WEB_URL;
+const API_URL_BLOG = import.meta.env.VITE_BLOG_URL;
 export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localhost:8000', fullBlogUrl = 'http://localhost:9000' }: FooterProps) {
   const [lang, setLang] = useState("/");
   const { t, i18n } = useTranslation();
@@ -22,12 +25,15 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
     }
   }, []);
 
+
+  const WEB_URL = getFullsiteUrl(fullSiteUrl, API_URL_WEB)
+  const BLOG_URL = getFullsiteUrl(fullBlogUrl, API_URL_BLOG)
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 md:px-6 pt-12 pb-6">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Link href={`${fullSiteUrl}${lang}`}  className="flex items-center gap-2 mb-4">
+            <Link href={`${WEB_URL}${lang}`} className="flex items-center gap-2 mb-4">
               <img src="/images/plexicus-logo-color.png" alt="Plexicus ASPM" className="h-10 w-auto" />
             </Link>
             <p className="text-gray-600 mb-4 max-w-sm">{t('footer.tagline')}</p>
@@ -48,7 +54,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
                   />
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-500">
+              <a href="https://github.com/apps/plexicus" className="text-gray-400 hover:text-gray-500">
                 <span className="sr-only">{t('footer.social_media.github')}</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -67,22 +73,22 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.products.title')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`${fullSiteUrl}${lang}products/aspm-overview`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}aspm-overview`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.aspm_overview')}
                 </Link>
               </li>
               <li>
-                <Link href={`${fullSiteUrl}${lang}products/benefits`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}benefits`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.benefits')}
                 </Link>
               </li>
               <li>
-                <Link href={`${fullSiteUrl}${lang}products/use-cases`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}use-cases`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.use_cases')}
                 </Link>
               </li>
               <li>
-                <Link href={`${fullSiteUrl}${lang}pricing`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}pricing`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.pricing')}
                 </Link>
               </li>
@@ -92,7 +98,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.resources.title')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`${fullBlogUrl}`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${BLOG_URL}`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.resources.links.blog')}
                 </Link>
               </li>
@@ -102,12 +108,12 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
                 </Link>
               </li>
               <li>
-                <Link href={`${fullSiteUrl}${lang}case-studies`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}case-studies`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.resources.links.case_studies')}
                 </Link>
               </li>
               <li>
-                <Link href={`${fullSiteUrl}${lang}security-resources`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}security-resources`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.resources.links.security_resources')}
                 </Link>
               </li>
@@ -117,22 +123,22 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.company.title')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`${fullSiteUrl}${lang}about`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}about`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.company.links.about_us')}
                 </Link>
               </li>
               <li>
-                <Link href={`${fullSiteUrl}${lang}contact`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}contact`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.company.links.contact')}
                 </Link>
               </li>
               <li>
-                <Link href={`${fullSiteUrl}${lang}careers`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}careers`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.company.links.careers')}
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}privacy`}  className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.company.links.privacy_policy')}
                 </Link>
               </li>
@@ -144,15 +150,15 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
           <div className="flex justify-between items-center mb-3">
             <p className="text-gray-500 text-sm">
               &copy; 2025 PLEXICUS, LLC.{' '}
-              <Link href={`${fullSiteUrl}${lang}privacy`} className="underline hover:text-gray-700">
+              <Link href={`${WEB_URL}${lang}privacy`} className="underline hover:text-gray-700">
                 {t('footer.policies.privacy_policy')}
               </Link>{' '}
               ·{' '}
-              <Link href={`${fullSiteUrl}${lang}management`} className="underline hover:text-gray-700">
+              <Link href={`${WEB_URL}${lang}management`} className="underline hover:text-gray-700">
                 {t('footer.policies.management_policy')}
               </Link>{' '}
               ·{' '}
-              <Link href={`${fullSiteUrl}${lang}legal`} className="underline hover:text-gray-700">
+              <Link href={`${WEB_URL}${lang}legal`} className="underline hover:text-gray-700">
                 {t('footer.policies.legal_notice')}
               </Link>
             </p>

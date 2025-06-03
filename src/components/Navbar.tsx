@@ -4,7 +4,7 @@ import Link from './ui/link';
 
 import { useTranslation } from 'react-i18next';
 import '../i18n';
-
+import { getFullsiteUrl } from '../lib/utils';
 // Change Spanish comments and variable names to English
 
 // Extract types to improve maintainability
@@ -27,6 +27,9 @@ type NavbarProps = {
   fullSiteUrl?: string,
   fullBlogUrl?: string
 }
+
+const API_URL_WEB = import.meta.env.VITE_WEB_URL;
+const API_URL_BLOG = import.meta.env.VITE_BLOG_URL;
 export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localhost:8000', fullBlogUrl = 'http://localhost:9000' }: NavbarProps) => {
   const [lang, setLang] = useState("/");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -111,6 +114,14 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
     [activeMenu],
   );
 
+
+  
+  const WEB_URL = getFullsiteUrl(fullSiteUrl,API_URL_WEB)
+  const BLOG_URL = getFullsiteUrl(fullBlogUrl,API_URL_BLOG)
+
+
+  console.log(API_URL_WEB,'WEB')
+
   const menus: Record<string, MenuType> = {
     products: {
       title: t('nav.product.title') as string,
@@ -120,7 +131,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.product.aspm_overview'),
           description: 'Complete application security protection',
-          href: `${fullSiteUrl}${lang}products/aspm`,
+          href: `${WEB_URL}${lang}aspm-overview`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +155,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.product.benefits'),
           description: 'See how Plexicus transforms security',
-          href: `${fullSiteUrl}${lang}products/benefits`,
+          href: `${WEB_URL}${lang}benefits`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +179,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.product.use_cases'),
           description: 'Real-world implementation examples',
-          href: `${fullSiteUrl}${lang}products/use-cases`,
+          href: `${WEB_URL}${lang}use-cases`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +211,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.fintech'),
           description: 'Security solutions for financial technology',
-          href: `${fullSiteUrl}${lang}solutions/fintech-solutions`,
+          href: `${WEB_URL}${lang}solutions/fintech-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +234,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.healthtech'),
           description: 'HIPAA compliant security solutions',
-          href: `${fullSiteUrl}${lang}solutions/healthcare-solutions`,
+          href: `${WEB_URL}${lang}solutions/healthcare-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +256,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.hrtech'),
           description: 'Security for legal technology platforms',
-          href: `${fullSiteUrl}${lang}solutions/hrtech-solutions`,
+          href: `${WEB_URL}${lang}solutions/hrtech-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +279,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.group_companies'),
           description: 'Solutions for corporate groups and holdings',
-          href: `${fullSiteUrl}${lang}solutions/group-companies-solutions`,
+          href: `${WEB_URL}${lang}solutions/group-companies-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -291,7 +302,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.agencies'),
           description: 'Security for digital and marketing agencies',
-          href: `${fullSiteUrl}${lang}solutions/agencies-solutions`,
+          href: `${WEB_URL}${lang}solutions/agencies-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -314,7 +325,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.startups'),
           description: 'Scalable security for growing companies',
-          href: `${fullSiteUrl}${lang}solutions/startup-solutions`,
+          href: `${WEB_URL}${lang}solutions/startup-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -339,7 +350,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.enterprise'),
           description: 'Comprehensive security for large organizations',
-          href: `${fullSiteUrl}${lang}solutions/enterprise-solutions`,
+          href: `${WEB_URL}${lang}solutions/enterprise-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -368,7 +379,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.mobile_apps'),
           description: 'Security for iOS and Android applications',
-          href: `${fullSiteUrl}${lang}solutions/mobile-app-solutions`,
+          href: `${WEB_URL}${lang}solutions/mobile-app-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -391,7 +402,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.manufacturing'),
           description: 'Security for industrial and IoT systems',
-          href: `${fullSiteUrl}${lang}solutions/manufacturing-solutions`,
+          href: `${WEB_URL}${lang}solutions/manufacturing-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -413,7 +424,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.government'),
           description: 'Security solutions for government agencies',
-          href: `${fullSiteUrl}${lang}solutions/government-solutions`,
+          href: `${WEB_URL}${lang}solutions/government-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -439,7 +450,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.solutions.retailtech'),
           description: 'Security for e-commerce and retail platforms',
-          href: `${fullSiteUrl}${lang}solutions/retailtech-solutions`,
+          href: `${WEB_URL}${lang}solutions/retailtech-solutions`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -541,7 +552,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.developers.github_apps'),
+          title: t('nav.developers.plexalyzer_action'),
           description: 'Automate security in your CI/CD pipeline',
           href: 'https://github.com/marketplace/actions/plexicus-runner-action',
           icon: (
@@ -572,7 +583,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.resources.blog'),
           description: 'Latest news and security insights',
-          href: fullBlogUrl,
+          href: BLOG_URL,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -618,7 +629,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: t('nav.resources.branding_assets'),
           description: 'Logos and brand guidelines',
-          href: `${fullSiteUrl}${lang}resources/branding`,
+          href: `${WEB_URL}${lang}resources/branding`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -694,7 +705,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: 'Plexicus vs. ArmorCode',
           description: 'See how Plexicus compares',
-          href: `${fullSiteUrl}${lang}compare/armorcode`,
+          href: `${WEB_URL}${lang}compare/armorcode`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -721,7 +732,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: 'Plexicus vs. Apiiro',
           description: 'Feature comparison',
-          href: `${fullSiteUrl}${lang}compare/apiiro`,
+          href: `${WEB_URL}${lang}compare/apiiro`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -748,7 +759,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           title: 'Plexicus vs. Legit Security',
           description: 'Side-by-side comparison',
-          href: `${fullSiteUrl}${lang}compare/legit-security`,
+          href: `${WEB_URL}${lang}compare/legit-security`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -787,7 +798,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center gap-2">
-          <Link href={`${fullSiteUrl}${lang}`} className="flex items-center gap-2 overflow-visible" aria-label="Plexicus Home">
+          <Link href={`${WEB_URL}${lang}`} className="flex items-center gap-2 overflow-visible" aria-label="Plexicus Home">
             <div className="relative w-auto h-14 flex items-center">
               <img
                 src="/images/plexicus-logo-white.png"
@@ -839,7 +850,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
               </div>
             ))}
           <Link
-            href={`${fullSiteUrl}${lang}pricing`}
+            href={`${WEB_URL}${lang}pricing`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap"
           >
             {t('nav.pricing')}
@@ -880,7 +891,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
               </div>
             ))}
           <Link
-            href={`${fullSiteUrl}${lang}contact`}
+            href={`${WEB_URL}${lang}contact`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap"
           >
             {t('nav.contact')}
@@ -889,7 +900,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
 
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href={`${fullSiteUrl}/login`}
+            href={`${WEB_URL}/login`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
           >
             {t('nav.login')}
@@ -1505,10 +1516,10 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
               </div>
             ))}
 
-            <Link href={`${fullSiteUrl}${lang}pricing`} className="block py-2 text-sm font-medium" onClick={() => setMenuOpen(false)}>
+            <Link href={`${WEB_URL}${lang}pricing`} className="block py-2 text-sm font-medium" onClick={() => setMenuOpen(false)}>
               {t('nav.pricing')}
             </Link>
-            <Link href={`${fullSiteUrl}${lang}contact`} className="block py-2 text-sm font-medium" onClick={() => setMenuOpen(false)}>
+            <Link href={`${WEB_URL}${lang}contact`} className="block py-2 text-sm font-medium" onClick={() => setMenuOpen(false)}>
               {t('nav.contact')}
             </Link>
             <div className="pt-4 border-t border-gray-100">

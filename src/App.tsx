@@ -20,11 +20,11 @@ console.log(language)
   return (
     <div className="h-screen bg-black">
       <div className='flex'>
-        <NavbarPlexicus lang={language} />
+        <NavbarPlexicus lang={language} fullSiteUrl={`https://plexicus.ai`}/>
       </div>
       <div className="h-screen"></div>
       <div className="mt-24">
-        <FooterPlexicus lang={language}/>
+        <FooterPlexicus lang={language} fullSiteUrl={`https://plexicus.ai:443`}/>
       </div>
     </div>
   );
