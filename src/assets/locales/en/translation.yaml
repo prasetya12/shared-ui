@@ -28,6 +28,7 @@ nav:
     documentations: "Documentations"
     github_actions: "Github Actions"
     github_apps: "Github Apps"
+    plexalyzer_action : "Plexalyzer Action"
     api_references: "API References"
   resources:
     title: "Resources"
