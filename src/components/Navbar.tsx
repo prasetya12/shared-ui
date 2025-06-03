@@ -120,7 +120,6 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
   const BLOG_URL = getFullsiteUrl(fullBlogUrl,API_URL_BLOG)
 
 
-  console.log(API_URL_WEB,'WEB')
 
   const menus: Record<string, MenuType> = {
     products: {
