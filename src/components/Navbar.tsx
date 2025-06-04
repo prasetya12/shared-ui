@@ -5,6 +5,7 @@ import Link from './ui/link';
 import { useTranslation } from 'react-i18next';
 import '../i18n';
 import { getFullsiteUrl } from '../lib/utils';
+import { API_URL_WEB,API_URL_BLOG } from '../contants/SiteUrl';
 // Change Spanish comments and variable names to English
 
 // Extract types to improve maintainability
@@ -28,8 +29,7 @@ type NavbarProps = {
   fullBlogUrl?: string
 }
 
-const API_URL_WEB = import.meta.env.VITE_WEB_URL;
-const API_URL_BLOG = import.meta.env.VITE_BLOG_URL;
+
 export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localhost:8000', fullBlogUrl = 'http://localhost:9000' }: NavbarProps) => {
   const [lang, setLang] = useState("/");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -118,8 +118,6 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
   
   const WEB_URL = getFullsiteUrl(fullSiteUrl,API_URL_WEB)
   const BLOG_URL = getFullsiteUrl(fullBlogUrl,API_URL_BLOG)
-
-
 
   const menus: Record<string, MenuType> = {
     products: {
