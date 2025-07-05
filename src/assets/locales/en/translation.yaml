@@ -21,6 +21,8 @@ nav:
     container_security_desc: "Container and Kubernetes security"
     cwpp: "CWPP"
     cwpp_desc: "Cloud Workload Protection Platform"
+    ciem: "CIEM"
+    ciem_desc: "Cloud Infrastructure Entitlement Management"
   solutions:
     title: "Solutions"
     explore: "Explore our solutions"
