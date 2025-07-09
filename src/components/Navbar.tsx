@@ -5,7 +5,7 @@ import Link from "./ui/link"
 import { useTranslation } from "react-i18next"
 import "../i18n"
 import { getFullsiteUrl } from "../lib/utils"
-import { API_URL_WEB, API_URL_BLOG } from "../contants/SiteUrl"
+import { API_URL_WEB, API_URL_BLOG,APP_URL } from "../contants/SiteUrl"
 
 // Extract types to improve maintainability
 type MenuItemType = {
@@ -117,6 +117,7 @@ export const NavbarPlexicus = ({
 
   const WEB_URL = getFullsiteUrl(fullSiteUrl, API_URL_WEB)
   const BLOG_URL = getFullsiteUrl(fullBlogUrl, API_URL_BLOG)
+
 
   const menus: Record<string, MenuType> = {
     products: {
@@ -969,14 +970,16 @@ export const NavbarPlexicus = ({
 
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href={`${WEB_URL}/login`}
+            href={`${APP_URL}/login`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
           >
             {t("nav.login")}
           </Link>
-          <Button className="bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap">
+          <Link   href={`${APP_URL}/register`}>
+            <Button className="bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap">
             {t("nav.get_started")}
           </Button>
+          </Link>
         </div>
 
         <button
