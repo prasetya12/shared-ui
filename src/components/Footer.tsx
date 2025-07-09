@@ -72,18 +72,43 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.products.title')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`${WEB_URL}${lang}aspm-overview`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.aspm_overview')}
+                <Link href={`${WEB_URL}${lang}/products/platform`} className="text-gray-600 hover:text-gray-900">
+                  {t('footer.sections.products.links.platform_overview')}
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}benefits`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}/products/benefits`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.benefits')}
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}use-cases`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}/products/use-cases`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.use_cases')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${WEB_URL}${lang}/products/aspm`} className="text-gray-600 hover:text-gray-900">
+                  {t('footer.sections.products.links.aspm')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${WEB_URL}${lang}/products/cspm`} className="text-gray-600 hover:text-gray-900">
+                  {t('footer.sections.products.links.cspm')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${WEB_URL}${lang}/products/container`} className="text-gray-600 hover:text-gray-900">
+                  {t('footer.sections.products.links.container_security')}
+                </Link>
+              </li>
+               <li>
+                <Link href={`${WEB_URL}${lang}/products/cwpp`} className="text-gray-600 hover:text-gray-900">
+                  {t('footer.sections.products.links.cwpp')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`${WEB_URL}${lang}/products/ciem`} className="text-gray-600 hover:text-gray-900">
+                  {t('footer.sections.products.links.ciem')}
                 </Link>
               </li>
               <li>
@@ -148,7 +173,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
         <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex justify-between items-center mb-3">
             <p className="text-gray-500 text-sm">
-              &copy; 2025 PLEXICUS, LLC.{' '}
+              &copy; 2025 PLEXICUS, CNAPP.{' '}
               <Link href={`${WEB_URL}${lang}privacy`} className="underline hover:text-gray-700">
                 {t('footer.policies.privacy_policy')}
               </Link>{' '}

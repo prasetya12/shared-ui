@@ -84,7 +84,12 @@ footer:
     products:
       title: "Prodotti"
       links:
-        aspm_overview: "Panoramica ASPM"
+        platform_overview: "Panoramica della piattaforma"
+        aspm: "ASPM"
+        cspm: "CSPM"
+        container_security: "Sicurezza dei contenitori"
+        cwpp: "CWPP"
+        ciem: "CIEM"
         benefits: "Vantaggi"
         use_cases: "Casi d'Uso"
         pricing: "Prezzi"
