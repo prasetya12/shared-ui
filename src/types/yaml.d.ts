@@ -1,4 +1,4 @@
 declare module '*.yaml' {
-    const content: any;
+    const content: Record<string, unknown>;
     export default content;
   }

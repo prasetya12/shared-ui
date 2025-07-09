@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../i18n';
 import { getFullsiteUrl } from '../lib/utils';
+import { API_URL_WEB, API_URL_BLOG } from '../contants/SiteUrl';
 
 interface FooterProps {
   lang: string,
@@ -11,8 +12,7 @@ interface FooterProps {
   fullBlogUrl?: string
 }
 
-const API_URL_WEB = import.meta.env.VITE_WEB_URL;
-const API_URL_BLOG = import.meta.env.VITE_BLOG_URL;
+
 export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localhost:8000', fullBlogUrl = 'http://localhost:9000' }: FooterProps) {
   const [lang, setLang] = useState("/");
   const { t, i18n } = useTranslation();
@@ -24,10 +24,9 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
       setLang("/")
     }
   }, []);
-
-
   const WEB_URL = getFullsiteUrl(fullSiteUrl, API_URL_WEB)
   const BLOG_URL = getFullsiteUrl(fullBlogUrl, API_URL_BLOG)
+
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 md:px-6 pt-12 pb-6">
@@ -138,7 +137,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}privacy`}  className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}privacy`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.company.links.privacy_policy')}
                 </Link>
               </li>

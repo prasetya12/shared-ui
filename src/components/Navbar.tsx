@@ -1,137 +1,133 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Button } from './ui/button';
-import Link from './ui/link';
+import React, { useState, useRef, useCallback, useEffect } from "react"
+import { Button } from "./ui/button"
+import Link from "./ui/link"
 
-import { useTranslation } from 'react-i18next';
-import '../i18n';
-import { getFullsiteUrl } from '../lib/utils';
-// Change Spanish comments and variable names to English
+import { useTranslation } from "react-i18next"
+import "../i18n"
+import { getFullsiteUrl } from "../lib/utils"
+import { API_URL_WEB, API_URL_BLOG } from "../contants/SiteUrl"
 
 // Extract types to improve maintainability
 type MenuItemType = {
-  title: string;
-  description: string;
-  href: string;
-  icon: React.ReactNode;
-};
+  title: string
+  description: string
+  href: string
+  icon: React.ReactNode
+}
 
 type MenuType = {
-  title: string;
-  shortTitle: string;
-  image: string;
-  items: MenuItemType[];
-  link?: string;
-};
+  title: string
+  shortTitle: string
+  image: string
+  items: MenuItemType[]
+  link?: string
+}
+
 type NavbarProps = {
-  lang: string,
-  fullSiteUrl?: string,
+  lang: string
+  fullSiteUrl?: string
   fullBlogUrl?: string
 }
 
-const API_URL_WEB = import.meta.env.VITE_WEB_URL;
-const API_URL_BLOG = import.meta.env.VITE_BLOG_URL;
-export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localhost:8000', fullBlogUrl = 'http://localhost:9000' }: NavbarProps) => {
-  const [lang, setLang] = useState("/");
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+export const NavbarPlexicus = ({
+  lang: currentLang,
+  fullSiteUrl = "http://localhost:8000",
+  fullBlogUrl = "http://localhost:9000",
+}: NavbarProps) => {
+  const [lang, setLang] = useState("/")
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [activeMenu, setActiveMenu] = useState<string | null>(null)
+  const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
-    i18n.changeLanguage(currentLang);
-    if (currentLang !== 'en') {
+    i18n.changeLanguage(currentLang)
+    if (currentLang !== "en") {
       setLang(`/${currentLang}/`)
     } else {
       setLang("/")
     }
   }, []);
 
-  // const pathname = usePathname()
-
   // Add this near the other state variables at the top of the component
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
 
   // Add this useEffect hook to detect scrolling
   useEffect(() => {
     const handleScroll = () => {
       // Change to solid background after scrolling down 50px
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
-    };
+      const scrollPosition = window.scrollY
+      setIsScrolled(scrollPosition > 50)
+    }
 
     // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll)
 
     // Initial check
-    handleScroll();
+    handleScroll()
 
     // Clean up
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   // Memoized menu handlers with proper timeout tracking
   const handleMenuEnter = useCallback((menu: string) => {
     if (menuTimeoutRef.current) {
-      clearTimeout(menuTimeoutRef.current);
-      menuTimeoutRef.current = null;
+      clearTimeout(menuTimeoutRef.current)
+      menuTimeoutRef.current = null
     }
-    setActiveMenu(menu);
-  }, []);
+    setActiveMenu(menu)
+  }, [])
 
   // Track all timeouts in a ref to ensure proper cleanup
-  const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
+  const timeoutsRef = useRef<NodeJS.Timeout[]>([])
 
   const handleMenuLeave = useCallback(() => {
     const timeoutId = setTimeout(() => {
-      setActiveMenu(null);
-    }, 150);
+      setActiveMenu(null)
+    }, 150)
 
-    menuTimeoutRef.current = timeoutId;
-    timeoutsRef.current.push(timeoutId);
-  }, []);
+    menuTimeoutRef.current = timeoutId
+    timeoutsRef.current.push(timeoutId)
+  }, [])
 
   useEffect(() => {
     return () => {
       // Clear the active menu timeout
       if (menuTimeoutRef.current) {
-        clearTimeout(menuTimeoutRef.current);
+        clearTimeout(menuTimeoutRef.current)
       }
 
       // Clear all tracked timeouts
-      timeoutsRef.current.forEach(clearTimeout);
-      timeoutsRef.current = [];
-    };
-  }, []);
+      timeoutsRef.current.forEach(clearTimeout)
+      timeoutsRef.current = []
+    }
+  }, [])
 
   // For mobile, we'll use click instead of hover
   const handleMenuClick = useCallback(
     (menu: string) => {
-      setActiveMenu(activeMenu === menu ? null : menu);
+      setActiveMenu(activeMenu === menu ? null : menu)
     },
     [activeMenu],
-  );
+  )
 
-
-  
-  const WEB_URL = getFullsiteUrl(fullSiteUrl,API_URL_WEB)
-  const BLOG_URL = getFullsiteUrl(fullBlogUrl,API_URL_BLOG)
-
-
-  console.log(API_URL_WEB,'WEB')
+  const WEB_URL = getFullsiteUrl(fullSiteUrl, API_URL_WEB)
+  const BLOG_URL = getFullsiteUrl(fullBlogUrl, API_URL_BLOG)
 
   const menus: Record<string, MenuType> = {
     products: {
-      title: t('nav.product.title') as string,
-      shortTitle: 'Product',
-      image: 'product-diagram',
+      title: t("nav.product.title") as string,
+      shortTitle: t("footer.sections.products.title"),
+      image: "product-diagram",
       items: [
         {
-          title: t('nav.product.aspm_overview'),
-          description: 'Complete application security protection',
-          href: `${WEB_URL}${lang}aspm-overview`,
+          title: t("nav.product.platform_overview"),
+          description: t("nav.product.platform_overview_desc"),
+          href: `${WEB_URL}${lang}products/platform`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -153,9 +149,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.product.benefits'),
-          description: 'See how Plexicus transforms security',
-          href: `${WEB_URL}${lang}benefits`,
+          title: t("nav.product.benefits"),
+          description: t("nav.product.benefits_desc"),
+          href: `${WEB_URL}${lang}products/benefits`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -177,9 +173,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.product.use_cases'),
-          description: 'Real-world implementation examples',
-          href: `${WEB_URL}${lang}use-cases`,
+          title: t("nav.product.use_cases"),
+          description: t("nav.product.use_cases_desc"),
+          href: `${WEB_URL}${lang}products/use-cases`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -200,18 +196,119 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
             </svg>
           ),
         },
+        {
+          title: t("nav.product.aspm"),
+          description: t("nav.product.aspm_desc"),
+          href: `${WEB_URL}${lang}products/aspm`,
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              aria-hidden="true"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          ),
+        },
+        {
+          title: t("nav.product.cspm"),
+          description: t("nav.product.cspm_desc"),
+          href: `${WEB_URL}${lang}products/cspm`,
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              aria-hidden="true"
+            >
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+            </svg>
+          ),
+        },
+        {
+          title: t("nav.product.container_security"),
+          description: t("nav.product.container_security_desc"),
+          href: `${WEB_URL}${lang}products/container`,
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              aria-hidden="true"
+            >
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+          ),
+        },
+        {
+          title: t("nav.product.cwpp"),
+          description: t("nav.product.cwpp_desc"),
+          href: `${WEB_URL}${lang}products/cwpp`,
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              aria-hidden="true"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <circle cx="12" cy="16" r="1" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          ),
+        },
+        {
+          title: t("nav.product.ciem"),
+          description: t("nav.product.ciem_desc"),
+          href: `${WEB_URL}${lang}products/ciem`,
+          icon: (
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-cloud-cog-icon lucide-cloud-cog"><path d="m10.852 19.772-.383.924" /><path d="m13.148 14.228.383-.923" /><path d="M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923" /><path d="m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544" /><path d="m14.772 15.852.923-.383" /><path d="m14.772 18.148.923.383" /><path d="M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" /><path d="m9.228 15.852-.923-.383" /><path d="m9.228 18.148-.923.383" /></svg>
+          ),
+        },
       ],
     },
     solutions: {
-      title: t('nav.solutions.title'),
-      link: '/solutions',
-      shortTitle: 'Solutions',
-      image: 'solutions-diagram',
+      title: t("nav.solutions.title"),
+      link: "/solutions",
+      shortTitle: "Solutions",
+      image: "solutions-diagram",
       items: [
         {
-          title: t('nav.solutions.fintech'),
-          description: 'Security solutions for financial technology',
-          href: `${WEB_URL}${lang}solutions/fintech-solutions`,
+          title: t("nav.solutions.fintech"),
+          description: t("nav.solutions.fintech_desc"),
+          href: `${WEB_URL}${lang}solutions/fintech`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -232,9 +329,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.healthtech'),
-          description: 'HIPAA compliant security solutions',
-          href: `${WEB_URL}${lang}solutions/healthcare-solutions`,
+          title: t("nav.solutions.healthtech"),
+          description: t("nav.solutions.healthtech_desc"),
+          href: `${WEB_URL}${lang}solutions/healthtech`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -254,9 +351,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.hrtech'),
-          description: 'Security for legal technology platforms',
-          href: `${WEB_URL}${lang}solutions/hrtech-solutions`,
+          title: t("nav.solutions.hrtech"),
+          description: t("nav.solutions.hrtech_desc"),
+          href: `${WEB_URL}${lang}solutions/hrtech`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -271,15 +368,17 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
               className="text-primary"
               aria-hidden="true"
             >
-              <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
-              <path d="M12 8v4l3 3"></path>
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
           ),
         },
         {
-          title: t('nav.solutions.group_companies'),
-          description: 'Solutions for corporate groups and holdings',
-          href: `${WEB_URL}${lang}solutions/group-companies-solutions`,
+          title: t("nav.solutions.group_companies"),
+          description: t("nav.solutions.group_companies_desc"),
+          href: `${WEB_URL}${lang}solutions/group-companies`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -300,9 +399,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.agencies'),
-          description: 'Security for digital and marketing agencies',
-          href: `${WEB_URL}${lang}solutions/agencies-solutions`,
+          title: t("nav.solutions.agencies"),
+          description: t("nav.solutions.agencies_desc"),
+          href: `${WEB_URL}${lang}solutions/agencies`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -323,9 +422,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.startups'),
-          description: 'Scalable security for growing companies',
-          href: `${WEB_URL}${lang}solutions/startup-solutions`,
+          title: t("nav.solutions.startups"),
+          description: t("nav.solutions.startups_desc"),
+          href: `${WEB_URL}${lang}solutions/startups`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -348,9 +447,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.enterprise'),
-          description: 'Comprehensive security for large organizations',
-          href: `${WEB_URL}${lang}solutions/enterprise-solutions`,
+          title: t("nav.solutions.enterprise"),
+          description: t("nav.solutions.enterprise_desc"),
+          href: `${WEB_URL}${lang}solutions/enterprise`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -377,9 +476,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.mobile_apps'),
-          description: 'Security for iOS and Android applications',
-          href: `${WEB_URL}${lang}solutions/mobile-app-solutions`,
+          title: t("nav.solutions.mobile_apps"),
+          description: t("nav.solutions.mobile_apps_desc"),
+          href: `${WEB_URL}${lang}solutions/mobile-apps`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -400,9 +499,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.manufacturing'),
-          description: 'Security for industrial and IoT systems',
-          href: `${WEB_URL}${lang}solutions/manufacturing-solutions`,
+          title: t("nav.solutions.manufacturing"),
+          description: t("nav.solutions.manufacturing_desc"),
+          href: `${WEB_URL}${lang}solutions/manufacturing`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -422,9 +521,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.government'),
-          description: 'Security solutions for government agencies',
-          href: `${WEB_URL}${lang}solutions/government-solutions`,
+          title: t("nav.solutions.government"),
+          description: t("nav.solutions.government_desc"),
+          href: `${WEB_URL}${lang}solutions/government`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -448,9 +547,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.solutions.retailtech'),
-          description: 'Security for e-commerce and retail platforms',
-          href: `${WEB_URL}${lang}solutions/retailtech-solutions`,
+          title: t("nav.solutions.retailtech"),
+          description: t("nav.solutions.retailtech_desc"),
+          href: `${WEB_URL}${lang}solutions/retailtech`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -474,14 +573,14 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
       ],
     },
     developers: {
-      title: t('nav.developers.title'),
-      shortTitle: 'Developers',
-      image: 'developers-diagram',
+      title: t("nav.developers.title"),
+      shortTitle: "Developers",
+      image: "developers-diagram",
       items: [
         {
-          title: t('nav.developers.documentations'),
-          description: 'Technical guides and references',
-          href: 'https://docs.plexicus.com/',
+          title: t("nav.developers.documentation"),
+          description: t("nav.developers.documentation_desc"),
+          href: "https://docs.plexicus.com",
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -505,9 +604,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.developers.api_references'),
-          description: 'Comprehensive API documentation',
-          href: 'https://docs.plexicus.com/getting-started/introduction',
+          title: t("nav.developers.api_references"),
+          description: t("nav.developers.api_references_desc"),
+          href: "https://docs.plexicus.com/api",
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -529,9 +628,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.developers.github_apps'),
-          description: 'Integrate Plexicus with your repositories',
-          href: 'https://github.com/apps/plexicus',
+          title: t("nav.developers.github_apps"),
+          description: t("nav.developers.github_apps_desc"),
+          href: "https://github.com/apps/plexicus",
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -552,9 +651,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.developers.plexalyzer_action'),
-          description: 'Automate security in your CI/CD pipeline',
-          href: 'https://github.com/marketplace/actions/plexicus-runner-action',
+          title: t("nav.developers.plexalyzer_action"),
+          description: t("nav.developers.plexalyzer_action_desc"),
+          href: "https://github.com/marketplace/actions/plexicus-runner-action",
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -576,13 +675,13 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
       ],
     },
     resources: {
-      title: t('nav.resources.title'),
-      shortTitle: 'Resources',
-      image: 'resources-diagram',
+      title: t("nav.resources.title"),
+      shortTitle: t("nav.resources.title"),
+      image: "resources-diagram",
       items: [
         {
-          title: t('nav.resources.blog'),
-          description: 'Latest news and security insights',
+          title: t("nav.resources.blog"),
+          description: t("nav.resources.blog_desc"),
           href: BLOG_URL,
           icon: (
             <svg
@@ -604,9 +703,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.resources.youtube_channel'),
-          description: 'Video tutorials and webinars',
-          href: 'https://youtube.com/channel/UCzrotvBZ3dcb7mhI55ExHBQ/',
+          title: t("nav.resources.youtube_channel"),
+          description: t("nav.resources.youtube_channel_desc"),
+          href: "https://youtube.com/@plexicus",
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -627,8 +726,8 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.resources.branding_assets'),
-          description: 'Logos and brand guidelines',
+          title: t("nav.resources.branding_assets"),
+          description: t("nav.resources.branding_assets_desc"),
           href: `${WEB_URL}${lang}resources/branding`,
           icon: (
             <svg
@@ -655,9 +754,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.resources.changelogs'),
-          description: 'Latest product updates',
-          href: 'https://plexicus.canny.io/changelog',
+          title: t("nav.resources.changelogs"),
+          description: t("nav.resources.changelogs_desc"),
+          href: "https://plexicus.canny.io/changelog",
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -678,9 +777,9 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           ),
         },
         {
-          title: t('nav.resources.feature_request'),
-          description: 'Submit and vote on new features',
-          href: 'https://plexicus.canny.io/feature-requests',
+          title: t("nav.resources.feature_requests"),
+          description: t("nav.resources.feature_requests_desc"),
+          href: "https://plexicus.canny.io/feature-requests",
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -699,13 +798,10 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
             </svg>
           ),
         },
-        // Find the three comparison items in the resources menu items array and update their icons
-
-        // For "Plexicus vs. ArmorCode", replace the icon with a sword
         {
-          title: 'Plexicus vs. ArmorCode',
-          description: 'See how Plexicus compares',
-          href: `${WEB_URL}${lang}compare/armorcode`,
+          title: t("nav.resources.integrations"),
+          description: t("nav.resources.integrations_desc"),
+          href: `${WEB_URL}${lang}integrations`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -720,19 +816,18 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
               className="text-primary"
               aria-hidden="true"
             >
-              <path d="M14.5 17.5L3 6V3h3l11.5 11.5" />
-              <path d="M13 19l6-6" />
-              <path d="M16 16l4 4" />
-              <path d="M19 21l2-2" />
+              <path d="M9 12l2 2 4-4" />
+              <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+              <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+              <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+              <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
             </svg>
           ),
         },
-
-        // For "Plexicus vs. Apiiro", replace the icon with an axe
         {
-          title: 'Plexicus vs. Apiiro',
-          description: 'Feature comparison',
-          href: `${WEB_URL}${lang}compare/apiiro`,
+          title: t("nav.resources.comparison_overview"),
+          description: t("nav.resources.comparison_overview_desc"),
+          href: `${WEB_URL}${lang}comparison/overview`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -747,66 +842,40 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
               className="text-primary"
               aria-hidden="true"
             >
-              <path d="M12 2v5.5m0 0v9m0-9 7-3.5c.8 0 1.5.7 1.5 1.5v3c0 .8-.7 1.5-1.5 1.5L12 8.5l-7-3.5C4.2 5 3.5 5.7 3.5 6.5v3c0 .8.7 1.5 1.5 1.5l7 3.5" />
-              <path d="M12 8.5 5 5l-1 1 8 8.5 8-8.5-1-1-7 3.5z" />
-              <path d="m9 12 3 2.5 3-2.5" />
-              <path d="M12 17v5" />
-            </svg>
-          ),
-        },
-
-        // For "Plexicus vs. Legit Security", replace the icon with a crosshair/target
-        {
-          title: 'Plexicus vs. Legit Security',
-          description: 'Side-by-side comparison',
-          href: `${WEB_URL}${lang}compare/legit-security`,
-          icon: (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-primary"
-              aria-hidden="true"
-            >
-              <path d="M3 8a4 4 0 0 1 8 0v8a4 4 0 0 1-8 0z" />
-              <path d="M7 8v8" />
-              <path d="M21 12h-7" />
-              <path d="m14 15 3-3-3-3" />
-              <path d="M7 12h7" />
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+              <circle cx="12" cy="12" r="3" />
             </svg>
           ),
         },
       ],
     },
-  };
+  }
 
   return (
     <header
       className="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300"
       style={{
-        background: isScrolled ? '#8220ff' : 'transparent',
-        boxShadow: isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none',
-        transition: 'all 0.3s ease-in-out',
-        minHeight: '64px',
+        background: isScrolled ? "#8220ff" : "transparent",
+        boxShadow: isScrolled ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
+        transition: "all 0.3s ease-in-out",
+        minHeight: "64px",
       }}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center gap-2">
-          <Link href={`${WEB_URL}${lang}`} className="flex items-center gap-2 overflow-visible" aria-label="Plexicus Home">
+          <Link
+            href={`${WEB_URL}${lang}`}
+            className="flex items-center gap-2 overflow-visible"
+            aria-label="Plexicus Home"
+          >
             <div className="relative w-auto h-14 flex items-center">
               <img
                 src="/images/plexicus-logo-white.png"
                 alt="Plexicus Logo"
                 className="object-contain max-h-full max-w-none"
                 style={{
-                  maxWidth: isScrolled ? '180px' : '220px',
-                  transition: 'max-width 0.3s ease-in-out',
+                  maxWidth: isScrolled ? "180px" : "220px",
+                  transition: "max-width 0.3s ease-in-out",
                 }}
               />
             </div>
@@ -815,7 +884,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
 
         <nav className="hidden md:flex md:gap-4 lg:gap-6" aria-label="Main Navigation">
           {Object.entries(menus)
-            .filter(([key]) => key === 'products')
+            .filter(([key]) => key === "products")
             .map(([key, menu]) => (
               <div
                 key={key}
@@ -841,7 +910,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`ml-1 transition-transform duration-200 ${activeMenu === key ? 'transform rotate-180' : ''}`}
+                    className={`ml-1 transition-transform duration-200 ${activeMenu === key ? "transform rotate-180" : ""}`}
                     aria-hidden="true"
                   >
                     <path d="m6 9 6 6 6-6" />
@@ -853,10 +922,10 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
             href={`${WEB_URL}${lang}pricing`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap"
           >
-            {t('nav.pricing')}
+            {t("nav.pricing")}
           </Link>
           {Object.entries(menus)
-            .filter(([key]) => key === 'solutions' || key === 'developers' || key === 'resources')
+            .filter(([key]) => key === "solutions" || key === "developers" || key === "resources")
             .map(([key, menu]) => (
               <div
                 key={key}
@@ -882,7 +951,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`ml-1 transition-transform duration-200 ${activeMenu === key ? 'transform rotate-180' : ''}`}
+                    className={`ml-1 transition-transform duration-200 ${activeMenu === key ? "transform rotate-180" : ""}`}
                     aria-hidden="true"
                   >
                     <path d="m6 9 6 6 6-6" />
@@ -894,7 +963,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
             href={`${WEB_URL}${lang}contact`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap"
           >
-            {t('nav.contact')}
+            {t("nav.contact")}
           </Link>
         </nav>
 
@@ -903,17 +972,17 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
             href={`${WEB_URL}/login`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
           >
-            {t('nav.login')}
+            {t("nav.login")}
           </Link>
           <Button className="bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap">
-            {t('nav.get_started')}
+            {t("nav.get_started")}
           </Button>
         </div>
 
         <button
           className="flex md:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
           {menuOpen ? (
@@ -955,14 +1024,14 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         </button>
       </div>
 
-      { /* Reemplazar la sección del mega menú con esta implementación mejorada */}
+      {/* Mega menu */}
       {activeMenu && (
         <>
           <div
             className="fixed inset-0 bg-black/20 z-30"
             onClick={() => setActiveMenu(null)}
             aria-hidden="true"
-            style={{ top: '64px' }} // Asegura que el overlay comience debajo del navbar
+            style={{ top: "64px" }}
           ></div>
           <div
             className="absolute left-0 right-0 top-16 z-40 bg-white shadow-xl border-t border-gray-100 transition-all duration-300 transform"
@@ -973,12 +1042,12 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
           >
             <div className="container mx-auto py-8 px-4 md:px-6 max-w-7xl">
               <div className="flex flex-col md:flex-row">
-                { /* Left side - Image and Text (stacked) */}
+                {/* Left side - Image and Text (stacked) */}
                 <div className="w-full md:w-1/3 pr-0 md:pr-8 mb-6 md:mb-0 flex flex-col">
-                  { /* Diagram section */}
+                  {/* Diagram section */}
                   <div className="relative h-36 md:h-40 w-full rounded-lg overflow-hidden bg-white border border-gray-100 mb-4">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      {activeMenu === 'products' && (
+                      {activeMenu === "products" && (
                         <div className="w-full h-full flex items-center justify-center">
                           <svg
                             width="100%"
@@ -987,10 +1056,10 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            { /* Fondo con gradiente */}
+                            {/* Background */}
                             <rect width="400" height="300" fill="white" />
 
-                            { /* Dashboard UI */}
+                            {/* Dashboard UI */}
                             <rect
                               x="40"
                               y="30"
@@ -1001,13 +1070,13 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               filter="url(#shadowEffect)"
                             />
 
-                            { /* Barra superior */}
+                            {/* Top bar */}
                             <rect x="40" y="30" width="320" height="40" rx="12" fill="#8220ff" fillOpacity="0.9" />
                             <circle cx="65" cy="50" r="8" fill="white" fillOpacity="0.6" />
                             <circle cx="90" cy="50" r="8" fill="white" fillOpacity="0.6" />
                             <circle cx="115" cy="50" r="8" fill="white" fillOpacity="0.6" />
 
-                            { /* Sidebar */}
+                            {/* Sidebar */}
                             <rect x="40" y="70" width="80" height="200" fill="#f5f5f7" />
                             <rect x="55" y="90" width="50" height="8" rx="4" fill="#8220ff" fillOpacity="0.7" />
                             <rect x="55" y="110" width="40" height="8" rx="4" fill="#8220ff" fillOpacity="0.5" />
@@ -1015,14 +1084,14 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                             <rect x="55" y="150" width="35" height="8" rx="4" fill="#8220ff" fillOpacity="0.5" />
                             <rect x="55" y="170" width="50" height="8" rx="4" fill="#8220ff" fillOpacity="0.5" />
 
-                            { /* Área principal */}
+                            {/* Main area */}
                             <rect x="140" y="90" width="200" height="70" rx="8" fill="#8220ff" fillOpacity="0.1" />
                             <rect x="155" y="105" width="170" height="40" rx="4" fill="#8220ff" fillOpacity="0.2" />
                             <circle cx="175" cy="125" r="15" fill="#8220ff" fillOpacity="0.8" />
                             <rect x="200" y="115" width="110" height="8" rx="4" fill="white" />
                             <rect x="200" y="130" width="80" height="6" rx="3" fill="white" fillOpacity="0.7" />
 
-                            { /* Gráficos y estadísticas */}
+                            {/* Charts and statistics */}
                             <rect x="140" y="180" width="95" height="80" rx="8" fill="#f0f0f5" />
                             <path
                               d="M150 240 L170 220 L190 230 L210 200"
@@ -1049,17 +1118,17 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               75%
                             </text>
 
-                            { /* Elementos decorativos */}
+                            {/* Decorative elements */}
                             <circle cx="320" cy="50" r="12" fill="white" fillOpacity="0.2" />
                             <path d="M314 50 L320 56 L326 50" stroke="white" strokeWidth="2" strokeLinecap="round" />
 
-                            { /* Partículas decorativas */}
+                            {/* Decorative particles */}
                             <circle cx="30" cy="30" r="5" fill="#8220ff" fillOpacity="0.5" />
                             <circle cx="350" cy="280" r="7" fill="#8220ff" fillOpacity="0.3" />
                             <circle cx="370" cy="50" r="4" fill="#8220ff" fillOpacity="0.4" />
                             <circle cx="20" cy="250" r="6" fill="#8220ff" fillOpacity="0.2" />
 
-                            { /* Líneas de conexión */}
+                            {/* Connection lines */}
                             <path
                               d="M15 100 C30 120, 20 150, 35 160"
                               stroke="#8220ff"
@@ -1073,19 +1142,8 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               strokeDasharray="4 4"
                             />
 
-                            { /* Definiciones de gradientes y efectos */}
+                            {/* Definitions */}
                             <defs>
-                              <linearGradient
-                                id="productGradient"
-                                x1="0"
-                                y1="0"
-                                x2="400"
-                                y2="300"
-                                gradientUnits="userSpaceOnUse"
-                              >
-                                <stop offset="0%" stopColor="#f5f5f7" />
-                                <stop offset="100%" stopColor="#e8e8f0" />
-                              </linearGradient>
                               <filter
                                 id="shadowEffect"
                                 x="0"
@@ -1114,7 +1172,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                           </svg>
                         </div>
                       )}
-                      {activeMenu === 'solutions' && (
+                      {activeMenu === "solutions" && (
                         <div className="w-full h-full flex items-center justify-center">
                           <svg
                             width="100%"
@@ -1123,12 +1181,12 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            { /* White background */}
+                            {/* White background */}
                             <rect width="400" height="300" fill="white" />
 
-                            { /* Process flow diagram - minimalist style */}
+                            {/* Process flow diagram - minimalist style */}
 
-                            { /* Central circle */}
+                            {/* Central circle */}
                             <circle
                               cx="200"
                               cy="150"
@@ -1139,35 +1197,35 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               strokeWidth="2"
                             />
 
-                            { /* Process nodes */}
+                            {/* Process nodes */}
                             <circle cx="100" cy="150" r="25" fill="white" stroke="#8220ff" strokeWidth="2" />
                             <circle cx="300" cy="150" r="25" fill="white" stroke="#8220ff" strokeWidth="2" />
                             <circle cx="200" cy="70" r="25" fill="white" stroke="#8220ff" strokeWidth="2" />
                             <circle cx="200" cy="230" r="25" fill="white" stroke="#8220ff" strokeWidth="2" />
 
-                            { /* Connection lines */}
+                            {/* Connection lines */}
                             <path d="M125 150 L160 150" stroke="#8220ff" strokeWidth="2" />
                             <path d="M240 150 L275 150" stroke="#8220ff" strokeWidth="2" />
                             <path d="M200 95 L200 130" stroke="#8220ff" strokeWidth="2" />
                             <path d="M200 170 L200 205" stroke="#8220ff" strokeWidth="2" />
 
-                            { /* Directional arrows */}
+                            {/* Directional arrows */}
                             <polygon points="158,145 158,155 168,150" fill="#8220ff" />
                             <polygon points="242,145 242,155 232,150" fill="#8220ff" />
                             <polygon points="195,128 205,128 200,138" fill="#8220ff" />
                             <polygon points="195,172 205,172 200,162" fill="#8220ff" />
 
-                            { /* Node inner details */}
+                            {/* Node inner details */}
                             <circle cx="100" cy="150" r="10" fill="#8220ff" fillOpacity="0.3" />
                             <circle cx="300" cy="150" r="10" fill="#8220ff" fillOpacity="0.3" />
                             <circle cx="200" cy="70" r="10" fill="#8220ff" fillOpacity="0.3" />
                             <circle cx="200" cy="230" r="10" fill="#8220ff" fillOpacity="0.3" />
 
-                            { /* Central node details */}
+                            {/* Central node details */}
                             <circle cx="200" cy="150" r="20" fill="#8220ff" fillOpacity="0.2" />
                             <circle cx="200" cy="150" r="10" fill="#8220ff" fillOpacity="0.4" />
 
-                            { /* Decorative elements */}
+                            {/* Decorative elements */}
                             <circle cx="150" cy="100" r="5" fill="#8220ff" fillOpacity="0.2" />
                             <circle cx="250" cy="100" r="5" fill="#8220ff" fillOpacity="0.2" />
                             <circle cx="150" cy="200" r="5" fill="#8220ff" fillOpacity="0.2" />
@@ -1175,7 +1233,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                           </svg>
                         </div>
                       )}
-                      {activeMenu === 'resources' && (
+                      {activeMenu === "resources" && (
                         <div className="w-full h-full flex items-center justify-center">
                           <svg
                             width="100%"
@@ -1184,12 +1242,12 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            { /* Fondo con gradiente */}
+                            {/* Background */}
                             <rect width="400" height="300" fill="white" />
 
-                            { /* Elementos principales - Diseño simplificado pero manteniendo el mismo tamaño */}
+                            {/* Main elements */}
                             <g filter="url(#resourcesShadow)">
-                              { /* Libro central */}
+                              {/* Central book */}
                               <rect x="140" y="80" width="120" height="140" rx="4" fill="url(#bookGradient)" />
                               <rect
                                 x="140"
@@ -1202,17 +1260,17 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                                 fill="none"
                               />
 
-                              { /* Páginas del libro */}
+                              {/* Book pages */}
                               <path d="M160 100 L240 100" stroke="#8220ff" strokeWidth="1" strokeOpacity="0.3" />
                               <path d="M160 120 L240 120" stroke="#8220ff" strokeWidth="1" strokeOpacity="0.3" />
                               <path d="M160 140 L240 140" stroke="#8220ff" strokeWidth="1" strokeOpacity="0.3" />
                               <path d="M160 160 L240 160" stroke="#8220ff" strokeWidth="1" strokeOpacity="0.3" />
                               <path d="M160 180 L240 180" stroke="#8220ff" strokeWidth="1" strokeOpacity="0.3" />
 
-                              { /* Marcador */}
+                              {/* Bookmark */}
                               <path d="M230 80 L230 110 L220 100 L210 110 L210 80" fill="#8220ff" fillOpacity="0.3" />
 
-                              { /* Documento flotante - Documentación */}
+                              {/* Floating document - Documentation */}
                               <g transform="translate(-10, -10) rotate(-5)">
                                 <rect
                                   x="80"
@@ -1230,7 +1288,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                                 <path d="M90 180 L120 180" stroke="#8220ff" strokeWidth="1" strokeOpacity="0.5" />
                               </g>
 
-                              { /* Pantalla de video - Webinars */}
+                              {/* Video screen - Webinars */}
                               <g transform="translate(10, -10) rotate(5)">
                                 <rect
                                   x="240"
@@ -1256,34 +1314,19 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               </g>
                             </g>
 
-                            { /* Espacio en blanco para las subsecciones - Manteniendo el mismo tamaño que los otros diagramas */}
-                            <rect x="80" y="230" width="240" height="50" fill="none" />
-
-                            { /* Elementos decorativos */}
+                            {/* Decorative elements */}
                             <circle cx="200" cy="50" r="15" fill="#8220ff" fillOpacity="0.1" />
                             <circle cx="200" cy="50" r="10" fill="#8220ff" fillOpacity="0.2" />
                             <circle cx="200" cy="50" r="5" fill="#8220ff" fillOpacity="0.3" />
 
-                            { /* Partículas brillantes */}
+                            {/* Sparkle particles */}
                             <circle cx="150" cy="60" r="2" fill="#8220ff" fillOpacity="0.6" />
                             <circle cx="250" cy="60" r="2" fill="#8220ff" fillOpacity="0.6" />
                             <circle cx="120" cy="150" r="2" fill="#8220ff" fillOpacity="0.6" />
                             <circle cx="280" cy="150" r="2" fill="#8220ff" fillOpacity="0.6" />
 
-                            { /* Definiciones de gradientes y efectos */}
+                            {/* Definitions */}
                             <defs>
-                              <linearGradient
-                                id="resourcesGradient"
-                                x1="0"
-                                y1="0"
-                                x2="400"
-                                y2="300"
-                                gradientUnits="userSpaceOnUse"
-                              >
-                                <stop offset="0%" stopColor="#f5f5f7" />
-                                <stop offset="100%" stopColor="#e8e8f0" />
-                              </linearGradient>
-
                               <linearGradient
                                 id="bookGradient"
                                 x1="140"
@@ -1303,7 +1346,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                           </svg>
                         </div>
                       )}
-                      {activeMenu === 'developers' && (
+                      {activeMenu === "developers" && (
                         <div className="w-full h-full flex items-center justify-center">
                           <svg
                             width="100%"
@@ -1312,19 +1355,19 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            { /* Background */}
+                            {/* Background */}
                             <rect width="400" height="300" fill="white" />
 
-                            { /* Code Editor Window - Positioned slightly to the left */}
+                            {/* Code Editor Window */}
                             <rect x="20" y="20" width="280" height="200" rx="8" fill="#1E1E1E" />
 
-                            { /* Editor Header */}
+                            {/* Editor Header */}
                             <rect x="20" y="20" width="280" height="30" rx="8" fill="#333333" />
                             <circle cx="40" cy="35" r="6" fill="#FF5F56" />
                             <circle cx="60" cy="35" r="6" fill="#FFBD2E" />
                             <circle cx="80" cy="35" r="6" fill="#27C93F" />
 
-                            { /* Code Lines */}
+                            {/* Code Lines */}
                             <rect x="40" y="70" width="120" height="10" rx="2" fill="#9CDCFE" fillOpacity="0.7" />
                             <rect x="40" y="90" width="180" height="10" rx="2" fill="#CE9178" fillOpacity="0.7" />
                             <rect x="60" y="110" width="200" height="10" rx="2" fill="#6A9955" fillOpacity="0.7" />
@@ -1333,7 +1376,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                             <rect x="60" y="170" width="180" height="10" rx="2" fill="#4EC9B0" fillOpacity="0.7" />
                             <rect x="40" y="190" width="160" height="10" rx="2" fill="#C586C0" fillOpacity="0.7" />
 
-                            { /* Line Numbers */}
+                            {/* Line Numbers */}
                             <text x="30" y="75" fontSize="10" fill="#858585">
                               1
                             </text>
@@ -1356,16 +1399,16 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               7
                             </text>
 
-                            { /* Terminal Window - Overlapping the code editor */}
+                            {/* Terminal Window */}
                             <rect x="80" y="130" width="310" height="130" rx="8" fill="#1E1E1E" filter="url(#shadow)" />
 
-                            { /* Terminal Header */}
+                            {/* Terminal Header */}
                             <rect x="80" y="130" width="310" height="25" rx="8" fill="#333333" />
                             <text x="235" y="147" fontSize="12" fill="#FFFFFF" textAnchor="middle">
                               Terminal
                             </text>
 
-                            { /* Terminal Content */}
+                            {/* Terminal Content */}
                             <text x="90" y="170" fontSize="9" fill="#CCCCCC" fontFamily="monospace">
                               $ git clone https://github.com/plexicus/plexicus-sdk.git
                             </text>
@@ -1385,7 +1428,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               $ npm run dev
                             </text>
 
-                            { /* GitHub Icon */}
+                            {/* GitHub Icon */}
                             <g transform="translate(320, 240) scale(0.8)">
                               <circle cx="0" cy="0" r="25" fill="white" />
                               <path
@@ -1395,7 +1438,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                               />
                             </g>
 
-                            { /* Shadow filter */}
+                            {/* Shadow filter */}
                             <defs>
                               <filter id="shadow" x="0" y="0" width="400" height="300" filterUnits="userSpaceOnUse">
                                 <feDropShadow dx="2" dy="4" stdDeviation="3" floodColor="#000000" floodOpacity="0.3" />
@@ -1407,26 +1450,26 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                     </div>
                   </div>
 
-                  { /* Text section */}
+                  {/* Text section */}
                   <div className="bg-gray-50 rounded-lg p-4">
                     <h3 className="text-xl font-bold text-[#8220ff]">
                       {menus[activeMenu as keyof typeof menus].title}
                     </h3>
                     <p className="text-gray-700">
-                      {activeMenu === 'products'
-                        ? 'Explore our product'
-                        : activeMenu === 'solutions'
-                          ? 'Explore our solutions'
-                          : 'Explore our resources'}
+                      {activeMenu === "products"
+                        ? t("nav.product.explore")
+                        : activeMenu === "solutions"
+                          ? t("nav.solutions.explore")
+                          : t("nav.resources.explore")}
                     </p>
                   </div>
                 </div>
 
-                { /* Right side - Menu items */}
+                {/* Right side - Menu items */}
                 <div className="w-full md:w-2/3">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {menus[activeMenu as keyof typeof menus].items
-                      .filter((item) => activeMenu !== 'resources' || !item.title.includes('vs.'))
+                      .filter((item) => activeMenu !== "resources" || !item.title.startsWith("vs "))
                       .map((item, index) => (
                         <Link
                           key={index}
@@ -1435,7 +1478,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                           onClick={() => setActiveMenu(null)}
                         >
                           <div className="w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors">
-                            {item.icon}
+                            {React.cloneElement(item.icon as React.ReactElement<React.SVGProps<SVGSVGElement>>, { width: 16, height: 16 })}
                           </div>
                           <div>
                             <h4 className="font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors">
@@ -1445,40 +1488,6 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                           </div>
                         </Link>
                       ))}
-
-                    {activeMenu === 'resources' && (
-                      <div className="col-span-1 sm:col-span-2 mt-4">
-                        <div className="bg-purple-50 p-4 rounded-lg border border-purple-100">
-                          <h3 className="text-sm font-medium text-purple-800 mb-3">Compare Plexicus</h3>
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            {menus.resources.items
-                              .filter(
-                                (item) =>
-                                  item.title === 'Plexicus vs. ArmorCode' ||
-                                  item.title === 'Plexicus vs. Apiiro' ||
-                                  item.title === 'Plexicus vs. Legit Security',
-                              )
-                              .map((item, idx) => (
-                                <Link
-                                  key={`compare-${idx}`}
-                                  href={item.href}
-                                  className="flex flex-col items-center p-3 rounded-lg bg-white hover:bg-purple-100 transition-colors text-center group"
-                                  onClick={() => setActiveMenu(null)}
-                                >
-                                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-purple-200 transition-colors">
-                                    {React.cloneElement(item.icon as React.ReactElement<any>, {
-                                      className: 'w-5 h-5 text-purple-700',
-                                    })}
-                                  </div>
-                                  <h4 className="font-medium text-sm text-gray-900 group-hover:text-purple-800 transition-colors">
-                                    {item.title}
-                                  </h4>
-                                </Link>
-                              ))}
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
@@ -1487,11 +1496,11 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         </>
       )}
 
-      { /* Mobile menu */}
+      {/* Mobile menu */}
       {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 lg:hidden" onClick={() => setMenuOpen(false)}></div>}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-        style={{ top: '64px', height: 'calc(100vh - 64px)', overflow: 'auto' }}
+        className={`md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+        style={{ top: "64px", height: "calc(100vh - 64px)", overflow: "auto" }}
       >
         <div className="overflow-y-auto h-full p-4 pb-20">
           <div className="space-y-4">
@@ -1507,7 +1516,7 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
                       onClick={() => setMenuOpen(false)}
                     >
                       <div className="w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center">
-                        {React.cloneElement(item.icon as React.ReactElement<any>, { width: 16, height: 16 })}
+                        {React.cloneElement(item.icon as React.ReactElement<React.SVGProps<SVGSVGElement>>, { width: 16, height: 16 })}
                       </div>
                       <span className="text-sm">{item.title}</span>
                     </Link>
@@ -1516,11 +1525,19 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
               </div>
             ))}
 
-            <Link href={`${WEB_URL}${lang}pricing`} className="block py-2 text-sm font-medium" onClick={() => setMenuOpen(false)}>
-              {t('nav.pricing')}
+            <Link
+              href={`${WEB_URL}${lang}pricing`}
+              className="block py-2 text-sm font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t("nav.pricing")}
             </Link>
-            <Link href={`${WEB_URL}${lang}contact`} className="block py-2 text-sm font-medium" onClick={() => setMenuOpen(false)}>
-              {t('nav.contact')}
+            <Link
+              href={`${WEB_URL}${lang}contact`}
+              className="block py-2 text-sm font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t("nav.contact")}
             </Link>
             <div className="pt-4 border-t border-gray-100">
               <Button className="w-full bg-gradient-primary" onClick={() => setMenuOpen(false)}>
@@ -1531,6 +1548,5 @@ export const NavbarPlexicus = ({ lang: currentLang, fullSiteUrl = 'http://localh
         </div>
       </div>
     </header>
-  );
+  )
 }
-
