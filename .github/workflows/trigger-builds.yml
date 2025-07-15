@@ -1,0 +1,48 @@
+name: Trigger Dependent Builds
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+    types: [closed]
+jobs:
+  trigger-builds:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event.pull_request.merged == true)
+    steps:
+      - name: Trigger Web Repo Build
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.CROSS_REPO_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "ref": "main",
+              "inputs": {
+                "triggered_by": "ui-repo",
+                "ui_commit": "${{ github.sha }}",
+                "ui_ref": "${{ github.ref_name }}"
+              }
+            }' \
+            "http[s://api.github.com/repos/${{ g](https://api.github.com/repos/$)ithub.repository_owner }}/web/actions/workflows/build.yml/dispatches"
+      - name: Trigger Blog Repo Build
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.CROSS_REPO_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "ref": "main",
+              "inputs": {
+                "triggered_by": "ui-repo",
+                "ui_commit": "${{ github.sha }}",
+                "ui_ref": "${{ github.ref_name }}"
+              }
+            }' \
+            "https://[api.github.com/repos/${{ githu](https://api.github.com/repos/$)b.repository_owner }}/blog/actions/workflows/build.yml/dispatches"
+      - name: Report Status
+        run: |
+          echo ":white_check_mark: Triggered builds for:"
+          echo "  - Web repo"
+          echo "  - Blog repo"
+          echo "  - UI commit: ${{ github.sha }}"
