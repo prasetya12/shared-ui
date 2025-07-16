@@ -24,7 +24,7 @@ jobs:
                 "ui_ref": "${{ github.ref_name }}"
               }
             }' \
-            "http[s://api.github.com/repos/${{ g](https://api.github.com/repos/$)ithub.repository_owner }}/web/actions/workflows/build.yml/dispatches"
+            "https://api.github.com/repos/${{ github.repository_owner }}/web/actions/workflows/build.yml/dispatches"
       - name: Trigger Blog Repo Build
         run: |
           curl -X POST \
@@ -39,7 +39,7 @@ jobs:
                 "ui_ref": "${{ github.ref_name }}"
               }
             }' \
-            "https://[api.github.com/repos/${{ githu](https://api.github.com/repos/$)b.repository_owner }}/blog/actions/workflows/build.yml/dispatches"
+            "https://api.github.com/repos/${{ github.repository_owner }}/blog/actions/workflows/build.yml/dispatches"
       - name: Report Status
         run: |
           echo ":white_check_mark: Triggered builds for:"
