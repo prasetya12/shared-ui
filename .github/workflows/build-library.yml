@@ -26,8 +26,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # You can change this to '20' or another version if needed
+          node-version: "20" # You can change this to '20' or another version if needed
 
+      - name: Clean up node modules and lock files
+        run: |
+          rm -rf node_modules
+          rm -f yarn.lock
+          rm -f pnpm-lock.yaml
+          rm -f package-lock.json
       # Step 3: Install project dependencies.
       # 'npm ci' is preferred over 'npm install' in CI environments for faster and more reliable installs.
       - name: Install dependencies
@@ -49,8 +55,8 @@ jobs:
           branch: main # Push to the main branch
           # Add the 'dist' directory to the files to be committed.
           # This ensures only changes in 'dist' are considered for the commit.
-          file_pattern: 'dist/**'
+          file_pattern: "dist/**"
           # Optional: Configure the committer details
-          commit_user_name: 'github-actions[bot]'
-          commit_user_email: 'github-actions[bot]@plexicus.noreply.plexicus.ai'
-          commit_author: 'github-actions[bot] <github-actions[bot]@plexicus.noreply.plexicus.ai>'
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@plexicus.noreply.plexicus.ai"
+          commit_author: "github-actions[bot] <github-actions[bot]@plexicus.noreply.plexicus.ai>"
