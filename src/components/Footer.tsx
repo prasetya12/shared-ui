@@ -72,7 +72,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.products.title')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`${WEB_URL}${lang}/products/platform`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}products/cnapp-platform`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.platform_overview')}
                 </Link>
               </li>
@@ -173,8 +173,8 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
         <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex justify-between items-center mb-3">
             <p className="text-gray-500 text-sm">
-              &copy; 2025 PLEXICUS, CNAPP.{' '}
-              <Link href={`${WEB_URL}${lang}privacy`} className="underline hover:text-gray-700">
+              &copy; 2025 PLEXICUS, S.L
+              <Link href={`${WEB_URL}${lang}privacy`} className="underline hover:text-gray-700 ml-4">
                 {t('footer.policies.privacy_policy')}
               </Link>{' '}
               ·{' '}

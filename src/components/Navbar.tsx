@@ -128,7 +128,7 @@ export const NavbarPlexicus = ({
         {
           title: t("nav.product.platform_overview"),
           description: t("nav.product.platform_overview_desc"),
-          href: `${WEB_URL}${lang}products/platform`,
+          href: `${WEB_URL}${lang}products/cnapp-platform`,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
