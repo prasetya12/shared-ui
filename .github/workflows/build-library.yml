@@ -56,6 +56,7 @@ jobs:
           # Add the 'dist' directory to the files to be committed.
           # This ensures only changes in 'dist' are considered for the commit.
           file_pattern: "dist/**"
+          skip_checkout: true
           # Optional: Configure the committer details
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@plexicus.noreply.plexicus.ai"
