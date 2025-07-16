@@ -8,7 +8,7 @@ on:
 jobs:
   trigger-builds:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || (github.event.pull_request.merged == true)
+    # if: github.event_name == 'push' || (github.event.pull_request.merged == true)
     steps:
       - name: Trigger Web Repo Build
         run: |
