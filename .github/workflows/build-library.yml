@@ -1,0 +1,57 @@
+# Workflow name displayed in GitHub Actions UI
+name: React Library Build and Push to Main
+
+# Controls when the workflow will run
+on:
+  push:
+    branches:
+      - main # Trigger the workflow on pushes to the 'main' branch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-and-push:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Step 1: Checks out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # Important: Fetch all history for auto-commit action to work correctly
+        with:
+          fetch-depth: 0
+
+      # Step 2: Set up Node.js environment.
+      # We recommend using a specific Node.js version that matches your project's requirements.
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # You can change this to '20' or another version if needed
+
+      # Step 3: Install project dependencies.
+      # 'npm ci' is preferred over 'npm install' in CI environments for faster and more reliable installs.
+      - name: Install dependencies
+        run: npm ci
+
+      # Step 4: Build the React library.
+      # This command should generate your 'dist' folder with 'index.js', 'index.es.js', 'index.d.ts', etc.
+      - name: Build React library
+        run: npm run build
+
+      # Step 5: Commit and push the built 'dist' files back to the 'main' branch.
+      # This action automatically handles committing new/changed files and pushing them.
+      - name: Commit and Push Built Files
+        uses: stefanzweifel/git-auto-commit-action@v5 # Use a stable version of the action
+        with:
+          # Path to the directory containing the files to commit.
+          # This will commit all changes within the 'dist' folder.
+          commit_message: "CI: Build library [skip ci]" # Use '[skip ci]' to prevent re-triggering the workflow
+          branch: main # Push to the main branch
+          # Add the 'dist' directory to the files to be committed.
+          # This ensures only changes in 'dist' are considered for the commit.
+          file_pattern: 'dist/**'
+          # Optional: Configure the committer details
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@plexicus.noreply.plexicus.ai'
+          commit_author: 'github-actions[bot] <github-actions[bot]@plexicus.noreply.plexicus.ai>'
