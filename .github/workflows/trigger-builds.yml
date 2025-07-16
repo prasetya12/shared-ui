@@ -13,7 +13,7 @@ jobs:
       - name: Trigger Website Repo Build
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.CROSS_REPO_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.CROSS_REPO_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Content-Type: application/json" \
             -d '{
@@ -28,7 +28,7 @@ jobs:
       - name: Trigger Blog Repo Build
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.CROSS_REPO_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.CROSS_REPO_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Content-Type: application/json" \
             -d '{
