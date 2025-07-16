@@ -52,7 +52,7 @@ jobs:
           # Path to the directory containing the files to commit.
           # This will commit all changes within the 'dist' folder.
           commit_message: "CI: Build library [skip ci]" # Use '[skip ci]' to prevent re-triggering the workflow
-          branch: main # Push to the main branch
+          branch: develop # Push to the main branch
           # Add the 'dist' directory to the files to be committed.
           # This ensures only changes in 'dist' are considered for the commit.
           file_pattern: "dist/**"
