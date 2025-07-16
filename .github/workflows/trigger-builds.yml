@@ -1,7 +1,7 @@
 name: Trigger Dependent Builds
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
   pull_request:
     branches: [main]
     types: [closed]
