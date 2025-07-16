@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     # if: github.event_name == 'push' || (github.event.pull_request.merged == true)
     steps:
-      - name: Trigger Web Repo Build
+      - name: Trigger Website Repo Build
         run: |
           curl -X POST \
             -H "Authorization: token ${{ secrets.CROSS_REPO_TOKEN }}" \
