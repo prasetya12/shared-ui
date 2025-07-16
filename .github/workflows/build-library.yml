@@ -37,7 +37,7 @@ jobs:
       # Step 3: Install project dependencies.
       # 'npm ci' is preferred over 'npm install' in CI environments for faster and more reliable installs.
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       # Step 4: Build the React library.
       # This command should generate your 'dist' folder with 'index.js', 'index.es.js', 'index.d.ts', etc.
