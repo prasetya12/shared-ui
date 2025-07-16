@@ -5041,7 +5041,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.platform_overview"),
           description: c("nav.product.platform_overview_desc"),
-          href: `${S}${s}products/platform`,
+          href: `${S}${s}products/cnapp-platform`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -6519,7 +6519,7 @@ function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
       /* @__PURE__ */ r.jsxs("div", { children: [
         /* @__PURE__ */ r.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: n("footer.sections.products.title") }),
         /* @__PURE__ */ r.jsxs("ul", { className: "space-y-2", children: [
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/platform`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.platform_overview") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}products/cnapp-platform`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.platform_overview") }) }),
           /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/benefits`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.benefits") }) }),
           /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/use-cases`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.use_cases") }) }),
           /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/aspm`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.aspm") }) }),
@@ -6551,9 +6551,8 @@ function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
     ] }),
     /* @__PURE__ */ r.jsx("div", { className: "mt-8 pt-6 border-t border-gray-200", children: /* @__PURE__ */ r.jsxs("div", { className: "flex justify-between items-center mb-3", children: [
       /* @__PURE__ */ r.jsxs("p", { className: "text-gray-500 text-sm", children: [
-        "© 2025 PLEXICUS, CNAPP.",
-        " ",
-        /* @__PURE__ */ r.jsx(z, { href: `${l}${s}privacy`, className: "underline hover:text-gray-700", children: n("footer.policies.privacy_policy") }),
+        "© 2025 PLEXICUS, S.L",
+        /* @__PURE__ */ r.jsx(z, { href: `${l}${s}privacy`, className: "underline hover:text-gray-700 ml-4", children: n("footer.policies.privacy_policy") }),
         " ",
         "·",
         " ",
