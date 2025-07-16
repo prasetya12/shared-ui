@@ -34,6 +34,11 @@ jobs:
           rm -f yarn.lock
           rm -f pnpm-lock.yaml
           rm -f package-lock.json
+      # Step 3: Install project dependencies.
+      # 'npm ci' is preferred over 'npm install' in CI environments for faster and more reliable installs.
+      - name: Install Dependencies
+        run: npm install
+
       # Step 4: Build the React library.
       # This command should generate your 'dist' folder with 'index.js', 'index.es.js', 'index.d.ts', etc.
       - name: Build React library
