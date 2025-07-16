@@ -5061,7 +5061,7 @@ Y.use(Bs).init({
   fallbackLng: "en",
   react: { useSuspense: !1 }
 });
-const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "https://covulor.plexicus.com", pr = ({
+const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "https://app.plexicus.ai", pr = ({
   lang: i,
   fullSiteUrl: e = "http://localhost:8000",
   fullBlogUrl: t = "http://localhost:9000"
