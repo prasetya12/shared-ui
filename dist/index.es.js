@@ -1,7 +1,7 @@
-import * as Wt from "react";
-import Me, { createContext as Bt, useContext as Vt, useCallback as Ce, useState as de, useRef as Le, useEffect as se } from "react";
+import * as Bt from "react";
+import Me, { createContext as Wt, useContext as Vt, useCallback as Ce, useState as ce, useRef as _e, useEffect as re } from "react";
 import { Globe as Dt } from "lucide-react";
-var be = { exports: {} }, pe = {};
+var be = { exports: {} }, fe = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -11,29 +11,29 @@ var be = { exports: {} }, pe = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var Je;
+var Ye;
 function Ut() {
-  if (Je) return pe;
-  Je = 1;
-  var i = Symbol.for("react.transitional.element"), e = Symbol.for("react.fragment");
-  function t(s, o, n) {
+  if (Ye) return fe;
+  Ye = 1;
+  var o = Symbol.for("react.transitional.element"), e = Symbol.for("react.fragment");
+  function t(s, i, n) {
     var a = null;
-    if (n !== void 0 && (a = "" + n), o.key !== void 0 && (a = "" + o.key), "key" in o) {
+    if (n !== void 0 && (a = "" + n), i.key !== void 0 && (a = "" + i.key), "key" in i) {
       n = {};
-      for (var l in o)
-        l !== "key" && (n[l] = o[l]);
-    } else n = o;
-    return o = n.ref, {
-      $$typeof: i,
+      for (var l in i)
+        l !== "key" && (n[l] = i[l]);
+    } else n = i;
+    return i = n.ref, {
+      $$typeof: o,
       type: s,
       key: a,
-      ref: o !== void 0 ? o : null,
+      ref: i !== void 0 ? i : null,
       props: n
     };
   }
-  return pe.Fragment = e, pe.jsx = t, pe.jsxs = t, pe;
+  return fe.Fragment = e, fe.jsx = t, fe.jsxs = t, fe;
 }
-var ge = {};
+var pe = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -43,47 +43,47 @@ var ge = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var qe;
+var Je;
 function Gt() {
-  return qe || (qe = 1, process.env.NODE_ENV !== "production" && function() {
-    function i(f) {
+  return Je || (Je = 1, process.env.NODE_ENV !== "production" && function() {
+    function o(f) {
       if (f == null) return null;
       if (typeof f == "function")
-        return f.$$typeof === W ? null : f.displayName || f.name || null;
+        return f.$$typeof === E ? null : f.displayName || f.name || null;
       if (typeof f == "string") return f;
       switch (f) {
-        case x:
-          return "Fragment";
-        case E:
-          return "Profiler";
         case b:
-          return "StrictMode";
-        case k:
-          return "Suspense";
-        case P:
-          return "SuspenseList";
+          return "Fragment";
         case M:
+          return "Profiler";
+        case _:
+          return "StrictMode";
+        case w:
+          return "Suspense";
+        case $:
+          return "SuspenseList";
+        case O:
           return "Activity";
       }
       if (typeof f == "object")
         switch (typeof f.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), f.$$typeof) {
-          case g:
+          case p:
             return "Portal";
           case T:
             return (f.displayName || "Context") + ".Provider";
-          case j:
+          case S:
             return (f._context.displayName || "Context") + ".Consumer";
-          case A:
-            var C = f.render;
-            return f = f.displayName, f || (f = C.displayName || C.name || "", f = f !== "" ? "ForwardRef(" + f + ")" : "ForwardRef"), f;
-          case O:
-            return C = f.displayName || null, C !== null ? C : i(f.type) || "Memo";
-          case m:
-            C = f._payload, f = f._init;
+          case R:
+            var j = f.render;
+            return f = f.displayName, f || (f = j.displayName || j.name || "", f = f !== "" ? "ForwardRef(" + f + ")" : "ForwardRef"), f;
+          case I:
+            return j = f.displayName || null, j !== null ? j : o(f.type) || "Memo";
+          case x:
+            j = f._payload, f = f._init;
             try {
-              return i(f(C));
+              return o(f(j));
             } catch {
             }
         }
@@ -95,71 +95,71 @@ function Gt() {
     function t(f) {
       try {
         e(f);
-        var C = !1;
+        var j = !1;
       } catch {
-        C = !0;
+        j = !0;
       }
-      if (C) {
-        C = console;
-        var $ = C.error, _ = typeof Symbol == "function" && Symbol.toStringTag && f[Symbol.toStringTag] || f.constructor.name || "Object";
-        return $.call(
-          C,
+      if (j) {
+        j = console;
+        var P = j.error, N = typeof Symbol == "function" && Symbol.toStringTag && f[Symbol.toStringTag] || f.constructor.name || "Object";
+        return P.call(
+          j,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
-          _
+          N
         ), e(f);
       }
     }
     function s(f) {
-      if (f === x) return "<>";
-      if (typeof f == "object" && f !== null && f.$$typeof === m)
+      if (f === b) return "<>";
+      if (typeof f == "object" && f !== null && f.$$typeof === x)
         return "<...>";
       try {
-        var C = i(f);
-        return C ? "<" + C + ">" : "<...>";
+        var j = o(f);
+        return j ? "<" + j + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
-    function o() {
-      var f = R.A;
+    function i() {
+      var f = G.A;
       return f === null ? null : f.getOwner();
     }
     function n() {
       return Error("react-stack-top-frame");
     }
     function a(f) {
-      if (B.call(f, "key")) {
-        var C = Object.getOwnPropertyDescriptor(f, "key").get;
-        if (C && C.isReactWarning) return !1;
+      if (Q.call(f, "key")) {
+        var j = Object.getOwnPropertyDescriptor(f, "key").get;
+        if (j && j.isReactWarning) return !1;
       }
       return f.key !== void 0;
     }
-    function l(f, C) {
-      function $() {
-        V || (V = !0, console.error(
+    function l(f, j) {
+      function P() {
+        J || (J = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
-          C
+          j
         ));
       }
-      $.isReactWarning = !0, Object.defineProperty(f, "key", {
-        get: $,
+      P.isReactWarning = !0, Object.defineProperty(f, "key", {
+        get: P,
         configurable: !0
       });
     }
     function d() {
-      var f = i(this.type);
-      return K[f] || (K[f] = !0, console.error(
+      var f = o(this.type);
+      return F[f] || (F[f] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), f = this.props.ref, f !== void 0 ? f : null;
     }
-    function u(f, C, $, _, I, q, oe, F) {
-      return $ = q.ref, f = {
-        $$typeof: w,
+    function u(f, j, P, N, A, H, ne, B) {
+      return P = H.ref, f = {
+        $$typeof: g,
         type: f,
-        key: C,
-        props: q,
-        _owner: I
-      }, ($ !== void 0 ? $ : null) !== null ? Object.defineProperty(f, "ref", {
+        key: j,
+        props: H,
+        _owner: A
+      }, (P !== void 0 ? P : null) !== null ? Object.defineProperty(f, "ref", {
         enumerable: !1,
         get: d
       }) : Object.defineProperty(f, "ref", { enumerable: !1, value: null }), f._store = {}, Object.defineProperty(f._store, "validated", {
@@ -176,230 +176,230 @@ function Gt() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: oe
+        value: ne
       }), Object.defineProperty(f, "_debugTask", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: F
+        value: B
       }), Object.freeze && (Object.freeze(f.props), Object.freeze(f)), f;
     }
-    function c(f, C, $, _, I, q, oe, F) {
-      var U = C.children;
-      if (U !== void 0)
-        if (_)
-          if (re(U)) {
-            for (_ = 0; _ < U.length; _++)
-              p(U[_]);
-            Object.freeze && Object.freeze(U);
+    function c(f, j, P, N, A, H, ne, B) {
+      var D = j.children;
+      if (D !== void 0)
+        if (N)
+          if (Y(D)) {
+            for (N = 0; N < D.length; N++)
+              h(D[N]);
+            Object.freeze && Object.freeze(D);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else p(U);
-      if (B.call(C, "key")) {
-        U = i(f);
-        var X = Object.keys(C).filter(function(fe) {
-          return fe !== "key";
+        else h(D);
+      if (Q.call(j, "key")) {
+        D = o(f);
+        var q = Object.keys(j).filter(function(he) {
+          return he !== "key";
         });
-        _ = 0 < X.length ? "{key: someKey, " + X.join(": ..., ") + ": ...}" : "{key: someKey}", D[U + _] || (X = 0 < X.length ? "{" + X.join(": ..., ") + ": ...}" : "{}", console.error(
+        N = 0 < q.length ? "{key: someKey, " + q.join(": ..., ") + ": ...}" : "{key: someKey}", X[D + N] || (q = 0 < q.length ? "{" + q.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
-          _,
-          U,
-          X,
-          U
-        ), D[U + _] = !0);
+          N,
+          D,
+          q,
+          D
+        ), X[D + N] = !0);
       }
-      if (U = null, $ !== void 0 && (t($), U = "" + $), a(C) && (t(C.key), U = "" + C.key), "key" in C) {
-        $ = {};
-        for (var ee in C)
-          ee !== "key" && ($[ee] = C[ee]);
-      } else $ = C;
-      return U && l(
-        $,
+      if (D = null, P !== void 0 && (t(P), D = "" + P), a(j) && (t(j.key), D = "" + j.key), "key" in j) {
+        P = {};
+        for (var te in j)
+          te !== "key" && (P[te] = j[te]);
+      } else P = j;
+      return D && l(
+        P,
         typeof f == "function" ? f.displayName || f.name || "Unknown" : f
       ), u(
         f,
-        U,
-        q,
-        I,
-        o(),
-        $,
-        oe,
-        F
+        D,
+        H,
+        A,
+        i(),
+        P,
+        ne,
+        B
       );
     }
-    function p(f) {
-      typeof f == "object" && f !== null && f.$$typeof === w && f._store && (f._store.validated = 1);
+    function h(f) {
+      typeof f == "object" && f !== null && f.$$typeof === g && f._store && (f._store.validated = 1);
     }
-    var h = Me, w = Symbol.for("react.transitional.element"), g = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), b = Symbol.for("react.strict_mode"), E = Symbol.for("react.profiler"), j = Symbol.for("react.consumer"), T = Symbol.for("react.context"), A = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), P = Symbol.for("react.suspense_list"), O = Symbol.for("react.memo"), m = Symbol.for("react.lazy"), M = Symbol.for("react.activity"), W = Symbol.for("react.client.reference"), R = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, B = Object.prototype.hasOwnProperty, re = Array.isArray, H = console.createTask ? console.createTask : function() {
+    var m = Me, g = Symbol.for("react.transitional.element"), p = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), M = Symbol.for("react.profiler"), S = Symbol.for("react.consumer"), T = Symbol.for("react.context"), R = Symbol.for("react.forward_ref"), w = Symbol.for("react.suspense"), $ = Symbol.for("react.suspense_list"), I = Symbol.for("react.memo"), x = Symbol.for("react.lazy"), O = Symbol.for("react.activity"), E = Symbol.for("react.client.reference"), G = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Q = Object.prototype.hasOwnProperty, Y = Array.isArray, V = console.createTask ? console.createTask : function() {
       return null;
     };
-    h = {
+    m = {
       "react-stack-bottom-frame": function(f) {
         return f();
       }
     };
-    var V, K = {}, J = h["react-stack-bottom-frame"].bind(
-      h,
+    var J, F = {}, W = m["react-stack-bottom-frame"].bind(
+      m,
       n
-    )(), S = H(s(n)), D = {};
-    ge.Fragment = x, ge.jsx = function(f, C, $, _, I) {
-      var q = 1e4 > R.recentlyCreatedOwnerStacks++;
+    )(), k = V(s(n)), X = {};
+    pe.Fragment = b, pe.jsx = function(f, j, P, N, A) {
+      var H = 1e4 > G.recentlyCreatedOwnerStacks++;
       return c(
         f,
-        C,
-        $,
+        j,
+        P,
         !1,
-        _,
-        I,
-        q ? Error("react-stack-top-frame") : J,
-        q ? H(s(f)) : S
+        N,
+        A,
+        H ? Error("react-stack-top-frame") : W,
+        H ? V(s(f)) : k
       );
-    }, ge.jsxs = function(f, C, $, _, I) {
-      var q = 1e4 > R.recentlyCreatedOwnerStacks++;
+    }, pe.jsxs = function(f, j, P, N, A) {
+      var H = 1e4 > G.recentlyCreatedOwnerStacks++;
       return c(
         f,
-        C,
-        $,
+        j,
+        P,
         !0,
-        _,
-        I,
-        q ? Error("react-stack-top-frame") : J,
-        q ? H(s(f)) : S
+        N,
+        A,
+        H ? Error("react-stack-top-frame") : W,
+        H ? V(s(f)) : k
       );
     };
-  }()), ge;
+  }()), pe;
 }
-var Xe;
+var qe;
 function Ht() {
-  return Xe || (Xe = 1, process.env.NODE_ENV === "production" ? be.exports = Ut() : be.exports = Gt()), be.exports;
+  return qe || (qe = 1, process.env.NODE_ENV === "production" ? be.exports = Ut() : be.exports = Gt()), be.exports;
 }
 var r = Ht();
-function wt(i) {
+function wt(o) {
   var e, t, s = "";
-  if (typeof i == "string" || typeof i == "number") s += i;
-  else if (typeof i == "object") if (Array.isArray(i)) {
-    var o = i.length;
-    for (e = 0; e < o; e++) i[e] && (t = wt(i[e])) && (s && (s += " "), s += t);
-  } else for (t in i) i[t] && (s && (s += " "), s += t);
+  if (typeof o == "string" || typeof o == "number") s += o;
+  else if (typeof o == "object") if (Array.isArray(o)) {
+    var i = o.length;
+    for (e = 0; e < i; e++) o[e] && (t = wt(o[e])) && (s && (s += " "), s += t);
+  } else for (t in o) o[t] && (s && (s += " "), s += t);
   return s;
 }
 function bt() {
-  for (var i, e, t = 0, s = "", o = arguments.length; t < o; t++) (i = arguments[t]) && (e = wt(i)) && (s && (s += " "), s += e);
+  for (var o, e, t = 0, s = "", i = arguments.length; t < i; t++) (o = arguments[t]) && (e = wt(o)) && (s && (s += " "), s += e);
   return s;
 }
-const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Qe = bt, Kt = (i, e) => (t) => {
+const Xe = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Ze = bt, Kt = (o, e) => (t) => {
   var s;
-  if ((e == null ? void 0 : e.variants) == null) return Qe(i, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
-  const { variants: o, defaultVariants: n } = e, a = Object.keys(o).map((u) => {
-    const c = t == null ? void 0 : t[u], p = n == null ? void 0 : n[u];
+  if ((e == null ? void 0 : e.variants) == null) return Ze(o, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
+  const { variants: i, defaultVariants: n } = e, a = Object.keys(i).map((u) => {
+    const c = t == null ? void 0 : t[u], h = n == null ? void 0 : n[u];
     if (c === null) return null;
-    const h = Ze(c) || Ze(p);
-    return o[u][h];
+    const m = Xe(c) || Xe(h);
+    return i[u][m];
   }), l = t && Object.entries(t).reduce((u, c) => {
-    let [p, h] = c;
-    return h === void 0 || (u[p] = h), u;
+    let [h, m] = c;
+    return m === void 0 || (u[h] = m), u;
   }, {}), d = e == null || (s = e.compoundVariants) === null || s === void 0 ? void 0 : s.reduce((u, c) => {
-    let { class: p, className: h, ...w } = c;
-    return Object.entries(w).every((g) => {
-      let [x, b] = g;
-      return Array.isArray(b) ? b.includes({
+    let { class: h, className: m, ...g } = c;
+    return Object.entries(g).every((p) => {
+      let [b, _] = p;
+      return Array.isArray(_) ? _.includes({
         ...n,
         ...l
-      }[x]) : {
+      }[b]) : {
         ...n,
         ...l
-      }[x] === b;
+      }[b] === _;
     }) ? [
       ...u,
-      p,
-      h
+      h,
+      m
     ] : u;
   }, []);
-  return Qe(i, a, d, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
-}, Ge = "-", Yt = (i) => {
-  const e = qt(i), {
+  return Ze(o, a, d, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
+}, Ue = "-", Yt = (o) => {
+  const e = qt(o), {
     conflictingClassGroups: t,
     conflictingClassGroupModifiers: s
-  } = i;
+  } = o;
   return {
     getClassGroupId: (a) => {
-      const l = a.split(Ge);
-      return l[0] === "" && l.length !== 1 && l.shift(), jt(l, e) || Jt(a);
+      const l = a.split(Ue);
+      return l[0] === "" && l.length !== 1 && l.shift(), kt(l, e) || Jt(a);
     },
     getConflictingClassGroupIds: (a, l) => {
       const d = t[a] || [];
       return l && s[a] ? [...d, ...s[a]] : d;
     }
   };
-}, jt = (i, e) => {
+}, kt = (o, e) => {
   var a;
-  if (i.length === 0)
+  if (o.length === 0)
     return e.classGroupId;
-  const t = i[0], s = e.nextPart.get(t), o = s ? jt(i.slice(1), s) : void 0;
-  if (o)
-    return o;
+  const t = o[0], s = e.nextPart.get(t), i = s ? kt(o.slice(1), s) : void 0;
+  if (i)
+    return i;
   if (e.validators.length === 0)
     return;
-  const n = i.join(Ge);
+  const n = o.join(Ue);
   return (a = e.validators.find(({
     validator: l
   }) => l(n))) == null ? void 0 : a.classGroupId;
-}, et = /^\[(.+)\]$/, Jt = (i) => {
-  if (et.test(i)) {
-    const e = et.exec(i)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
+}, Qe = /^\[(.+)\]$/, Jt = (o) => {
+  if (Qe.test(o)) {
+    const e = Qe.exec(o)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
     if (t)
       return "arbitrary.." + t;
   }
-}, qt = (i) => {
+}, qt = (o) => {
   const {
     theme: e,
     classGroups: t
-  } = i, s = {
+  } = o, s = {
     nextPart: /* @__PURE__ */ new Map(),
     validators: []
   };
-  for (const o in t)
-    Te(t[o], s, o, e);
+  for (const i in t)
+    Ae(t[i], s, i, e);
   return s;
-}, Te = (i, e, t, s) => {
-  i.forEach((o) => {
-    if (typeof o == "string") {
-      const n = o === "" ? e : tt(e, o);
+}, Ae = (o, e, t, s) => {
+  o.forEach((i) => {
+    if (typeof i == "string") {
+      const n = i === "" ? e : et(e, i);
       n.classGroupId = t;
       return;
     }
-    if (typeof o == "function") {
-      if (Xt(o)) {
-        Te(o(s), e, t, s);
+    if (typeof i == "function") {
+      if (Xt(i)) {
+        Ae(i(s), e, t, s);
         return;
       }
       e.validators.push({
-        validator: o,
+        validator: i,
         classGroupId: t
       });
       return;
     }
-    Object.entries(o).forEach(([n, a]) => {
-      Te(a, tt(e, n), t, s);
+    Object.entries(i).forEach(([n, a]) => {
+      Ae(a, et(e, n), t, s);
     });
   });
-}, tt = (i, e) => {
-  let t = i;
-  return e.split(Ge).forEach((s) => {
+}, et = (o, e) => {
+  let t = o;
+  return e.split(Ue).forEach((s) => {
     t.nextPart.has(s) || t.nextPart.set(s, {
       nextPart: /* @__PURE__ */ new Map(),
       validators: []
     }), t = t.nextPart.get(s);
   }), t;
-}, Xt = (i) => i.isThemeGetter, Zt = (i) => {
-  if (i < 1)
+}, Xt = (o) => o.isThemeGetter, Zt = (o) => {
+  if (o < 1)
     return {
       get: () => {
       },
@@ -407,8 +407,8 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Qe = bt, K
       }
     };
   let e = 0, t = /* @__PURE__ */ new Map(), s = /* @__PURE__ */ new Map();
-  const o = (n, a) => {
-    t.set(n, a), e++, e > i && (e = 0, s = t, t = /* @__PURE__ */ new Map());
+  const i = (n, a) => {
+    t.set(n, a), e++, e > o && (e = 0, s = t, t = /* @__PURE__ */ new Map());
   };
   return {
     get(n) {
@@ -416,45 +416,45 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Qe = bt, K
       if (a !== void 0)
         return a;
       if ((a = s.get(n)) !== void 0)
-        return o(n, a), a;
+        return i(n, a), a;
     },
     set(n, a) {
-      t.has(n) ? t.set(n, a) : o(n, a);
+      t.has(n) ? t.set(n, a) : i(n, a);
     }
   };
-}, Ie = "!", Fe = ":", Qt = Fe.length, es = (i) => {
+}, Te = "!", Ie = ":", Qt = Ie.length, es = (o) => {
   const {
     prefix: e,
     experimentalParseClassName: t
-  } = i;
-  let s = (o) => {
+  } = o;
+  let s = (i) => {
     const n = [];
     let a = 0, l = 0, d = 0, u;
-    for (let g = 0; g < o.length; g++) {
-      let x = o[g];
+    for (let p = 0; p < i.length; p++) {
+      let b = i[p];
       if (a === 0 && l === 0) {
-        if (x === Fe) {
-          n.push(o.slice(d, g)), d = g + Qt;
+        if (b === Ie) {
+          n.push(i.slice(d, p)), d = p + Qt;
           continue;
         }
-        if (x === "/") {
-          u = g;
+        if (b === "/") {
+          u = p;
           continue;
         }
       }
-      x === "[" ? a++ : x === "]" ? a-- : x === "(" ? l++ : x === ")" && l--;
+      b === "[" ? a++ : b === "]" ? a-- : b === "(" ? l++ : b === ")" && l--;
     }
-    const c = n.length === 0 ? o : o.substring(d), p = ts(c), h = p !== c, w = u && u > d ? u - d : void 0;
+    const c = n.length === 0 ? i : i.substring(d), h = ts(c), m = h !== c, g = u && u > d ? u - d : void 0;
     return {
       modifiers: n,
-      hasImportantModifier: h,
-      baseClassName: p,
-      maybePostfixModifierPosition: w
+      hasImportantModifier: m,
+      baseClassName: h,
+      maybePostfixModifierPosition: g
     };
   };
   if (e) {
-    const o = e + Fe, n = s;
-    s = (a) => a.startsWith(o) ? n(a.substring(o.length)) : {
+    const i = e + Ie, n = s;
+    s = (a) => a.startsWith(i) ? n(a.substring(i.length)) : {
       isExternal: !0,
       modifiers: [],
       hasImportantModifier: !1,
@@ -463,121 +463,121 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Qe = bt, K
     };
   }
   if (t) {
-    const o = s;
+    const i = s;
     s = (n) => t({
       className: n,
-      parseClassName: o
+      parseClassName: i
     });
   }
   return s;
-}, ts = (i) => i.endsWith(Ie) ? i.substring(0, i.length - 1) : i.startsWith(Ie) ? i.substring(1) : i, ss = (i) => {
-  const e = Object.fromEntries(i.orderSensitiveModifiers.map((s) => [s, !0]));
+}, ts = (o) => o.endsWith(Te) ? o.substring(0, o.length - 1) : o.startsWith(Te) ? o.substring(1) : o, ss = (o) => {
+  const e = Object.fromEntries(o.orderSensitiveModifiers.map((s) => [s, !0]));
   return (s) => {
     if (s.length <= 1)
       return s;
-    const o = [];
+    const i = [];
     let n = [];
     return s.forEach((a) => {
-      a[0] === "[" || e[a] ? (o.push(...n.sort(), a), n = []) : n.push(a);
-    }), o.push(...n.sort()), o;
+      a[0] === "[" || e[a] ? (i.push(...n.sort(), a), n = []) : n.push(a);
+    }), i.push(...n.sort()), i;
   };
-}, rs = (i) => ({
-  cache: Zt(i.cacheSize),
-  parseClassName: es(i),
-  sortModifiers: ss(i),
-  ...Yt(i)
-}), is = /\s+/, ns = (i, e) => {
+}, rs = (o) => ({
+  cache: Zt(o.cacheSize),
+  parseClassName: es(o),
+  sortModifiers: ss(o),
+  ...Yt(o)
+}), is = /\s+/, os = (o, e) => {
   const {
     parseClassName: t,
     getClassGroupId: s,
-    getConflictingClassGroupIds: o,
+    getConflictingClassGroupIds: i,
     sortModifiers: n
-  } = e, a = [], l = i.trim().split(is);
+  } = e, a = [], l = o.trim().split(is);
   let d = "";
   for (let u = l.length - 1; u >= 0; u -= 1) {
     const c = l[u], {
-      isExternal: p,
-      modifiers: h,
-      hasImportantModifier: w,
-      baseClassName: g,
-      maybePostfixModifierPosition: x
+      isExternal: h,
+      modifiers: m,
+      hasImportantModifier: g,
+      baseClassName: p,
+      maybePostfixModifierPosition: b
     } = t(c);
-    if (p) {
+    if (h) {
       d = c + (d.length > 0 ? " " + d : d);
       continue;
     }
-    let b = !!x, E = s(b ? g.substring(0, x) : g);
-    if (!E) {
-      if (!b) {
+    let _ = !!b, M = s(_ ? p.substring(0, b) : p);
+    if (!M) {
+      if (!_) {
         d = c + (d.length > 0 ? " " + d : d);
         continue;
       }
-      if (E = s(g), !E) {
+      if (M = s(p), !M) {
         d = c + (d.length > 0 ? " " + d : d);
         continue;
       }
-      b = !1;
+      _ = !1;
     }
-    const j = n(h).join(":"), T = w ? j + Ie : j, A = T + E;
-    if (a.includes(A))
+    const S = n(m).join(":"), T = g ? S + Te : S, R = T + M;
+    if (a.includes(R))
       continue;
-    a.push(A);
-    const k = o(E, b);
-    for (let P = 0; P < k.length; ++P) {
-      const O = k[P];
-      a.push(T + O);
+    a.push(R);
+    const w = i(M, _);
+    for (let $ = 0; $ < w.length; ++$) {
+      const I = w[$];
+      a.push(T + I);
     }
     d = c + (d.length > 0 ? " " + d : d);
   }
   return d;
 };
-function os() {
-  let i = 0, e, t, s = "";
-  for (; i < arguments.length; )
-    (e = arguments[i++]) && (t = kt(e)) && (s && (s += " "), s += t);
+function ns() {
+  let o = 0, e, t, s = "";
+  for (; o < arguments.length; )
+    (e = arguments[o++]) && (t = jt(e)) && (s && (s += " "), s += t);
   return s;
 }
-const kt = (i) => {
-  if (typeof i == "string")
-    return i;
+const jt = (o) => {
+  if (typeof o == "string")
+    return o;
   let e, t = "";
-  for (let s = 0; s < i.length; s++)
-    i[s] && (e = kt(i[s])) && (t && (t += " "), t += e);
+  for (let s = 0; s < o.length; s++)
+    o[s] && (e = jt(o[s])) && (t && (t += " "), t += e);
   return t;
 };
-function as(i, ...e) {
-  let t, s, o, n = a;
+function as(o, ...e) {
+  let t, s, i, n = a;
   function a(d) {
-    const u = e.reduce((c, p) => p(c), i());
-    return t = rs(u), s = t.cache.get, o = t.cache.set, n = l, l(d);
+    const u = e.reduce((c, h) => h(c), o());
+    return t = rs(u), s = t.cache.get, i = t.cache.set, n = l, l(d);
   }
   function l(d) {
     const u = s(d);
     if (u)
       return u;
-    const c = ns(d, t);
-    return o(d, c), c;
+    const c = os(d, t);
+    return i(d, c), c;
   }
   return function() {
-    return n(os.apply(null, arguments));
+    return n(ns.apply(null, arguments));
   };
 }
-const G = (i) => {
-  const e = (t) => t[i] || [];
+const U = (o) => {
+  const e = (t) => t[o] || [];
   return e.isThemeGetter = !0, e;
-}, St = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Ct = /^\((?:(\w[\w-]*):)?(.+)\)$/i, ls = /^\d+\/\d+$/, cs = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ds = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, us = /^(rgba?|hsla?|hwb|(ok)?(lab|lch))\(.+\)$/, hs = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, fs = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (i) => ls.test(i), N = (i) => !!i && !Number.isNaN(Number(i)), te = (i) => !!i && Number.isInteger(Number(i)), ze = (i) => i.endsWith("%") && N(i.slice(0, -1)), Q = (i) => cs.test(i), ps = () => !0, gs = (i) => (
+}, St = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Ct = /^\((?:(\w[\w-]*):)?(.+)\)$/i, ls = /^\d+\/\d+$/, cs = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ds = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, us = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/, hs = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, fs = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (o) => ls.test(o), L = (o) => !!o && !Number.isNaN(Number(o)), se = (o) => !!o && Number.isInteger(Number(o)), $e = (o) => o.endsWith("%") && L(o.slice(0, -1)), ee = (o) => cs.test(o), ps = () => !0, gs = (o) => (
   // `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
   // For example, `hsl(0 0% 0%)` would be classified as a length without this check.
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
-  ds.test(i) && !us.test(i)
-), Lt = () => !1, ms = (i) => hs.test(i), xs = (i) => fs.test(i), ys = (i) => !y(i) && !v(i), vs = (i) => ue(i, Pt, Lt), y = (i) => St.test(i), ie = (i) => ue(i, Ot, gs), Ee = (i) => ue(i, Ss, N), st = (i) => ue(i, Nt, Lt), ws = (i) => ue(i, _t, xs), je = (i) => ue(i, Rt, ms), v = (i) => Ct.test(i), me = (i) => he(i, Ot), bs = (i) => he(i, Cs), rt = (i) => he(i, Nt), js = (i) => he(i, Pt), ks = (i) => he(i, _t), ke = (i) => he(i, Rt, !0), ue = (i, e, t) => {
-  const s = St.exec(i);
+  ds.test(o) && !us.test(o)
+), _t = () => !1, ms = (o) => hs.test(o), xs = (o) => fs.test(o), ys = (o) => !y(o) && !v(o), vs = (o) => de(o, Ot, _t), y = (o) => St.test(o), ie = (o) => de(o, Pt, gs), Ee = (o) => de(o, Ss, L), tt = (o) => de(o, Lt, _t), ws = (o) => de(o, Nt, xs), ke = (o) => de(o, Rt, ms), v = (o) => Ct.test(o), ge = (o) => ue(o, Pt), bs = (o) => ue(o, Cs), st = (o) => ue(o, Lt), ks = (o) => ue(o, Ot), js = (o) => ue(o, Nt), je = (o) => ue(o, Rt, !0), de = (o, e, t) => {
+  const s = St.exec(o);
   return s ? s[1] ? e(s[1]) : t(s[2]) : !1;
-}, he = (i, e, t = !1) => {
-  const s = Ct.exec(i);
+}, ue = (o, e, t = !1) => {
+  const s = Ct.exec(o);
   return s ? s[1] ? e(s[1]) : t : !1;
-}, Nt = (i) => i === "position" || i === "percentage", _t = (i) => i === "image" || i === "url", Pt = (i) => i === "length" || i === "size" || i === "bg-size", Ot = (i) => i === "length", Ss = (i) => i === "number", Cs = (i) => i === "family-name", Rt = (i) => i === "shadow", Ls = () => {
-  const i = G("color"), e = G("font"), t = G("text"), s = G("font-weight"), o = G("tracking"), n = G("leading"), a = G("breakpoint"), l = G("container"), d = G("spacing"), u = G("radius"), c = G("shadow"), p = G("inset-shadow"), h = G("text-shadow"), w = G("drop-shadow"), g = G("blur"), x = G("perspective"), b = G("aspect"), E = G("ease"), j = G("animate"), T = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], A = () => [
+}, Lt = (o) => o === "position" || o === "percentage", Nt = (o) => o === "image" || o === "url", Ot = (o) => o === "length" || o === "size" || o === "bg-size", Pt = (o) => o === "length", Ss = (o) => o === "number", Cs = (o) => o === "family-name", Rt = (o) => o === "shadow", _s = () => {
+  const o = U("color"), e = U("font"), t = U("text"), s = U("font-weight"), i = U("tracking"), n = U("leading"), a = U("breakpoint"), l = U("container"), d = U("spacing"), u = U("radius"), c = U("shadow"), h = U("inset-shadow"), m = U("text-shadow"), g = U("drop-shadow"), p = U("blur"), b = U("perspective"), _ = U("aspect"), M = U("ease"), S = U("animate"), T = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], R = () => [
     "center",
     "top",
     "bottom",
@@ -595,15 +595,15 @@ const G = (i) => {
     "bottom-left",
     // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
     "left-bottom"
-  ], k = () => [...A(), v, y], P = () => ["auto", "hidden", "clip", "visible", "scroll"], O = () => ["auto", "contain", "none"], m = () => [v, y, d], M = () => [ae, "full", "auto", ...m()], W = () => [te, "none", "subgrid", v, y], R = () => ["auto", {
-    span: ["full", te, v, y]
-  }, te, v, y], B = () => [te, "auto", v, y], re = () => ["auto", "min", "max", "fr", v, y], H = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], V = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], K = () => ["auto", ...m()], J = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...m()], S = () => [i, v, y], D = () => [...A(), rt, st, {
+  ], w = () => [...R(), v, y], $ = () => ["auto", "hidden", "clip", "visible", "scroll"], I = () => ["auto", "contain", "none"], x = () => [v, y, d], O = () => [ae, "full", "auto", ...x()], E = () => [se, "none", "subgrid", v, y], G = () => ["auto", {
+    span: ["full", se, v, y]
+  }, se, v, y], Q = () => [se, "auto", v, y], Y = () => ["auto", "min", "max", "fr", v, y], V = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], J = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], F = () => ["auto", ...x()], W = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...x()], k = () => [o, v, y], X = () => [...R(), st, tt, {
     position: [v, y]
   }], f = () => ["no-repeat", {
     repeat: ["", "x", "y", "space", "round"]
-  }], C = () => ["auto", "cover", "contain", js, vs, {
+  }], j = () => ["auto", "cover", "contain", ks, vs, {
     size: [v, y]
-  }], $ = () => [ze, me, ie], _ = () => [
+  }], P = () => [$e, ge, ie], N = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
@@ -611,35 +611,35 @@ const G = (i) => {
     u,
     v,
     y
-  ], I = () => ["", N, me, ie], q = () => ["solid", "dashed", "dotted", "double"], oe = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], F = () => [N, ze, rt, st], U = () => [
+  ], A = () => ["", L, ge, ie], H = () => ["solid", "dashed", "dotted", "double"], ne = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], B = () => [L, $e, st, tt], D = () => [
     // Deprecated since Tailwind CSS v4.0.0
     "",
     "none",
-    g,
+    p,
     v,
     y
-  ], X = () => ["none", N, v, y], ee = () => ["none", N, v, y], fe = () => [N, v, y], we = () => [ae, "full", ...m()];
+  ], q = () => ["none", L, v, y], te = () => ["none", L, v, y], he = () => [L, v, y], we = () => [ae, "full", ...x()];
   return {
     cacheSize: 500,
     theme: {
       animate: ["spin", "ping", "pulse", "bounce"],
       aspect: ["video"],
-      blur: [Q],
-      breakpoint: [Q],
+      blur: [ee],
+      breakpoint: [ee],
       color: [ps],
-      container: [Q],
-      "drop-shadow": [Q],
+      container: [ee],
+      "drop-shadow": [ee],
       ease: ["in", "out", "in-out"],
       font: [ys],
       "font-weight": ["thin", "extralight", "light", "normal", "medium", "semibold", "bold", "extrabold", "black"],
-      "inset-shadow": [Q],
+      "inset-shadow": [ee],
       leading: ["none", "tight", "snug", "normal", "relaxed", "loose"],
       perspective: ["dramatic", "near", "normal", "midrange", "distant", "none"],
-      radius: [Q],
-      shadow: [Q],
-      spacing: ["px", N],
-      text: [Q],
-      "text-shadow": [Q],
+      radius: [ee],
+      shadow: [ee],
+      spacing: ["px", L],
+      text: [ee],
+      "text-shadow": [ee],
       tracking: ["tighter", "tight", "normal", "wide", "wider", "widest"]
     },
     classGroups: {
@@ -651,7 +651,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/aspect-ratio
        */
       aspect: [{
-        aspect: ["auto", "square", ae, y, v, b]
+        aspect: ["auto", "square", ae, y, v, _]
       }],
       /**
        * Container
@@ -664,7 +664,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/columns
        */
       columns: [{
-        columns: [N, y, v, l]
+        columns: [L, y, v, l]
       }],
       /**
        * Break After
@@ -742,49 +742,49 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/object-position
        */
       "object-position": [{
-        object: k()
+        object: w()
       }],
       /**
        * Overflow
        * @see https://tailwindcss.com/docs/overflow
        */
       overflow: [{
-        overflow: P()
+        overflow: $()
       }],
       /**
        * Overflow X
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-x": [{
-        "overflow-x": P()
+        "overflow-x": $()
       }],
       /**
        * Overflow Y
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-y": [{
-        "overflow-y": P()
+        "overflow-y": $()
       }],
       /**
        * Overscroll Behavior
        * @see https://tailwindcss.com/docs/overscroll-behavior
        */
       overscroll: [{
-        overscroll: O()
+        overscroll: I()
       }],
       /**
        * Overscroll Behavior X
        * @see https://tailwindcss.com/docs/overscroll-behavior
        */
       "overscroll-x": [{
-        "overscroll-x": O()
+        "overscroll-x": I()
       }],
       /**
        * Overscroll Behavior Y
        * @see https://tailwindcss.com/docs/overscroll-behavior
        */
       "overscroll-y": [{
-        "overscroll-y": O()
+        "overscroll-y": I()
       }],
       /**
        * Position
@@ -796,63 +796,63 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       inset: [{
-        inset: M()
+        inset: O()
       }],
       /**
        * Right / Left
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-x": [{
-        "inset-x": M()
+        "inset-x": O()
       }],
       /**
        * Top / Bottom
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-y": [{
-        "inset-y": M()
+        "inset-y": O()
       }],
       /**
        * Start
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       start: [{
-        start: M()
+        start: O()
       }],
       /**
        * End
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       end: [{
-        end: M()
+        end: O()
       }],
       /**
        * Top
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       top: [{
-        top: M()
+        top: O()
       }],
       /**
        * Right
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       right: [{
-        right: M()
+        right: O()
       }],
       /**
        * Bottom
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       bottom: [{
-        bottom: M()
+        bottom: O()
       }],
       /**
        * Left
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       left: [{
-        left: M()
+        left: O()
       }],
       /**
        * Visibility
@@ -864,7 +864,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/z-index
        */
       z: [{
-        z: [te, "auto", v, y]
+        z: [se, "auto", v, y]
       }],
       // ------------------------
       // --- Flexbox and Grid ---
@@ -874,7 +874,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/flex-basis
        */
       basis: [{
-        basis: [ae, "full", "auto", l, ...m()]
+        basis: [ae, "full", "auto", l, ...x()]
       }],
       /**
        * Flex Direction
@@ -895,84 +895,84 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/flex
        */
       flex: [{
-        flex: [N, ae, "auto", "initial", "none", y]
+        flex: [L, ae, "auto", "initial", "none", y]
       }],
       /**
        * Flex Grow
        * @see https://tailwindcss.com/docs/flex-grow
        */
       grow: [{
-        grow: ["", N, v, y]
+        grow: ["", L, v, y]
       }],
       /**
        * Flex Shrink
        * @see https://tailwindcss.com/docs/flex-shrink
        */
       shrink: [{
-        shrink: ["", N, v, y]
+        shrink: ["", L, v, y]
       }],
       /**
        * Order
        * @see https://tailwindcss.com/docs/order
        */
       order: [{
-        order: [te, "first", "last", "none", v, y]
+        order: [se, "first", "last", "none", v, y]
       }],
       /**
        * Grid Template Columns
        * @see https://tailwindcss.com/docs/grid-template-columns
        */
       "grid-cols": [{
-        "grid-cols": W()
+        "grid-cols": E()
       }],
       /**
        * Grid Column Start / End
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-start-end": [{
-        col: R()
+        col: G()
       }],
       /**
        * Grid Column Start
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-start": [{
-        "col-start": B()
+        "col-start": Q()
       }],
       /**
        * Grid Column End
        * @see https://tailwindcss.com/docs/grid-column
        */
       "col-end": [{
-        "col-end": B()
+        "col-end": Q()
       }],
       /**
        * Grid Template Rows
        * @see https://tailwindcss.com/docs/grid-template-rows
        */
       "grid-rows": [{
-        "grid-rows": W()
+        "grid-rows": E()
       }],
       /**
        * Grid Row Start / End
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-start-end": [{
-        row: R()
+        row: G()
       }],
       /**
        * Grid Row Start
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-start": [{
-        "row-start": B()
+        "row-start": Q()
       }],
       /**
        * Grid Row End
        * @see https://tailwindcss.com/docs/grid-row
        */
       "row-end": [{
-        "row-end": B()
+        "row-end": Q()
       }],
       /**
        * Grid Auto Flow
@@ -986,70 +986,70 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/grid-auto-columns
        */
       "auto-cols": [{
-        "auto-cols": re()
+        "auto-cols": Y()
       }],
       /**
        * Grid Auto Rows
        * @see https://tailwindcss.com/docs/grid-auto-rows
        */
       "auto-rows": [{
-        "auto-rows": re()
+        "auto-rows": Y()
       }],
       /**
        * Gap
        * @see https://tailwindcss.com/docs/gap
        */
       gap: [{
-        gap: m()
+        gap: x()
       }],
       /**
        * Gap X
        * @see https://tailwindcss.com/docs/gap
        */
       "gap-x": [{
-        "gap-x": m()
+        "gap-x": x()
       }],
       /**
        * Gap Y
        * @see https://tailwindcss.com/docs/gap
        */
       "gap-y": [{
-        "gap-y": m()
+        "gap-y": x()
       }],
       /**
        * Justify Content
        * @see https://tailwindcss.com/docs/justify-content
        */
       "justify-content": [{
-        justify: [...H(), "normal"]
+        justify: [...V(), "normal"]
       }],
       /**
        * Justify Items
        * @see https://tailwindcss.com/docs/justify-items
        */
       "justify-items": [{
-        "justify-items": [...V(), "normal"]
+        "justify-items": [...J(), "normal"]
       }],
       /**
        * Justify Self
        * @see https://tailwindcss.com/docs/justify-self
        */
       "justify-self": [{
-        "justify-self": ["auto", ...V()]
+        "justify-self": ["auto", ...J()]
       }],
       /**
        * Align Content
        * @see https://tailwindcss.com/docs/align-content
        */
       "align-content": [{
-        content: ["normal", ...H()]
+        content: ["normal", ...V()]
       }],
       /**
        * Align Items
        * @see https://tailwindcss.com/docs/align-items
        */
       "align-items": [{
-        items: [...V(), {
+        items: [...J(), {
           baseline: ["", "last"]
         }]
       }],
@@ -1058,7 +1058,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/align-self
        */
       "align-self": [{
-        self: ["auto", ...V(), {
+        self: ["auto", ...J(), {
           baseline: ["", "last"]
         }]
       }],
@@ -1067,21 +1067,21 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/place-content
        */
       "place-content": [{
-        "place-content": H()
+        "place-content": V()
       }],
       /**
        * Place Items
        * @see https://tailwindcss.com/docs/place-items
        */
       "place-items": [{
-        "place-items": [...V(), "baseline"]
+        "place-items": [...J(), "baseline"]
       }],
       /**
        * Place Self
        * @see https://tailwindcss.com/docs/place-self
        */
       "place-self": [{
-        "place-self": ["auto", ...V()]
+        "place-self": ["auto", ...J()]
       }],
       // Spacing
       /**
@@ -1089,133 +1089,133 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/padding
        */
       p: [{
-        p: m()
+        p: x()
       }],
       /**
        * Padding X
        * @see https://tailwindcss.com/docs/padding
        */
       px: [{
-        px: m()
+        px: x()
       }],
       /**
        * Padding Y
        * @see https://tailwindcss.com/docs/padding
        */
       py: [{
-        py: m()
+        py: x()
       }],
       /**
        * Padding Start
        * @see https://tailwindcss.com/docs/padding
        */
       ps: [{
-        ps: m()
+        ps: x()
       }],
       /**
        * Padding End
        * @see https://tailwindcss.com/docs/padding
        */
       pe: [{
-        pe: m()
+        pe: x()
       }],
       /**
        * Padding Top
        * @see https://tailwindcss.com/docs/padding
        */
       pt: [{
-        pt: m()
+        pt: x()
       }],
       /**
        * Padding Right
        * @see https://tailwindcss.com/docs/padding
        */
       pr: [{
-        pr: m()
+        pr: x()
       }],
       /**
        * Padding Bottom
        * @see https://tailwindcss.com/docs/padding
        */
       pb: [{
-        pb: m()
+        pb: x()
       }],
       /**
        * Padding Left
        * @see https://tailwindcss.com/docs/padding
        */
       pl: [{
-        pl: m()
+        pl: x()
       }],
       /**
        * Margin
        * @see https://tailwindcss.com/docs/margin
        */
       m: [{
-        m: K()
+        m: F()
       }],
       /**
        * Margin X
        * @see https://tailwindcss.com/docs/margin
        */
       mx: [{
-        mx: K()
+        mx: F()
       }],
       /**
        * Margin Y
        * @see https://tailwindcss.com/docs/margin
        */
       my: [{
-        my: K()
+        my: F()
       }],
       /**
        * Margin Start
        * @see https://tailwindcss.com/docs/margin
        */
       ms: [{
-        ms: K()
+        ms: F()
       }],
       /**
        * Margin End
        * @see https://tailwindcss.com/docs/margin
        */
       me: [{
-        me: K()
+        me: F()
       }],
       /**
        * Margin Top
        * @see https://tailwindcss.com/docs/margin
        */
       mt: [{
-        mt: K()
+        mt: F()
       }],
       /**
        * Margin Right
        * @see https://tailwindcss.com/docs/margin
        */
       mr: [{
-        mr: K()
+        mr: F()
       }],
       /**
        * Margin Bottom
        * @see https://tailwindcss.com/docs/margin
        */
       mb: [{
-        mb: K()
+        mb: F()
       }],
       /**
        * Margin Left
        * @see https://tailwindcss.com/docs/margin
        */
       ml: [{
-        ml: K()
+        ml: F()
       }],
       /**
        * Space Between X
        * @see https://tailwindcss.com/docs/margin#adding-space-between-children
        */
       "space-x": [{
-        "space-x": m()
+        "space-x": x()
       }],
       /**
        * Space Between X Reverse
@@ -1227,7 +1227,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/margin#adding-space-between-children
        */
       "space-y": [{
-        "space-y": m()
+        "space-y": x()
       }],
       /**
        * Space Between Y Reverse
@@ -1242,14 +1242,14 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/width#setting-both-width-and-height
        */
       size: [{
-        size: J()
+        size: W()
       }],
       /**
        * Width
        * @see https://tailwindcss.com/docs/width
        */
       w: [{
-        w: [l, "screen", ...J()]
+        w: [l, "screen", ...W()]
       }],
       /**
        * Min-Width
@@ -1261,7 +1261,7 @@ const G = (i) => {
           "screen",
           /** Deprecated. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
           "none",
-          ...J()
+          ...W()
         ]
       }],
       /**
@@ -1279,7 +1279,7 @@ const G = (i) => {
           {
             screen: [a]
           },
-          ...J()
+          ...W()
         ]
       }],
       /**
@@ -1287,21 +1287,21 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/height
        */
       h: [{
-        h: ["screen", ...J()]
+        h: ["screen", "lh", ...W()]
       }],
       /**
        * Min-Height
        * @see https://tailwindcss.com/docs/min-height
        */
       "min-h": [{
-        "min-h": ["screen", "none", ...J()]
+        "min-h": ["screen", "lh", "none", ...W()]
       }],
       /**
        * Max-Height
        * @see https://tailwindcss.com/docs/max-height
        */
       "max-h": [{
-        "max-h": ["screen", ...J()]
+        "max-h": ["screen", "lh", ...W()]
       }],
       // ------------------
       // --- Typography ---
@@ -1311,7 +1311,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/font-size
        */
       "font-size": [{
-        text: ["base", t, me, ie]
+        text: ["base", t, ge, ie]
       }],
       /**
        * Font Smoothing
@@ -1335,7 +1335,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/font-stretch
        */
       "font-stretch": [{
-        "font-stretch": ["ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "normal", "semi-expanded", "expanded", "extra-expanded", "ultra-expanded", ze, y]
+        "font-stretch": ["ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "normal", "semi-expanded", "expanded", "extra-expanded", "ultra-expanded", $e, y]
       }],
       /**
        * Font Family
@@ -1379,14 +1379,14 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/letter-spacing
        */
       tracking: [{
-        tracking: [o, v, y]
+        tracking: [i, v, y]
       }],
       /**
        * Line Clamp
        * @see https://tailwindcss.com/docs/line-clamp
        */
       "line-clamp": [{
-        "line-clamp": [N, "none", v, Ee]
+        "line-clamp": [L, "none", v, Ee]
       }],
       /**
        * Line Height
@@ -1396,7 +1396,7 @@ const G = (i) => {
         leading: [
           /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
           n,
-          ...m()
+          ...x()
         ]
       }],
       /**
@@ -1433,14 +1433,14 @@ const G = (i) => {
        * @see https://v3.tailwindcss.com/docs/placeholder-color
        */
       "placeholder-color": [{
-        placeholder: S()
+        placeholder: k()
       }],
       /**
        * Text Color
        * @see https://tailwindcss.com/docs/text-color
        */
       "text-color": [{
-        text: S()
+        text: k()
       }],
       /**
        * Text Decoration
@@ -1452,28 +1452,28 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/text-decoration-style
        */
       "text-decoration-style": [{
-        decoration: [...q(), "wavy"]
+        decoration: [...H(), "wavy"]
       }],
       /**
        * Text Decoration Thickness
        * @see https://tailwindcss.com/docs/text-decoration-thickness
        */
       "text-decoration-thickness": [{
-        decoration: [N, "from-font", "auto", v, ie]
+        decoration: [L, "from-font", "auto", v, ie]
       }],
       /**
        * Text Decoration Color
        * @see https://tailwindcss.com/docs/text-decoration-color
        */
       "text-decoration-color": [{
-        decoration: S()
+        decoration: k()
       }],
       /**
        * Text Underline Offset
        * @see https://tailwindcss.com/docs/text-underline-offset
        */
       "underline-offset": [{
-        "underline-offset": [N, "auto", v, y]
+        "underline-offset": [L, "auto", v, y]
       }],
       /**
        * Text Transform
@@ -1497,7 +1497,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/text-indent
        */
       indent: [{
-        indent: m()
+        indent: x()
       }],
       /**
        * Vertical Alignment
@@ -1570,7 +1570,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/background-position
        */
       "bg-position": [{
-        bg: D()
+        bg: X()
       }],
       /**
        * Background Repeat
@@ -1584,7 +1584,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/background-size
        */
       "bg-size": [{
-        bg: C()
+        bg: j()
       }],
       /**
        * Background Image
@@ -1594,59 +1594,59 @@ const G = (i) => {
         bg: ["none", {
           linear: [{
             to: ["t", "tr", "r", "br", "b", "bl", "l", "tl"]
-          }, te, v, y],
+          }, se, v, y],
           radial: ["", v, y],
-          conic: [te, v, y]
-        }, ks, ws]
+          conic: [se, v, y]
+        }, js, ws]
       }],
       /**
        * Background Color
        * @see https://tailwindcss.com/docs/background-color
        */
       "bg-color": [{
-        bg: S()
+        bg: k()
       }],
       /**
        * Gradient Color Stops From Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-from-pos": [{
-        from: $()
+        from: P()
       }],
       /**
        * Gradient Color Stops Via Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-via-pos": [{
-        via: $()
+        via: P()
       }],
       /**
        * Gradient Color Stops To Position
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-to-pos": [{
-        to: $()
+        to: P()
       }],
       /**
        * Gradient Color Stops From
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-from": [{
-        from: S()
+        from: k()
       }],
       /**
        * Gradient Color Stops Via
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-via": [{
-        via: S()
+        via: k()
       }],
       /**
        * Gradient Color Stops To
        * @see https://tailwindcss.com/docs/gradient-color-stops
        */
       "gradient-to": [{
-        to: S()
+        to: k()
       }],
       // ---------------
       // --- Borders ---
@@ -1656,175 +1656,175 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/border-radius
        */
       rounded: [{
-        rounded: _()
+        rounded: N()
       }],
       /**
        * Border Radius Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-s": [{
-        "rounded-s": _()
+        "rounded-s": N()
       }],
       /**
        * Border Radius End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-e": [{
-        "rounded-e": _()
+        "rounded-e": N()
       }],
       /**
        * Border Radius Top
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-t": [{
-        "rounded-t": _()
+        "rounded-t": N()
       }],
       /**
        * Border Radius Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-r": [{
-        "rounded-r": _()
+        "rounded-r": N()
       }],
       /**
        * Border Radius Bottom
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-b": [{
-        "rounded-b": _()
+        "rounded-b": N()
       }],
       /**
        * Border Radius Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-l": [{
-        "rounded-l": _()
+        "rounded-l": N()
       }],
       /**
        * Border Radius Start Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-ss": [{
-        "rounded-ss": _()
+        "rounded-ss": N()
       }],
       /**
        * Border Radius Start End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-se": [{
-        "rounded-se": _()
+        "rounded-se": N()
       }],
       /**
        * Border Radius End End
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-ee": [{
-        "rounded-ee": _()
+        "rounded-ee": N()
       }],
       /**
        * Border Radius End Start
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-es": [{
-        "rounded-es": _()
+        "rounded-es": N()
       }],
       /**
        * Border Radius Top Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-tl": [{
-        "rounded-tl": _()
+        "rounded-tl": N()
       }],
       /**
        * Border Radius Top Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-tr": [{
-        "rounded-tr": _()
+        "rounded-tr": N()
       }],
       /**
        * Border Radius Bottom Right
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-br": [{
-        "rounded-br": _()
+        "rounded-br": N()
       }],
       /**
        * Border Radius Bottom Left
        * @see https://tailwindcss.com/docs/border-radius
        */
       "rounded-bl": [{
-        "rounded-bl": _()
+        "rounded-bl": N()
       }],
       /**
        * Border Width
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w": [{
-        border: I()
+        border: A()
       }],
       /**
        * Border Width X
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-x": [{
-        "border-x": I()
+        "border-x": A()
       }],
       /**
        * Border Width Y
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-y": [{
-        "border-y": I()
+        "border-y": A()
       }],
       /**
        * Border Width Start
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-s": [{
-        "border-s": I()
+        "border-s": A()
       }],
       /**
        * Border Width End
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-e": [{
-        "border-e": I()
+        "border-e": A()
       }],
       /**
        * Border Width Top
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-t": [{
-        "border-t": I()
+        "border-t": A()
       }],
       /**
        * Border Width Right
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-r": [{
-        "border-r": I()
+        "border-r": A()
       }],
       /**
        * Border Width Bottom
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-b": [{
-        "border-b": I()
+        "border-b": A()
       }],
       /**
        * Border Width Left
        * @see https://tailwindcss.com/docs/border-width
        */
       "border-w-l": [{
-        "border-l": I()
+        "border-l": A()
       }],
       /**
        * Divide Width X
        * @see https://tailwindcss.com/docs/border-width#between-children
        */
       "divide-x": [{
-        "divide-x": I()
+        "divide-x": A()
       }],
       /**
        * Divide Width X Reverse
@@ -1836,7 +1836,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/border-width#between-children
        */
       "divide-y": [{
-        "divide-y": I()
+        "divide-y": A()
       }],
       /**
        * Divide Width Y Reverse
@@ -1848,112 +1848,112 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/border-style
        */
       "border-style": [{
-        border: [...q(), "hidden", "none"]
+        border: [...H(), "hidden", "none"]
       }],
       /**
        * Divide Style
        * @see https://tailwindcss.com/docs/border-style#setting-the-divider-style
        */
       "divide-style": [{
-        divide: [...q(), "hidden", "none"]
+        divide: [...H(), "hidden", "none"]
       }],
       /**
        * Border Color
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color": [{
-        border: S()
+        border: k()
       }],
       /**
        * Border Color X
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-x": [{
-        "border-x": S()
+        "border-x": k()
       }],
       /**
        * Border Color Y
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-y": [{
-        "border-y": S()
+        "border-y": k()
       }],
       /**
        * Border Color S
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-s": [{
-        "border-s": S()
+        "border-s": k()
       }],
       /**
        * Border Color E
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-e": [{
-        "border-e": S()
+        "border-e": k()
       }],
       /**
        * Border Color Top
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-t": [{
-        "border-t": S()
+        "border-t": k()
       }],
       /**
        * Border Color Right
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-r": [{
-        "border-r": S()
+        "border-r": k()
       }],
       /**
        * Border Color Bottom
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-b": [{
-        "border-b": S()
+        "border-b": k()
       }],
       /**
        * Border Color Left
        * @see https://tailwindcss.com/docs/border-color
        */
       "border-color-l": [{
-        "border-l": S()
+        "border-l": k()
       }],
       /**
        * Divide Color
        * @see https://tailwindcss.com/docs/divide-color
        */
       "divide-color": [{
-        divide: S()
+        divide: k()
       }],
       /**
        * Outline Style
        * @see https://tailwindcss.com/docs/outline-style
        */
       "outline-style": [{
-        outline: [...q(), "none", "hidden"]
+        outline: [...H(), "none", "hidden"]
       }],
       /**
        * Outline Offset
        * @see https://tailwindcss.com/docs/outline-offset
        */
       "outline-offset": [{
-        "outline-offset": [N, v, y]
+        "outline-offset": [L, v, y]
       }],
       /**
        * Outline Width
        * @see https://tailwindcss.com/docs/outline-width
        */
       "outline-w": [{
-        outline: ["", N, me, ie]
+        outline: ["", L, ge, ie]
       }],
       /**
        * Outline Color
        * @see https://tailwindcss.com/docs/outline-color
        */
       "outline-color": [{
-        outline: S()
+        outline: k()
       }],
       // ---------------
       // --- Effects ---
@@ -1968,8 +1968,8 @@ const G = (i) => {
           "",
           "none",
           c,
-          ke,
-          je
+          je,
+          ke
         ]
       }],
       /**
@@ -1977,28 +1977,28 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-shadow-color
        */
       "shadow-color": [{
-        shadow: S()
+        shadow: k()
       }],
       /**
        * Inset Box Shadow
        * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-shadow
        */
       "inset-shadow": [{
-        "inset-shadow": ["none", p, ke, je]
+        "inset-shadow": ["none", h, je, ke]
       }],
       /**
        * Inset Box Shadow Color
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-shadow-color
        */
       "inset-shadow-color": [{
-        "inset-shadow": S()
+        "inset-shadow": k()
       }],
       /**
        * Ring Width
        * @see https://tailwindcss.com/docs/box-shadow#adding-a-ring
        */
       "ring-w": [{
-        ring: I()
+        ring: A()
       }],
       /**
        * Ring Width Inset
@@ -2012,7 +2012,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-ring-color
        */
       "ring-color": [{
-        ring: S()
+        ring: k()
       }],
       /**
        * Ring Offset Width
@@ -2021,7 +2021,7 @@ const G = (i) => {
        * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
        */
       "ring-offset-w": [{
-        "ring-offset": [N, ie]
+        "ring-offset": [L, ie]
       }],
       /**
        * Ring Offset Color
@@ -2030,56 +2030,56 @@ const G = (i) => {
        * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
        */
       "ring-offset-color": [{
-        "ring-offset": S()
+        "ring-offset": k()
       }],
       /**
        * Inset Ring Width
        * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-ring
        */
       "inset-ring-w": [{
-        "inset-ring": I()
+        "inset-ring": A()
       }],
       /**
        * Inset Ring Color
        * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-ring-color
        */
       "inset-ring-color": [{
-        "inset-ring": S()
+        "inset-ring": k()
       }],
       /**
        * Text Shadow
        * @see https://tailwindcss.com/docs/text-shadow
        */
       "text-shadow": [{
-        "text-shadow": ["none", h, ke, je]
+        "text-shadow": ["none", m, je, ke]
       }],
       /**
        * Text Shadow Color
        * @see https://tailwindcss.com/docs/text-shadow#setting-the-shadow-color
        */
       "text-shadow-color": [{
-        "text-shadow": S()
+        "text-shadow": k()
       }],
       /**
        * Opacity
        * @see https://tailwindcss.com/docs/opacity
        */
       opacity: [{
-        opacity: [N, v, y]
+        opacity: [L, v, y]
       }],
       /**
        * Mix Blend Mode
        * @see https://tailwindcss.com/docs/mix-blend-mode
        */
       "mix-blend": [{
-        "mix-blend": [...oe(), "plus-darker", "plus-lighter"]
+        "mix-blend": [...ne(), "plus-darker", "plus-lighter"]
       }],
       /**
        * Background Blend Mode
        * @see https://tailwindcss.com/docs/background-blend-mode
        */
       "bg-blend": [{
-        "bg-blend": oe()
+        "bg-blend": ne()
       }],
       /**
        * Mask Clip
@@ -2100,106 +2100,106 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/mask-image
        */
       "mask-image-linear-pos": [{
-        "mask-linear": [N]
+        "mask-linear": [L]
       }],
       "mask-image-linear-from-pos": [{
-        "mask-linear-from": F()
+        "mask-linear-from": B()
       }],
       "mask-image-linear-to-pos": [{
-        "mask-linear-to": F()
+        "mask-linear-to": B()
       }],
       "mask-image-linear-from-color": [{
-        "mask-linear-from": S()
+        "mask-linear-from": k()
       }],
       "mask-image-linear-to-color": [{
-        "mask-linear-to": S()
+        "mask-linear-to": k()
       }],
       "mask-image-t-from-pos": [{
-        "mask-t-from": F()
+        "mask-t-from": B()
       }],
       "mask-image-t-to-pos": [{
-        "mask-t-to": F()
+        "mask-t-to": B()
       }],
       "mask-image-t-from-color": [{
-        "mask-t-from": S()
+        "mask-t-from": k()
       }],
       "mask-image-t-to-color": [{
-        "mask-t-to": S()
+        "mask-t-to": k()
       }],
       "mask-image-r-from-pos": [{
-        "mask-r-from": F()
+        "mask-r-from": B()
       }],
       "mask-image-r-to-pos": [{
-        "mask-r-to": F()
+        "mask-r-to": B()
       }],
       "mask-image-r-from-color": [{
-        "mask-r-from": S()
+        "mask-r-from": k()
       }],
       "mask-image-r-to-color": [{
-        "mask-r-to": S()
+        "mask-r-to": k()
       }],
       "mask-image-b-from-pos": [{
-        "mask-b-from": F()
+        "mask-b-from": B()
       }],
       "mask-image-b-to-pos": [{
-        "mask-b-to": F()
+        "mask-b-to": B()
       }],
       "mask-image-b-from-color": [{
-        "mask-b-from": S()
+        "mask-b-from": k()
       }],
       "mask-image-b-to-color": [{
-        "mask-b-to": S()
+        "mask-b-to": k()
       }],
       "mask-image-l-from-pos": [{
-        "mask-l-from": F()
+        "mask-l-from": B()
       }],
       "mask-image-l-to-pos": [{
-        "mask-l-to": F()
+        "mask-l-to": B()
       }],
       "mask-image-l-from-color": [{
-        "mask-l-from": S()
+        "mask-l-from": k()
       }],
       "mask-image-l-to-color": [{
-        "mask-l-to": S()
+        "mask-l-to": k()
       }],
       "mask-image-x-from-pos": [{
-        "mask-x-from": F()
+        "mask-x-from": B()
       }],
       "mask-image-x-to-pos": [{
-        "mask-x-to": F()
+        "mask-x-to": B()
       }],
       "mask-image-x-from-color": [{
-        "mask-x-from": S()
+        "mask-x-from": k()
       }],
       "mask-image-x-to-color": [{
-        "mask-x-to": S()
+        "mask-x-to": k()
       }],
       "mask-image-y-from-pos": [{
-        "mask-y-from": F()
+        "mask-y-from": B()
       }],
       "mask-image-y-to-pos": [{
-        "mask-y-to": F()
+        "mask-y-to": B()
       }],
       "mask-image-y-from-color": [{
-        "mask-y-from": S()
+        "mask-y-from": k()
       }],
       "mask-image-y-to-color": [{
-        "mask-y-to": S()
+        "mask-y-to": k()
       }],
       "mask-image-radial": [{
         "mask-radial": [v, y]
       }],
       "mask-image-radial-from-pos": [{
-        "mask-radial-from": F()
+        "mask-radial-from": B()
       }],
       "mask-image-radial-to-pos": [{
-        "mask-radial-to": F()
+        "mask-radial-to": B()
       }],
       "mask-image-radial-from-color": [{
-        "mask-radial-from": S()
+        "mask-radial-from": k()
       }],
       "mask-image-radial-to-color": [{
-        "mask-radial-to": S()
+        "mask-radial-to": k()
       }],
       "mask-image-radial-shape": [{
         "mask-radial": ["circle", "ellipse"]
@@ -2211,22 +2211,22 @@ const G = (i) => {
         }]
       }],
       "mask-image-radial-pos": [{
-        "mask-radial-at": A()
+        "mask-radial-at": R()
       }],
       "mask-image-conic-pos": [{
-        "mask-conic": [N]
+        "mask-conic": [L]
       }],
       "mask-image-conic-from-pos": [{
-        "mask-conic-from": F()
+        "mask-conic-from": B()
       }],
       "mask-image-conic-to-pos": [{
-        "mask-conic-to": F()
+        "mask-conic-to": B()
       }],
       "mask-image-conic-from-color": [{
-        "mask-conic-from": S()
+        "mask-conic-from": k()
       }],
       "mask-image-conic-to-color": [{
-        "mask-conic-to": S()
+        "mask-conic-to": k()
       }],
       /**
        * Mask Mode
@@ -2247,7 +2247,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/mask-position
        */
       "mask-position": [{
-        mask: D()
+        mask: X()
       }],
       /**
        * Mask Repeat
@@ -2261,7 +2261,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/mask-size
        */
       "mask-size": [{
-        mask: C()
+        mask: j()
       }],
       /**
        * Mask Type
@@ -2298,21 +2298,21 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/blur
        */
       blur: [{
-        blur: U()
+        blur: D()
       }],
       /**
        * Brightness
        * @see https://tailwindcss.com/docs/brightness
        */
       brightness: [{
-        brightness: [N, v, y]
+        brightness: [L, v, y]
       }],
       /**
        * Contrast
        * @see https://tailwindcss.com/docs/contrast
        */
       contrast: [{
-        contrast: [N, v, y]
+        contrast: [L, v, y]
       }],
       /**
        * Drop Shadow
@@ -2323,9 +2323,9 @@ const G = (i) => {
           // Deprecated since Tailwind CSS v4.0.0
           "",
           "none",
-          w,
-          ke,
-          je
+          g,
+          je,
+          ke
         ]
       }],
       /**
@@ -2333,42 +2333,42 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/filter-drop-shadow#setting-the-shadow-color
        */
       "drop-shadow-color": [{
-        "drop-shadow": S()
+        "drop-shadow": k()
       }],
       /**
        * Grayscale
        * @see https://tailwindcss.com/docs/grayscale
        */
       grayscale: [{
-        grayscale: ["", N, v, y]
+        grayscale: ["", L, v, y]
       }],
       /**
        * Hue Rotate
        * @see https://tailwindcss.com/docs/hue-rotate
        */
       "hue-rotate": [{
-        "hue-rotate": [N, v, y]
+        "hue-rotate": [L, v, y]
       }],
       /**
        * Invert
        * @see https://tailwindcss.com/docs/invert
        */
       invert: [{
-        invert: ["", N, v, y]
+        invert: ["", L, v, y]
       }],
       /**
        * Saturate
        * @see https://tailwindcss.com/docs/saturate
        */
       saturate: [{
-        saturate: [N, v, y]
+        saturate: [L, v, y]
       }],
       /**
        * Sepia
        * @see https://tailwindcss.com/docs/sepia
        */
       sepia: [{
-        sepia: ["", N, v, y]
+        sepia: ["", L, v, y]
       }],
       /**
        * Backdrop Filter
@@ -2388,63 +2388,63 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/backdrop-blur
        */
       "backdrop-blur": [{
-        "backdrop-blur": U()
+        "backdrop-blur": D()
       }],
       /**
        * Backdrop Brightness
        * @see https://tailwindcss.com/docs/backdrop-brightness
        */
       "backdrop-brightness": [{
-        "backdrop-brightness": [N, v, y]
+        "backdrop-brightness": [L, v, y]
       }],
       /**
        * Backdrop Contrast
        * @see https://tailwindcss.com/docs/backdrop-contrast
        */
       "backdrop-contrast": [{
-        "backdrop-contrast": [N, v, y]
+        "backdrop-contrast": [L, v, y]
       }],
       /**
        * Backdrop Grayscale
        * @see https://tailwindcss.com/docs/backdrop-grayscale
        */
       "backdrop-grayscale": [{
-        "backdrop-grayscale": ["", N, v, y]
+        "backdrop-grayscale": ["", L, v, y]
       }],
       /**
        * Backdrop Hue Rotate
        * @see https://tailwindcss.com/docs/backdrop-hue-rotate
        */
       "backdrop-hue-rotate": [{
-        "backdrop-hue-rotate": [N, v, y]
+        "backdrop-hue-rotate": [L, v, y]
       }],
       /**
        * Backdrop Invert
        * @see https://tailwindcss.com/docs/backdrop-invert
        */
       "backdrop-invert": [{
-        "backdrop-invert": ["", N, v, y]
+        "backdrop-invert": ["", L, v, y]
       }],
       /**
        * Backdrop Opacity
        * @see https://tailwindcss.com/docs/backdrop-opacity
        */
       "backdrop-opacity": [{
-        "backdrop-opacity": [N, v, y]
+        "backdrop-opacity": [L, v, y]
       }],
       /**
        * Backdrop Saturate
        * @see https://tailwindcss.com/docs/backdrop-saturate
        */
       "backdrop-saturate": [{
-        "backdrop-saturate": [N, v, y]
+        "backdrop-saturate": [L, v, y]
       }],
       /**
        * Backdrop Sepia
        * @see https://tailwindcss.com/docs/backdrop-sepia
        */
       "backdrop-sepia": [{
-        "backdrop-sepia": ["", N, v, y]
+        "backdrop-sepia": ["", L, v, y]
       }],
       // --------------
       // --- Tables ---
@@ -2461,21 +2461,21 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/border-spacing
        */
       "border-spacing": [{
-        "border-spacing": m()
+        "border-spacing": x()
       }],
       /**
        * Border Spacing X
        * @see https://tailwindcss.com/docs/border-spacing
        */
       "border-spacing-x": [{
-        "border-spacing-x": m()
+        "border-spacing-x": x()
       }],
       /**
        * Border Spacing Y
        * @see https://tailwindcss.com/docs/border-spacing
        */
       "border-spacing-y": [{
-        "border-spacing-y": m()
+        "border-spacing-y": x()
       }],
       /**
        * Table Layout
@@ -2513,28 +2513,28 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/transition-duration
        */
       duration: [{
-        duration: [N, "initial", v, y]
+        duration: [L, "initial", v, y]
       }],
       /**
        * Transition Timing Function
        * @see https://tailwindcss.com/docs/transition-timing-function
        */
       ease: [{
-        ease: ["linear", "initial", E, v, y]
+        ease: ["linear", "initial", M, v, y]
       }],
       /**
        * Transition Delay
        * @see https://tailwindcss.com/docs/transition-delay
        */
       delay: [{
-        delay: [N, v, y]
+        delay: [L, v, y]
       }],
       /**
        * Animation
        * @see https://tailwindcss.com/docs/animation
        */
       animate: [{
-        animate: ["none", j, v, y]
+        animate: ["none", S, v, y]
       }],
       // ------------------
       // --- Transforms ---
@@ -2551,70 +2551,70 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/perspective
        */
       perspective: [{
-        perspective: [x, v, y]
+        perspective: [b, v, y]
       }],
       /**
        * Perspective Origin
        * @see https://tailwindcss.com/docs/perspective-origin
        */
       "perspective-origin": [{
-        "perspective-origin": k()
+        "perspective-origin": w()
       }],
       /**
        * Rotate
        * @see https://tailwindcss.com/docs/rotate
        */
       rotate: [{
-        rotate: X()
+        rotate: q()
       }],
       /**
        * Rotate X
        * @see https://tailwindcss.com/docs/rotate
        */
       "rotate-x": [{
-        "rotate-x": X()
+        "rotate-x": q()
       }],
       /**
        * Rotate Y
        * @see https://tailwindcss.com/docs/rotate
        */
       "rotate-y": [{
-        "rotate-y": X()
+        "rotate-y": q()
       }],
       /**
        * Rotate Z
        * @see https://tailwindcss.com/docs/rotate
        */
       "rotate-z": [{
-        "rotate-z": X()
+        "rotate-z": q()
       }],
       /**
        * Scale
        * @see https://tailwindcss.com/docs/scale
        */
       scale: [{
-        scale: ee()
+        scale: te()
       }],
       /**
        * Scale X
        * @see https://tailwindcss.com/docs/scale
        */
       "scale-x": [{
-        "scale-x": ee()
+        "scale-x": te()
       }],
       /**
        * Scale Y
        * @see https://tailwindcss.com/docs/scale
        */
       "scale-y": [{
-        "scale-y": ee()
+        "scale-y": te()
       }],
       /**
        * Scale Z
        * @see https://tailwindcss.com/docs/scale
        */
       "scale-z": [{
-        "scale-z": ee()
+        "scale-z": te()
       }],
       /**
        * Scale 3D
@@ -2626,21 +2626,21 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/skew
        */
       skew: [{
-        skew: fe()
+        skew: he()
       }],
       /**
        * Skew X
        * @see https://tailwindcss.com/docs/skew
        */
       "skew-x": [{
-        "skew-x": fe()
+        "skew-x": he()
       }],
       /**
        * Skew Y
        * @see https://tailwindcss.com/docs/skew
        */
       "skew-y": [{
-        "skew-y": fe()
+        "skew-y": he()
       }],
       /**
        * Transform
@@ -2654,7 +2654,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/transform-origin
        */
       "transform-origin": [{
-        origin: k()
+        origin: w()
       }],
       /**
        * Transform Style
@@ -2704,7 +2704,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/accent-color
        */
       accent: [{
-        accent: S()
+        accent: k()
       }],
       /**
        * Appearance
@@ -2718,7 +2718,7 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/just-in-time-mode#caret-color-utilities
        */
       "caret-color": [{
-        caret: S()
+        caret: k()
       }],
       /**
        * Color Scheme
@@ -2767,126 +2767,126 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-m": [{
-        "scroll-m": m()
+        "scroll-m": x()
       }],
       /**
        * Scroll Margin X
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mx": [{
-        "scroll-mx": m()
+        "scroll-mx": x()
       }],
       /**
        * Scroll Margin Y
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-my": [{
-        "scroll-my": m()
+        "scroll-my": x()
       }],
       /**
        * Scroll Margin Start
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-ms": [{
-        "scroll-ms": m()
+        "scroll-ms": x()
       }],
       /**
        * Scroll Margin End
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-me": [{
-        "scroll-me": m()
+        "scroll-me": x()
       }],
       /**
        * Scroll Margin Top
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mt": [{
-        "scroll-mt": m()
+        "scroll-mt": x()
       }],
       /**
        * Scroll Margin Right
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mr": [{
-        "scroll-mr": m()
+        "scroll-mr": x()
       }],
       /**
        * Scroll Margin Bottom
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-mb": [{
-        "scroll-mb": m()
+        "scroll-mb": x()
       }],
       /**
        * Scroll Margin Left
        * @see https://tailwindcss.com/docs/scroll-margin
        */
       "scroll-ml": [{
-        "scroll-ml": m()
+        "scroll-ml": x()
       }],
       /**
        * Scroll Padding
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-p": [{
-        "scroll-p": m()
+        "scroll-p": x()
       }],
       /**
        * Scroll Padding X
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-px": [{
-        "scroll-px": m()
+        "scroll-px": x()
       }],
       /**
        * Scroll Padding Y
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-py": [{
-        "scroll-py": m()
+        "scroll-py": x()
       }],
       /**
        * Scroll Padding Start
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-ps": [{
-        "scroll-ps": m()
+        "scroll-ps": x()
       }],
       /**
        * Scroll Padding End
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pe": [{
-        "scroll-pe": m()
+        "scroll-pe": x()
       }],
       /**
        * Scroll Padding Top
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pt": [{
-        "scroll-pt": m()
+        "scroll-pt": x()
       }],
       /**
        * Scroll Padding Right
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pr": [{
-        "scroll-pr": m()
+        "scroll-pr": x()
       }],
       /**
        * Scroll Padding Bottom
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pb": [{
-        "scroll-pb": m()
+        "scroll-pb": x()
       }],
       /**
        * Scroll Padding Left
        * @see https://tailwindcss.com/docs/scroll-padding
        */
       "scroll-pl": [{
-        "scroll-pl": m()
+        "scroll-pl": x()
       }],
       /**
        * Scroll Snap Align
@@ -2964,21 +2964,21 @@ const G = (i) => {
        * @see https://tailwindcss.com/docs/fill
        */
       fill: [{
-        fill: ["none", ...S()]
+        fill: ["none", ...k()]
       }],
       /**
        * Stroke Width
        * @see https://tailwindcss.com/docs/stroke-width
        */
       "stroke-w": [{
-        stroke: [N, me, ie, Ee]
+        stroke: [L, ge, ie, Ee]
       }],
       /**
        * Stroke
        * @see https://tailwindcss.com/docs/stroke
        */
       stroke: [{
-        stroke: ["none", ...S()]
+        stroke: ["none", ...k()]
       }],
       // ---------------------
       // --- Accessibility ---
@@ -3046,19 +3046,19 @@ const G = (i) => {
     },
     orderSensitiveModifiers: ["*", "**", "after", "backdrop", "before", "details-content", "file", "first-letter", "first-line", "marker", "placeholder", "selection"]
   };
-}, Ns = /* @__PURE__ */ as(Ls);
-function _s(...i) {
-  return Ns(bt(i));
+}, Ls = /* @__PURE__ */ as(_s);
+function Ns(...o) {
+  return Ls(bt(o));
 }
-function Ne(i, e) {
-  if (i) {
-    const t = i.split(":");
+function Le(o, e) {
+  if (o) {
+    const t = o.split(":");
     if (t.length >= 3 && t[0] && t[2] !== "443")
-      return i;
+      return o;
   }
   return e;
 }
-const Ps = Kt(
+const Os = Kt(
   "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none data-[state=open]:bg-secondary/50",
   {
     variants: {
@@ -3083,64 +3083,64 @@ const Ps = Kt(
       size: "default"
     }
   }
-), We = Wt.forwardRef(
-  ({ className: i, variant: e, size: t, ...s }, o) => /* @__PURE__ */ r.jsx("button", { className: _s(Ps({ variant: e, size: t, className: i })), ref: o, ...s })
+), Fe = Bt.forwardRef(
+  ({ className: o, variant: e, size: t, ...s }, i) => /* @__PURE__ */ r.jsx("button", { className: Ns(Os({ variant: e, size: t, className: o })), ref: i, ...s })
 );
-We.displayName = "Button";
-const z = ({ href: i, children: e, className: t = "", target: s = "_self", rel: o = "noopener noreferrer", onClick: n }) => {
+Fe.displayName = "Button";
+const z = ({ href: o, children: e, className: t = "", target: s = "_self", rel: i = "noopener noreferrer", onClick: n }) => {
   const a = (l) => {
-    s !== "_blank" && (l.preventDefault(), window.location.href = i), n && n(l);
+    s !== "_blank" && (l.preventDefault(), window.location.href = o), n && n(l);
   };
   return /* @__PURE__ */ r.jsx(
     "a",
     {
-      href: i,
+      href: o,
       className: t,
       target: s,
-      rel: o,
+      rel: i,
       onClick: a,
       "aria-label": typeof e == "string" ? e : void 0,
       children: e
     }
   );
-}, Os = (i, e, t, s) => {
+}, Ps = (o, e, t, s) => {
   var n, a, l, d;
-  const o = [t, {
+  const i = [t, {
     code: e,
     ...s || {}
   }];
-  if ((a = (n = i == null ? void 0 : i.services) == null ? void 0 : n.logger) != null && a.forward)
-    return i.services.logger.forward(o, "warn", "react-i18next::", !0);
-  ne(o[0]) && (o[0] = `react-i18next:: ${o[0]}`), (d = (l = i == null ? void 0 : i.services) == null ? void 0 : l.logger) != null && d.warn ? i.services.logger.warn(...o) : console != null && console.warn && console.warn(...o);
-}, it = {}, Be = (i, e, t, s) => {
-  ne(t) && it[t] || (ne(t) && (it[t] = /* @__PURE__ */ new Date()), Os(i, e, t, s));
-}, $t = (i, e) => () => {
-  if (i.isInitialized)
+  if ((a = (n = o == null ? void 0 : o.services) == null ? void 0 : n.logger) != null && a.forward)
+    return o.services.logger.forward(i, "warn", "react-i18next::", !0);
+  oe(i[0]) && (i[0] = `react-i18next:: ${i[0]}`), (d = (l = o == null ? void 0 : o.services) == null ? void 0 : l.logger) != null && d.warn ? o.services.logger.warn(...i) : console != null && console.warn && console.warn(...i);
+}, rt = {}, Be = (o, e, t, s) => {
+  oe(t) && rt[t] || (oe(t) && (rt[t] = /* @__PURE__ */ new Date()), Ps(o, e, t, s));
+}, $t = (o, e) => () => {
+  if (o.isInitialized)
     e();
   else {
     const t = () => {
       setTimeout(() => {
-        i.off("initialized", t);
+        o.off("initialized", t);
       }, 0), e();
     };
-    i.on("initialized", t);
+    o.on("initialized", t);
   }
-}, Ve = (i, e, t) => {
-  i.loadNamespaces(e, $t(i, t));
-}, nt = (i, e, t, s) => {
-  if (ne(t) && (t = [t]), i.options.preload && i.options.preload.indexOf(e) > -1) return Ve(i, t, s);
-  t.forEach((o) => {
-    i.options.ns.indexOf(o) < 0 && i.options.ns.push(o);
-  }), i.loadLanguages(e, $t(i, s));
-}, Rs = (i, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
+}, We = (o, e, t) => {
+  o.loadNamespaces(e, $t(o, t));
+}, it = (o, e, t, s) => {
+  if (oe(t) && (t = [t]), o.options.preload && o.options.preload.indexOf(e) > -1) return We(o, t, s);
+  t.forEach((i) => {
+    o.options.ns.indexOf(i) < 0 && o.options.ns.push(i);
+  }), o.loadLanguages(e, $t(o, s));
+}, Rs = (o, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
   languages: e.languages
-}), !0) : e.hasLoadedNamespace(i, {
+}), !0) : e.hasLoadedNamespace(o, {
   lng: t.lng,
-  precheck: (s, o) => {
+  precheck: (s, i) => {
     var n;
-    if (((n = t.bindI18n) == null ? void 0 : n.indexOf("languageChanging")) > -1 && s.services.backendConnector.backend && s.isLanguageChangingTo && !o(s.isLanguageChangingTo, i)) return !1;
+    if (((n = t.bindI18n) == null ? void 0 : n.indexOf("languageChanging")) > -1 && s.services.backendConnector.backend && s.isLanguageChangingTo && !i(s.isLanguageChangingTo, o)) return !1;
   }
-}), ne = (i) => typeof i == "string", $s = (i) => typeof i == "object" && i !== null, zs = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, Es = {
+}), oe = (o) => typeof o == "string", $s = (o) => typeof o == "object" && o !== null, Es = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, zs = {
   "&amp;": "&",
   "&#38;": "&",
   "&lt;": "<",
@@ -3161,8 +3161,8 @@ const z = ({ href: i, children: e, className: t = "", target: s = "_self", rel: 
   "&#8230;": "…",
   "&#x2F;": "/",
   "&#47;": "/"
-}, As = (i) => Es[i], Ms = (i) => i.replace(zs, As);
-let De = {
+}, Ms = (o) => zs[o], As = (o) => o.replace(Es, Ms);
+let Ve = {
   bindI18n: "languageChanged",
   bindI18nStore: "",
   transEmptyNodeValue: "",
@@ -3170,23 +3170,23 @@ let De = {
   transWrapTextNodes: "",
   transKeepBasicHtmlNodesFor: ["br", "strong", "i", "p"],
   useSuspense: !0,
-  unescape: Ms
+  unescape: As
 };
-const Ts = (i = {}) => {
-  De = {
-    ...De,
-    ...i
+const Ts = (o = {}) => {
+  Ve = {
+    ...Ve,
+    ...o
   };
-}, Is = () => De;
-let zt;
-const Fs = (i) => {
-  zt = i;
-}, Ws = () => zt, Bs = {
+}, Is = () => Ve;
+let Et;
+const Fs = (o) => {
+  Et = o;
+}, Bs = () => Et, Ws = {
   type: "3rdParty",
-  init(i) {
-    Ts(i.options.react), Fs(i);
+  init(o) {
+    Ts(o.options.react), Fs(o);
   }
-}, Vs = Bt();
+}, Vs = Wt();
 class Ds {
   constructor() {
     this.usedNamespaces = {};
@@ -3200,25 +3200,25 @@ class Ds {
     return Object.keys(this.usedNamespaces);
   }
 }
-const Us = (i, e) => {
-  const t = Le();
-  return se(() => {
-    t.current = i;
-  }, [i, e]), t.current;
-}, Et = (i, e, t, s) => i.getFixedT(e, t, s), Gs = (i, e, t, s) => Ce(Et(i, e, t, s), [i, e, t, s]), At = (i, e = {}) => {
-  var A, k, P, O;
+const Us = (o, e) => {
+  const t = _e();
+  return re(() => {
+    t.current = o;
+  }, [o, e]), t.current;
+}, zt = (o, e, t, s) => o.getFixedT(e, t, s), Gs = (o, e, t, s) => Ce(zt(o, e, t, s), [o, e, t, s]), Mt = (o, e = {}) => {
+  var R, w, $, I;
   const {
     i18n: t
   } = e, {
     i18n: s,
-    defaultNS: o
-  } = Vt(Vs) || {}, n = t || s || Ws();
+    defaultNS: i
+  } = Vt(Vs) || {}, n = t || s || Bs();
   if (n && !n.reportNamespaces && (n.reportNamespaces = new Ds()), !n) {
     Be(n, "NO_I18NEXT_INSTANCE", "useTranslation: You will need to pass in an i18next instance by using initReactI18next");
-    const m = (W, R) => ne(R) ? R : $s(R) && ne(R.defaultValue) ? R.defaultValue : Array.isArray(W) ? W[W.length - 1] : W, M = [m, {}, !1];
-    return M.t = m, M.i18n = {}, M.ready = !1, M;
+    const x = (E, G) => oe(G) ? G : $s(G) && oe(G.defaultValue) ? G.defaultValue : Array.isArray(E) ? E[E.length - 1] : E, O = [x, {}, !1];
+    return O.t = x, O.i18n = {}, O.ready = !1, O;
   }
-  (A = n.options.react) != null && A.wait && Be(n, "DEPRECATED_OPTION", "useTranslation: It seems you are still using the old wait option, you may migrate to the new useSuspense behaviour.");
+  (R = n.options.react) != null && R.wait && Be(n, "DEPRECATED_OPTION", "useTranslation: It seems you are still using the old wait option, you may migrate to the new useSuspense behaviour.");
   const a = {
     ...Is(),
     ...n.options.react,
@@ -3227,92 +3227,92 @@ const Us = (i, e) => {
     useSuspense: l,
     keyPrefix: d
   } = a;
-  let u = o || ((k = n.options) == null ? void 0 : k.defaultNS);
-  u = ne(u) ? [u] : u || ["translation"], (O = (P = n.reportNamespaces).addUsedNamespaces) == null || O.call(P, u);
-  const c = (n.isInitialized || n.initializedStoreOnce) && u.every((m) => Rs(m, n, a)), p = Gs(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), h = () => p, w = () => Et(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), [g, x] = de(h);
-  let b = u.join();
-  e.lng && (b = `${e.lng}${b}`);
-  const E = Us(b), j = Le(!0);
-  se(() => {
+  let u = i || ((w = n.options) == null ? void 0 : w.defaultNS);
+  u = oe(u) ? [u] : u || ["translation"], (I = ($ = n.reportNamespaces).addUsedNamespaces) == null || I.call($, u);
+  const c = (n.isInitialized || n.initializedStoreOnce) && u.every((x) => Rs(x, n, a)), h = Gs(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), m = () => h, g = () => zt(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), [p, b] = ce(m);
+  let _ = u.join();
+  e.lng && (_ = `${e.lng}${_}`);
+  const M = Us(_), S = _e(!0);
+  re(() => {
     const {
-      bindI18n: m,
-      bindI18nStore: M
+      bindI18n: x,
+      bindI18nStore: O
     } = a;
-    j.current = !0, !c && !l && (e.lng ? nt(n, e.lng, u, () => {
-      j.current && x(w);
-    }) : Ve(n, u, () => {
-      j.current && x(w);
-    })), c && E && E !== b && j.current && x(w);
-    const W = () => {
-      j.current && x(w);
+    S.current = !0, !c && !l && (e.lng ? it(n, e.lng, u, () => {
+      S.current && b(g);
+    }) : We(n, u, () => {
+      S.current && b(g);
+    })), c && M && M !== _ && S.current && b(g);
+    const E = () => {
+      S.current && b(g);
     };
-    return m && (n == null || n.on(m, W)), M && (n == null || n.store.on(M, W)), () => {
-      j.current = !1, n && (m == null || m.split(" ").forEach((R) => n.off(R, W))), M && n && M.split(" ").forEach((R) => n.store.off(R, W));
+    return x && (n == null || n.on(x, E)), O && (n == null || n.store.on(O, E)), () => {
+      S.current = !1, n && (x == null || x.split(" ").forEach((G) => n.off(G, E))), O && n && O.split(" ").forEach((G) => n.store.off(G, E));
     };
-  }, [n, b]), se(() => {
-    j.current && c && x(h);
+  }, [n, _]), re(() => {
+    S.current && c && b(m);
   }, [n, d, c]);
-  const T = [g, n, c];
-  if (T.t = g, T.i18n = n, T.ready = c, c || !c && !l) return T;
-  throw new Promise((m) => {
-    e.lng ? nt(n, e.lng, u, () => m()) : Ve(n, u, () => m());
+  const T = [p, n, c];
+  if (T.t = p, T.i18n = n, T.ready = c, c || !c && !l) return T;
+  throw new Promise((x) => {
+    e.lng ? it(n, e.lng, u, () => x()) : We(n, u, () => x());
   });
-}, L = (i) => typeof i == "string", xe = () => {
-  let i, e;
-  const t = new Promise((s, o) => {
-    i = s, e = o;
+}, C = (o) => typeof o == "string", me = () => {
+  let o, e;
+  const t = new Promise((s, i) => {
+    o = s, e = i;
   });
-  return t.resolve = i, t.reject = e, t;
-}, ot = (i) => i == null ? "" : "" + i, Hs = (i, e, t) => {
-  i.forEach((s) => {
+  return t.resolve = o, t.reject = e, t;
+}, ot = (o) => o == null ? "" : "" + o, Hs = (o, e, t) => {
+  o.forEach((s) => {
     e[s] && (t[s] = e[s]);
   });
-}, Ks = /###/g, at = (i) => i && i.indexOf("###") > -1 ? i.replace(Ks, ".") : i, lt = (i) => !i || L(i), ye = (i, e, t) => {
-  const s = L(e) ? e.split(".") : e;
-  let o = 0;
-  for (; o < s.length - 1; ) {
-    if (lt(i)) return {};
-    const n = at(s[o]);
-    !i[n] && t && (i[n] = new t()), Object.prototype.hasOwnProperty.call(i, n) ? i = i[n] : i = {}, ++o;
+}, Ks = /###/g, nt = (o) => o && o.indexOf("###") > -1 ? o.replace(Ks, ".") : o, at = (o) => !o || C(o), xe = (o, e, t) => {
+  const s = C(e) ? e.split(".") : e;
+  let i = 0;
+  for (; i < s.length - 1; ) {
+    if (at(o)) return {};
+    const n = nt(s[i]);
+    !o[n] && t && (o[n] = new t()), Object.prototype.hasOwnProperty.call(o, n) ? o = o[n] : o = {}, ++i;
   }
-  return lt(i) ? {} : {
-    obj: i,
-    k: at(s[o])
+  return at(o) ? {} : {
+    obj: o,
+    k: nt(s[i])
   };
-}, ct = (i, e, t) => {
+}, lt = (o, e, t) => {
   const {
     obj: s,
-    k: o
-  } = ye(i, e, Object);
+    k: i
+  } = xe(o, e, Object);
   if (s !== void 0 || e.length === 1) {
-    s[o] = t;
+    s[i] = t;
     return;
   }
-  let n = e[e.length - 1], a = e.slice(0, e.length - 1), l = ye(i, a, Object);
+  let n = e[e.length - 1], a = e.slice(0, e.length - 1), l = xe(o, a, Object);
   for (; l.obj === void 0 && a.length; )
-    n = `${a[a.length - 1]}.${n}`, a = a.slice(0, a.length - 1), l = ye(i, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${n}`] < "u" && (l.obj = void 0);
+    n = `${a[a.length - 1]}.${n}`, a = a.slice(0, a.length - 1), l = xe(o, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${n}`] < "u" && (l.obj = void 0);
   l.obj[`${l.k}.${n}`] = t;
-}, Ys = (i, e, t, s) => {
+}, Ys = (o, e, t, s) => {
   const {
-    obj: o,
+    obj: i,
     k: n
-  } = ye(i, e, Object);
-  o[n] = o[n] || [], o[n].push(t);
-}, _e = (i, e) => {
+  } = xe(o, e, Object);
+  i[n] = i[n] || [], i[n].push(t);
+}, Ne = (o, e) => {
   const {
     obj: t,
     k: s
-  } = ye(i, e);
+  } = xe(o, e);
   if (t && Object.prototype.hasOwnProperty.call(t, s))
     return t[s];
-}, Js = (i, e, t) => {
-  const s = _e(i, t);
-  return s !== void 0 ? s : _e(e, t);
-}, Mt = (i, e, t) => {
+}, Js = (o, e, t) => {
+  const s = Ne(o, t);
+  return s !== void 0 ? s : Ne(e, t);
+}, At = (o, e, t) => {
   for (const s in e)
-    s !== "__proto__" && s !== "constructor" && (s in i ? L(i[s]) || i[s] instanceof String || L(e[s]) || e[s] instanceof String ? t && (i[s] = e[s]) : Mt(i[s], e[s], t) : i[s] = e[s]);
-  return i;
-}, le = (i) => i.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    s !== "__proto__" && s !== "constructor" && (s in o ? C(o[s]) || o[s] instanceof String || C(e[s]) || e[s] instanceof String ? t && (o[s] = e[s]) : At(o[s], e[s], t) : o[s] = e[s]);
+  return o;
+}, le = (o) => o.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 var qs = {
   "&": "&amp;",
   "<": "&lt;",
@@ -3321,7 +3321,7 @@ var qs = {
   "'": "&#39;",
   "/": "&#x2F;"
 };
-const Xs = (i) => L(i) ? i.replace(/[&<>"'\/]/g, (e) => qs[e]) : i;
+const Xs = (o) => C(o) ? o.replace(/[&<>"'\/]/g, (e) => qs[e]) : o;
 class Zs {
   constructor(e) {
     this.capacity = e, this.regExpMap = /* @__PURE__ */ new Map(), this.regExpQueue = [];
@@ -3334,85 +3334,74 @@ class Zs {
     return this.regExpQueue.length === this.capacity && this.regExpMap.delete(this.regExpQueue.shift()), this.regExpMap.set(e, s), this.regExpQueue.push(e), s;
   }
 }
-const Qs = [" ", ",", "?", "!", ";"], er = new Zs(20), tr = (i, e, t) => {
+const Qs = [" ", ",", "?", "!", ";"], er = new Zs(20), tr = (o, e, t) => {
   e = e || "", t = t || "";
   const s = Qs.filter((a) => e.indexOf(a) < 0 && t.indexOf(a) < 0);
   if (s.length === 0) return !0;
-  const o = er.getRegExp(`(${s.map((a) => a === "?" ? "\\?" : a).join("|")})`);
-  let n = !o.test(i);
+  const i = er.getRegExp(`(${s.map((a) => a === "?" ? "\\?" : a).join("|")})`);
+  let n = !i.test(o);
   if (!n) {
-    const a = i.indexOf(t);
-    a > 0 && !o.test(i.substring(0, a)) && (n = !0);
+    const a = o.indexOf(t);
+    a > 0 && !i.test(o.substring(0, a)) && (n = !0);
   }
   return n;
-}, Ue = function(i, e) {
-  let t = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : ".";
-  if (!i) return;
-  if (i[e])
-    return Object.prototype.hasOwnProperty.call(i, e) ? i[e] : void 0;
+}, De = (o, e, t = ".") => {
+  if (!o) return;
+  if (o[e])
+    return Object.prototype.hasOwnProperty.call(o, e) ? o[e] : void 0;
   const s = e.split(t);
-  let o = i;
+  let i = o;
   for (let n = 0; n < s.length; ) {
-    if (!o || typeof o != "object")
+    if (!i || typeof i != "object")
       return;
     let a, l = "";
     for (let d = n; d < s.length; ++d)
-      if (d !== n && (l += t), l += s[d], a = o[l], a !== void 0) {
+      if (d !== n && (l += t), l += s[d], a = i[l], a !== void 0) {
         if (["string", "number", "boolean"].indexOf(typeof a) > -1 && d < s.length - 1)
           continue;
         n += d - n + 1;
         break;
       }
-    o = a;
+    i = a;
   }
-  return o;
-}, Pe = (i) => i == null ? void 0 : i.replace("_", "-"), sr = {
+  return i;
+}, ye = (o) => o == null ? void 0 : o.replace("_", "-"), sr = {
   type: "logger",
-  log(i) {
-    this.output("log", i);
+  log(o) {
+    this.output("log", o);
   },
-  warn(i) {
-    this.output("warn", i);
+  warn(o) {
+    this.output("warn", o);
   },
-  error(i) {
-    this.output("error", i);
+  error(o) {
+    this.output("error", o);
   },
-  output(i, e) {
+  output(o, e) {
     var t, s;
-    (s = (t = console == null ? void 0 : console[i]) == null ? void 0 : t.apply) == null || s.call(t, console, e);
+    (s = (t = console == null ? void 0 : console[o]) == null ? void 0 : t.apply) == null || s.call(t, console, e);
   }
 };
 class Oe {
-  constructor(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+  constructor(e, t = {}) {
     this.init(e, t);
   }
-  init(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+  init(e, t = {}) {
     this.prefix = t.prefix || "i18next:", this.logger = e || sr, this.options = t, this.debug = t.debug;
   }
-  log() {
-    for (var e = arguments.length, t = new Array(e), s = 0; s < e; s++)
-      t[s] = arguments[s];
-    return this.forward(t, "log", "", !0);
+  log(...e) {
+    return this.forward(e, "log", "", !0);
   }
-  warn() {
-    for (var e = arguments.length, t = new Array(e), s = 0; s < e; s++)
-      t[s] = arguments[s];
-    return this.forward(t, "warn", "", !0);
+  warn(...e) {
+    return this.forward(e, "warn", "", !0);
   }
-  error() {
-    for (var e = arguments.length, t = new Array(e), s = 0; s < e; s++)
-      t[s] = arguments[s];
-    return this.forward(t, "error", "");
+  error(...e) {
+    return this.forward(e, "error", "");
   }
-  deprecate() {
-    for (var e = arguments.length, t = new Array(e), s = 0; s < e; s++)
-      t[s] = arguments[s];
-    return this.forward(t, "warn", "WARNING DEPRECATED: ", !0);
+  deprecate(...e) {
+    return this.forward(e, "warn", "WARNING DEPRECATED: ", !0);
   }
-  forward(e, t, s, o) {
-    return o && !this.debug ? null : (L(e[0]) && (e[0] = `${s}${this.prefix} ${e[0]}`), this.logger[t](e));
+  forward(e, t, s, i) {
+    return i && !this.debug ? null : (C(e[0]) && (e[0] = `${s}${this.prefix} ${e[0]}`), this.logger[t](e));
   }
   create(e) {
     return new Oe(this.logger, {
@@ -3425,15 +3414,15 @@ class Oe {
   }
 }
 var Z = new Oe();
-class $e {
+class Re {
   constructor() {
     this.observers = {};
   }
   on(e, t) {
     return e.split(" ").forEach((s) => {
       this.observers[s] || (this.observers[s] = /* @__PURE__ */ new Map());
-      const o = this.observers[s].get(t) || 0;
-      this.observers[s].set(t, o + 1);
+      const i = this.observers[s].get(t) || 0;
+      this.observers[s].set(t, i + 1);
     }), this;
   }
   off(e, t) {
@@ -3445,26 +3434,21 @@ class $e {
       this.observers[e].delete(t);
     }
   }
-  emit(e) {
-    for (var t = arguments.length, s = new Array(t > 1 ? t - 1 : 0), o = 1; o < t; o++)
-      s[o - 1] = arguments[o];
-    this.observers[e] && Array.from(this.observers[e].entries()).forEach((a) => {
-      let [l, d] = a;
-      for (let u = 0; u < d; u++)
-        l(...s);
-    }), this.observers["*"] && Array.from(this.observers["*"].entries()).forEach((a) => {
-      let [l, d] = a;
-      for (let u = 0; u < d; u++)
-        l.apply(l, [e, ...s]);
+  emit(e, ...t) {
+    this.observers[e] && Array.from(this.observers[e].entries()).forEach(([i, n]) => {
+      for (let a = 0; a < n; a++)
+        i(...t);
+    }), this.observers["*"] && Array.from(this.observers["*"].entries()).forEach(([i, n]) => {
+      for (let a = 0; a < n; a++)
+        i.apply(i, [e, ...t]);
     });
   }
 }
-class dt extends $e {
-  constructor(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {
-      ns: ["translation"],
-      defaultNS: "translation"
-    };
+class ct extends Re {
+  constructor(e, t = {
+    ns: ["translation"],
+    defaultNS: "translation"
+  }) {
     super(), this.data = e || {}, this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.options.ignoreJSONStructure === void 0 && (this.options.ignoreJSONStructure = !0);
   }
   addNamespaces(e) {
@@ -3474,44 +3458,41 @@ class dt extends $e {
     const t = this.options.ns.indexOf(e);
     t > -1 && this.options.ns.splice(t, 1);
   }
-  getResource(e, t, s) {
+  getResource(e, t, s, i = {}) {
     var u, c;
-    let o = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
-    const n = o.keySeparator !== void 0 ? o.keySeparator : this.options.keySeparator, a = o.ignoreJSONStructure !== void 0 ? o.ignoreJSONStructure : this.options.ignoreJSONStructure;
+    const n = i.keySeparator !== void 0 ? i.keySeparator : this.options.keySeparator, a = i.ignoreJSONStructure !== void 0 ? i.ignoreJSONStructure : this.options.ignoreJSONStructure;
     let l;
-    e.indexOf(".") > -1 ? l = e.split(".") : (l = [e, t], s && (Array.isArray(s) ? l.push(...s) : L(s) && n ? l.push(...s.split(n)) : l.push(s)));
-    const d = _e(this.data, l);
-    return !d && !t && !s && e.indexOf(".") > -1 && (e = l[0], t = l[1], s = l.slice(2).join(".")), d || !a || !L(s) ? d : Ue((c = (u = this.data) == null ? void 0 : u[e]) == null ? void 0 : c[t], s, n);
+    e.indexOf(".") > -1 ? l = e.split(".") : (l = [e, t], s && (Array.isArray(s) ? l.push(...s) : C(s) && n ? l.push(...s.split(n)) : l.push(s)));
+    const d = Ne(this.data, l);
+    return !d && !t && !s && e.indexOf(".") > -1 && (e = l[0], t = l[1], s = l.slice(2).join(".")), d || !a || !C(s) ? d : De((c = (u = this.data) == null ? void 0 : u[e]) == null ? void 0 : c[t], s, n);
   }
-  addResource(e, t, s, o) {
-    let n = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : {
-      silent: !1
-    };
+  addResource(e, t, s, i, n = {
+    silent: !1
+  }) {
     const a = n.keySeparator !== void 0 ? n.keySeparator : this.options.keySeparator;
     let l = [e, t];
-    s && (l = l.concat(a ? s.split(a) : s)), e.indexOf(".") > -1 && (l = e.split("."), o = t, t = l[1]), this.addNamespaces(t), ct(this.data, l, o), n.silent || this.emit("added", e, t, s, o);
+    s && (l = l.concat(a ? s.split(a) : s)), e.indexOf(".") > -1 && (l = e.split("."), i = t, t = l[1]), this.addNamespaces(t), lt(this.data, l, i), n.silent || this.emit("added", e, t, s, i);
   }
-  addResources(e, t, s) {
-    let o = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {
-      silent: !1
-    };
+  addResources(e, t, s, i = {
+    silent: !1
+  }) {
     for (const n in s)
-      (L(s[n]) || Array.isArray(s[n])) && this.addResource(e, t, n, s[n], {
+      (C(s[n]) || Array.isArray(s[n])) && this.addResource(e, t, n, s[n], {
         silent: !0
       });
-    o.silent || this.emit("added", e, t, s);
+    i.silent || this.emit("added", e, t, s);
   }
-  addResourceBundle(e, t, s, o, n) {
-    let a = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : {
-      silent: !1,
-      skipCopy: !1
-    }, l = [e, t];
-    e.indexOf(".") > -1 && (l = e.split("."), o = s, s = t, t = l[1]), this.addNamespaces(t);
-    let d = _e(this.data, l) || {};
-    a.skipCopy || (s = JSON.parse(JSON.stringify(s))), o ? Mt(d, s, n) : d = {
+  addResourceBundle(e, t, s, i, n, a = {
+    silent: !1,
+    skipCopy: !1
+  }) {
+    let l = [e, t];
+    e.indexOf(".") > -1 && (l = e.split("."), i = s, s = t, t = l[1]), this.addNamespaces(t);
+    let d = Ne(this.data, l) || {};
+    a.skipCopy || (s = JSON.parse(JSON.stringify(s))), i ? At(d, s, n) : d = {
       ...d,
       ...s
-    }, ct(this.data, l, d), a.silent || this.emit("added", e, t, s);
+    }, lt(this.data, l, d), a.silent || this.emit("added", e, t, s);
   }
   removeResourceBundle(e, t) {
     this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t);
@@ -3527,7 +3508,7 @@ class dt extends $e {
   }
   hasLanguageSomeTranslations(e) {
     const t = this.getDataByLanguage(e);
-    return !!(t && Object.keys(t) || []).find((o) => t[o] && Object.keys(t[o]).length > 0);
+    return !!(t && Object.keys(t) || []).find((i) => t[i] && Object.keys(t[i]).length > 0);
   }
   toJSON() {
     return this.data;
@@ -3535,165 +3516,165 @@ class dt extends $e {
 }
 var Tt = {
   processors: {},
-  addPostProcessor(i) {
-    this.processors[i.name] = i;
+  addPostProcessor(o) {
+    this.processors[o.name] = o;
   },
-  handle(i, e, t, s, o) {
-    return i.forEach((n) => {
+  handle(o, e, t, s, i) {
+    return o.forEach((n) => {
       var a;
-      e = ((a = this.processors[n]) == null ? void 0 : a.process(e, t, s, o)) ?? e;
+      e = ((a = this.processors[n]) == null ? void 0 : a.process(e, t, s, i)) ?? e;
     }), e;
   }
 };
-const ut = {}, ht = (i) => !L(i) && typeof i != "boolean" && typeof i != "number";
-class Re extends $e {
-  constructor(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+const dt = {}, ut = (o) => !C(o) && typeof o != "boolean" && typeof o != "number";
+class Pe extends Re {
+  constructor(e, t = {}) {
     super(), Hs(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = Z.create("translator");
   }
   changeLanguage(e) {
     e && (this.language = e);
   }
-  exists(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {
-      interpolation: {}
+  exists(e, t = {
+    interpolation: {}
+  }) {
+    const s = {
+      ...t
     };
-    if (e == null)
-      return !1;
-    const s = this.resolve(e, t);
-    return (s == null ? void 0 : s.res) !== void 0;
+    if (e == null) return !1;
+    const i = this.resolve(e, s);
+    return (i == null ? void 0 : i.res) !== void 0;
   }
   extractFromKey(e, t) {
     let s = t.nsSeparator !== void 0 ? t.nsSeparator : this.options.nsSeparator;
     s === void 0 && (s = ":");
-    const o = t.keySeparator !== void 0 ? t.keySeparator : this.options.keySeparator;
+    const i = t.keySeparator !== void 0 ? t.keySeparator : this.options.keySeparator;
     let n = t.ns || this.options.defaultNS || [];
-    const a = s && e.indexOf(s) > -1, l = !this.options.userDefinedKeySeparator && !t.keySeparator && !this.options.userDefinedNsSeparator && !t.nsSeparator && !tr(e, s, o);
+    const a = s && e.indexOf(s) > -1, l = !this.options.userDefinedKeySeparator && !t.keySeparator && !this.options.userDefinedNsSeparator && !t.nsSeparator && !tr(e, s, i);
     if (a && !l) {
       const d = e.match(this.interpolator.nestingRegexp);
       if (d && d.length > 0)
         return {
           key: e,
-          namespaces: L(n) ? [n] : n
+          namespaces: C(n) ? [n] : n
         };
       const u = e.split(s);
-      (s !== o || s === o && this.options.ns.indexOf(u[0]) > -1) && (n = u.shift()), e = u.join(o);
+      (s !== i || s === i && this.options.ns.indexOf(u[0]) > -1) && (n = u.shift()), e = u.join(i);
     }
     return {
       key: e,
-      namespaces: L(n) ? [n] : n
+      namespaces: C(n) ? [n] : n
     };
   }
   translate(e, t, s) {
-    if (typeof t != "object" && this.options.overloadTranslationOptionHandler && (t = this.options.overloadTranslationOptionHandler(arguments)), typeof options == "object" && (t = {
+    let i = typeof t == "object" ? {
       ...t
-    }), t || (t = {}), e == null) return "";
+    } : t;
+    if (typeof i != "object" && this.options.overloadTranslationOptionHandler && (i = this.options.overloadTranslationOptionHandler(arguments)), typeof options == "object" && (i = {
+      ...i
+    }), i || (i = {}), e == null) return "";
     Array.isArray(e) || (e = [String(e)]);
-    const o = t.returnDetails !== void 0 ? t.returnDetails : this.options.returnDetails, n = t.keySeparator !== void 0 ? t.keySeparator : this.options.keySeparator, {
-      key: a,
-      namespaces: l
-    } = this.extractFromKey(e[e.length - 1], t), d = l[l.length - 1], u = t.lng || this.language, c = t.appendNamespaceToCIMode || this.options.appendNamespaceToCIMode;
-    if ((u == null ? void 0 : u.toLowerCase()) === "cimode") {
-      if (c) {
-        const R = t.nsSeparator || this.options.nsSeparator;
-        return o ? {
-          res: `${d}${R}${a}`,
-          usedKey: a,
-          exactUsedKey: a,
-          usedLng: u,
-          usedNS: d,
-          usedParams: this.getUsedParamsDetails(t)
-        } : `${d}${R}${a}`;
-      }
-      return o ? {
-        res: a,
-        usedKey: a,
-        exactUsedKey: a,
-        usedLng: u,
-        usedNS: d,
-        usedParams: this.getUsedParamsDetails(t)
-      } : a;
-    }
-    const p = this.resolve(e, t);
-    let h = p == null ? void 0 : p.res;
-    const w = (p == null ? void 0 : p.usedKey) || a, g = (p == null ? void 0 : p.exactUsedKey) || a, x = ["[object Number]", "[object Function]", "[object RegExp]"], b = t.joinArrays !== void 0 ? t.joinArrays : this.options.joinArrays, E = !this.i18nFormat || this.i18nFormat.handleAsObject, j = t.count !== void 0 && !L(t.count), T = Re.hasDefaultValue(t), A = j ? this.pluralResolver.getSuffix(u, t.count, t) : "", k = t.ordinal && j ? this.pluralResolver.getSuffix(u, t.count, {
+    const n = i.returnDetails !== void 0 ? i.returnDetails : this.options.returnDetails, a = i.keySeparator !== void 0 ? i.keySeparator : this.options.keySeparator, {
+      key: l,
+      namespaces: d
+    } = this.extractFromKey(e[e.length - 1], i), u = d[d.length - 1];
+    let c = i.nsSeparator !== void 0 ? i.nsSeparator : this.options.nsSeparator;
+    c === void 0 && (c = ":");
+    const h = i.lng || this.language, m = i.appendNamespaceToCIMode || this.options.appendNamespaceToCIMode;
+    if ((h == null ? void 0 : h.toLowerCase()) === "cimode")
+      return m ? n ? {
+        res: `${u}${c}${l}`,
+        usedKey: l,
+        exactUsedKey: l,
+        usedLng: h,
+        usedNS: u,
+        usedParams: this.getUsedParamsDetails(i)
+      } : `${u}${c}${l}` : n ? {
+        res: l,
+        usedKey: l,
+        exactUsedKey: l,
+        usedLng: h,
+        usedNS: u,
+        usedParams: this.getUsedParamsDetails(i)
+      } : l;
+    const g = this.resolve(e, i);
+    let p = g == null ? void 0 : g.res;
+    const b = (g == null ? void 0 : g.usedKey) || l, _ = (g == null ? void 0 : g.exactUsedKey) || l, M = ["[object Number]", "[object Function]", "[object RegExp]"], S = i.joinArrays !== void 0 ? i.joinArrays : this.options.joinArrays, T = !this.i18nFormat || this.i18nFormat.handleAsObject, R = i.count !== void 0 && !C(i.count), w = Pe.hasDefaultValue(i), $ = R ? this.pluralResolver.getSuffix(h, i.count, i) : "", I = i.ordinal && R ? this.pluralResolver.getSuffix(h, i.count, {
       ordinal: !1
-    }) : "", P = j && !t.ordinal && t.count === 0, O = P && t[`defaultValue${this.options.pluralSeparator}zero`] || t[`defaultValue${A}`] || t[`defaultValue${k}`] || t.defaultValue;
-    let m = h;
-    E && !h && T && (m = O);
-    const M = ht(m), W = Object.prototype.toString.apply(m);
-    if (E && m && M && x.indexOf(W) < 0 && !(L(b) && Array.isArray(m))) {
-      if (!t.returnObjects && !this.options.returnObjects) {
+    }) : "", x = R && !i.ordinal && i.count === 0, O = x && i[`defaultValue${this.options.pluralSeparator}zero`] || i[`defaultValue${$}`] || i[`defaultValue${I}`] || i.defaultValue;
+    let E = p;
+    T && !p && w && (E = O);
+    const G = ut(E), Q = Object.prototype.toString.apply(E);
+    if (T && E && G && M.indexOf(Q) < 0 && !(C(S) && Array.isArray(E))) {
+      if (!i.returnObjects && !this.options.returnObjects) {
         this.options.returnedObjectHandler || this.logger.warn("accessing an object - but returnObjects options is not enabled!");
-        const R = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(w, m, {
-          ...t,
-          ns: l
-        }) : `key '${a} (${this.language})' returned an object instead of string.`;
-        return o ? (p.res = R, p.usedParams = this.getUsedParamsDetails(t), p) : R;
+        const Y = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(b, E, {
+          ...i,
+          ns: d
+        }) : `key '${l} (${this.language})' returned an object instead of string.`;
+        return n ? (g.res = Y, g.usedParams = this.getUsedParamsDetails(i), g) : Y;
       }
-      if (n) {
-        const R = Array.isArray(m), B = R ? [] : {}, re = R ? g : w;
-        for (const H in m)
-          if (Object.prototype.hasOwnProperty.call(m, H)) {
-            const V = `${re}${n}${H}`;
-            T && !h ? B[H] = this.translate(V, {
-              ...t,
-              defaultValue: ht(O) ? O[H] : void 0,
+      if (a) {
+        const Y = Array.isArray(E), V = Y ? [] : {}, J = Y ? _ : b;
+        for (const F in E)
+          if (Object.prototype.hasOwnProperty.call(E, F)) {
+            const W = `${J}${a}${F}`;
+            w && !p ? V[F] = this.translate(W, {
+              ...i,
+              defaultValue: ut(O) ? O[F] : void 0,
               joinArrays: !1,
-              ns: l
-            }) : B[H] = this.translate(V, {
-              ...t,
+              ns: d
+            }) : V[F] = this.translate(W, {
+              ...i,
               joinArrays: !1,
-              ns: l
-            }), B[H] === V && (B[H] = m[H]);
+              ns: d
+            }), V[F] === W && (V[F] = E[F]);
           }
-        h = B;
+        p = V;
       }
-    } else if (E && L(b) && Array.isArray(h))
-      h = h.join(b), h && (h = this.extendTranslation(h, e, t, s));
+    } else if (T && C(S) && Array.isArray(p))
+      p = p.join(S), p && (p = this.extendTranslation(p, e, i, s));
     else {
-      let R = !1, B = !1;
-      !this.isValidLookup(h) && T && (R = !0, h = O), this.isValidLookup(h) || (B = !0, h = a);
-      const H = (t.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && B ? void 0 : h, V = T && O !== h && this.options.updateMissing;
-      if (B || R || V) {
-        if (this.logger.log(V ? "updateKey" : "missingKey", u, d, a, V ? O : h), n) {
-          const D = this.resolve(a, {
-            ...t,
+      let Y = !1, V = !1;
+      !this.isValidLookup(p) && w && (Y = !0, p = O), this.isValidLookup(p) || (V = !0, p = l);
+      const F = (i.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && V ? void 0 : p, W = w && O !== p && this.options.updateMissing;
+      if (V || Y || W) {
+        if (this.logger.log(W ? "updateKey" : "missingKey", h, u, l, W ? O : p), a) {
+          const j = this.resolve(l, {
+            ...i,
             keySeparator: !1
           });
-          D && D.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
+          j && j.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
         }
-        let K = [];
-        const J = this.languageUtils.getFallbackCodes(this.options.fallbackLng, t.lng || this.language);
-        if (this.options.saveMissingTo === "fallback" && J && J[0])
-          for (let D = 0; D < J.length; D++)
-            K.push(J[D]);
-        else this.options.saveMissingTo === "all" ? K = this.languageUtils.toResolveHierarchy(t.lng || this.language) : K.push(t.lng || this.language);
-        const S = (D, f, C) => {
-          var _;
-          const $ = T && C !== h ? C : H;
-          this.options.missingKeyHandler ? this.options.missingKeyHandler(D, d, f, $, V, t) : (_ = this.backendConnector) != null && _.saveMissing && this.backendConnector.saveMissing(D, d, f, $, V, t), this.emit("missingKey", D, d, f, h);
+        let k = [];
+        const X = this.languageUtils.getFallbackCodes(this.options.fallbackLng, i.lng || this.language);
+        if (this.options.saveMissingTo === "fallback" && X && X[0])
+          for (let j = 0; j < X.length; j++)
+            k.push(X[j]);
+        else this.options.saveMissingTo === "all" ? k = this.languageUtils.toResolveHierarchy(i.lng || this.language) : k.push(i.lng || this.language);
+        const f = (j, P, N) => {
+          var H;
+          const A = w && N !== p ? N : F;
+          this.options.missingKeyHandler ? this.options.missingKeyHandler(j, u, P, A, W, i) : (H = this.backendConnector) != null && H.saveMissing && this.backendConnector.saveMissing(j, u, P, A, W, i), this.emit("missingKey", j, u, P, p);
         };
-        this.options.saveMissing && (this.options.saveMissingPlurals && j ? K.forEach((D) => {
-          const f = this.pluralResolver.getSuffixes(D, t);
-          P && t[`defaultValue${this.options.pluralSeparator}zero`] && f.indexOf(`${this.options.pluralSeparator}zero`) < 0 && f.push(`${this.options.pluralSeparator}zero`), f.forEach((C) => {
-            S([D], a + C, t[`defaultValue${C}`] || O);
+        this.options.saveMissing && (this.options.saveMissingPlurals && R ? k.forEach((j) => {
+          const P = this.pluralResolver.getSuffixes(j, i);
+          x && i[`defaultValue${this.options.pluralSeparator}zero`] && P.indexOf(`${this.options.pluralSeparator}zero`) < 0 && P.push(`${this.options.pluralSeparator}zero`), P.forEach((N) => {
+            f([j], l + N, i[`defaultValue${N}`] || O);
           });
-        }) : S(K, a, O));
+        }) : f(k, l, O));
       }
-      h = this.extendTranslation(h, e, t, p, s), B && h === a && this.options.appendNamespaceToMissingKey && (h = `${d}:${a}`), (B || R) && this.options.parseMissingKeyHandler && (h = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${d}:${a}` : a, R ? h : void 0, t));
+      p = this.extendTranslation(p, e, i, g, s), V && p === l && this.options.appendNamespaceToMissingKey && (p = `${u}${c}${l}`), (V || Y) && this.options.parseMissingKeyHandler && (p = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${u}${c}${l}` : l, Y ? p : void 0, i));
     }
-    return o ? (p.res = h, p.usedParams = this.getUsedParamsDetails(t), p) : h;
+    return n ? (g.res = p, g.usedParams = this.getUsedParamsDetails(i), g) : p;
   }
-  extendTranslation(e, t, s, o, n) {
-    var u, c;
-    var a = this;
-    if ((u = this.i18nFormat) != null && u.parse)
+  extendTranslation(e, t, s, i, n) {
+    var d, u;
+    if ((d = this.i18nFormat) != null && d.parse)
       e = this.i18nFormat.parse(e, {
         ...this.options.interpolation.defaultVariables,
         ...s
-      }, s.lng || this.language || o.usedLng, o.usedNS, o.usedKey, {
-        resolved: o
+      }, s.lng || this.language || i.usedLng, i.usedNS, i.usedKey, {
+        resolved: i
       });
     else if (!s.skipInterpolation) {
       s.interpolation && this.interpolator.init({
@@ -3703,70 +3684,66 @@ class Re extends $e {
           ...s.interpolation
         }
       });
-      const p = L(e) && (((c = s == null ? void 0 : s.interpolation) == null ? void 0 : c.skipOnVariables) !== void 0 ? s.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables);
+      const c = C(e) && (((u = s == null ? void 0 : s.interpolation) == null ? void 0 : u.skipOnVariables) !== void 0 ? s.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables);
       let h;
-      if (p) {
+      if (c) {
         const g = e.match(this.interpolator.nestingRegexp);
         h = g && g.length;
       }
-      let w = s.replace && !L(s.replace) ? s.replace : s;
-      if (this.options.interpolation.defaultVariables && (w = {
+      let m = s.replace && !C(s.replace) ? s.replace : s;
+      if (this.options.interpolation.defaultVariables && (m = {
         ...this.options.interpolation.defaultVariables,
-        ...w
-      }), e = this.interpolator.interpolate(e, w, s.lng || this.language || o.usedLng, s), p) {
-        const g = e.match(this.interpolator.nestingRegexp), x = g && g.length;
-        h < x && (s.nest = !1);
+        ...m
+      }), e = this.interpolator.interpolate(e, m, s.lng || this.language || i.usedLng, s), c) {
+        const g = e.match(this.interpolator.nestingRegexp), p = g && g.length;
+        h < p && (s.nest = !1);
       }
-      !s.lng && o && o.res && (s.lng = this.language || o.usedLng), s.nest !== !1 && (e = this.interpolator.nest(e, function() {
-        for (var g = arguments.length, x = new Array(g), b = 0; b < g; b++)
-          x[b] = arguments[b];
-        return (n == null ? void 0 : n[0]) === x[0] && !s.context ? (a.logger.warn(`It seems you are nesting recursively key: ${x[0]} in key: ${t[0]}`), null) : a.translate(...x, t);
-      }, s)), s.interpolation && this.interpolator.reset();
+      !s.lng && i && i.res && (s.lng = this.language || i.usedLng), s.nest !== !1 && (e = this.interpolator.nest(e, (...g) => (n == null ? void 0 : n[0]) === g[0] && !s.context ? (this.logger.warn(`It seems you are nesting recursively key: ${g[0]} in key: ${t[0]}`), null) : this.translate(...g, t), s)), s.interpolation && this.interpolator.reset();
     }
-    const l = s.postProcess || this.options.postProcess, d = L(l) ? [l] : l;
-    return e != null && (d != null && d.length) && s.applyPostProcessor !== !1 && (e = Tt.handle(d, e, t, this.options && this.options.postProcessPassResolved ? {
+    const a = s.postProcess || this.options.postProcess, l = C(a) ? [a] : a;
+    return e != null && (l != null && l.length) && s.applyPostProcessor !== !1 && (e = Tt.handle(l, e, t, this.options && this.options.postProcessPassResolved ? {
       i18nResolved: {
-        ...o,
+        ...i,
         usedParams: this.getUsedParamsDetails(s)
       },
       ...s
     } : s, this)), e;
   }
-  resolve(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, s, o, n, a, l;
-    return L(e) && (e = [e]), e.forEach((d) => {
+  resolve(e, t = {}) {
+    let s, i, n, a, l;
+    return C(e) && (e = [e]), e.forEach((d) => {
       if (this.isValidLookup(s)) return;
       const u = this.extractFromKey(d, t), c = u.key;
-      o = c;
-      let p = u.namespaces;
-      this.options.fallbackNS && (p = p.concat(this.options.fallbackNS));
-      const h = t.count !== void 0 && !L(t.count), w = h && !t.ordinal && t.count === 0, g = t.context !== void 0 && (L(t.context) || typeof t.context == "number") && t.context !== "", x = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
-      p.forEach((b) => {
-        var E, j;
-        this.isValidLookup(s) || (l = b, !ut[`${x[0]}-${b}`] && ((E = this.utils) != null && E.hasLoadedNamespace) && !((j = this.utils) != null && j.hasLoadedNamespace(l)) && (ut[`${x[0]}-${b}`] = !0, this.logger.warn(`key "${o}" for languages "${x.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), x.forEach((T) => {
-          var P;
+      i = c;
+      let h = u.namespaces;
+      this.options.fallbackNS && (h = h.concat(this.options.fallbackNS));
+      const m = t.count !== void 0 && !C(t.count), g = m && !t.ordinal && t.count === 0, p = t.context !== void 0 && (C(t.context) || typeof t.context == "number") && t.context !== "", b = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
+      h.forEach((_) => {
+        var M, S;
+        this.isValidLookup(s) || (l = _, !dt[`${b[0]}-${_}`] && ((M = this.utils) != null && M.hasLoadedNamespace) && !((S = this.utils) != null && S.hasLoadedNamespace(l)) && (dt[`${b[0]}-${_}`] = !0, this.logger.warn(`key "${i}" for languages "${b.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), b.forEach((T) => {
+          var $;
           if (this.isValidLookup(s)) return;
           a = T;
-          const A = [c];
-          if ((P = this.i18nFormat) != null && P.addLookupKeys)
-            this.i18nFormat.addLookupKeys(A, c, T, b, t);
+          const R = [c];
+          if (($ = this.i18nFormat) != null && $.addLookupKeys)
+            this.i18nFormat.addLookupKeys(R, c, T, _, t);
           else {
-            let O;
-            h && (O = this.pluralResolver.getSuffix(T, t.count, t));
-            const m = `${this.options.pluralSeparator}zero`, M = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
-            if (h && (A.push(c + O), t.ordinal && O.indexOf(M) === 0 && A.push(c + O.replace(M, this.options.pluralSeparator)), w && A.push(c + m)), g) {
-              const W = `${c}${this.options.contextSeparator}${t.context}`;
-              A.push(W), h && (A.push(W + O), t.ordinal && O.indexOf(M) === 0 && A.push(W + O.replace(M, this.options.pluralSeparator)), w && A.push(W + m));
+            let I;
+            m && (I = this.pluralResolver.getSuffix(T, t.count, t));
+            const x = `${this.options.pluralSeparator}zero`, O = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
+            if (m && (R.push(c + I), t.ordinal && I.indexOf(O) === 0 && R.push(c + I.replace(O, this.options.pluralSeparator)), g && R.push(c + x)), p) {
+              const E = `${c}${this.options.contextSeparator}${t.context}`;
+              R.push(E), m && (R.push(E + I), t.ordinal && I.indexOf(O) === 0 && R.push(E + I.replace(O, this.options.pluralSeparator)), g && R.push(E + x));
             }
           }
-          let k;
-          for (; k = A.pop(); )
-            this.isValidLookup(s) || (n = k, s = this.getResource(T, b, k, t));
+          let w;
+          for (; w = R.pop(); )
+            this.isValidLookup(s) || (n = w, s = this.getResource(T, _, w, t));
         }));
       });
     }), {
       res: s,
-      usedKey: o,
+      usedKey: i,
       exactUsedKey: n,
       usedLng: a,
       usedNS: l
@@ -3775,26 +3752,24 @@ class Re extends $e {
   isValidLookup(e) {
     return e !== void 0 && !(!this.options.returnNull && e === null) && !(!this.options.returnEmptyString && e === "");
   }
-  getResource(e, t, s) {
+  getResource(e, t, s, i = {}) {
     var n;
-    let o = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
-    return (n = this.i18nFormat) != null && n.getResource ? this.i18nFormat.getResource(e, t, s, o) : this.resourceStore.getResource(e, t, s, o);
+    return (n = this.i18nFormat) != null && n.getResource ? this.i18nFormat.getResource(e, t, s, i) : this.resourceStore.getResource(e, t, s, i);
   }
-  getUsedParamsDetails() {
-    let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    const t = ["defaultValue", "ordinal", "context", "replace", "lng", "lngs", "fallbackLng", "ns", "keySeparator", "nsSeparator", "returnObjects", "returnDetails", "joinArrays", "postProcess", "interpolation"], s = e.replace && !L(e.replace);
-    let o = s ? e.replace : e;
-    if (s && typeof e.count < "u" && (o.count = e.count), this.options.interpolation.defaultVariables && (o = {
+  getUsedParamsDetails(e = {}) {
+    const t = ["defaultValue", "ordinal", "context", "replace", "lng", "lngs", "fallbackLng", "ns", "keySeparator", "nsSeparator", "returnObjects", "returnDetails", "joinArrays", "postProcess", "interpolation"], s = e.replace && !C(e.replace);
+    let i = s ? e.replace : e;
+    if (s && typeof e.count < "u" && (i.count = e.count), this.options.interpolation.defaultVariables && (i = {
       ...this.options.interpolation.defaultVariables,
-      ...o
+      ...i
     }), !s) {
-      o = {
-        ...o
+      i = {
+        ...i
       };
       for (const n of t)
-        delete o[n];
+        delete i[n];
     }
-    return o;
+    return i;
   }
   static hasDefaultValue(e) {
     const t = "defaultValue";
@@ -3804,22 +3779,22 @@ class Re extends $e {
     return !1;
   }
 }
-class ft {
+class ht {
   constructor(e) {
     this.options = e, this.supportedLngs = this.options.supportedLngs || !1, this.logger = Z.create("languageUtils");
   }
   getScriptPartFromCode(e) {
-    if (e = Pe(e), !e || e.indexOf("-") < 0) return null;
+    if (e = ye(e), !e || e.indexOf("-") < 0) return null;
     const t = e.split("-");
     return t.length === 2 || (t.pop(), t[t.length - 1].toLowerCase() === "x") ? null : this.formatLanguageCode(t.join("-"));
   }
   getLanguagePartFromCode(e) {
-    if (e = Pe(e), !e || e.indexOf("-") < 0) return e;
+    if (e = ye(e), !e || e.indexOf("-") < 0) return e;
     const t = e.split("-");
     return this.formatLanguageCode(t[0]);
   }
   formatLanguageCode(e) {
-    if (L(e) && e.indexOf("-") > -1) {
+    if (C(e) && e.indexOf("-") > -1) {
       let t;
       try {
         t = Intl.getCanonicalLocales(e)[0];
@@ -3837,12 +3812,12 @@ class ft {
     let t;
     return e.forEach((s) => {
       if (t) return;
-      const o = this.formatLanguageCode(s);
-      (!this.options.supportedLngs || this.isSupportedCode(o)) && (t = o);
+      const i = this.formatLanguageCode(s);
+      (!this.options.supportedLngs || this.isSupportedCode(i)) && (t = i);
     }), !t && this.options.supportedLngs && e.forEach((s) => {
       if (t) return;
-      const o = this.getScriptPartFromCode(s);
-      if (this.isSupportedCode(o)) return t = o;
+      const i = this.getScriptPartFromCode(s);
+      if (this.isSupportedCode(i)) return t = i;
       const n = this.getLanguagePartFromCode(s);
       if (this.isSupportedCode(n)) return t = n;
       t = this.options.supportedLngs.find((a) => {
@@ -3854,36 +3829,35 @@ class ft {
   }
   getFallbackCodes(e, t) {
     if (!e) return [];
-    if (typeof e == "function" && (e = e(t)), L(e) && (e = [e]), Array.isArray(e)) return e;
+    if (typeof e == "function" && (e = e(t)), C(e) && (e = [e]), Array.isArray(e)) return e;
     if (!t) return e.default || [];
     let s = e[t];
     return s || (s = e[this.getScriptPartFromCode(t)]), s || (s = e[this.formatLanguageCode(t)]), s || (s = e[this.getLanguagePartFromCode(t)]), s || (s = e.default), s || [];
   }
   toResolveHierarchy(e, t) {
-    const s = this.getFallbackCodes(t || this.options.fallbackLng || [], e), o = [], n = (a) => {
-      a && (this.isSupportedCode(a) ? o.push(a) : this.logger.warn(`rejecting language code not found in supportedLngs: ${a}`));
+    const s = this.getFallbackCodes((t === !1 ? [] : t) || this.options.fallbackLng || [], e), i = [], n = (a) => {
+      a && (this.isSupportedCode(a) ? i.push(a) : this.logger.warn(`rejecting language code not found in supportedLngs: ${a}`));
     };
-    return L(e) && (e.indexOf("-") > -1 || e.indexOf("_") > -1) ? (this.options.load !== "languageOnly" && n(this.formatLanguageCode(e)), this.options.load !== "languageOnly" && this.options.load !== "currentOnly" && n(this.getScriptPartFromCode(e)), this.options.load !== "currentOnly" && n(this.getLanguagePartFromCode(e))) : L(e) && n(this.formatLanguageCode(e)), s.forEach((a) => {
-      o.indexOf(a) < 0 && n(this.formatLanguageCode(a));
-    }), o;
+    return C(e) && (e.indexOf("-") > -1 || e.indexOf("_") > -1) ? (this.options.load !== "languageOnly" && n(this.formatLanguageCode(e)), this.options.load !== "languageOnly" && this.options.load !== "currentOnly" && n(this.getScriptPartFromCode(e)), this.options.load !== "currentOnly" && n(this.getLanguagePartFromCode(e))) : C(e) && n(this.formatLanguageCode(e)), s.forEach((a) => {
+      i.indexOf(a) < 0 && n(this.formatLanguageCode(a));
+    }), i;
   }
 }
-const pt = {
+const ft = {
   zero: 0,
   one: 1,
   two: 2,
   few: 3,
   many: 4,
   other: 5
-}, gt = {
-  select: (i) => i === 1 ? "one" : "other",
+}, pt = {
+  select: (o) => o === 1 ? "one" : "other",
   resolvedOptions: () => ({
     pluralCategories: ["one", "other"]
   })
 };
 class rr {
-  constructor(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+  constructor(e, t = {}) {
     this.languageUtils = e, this.options = t, this.logger = Z.create("pluralResolver"), this.pluralRulesCache = {};
   }
   addRule(e, t) {
@@ -3892,81 +3866,76 @@ class rr {
   clearCache() {
     this.pluralRulesCache = {};
   }
-  getRule(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-    const s = Pe(e === "dev" ? "en" : e), o = t.ordinal ? "ordinal" : "cardinal", n = JSON.stringify({
+  getRule(e, t = {}) {
+    const s = ye(e === "dev" ? "en" : e), i = t.ordinal ? "ordinal" : "cardinal", n = JSON.stringify({
       cleanedCode: s,
-      type: o
+      type: i
     });
     if (n in this.pluralRulesCache)
       return this.pluralRulesCache[n];
     let a;
     try {
       a = new Intl.PluralRules(s, {
-        type: o
+        type: i
       });
     } catch {
       if (!Intl)
-        return this.logger.error("No Intl support, please use an Intl polyfill!"), gt;
-      if (!e.match(/-|_/)) return gt;
+        return this.logger.error("No Intl support, please use an Intl polyfill!"), pt;
+      if (!e.match(/-|_/)) return pt;
       const d = this.languageUtils.getLanguagePartFromCode(e);
       a = this.getRule(d, t);
     }
     return this.pluralRulesCache[n] = a, a;
   }
-  needsPlural(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, s = this.getRule(e, t);
+  needsPlural(e, t = {}) {
+    let s = this.getRule(e, t);
     return s || (s = this.getRule("dev", t)), (s == null ? void 0 : s.resolvedOptions().pluralCategories.length) > 1;
   }
-  getPluralFormsOfKey(e, t) {
-    let s = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {};
-    return this.getSuffixes(e, s).map((o) => `${t}${o}`);
+  getPluralFormsOfKey(e, t, s = {}) {
+    return this.getSuffixes(e, s).map((i) => `${t}${i}`);
   }
-  getSuffixes(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, s = this.getRule(e, t);
-    return s || (s = this.getRule("dev", t)), s ? s.resolvedOptions().pluralCategories.sort((o, n) => pt[o] - pt[n]).map((o) => `${this.options.prepend}${t.ordinal ? `ordinal${this.options.prepend}` : ""}${o}`) : [];
+  getSuffixes(e, t = {}) {
+    let s = this.getRule(e, t);
+    return s || (s = this.getRule("dev", t)), s ? s.resolvedOptions().pluralCategories.sort((i, n) => ft[i] - ft[n]).map((i) => `${this.options.prepend}${t.ordinal ? `ordinal${this.options.prepend}` : ""}${i}`) : [];
   }
-  getSuffix(e, t) {
-    let s = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {};
-    const o = this.getRule(e, s);
-    return o ? `${this.options.prepend}${s.ordinal ? `ordinal${this.options.prepend}` : ""}${o.select(t)}` : (this.logger.warn(`no plural rule found for: ${e}`), this.getSuffix("dev", t, s));
+  getSuffix(e, t, s = {}) {
+    const i = this.getRule(e, s);
+    return i ? `${this.options.prepend}${s.ordinal ? `ordinal${this.options.prepend}` : ""}${i.select(t)}` : (this.logger.warn(`no plural rule found for: ${e}`), this.getSuffix("dev", t, s));
   }
 }
-const mt = function(i, e, t) {
-  let s = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : ".", o = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : !0, n = Js(i, e, t);
-  return !n && o && L(t) && (n = Ue(i, t, s), n === void 0 && (n = Ue(e, t, s))), n;
-}, Ae = (i) => i.replace(/\$/g, "$$$$");
+const gt = (o, e, t, s = ".", i = !0) => {
+  let n = Js(o, e, t);
+  return !n && i && C(t) && (n = De(o, t, s), n === void 0 && (n = De(e, t, s))), n;
+}, ze = (o) => o.replace(/\$/g, "$$$$");
 class ir {
-  constructor() {
+  constructor(e = {}) {
     var t;
-    let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
     this.logger = Z.create("interpolator"), this.options = e, this.format = ((t = e == null ? void 0 : e.interpolation) == null ? void 0 : t.format) || ((s) => s), this.init(e);
   }
-  init() {
-    let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
+  init(e = {}) {
     e.interpolation || (e.interpolation = {
       escapeValue: !0
     });
     const {
       escape: t,
       escapeValue: s,
-      useRawValueToEscape: o,
+      useRawValueToEscape: i,
       prefix: n,
       prefixEscaped: a,
       suffix: l,
       suffixEscaped: d,
       formatSeparator: u,
       unescapeSuffix: c,
-      unescapePrefix: p,
-      nestingPrefix: h,
-      nestingPrefixEscaped: w,
-      nestingSuffix: g,
-      nestingSuffixEscaped: x,
-      nestingOptionsSeparator: b,
-      maxReplaces: E,
-      alwaysFormat: j
+      unescapePrefix: h,
+      nestingPrefix: m,
+      nestingPrefixEscaped: g,
+      nestingSuffix: p,
+      nestingSuffixEscaped: b,
+      nestingOptionsSeparator: _,
+      maxReplaces: M,
+      alwaysFormat: S
     } = e.interpolation;
-    this.escape = t !== void 0 ? t : Xs, this.escapeValue = s !== void 0 ? s : !0, this.useRawValueToEscape = o !== void 0 ? o : !1, this.prefix = n ? le(n) : a || "{{", this.suffix = l ? le(l) : d || "}}", this.formatSeparator = u || ",", this.unescapePrefix = c ? "" : p || "-", this.unescapeSuffix = this.unescapePrefix ? "" : c || "", this.nestingPrefix = h ? le(h) : w || le("$t("), this.nestingSuffix = g ? le(g) : x || le(")"), this.nestingOptionsSeparator = b || ",", this.maxReplaces = E || 1e3, this.alwaysFormat = j !== void 0 ? j : !1, this.resetRegExp();
+    this.escape = t !== void 0 ? t : Xs, this.escapeValue = s !== void 0 ? s : !0, this.useRawValueToEscape = i !== void 0 ? i : !1, this.prefix = n ? le(n) : a || "{{", this.suffix = l ? le(l) : d || "}}", this.formatSeparator = u || ",", this.unescapePrefix = c ? "" : h || "-", this.unescapeSuffix = this.unescapePrefix ? "" : c || "", this.nestingPrefix = m ? le(m) : g || le("$t("), this.nestingSuffix = p ? le(p) : b || le(")"), this.nestingOptionsSeparator = _ || ",", this.maxReplaces = M || 1e3, this.alwaysFormat = S !== void 0 ? S : !1, this.resetRegExp();
   }
   reset() {
     this.options && this.init(this.options);
@@ -3975,101 +3944,97 @@ class ir {
     const e = (t, s) => (t == null ? void 0 : t.source) === s ? (t.lastIndex = 0, t) : new RegExp(s, "g");
     this.regexp = e(this.regexp, `${this.prefix}(.+?)${this.suffix}`), this.regexpUnescape = e(this.regexpUnescape, `${this.prefix}${this.unescapePrefix}(.+?)${this.unescapeSuffix}${this.suffix}`), this.nestingRegexp = e(this.nestingRegexp, `${this.nestingPrefix}(.+?)${this.nestingSuffix}`);
   }
-  interpolate(e, t, s, o) {
-    var w;
+  interpolate(e, t, s, i) {
+    var g;
     let n, a, l;
-    const d = this.options && this.options.interpolation && this.options.interpolation.defaultVariables || {}, u = (g) => {
-      if (g.indexOf(this.formatSeparator) < 0) {
-        const j = mt(t, d, g, this.options.keySeparator, this.options.ignoreJSONStructure);
-        return this.alwaysFormat ? this.format(j, void 0, s, {
-          ...o,
+    const d = this.options && this.options.interpolation && this.options.interpolation.defaultVariables || {}, u = (p) => {
+      if (p.indexOf(this.formatSeparator) < 0) {
+        const S = gt(t, d, p, this.options.keySeparator, this.options.ignoreJSONStructure);
+        return this.alwaysFormat ? this.format(S, void 0, s, {
+          ...i,
           ...t,
-          interpolationkey: g
-        }) : j;
+          interpolationkey: p
+        }) : S;
       }
-      const x = g.split(this.formatSeparator), b = x.shift().trim(), E = x.join(this.formatSeparator).trim();
-      return this.format(mt(t, d, b, this.options.keySeparator, this.options.ignoreJSONStructure), E, s, {
-        ...o,
+      const b = p.split(this.formatSeparator), _ = b.shift().trim(), M = b.join(this.formatSeparator).trim();
+      return this.format(gt(t, d, _, this.options.keySeparator, this.options.ignoreJSONStructure), M, s, {
+        ...i,
         ...t,
-        interpolationkey: b
+        interpolationkey: _
       });
     };
     this.resetRegExp();
-    const c = (o == null ? void 0 : o.missingInterpolationHandler) || this.options.missingInterpolationHandler, p = ((w = o == null ? void 0 : o.interpolation) == null ? void 0 : w.skipOnVariables) !== void 0 ? o.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables;
+    const c = (i == null ? void 0 : i.missingInterpolationHandler) || this.options.missingInterpolationHandler, h = ((g = i == null ? void 0 : i.interpolation) == null ? void 0 : g.skipOnVariables) !== void 0 ? i.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables;
     return [{
       regex: this.regexpUnescape,
-      safeValue: (g) => Ae(g)
+      safeValue: (p) => ze(p)
     }, {
       regex: this.regexp,
-      safeValue: (g) => this.escapeValue ? Ae(this.escape(g)) : Ae(g)
-    }].forEach((g) => {
-      for (l = 0; n = g.regex.exec(e); ) {
-        const x = n[1].trim();
-        if (a = u(x), a === void 0)
+      safeValue: (p) => this.escapeValue ? ze(this.escape(p)) : ze(p)
+    }].forEach((p) => {
+      for (l = 0; n = p.regex.exec(e); ) {
+        const b = n[1].trim();
+        if (a = u(b), a === void 0)
           if (typeof c == "function") {
-            const E = c(e, n, o);
-            a = L(E) ? E : "";
-          } else if (o && Object.prototype.hasOwnProperty.call(o, x))
+            const M = c(e, n, i);
+            a = C(M) ? M : "";
+          } else if (i && Object.prototype.hasOwnProperty.call(i, b))
             a = "";
-          else if (p) {
+          else if (h) {
             a = n[0];
             continue;
           } else
-            this.logger.warn(`missed to pass in variable ${x} for interpolating ${e}`), a = "";
-        else !L(a) && !this.useRawValueToEscape && (a = ot(a));
-        const b = g.safeValue(a);
-        if (e = e.replace(n[0], b), p ? (g.regex.lastIndex += a.length, g.regex.lastIndex -= n[0].length) : g.regex.lastIndex = 0, l++, l >= this.maxReplaces)
+            this.logger.warn(`missed to pass in variable ${b} for interpolating ${e}`), a = "";
+        else !C(a) && !this.useRawValueToEscape && (a = ot(a));
+        const _ = p.safeValue(a);
+        if (e = e.replace(n[0], _), h ? (p.regex.lastIndex += a.length, p.regex.lastIndex -= n[0].length) : p.regex.lastIndex = 0, l++, l >= this.maxReplaces)
           break;
       }
     }), e;
   }
-  nest(e, t) {
-    let s = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {}, o, n, a;
+  nest(e, t, s = {}) {
+    let i, n, a;
     const l = (d, u) => {
       const c = this.nestingOptionsSeparator;
       if (d.indexOf(c) < 0) return d;
-      const p = d.split(new RegExp(`${c}[ ]*{`));
-      let h = `{${p[1]}`;
-      d = p[0], h = this.interpolate(h, a);
-      const w = h.match(/'/g), g = h.match(/"/g);
-      (((w == null ? void 0 : w.length) ?? 0) % 2 === 0 && !g || g.length % 2 !== 0) && (h = h.replace(/'/g, '"'));
+      const h = d.split(new RegExp(`${c}[ ]*{`));
+      let m = `{${h[1]}`;
+      d = h[0], m = this.interpolate(m, a);
+      const g = m.match(/'/g), p = m.match(/"/g);
+      (((g == null ? void 0 : g.length) ?? 0) % 2 === 0 && !p || p.length % 2 !== 0) && (m = m.replace(/'/g, '"'));
       try {
-        a = JSON.parse(h), u && (a = {
+        a = JSON.parse(m), u && (a = {
           ...u,
           ...a
         });
-      } catch (x) {
-        return this.logger.warn(`failed parsing options string in nesting for key ${d}`, x), `${d}${c}${h}`;
+      } catch (b) {
+        return this.logger.warn(`failed parsing options string in nesting for key ${d}`, b), `${d}${c}${m}`;
       }
       return a.defaultValue && a.defaultValue.indexOf(this.prefix) > -1 && delete a.defaultValue, d;
     };
-    for (; o = this.nestingRegexp.exec(e); ) {
+    for (; i = this.nestingRegexp.exec(e); ) {
       let d = [];
       a = {
         ...s
-      }, a = a.replace && !L(a.replace) ? a.replace : a, a.applyPostProcessor = !1, delete a.defaultValue;
-      let u = !1;
-      if (o[0].indexOf(this.formatSeparator) !== -1 && !/{.*}/.test(o[1])) {
-        const c = o[1].split(this.formatSeparator).map((p) => p.trim());
-        o[1] = c.shift(), d = c, u = !0;
-      }
-      if (n = t(l.call(this, o[1].trim(), a), a), n && o[0] === e && !L(n)) return n;
-      L(n) || (n = ot(n)), n || (this.logger.warn(`missed to resolve ${o[1]} for nesting ${e}`), n = ""), u && (n = d.reduce((c, p) => this.format(c, p, s.lng, {
+      }, a = a.replace && !C(a.replace) ? a.replace : a, a.applyPostProcessor = !1, delete a.defaultValue;
+      const u = /{.*}/.test(i[1]) ? i[1].lastIndexOf("}") + 1 : i[1].indexOf(this.formatSeparator);
+      if (u !== -1 && (d = i[1].slice(u).split(this.formatSeparator).map((c) => c.trim()).filter(Boolean), i[1] = i[1].slice(0, u)), n = t(l.call(this, i[1].trim(), a), a), n && i[0] === e && !C(n)) return n;
+      C(n) || (n = ot(n)), n || (this.logger.warn(`missed to resolve ${i[1]} for nesting ${e}`), n = ""), d.length && (n = d.reduce((c, h) => this.format(c, h, s.lng, {
         ...s,
-        interpolationkey: o[1].trim()
-      }), n.trim())), e = e.replace(o[0], n), this.regexp.lastIndex = 0;
+        interpolationkey: i[1].trim()
+      }), n.trim())), e = e.replace(i[0], n), this.regexp.lastIndex = 0;
     }
     return e;
   }
 }
-const nr = (i) => {
-  let e = i.toLowerCase().trim();
+const or = (o) => {
+  let e = o.toLowerCase().trim();
   const t = {};
-  if (i.indexOf("(") > -1) {
-    const s = i.split("(");
+  if (o.indexOf("(") > -1) {
+    const s = o.split("(");
     e = s[0].toLowerCase().trim();
-    const o = s[1].substring(0, s[1].length - 1);
-    e === "currency" && o.indexOf(":") < 0 ? t.currency || (t.currency = o.trim()) : e === "relativetime" && o.indexOf(":") < 0 ? t.range || (t.range = o.trim()) : o.split(";").forEach((a) => {
+    const i = s[1].substring(0, s[1].length - 1);
+    e === "currency" && i.indexOf(":") < 0 ? t.currency || (t.currency = i.trim()) : e === "relativetime" && i.indexOf(":") < 0 ? t.range || (t.range = i.trim()) : i.split(";").forEach((a) => {
       if (a) {
         const [l, ...d] = a.split(":"), u = d.join(":").trim().replace(/^'+|'+$/g, ""), c = l.trim();
         t[c] || (t[c] = u), u === "false" && (t[c] = !1), u === "true" && (t[c] = !0), isNaN(u) || (t[c] = parseInt(u, 10));
@@ -4080,123 +4045,121 @@ const nr = (i) => {
     formatName: e,
     formatOptions: t
   };
-}, ce = (i) => {
+}, mt = (o) => {
   const e = {};
-  return (t, s, o) => {
-    let n = o;
-    o && o.interpolationkey && o.formatParams && o.formatParams[o.interpolationkey] && o[o.interpolationkey] && (n = {
+  return (t, s, i) => {
+    let n = i;
+    i && i.interpolationkey && i.formatParams && i.formatParams[i.interpolationkey] && i[i.interpolationkey] && (n = {
       ...n,
-      [o.interpolationkey]: void 0
+      [i.interpolationkey]: void 0
     });
     const a = s + JSON.stringify(n);
     let l = e[a];
-    return l || (l = i(Pe(s), o), e[a] = l), l(t);
+    return l || (l = o(ye(s), i), e[a] = l), l(t);
   };
-};
-class or {
-  constructor() {
-    let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    this.logger = Z.create("formatter"), this.options = e, this.formats = {
-      number: ce((t, s) => {
-        const o = new Intl.NumberFormat(t, {
-          ...s
+}, nr = (o) => (e, t, s) => o(ye(t), s)(e);
+class ar {
+  constructor(e = {}) {
+    this.logger = Z.create("formatter"), this.options = e, this.init(e);
+  }
+  init(e, t = {
+    interpolation: {}
+  }) {
+    this.formatSeparator = t.interpolation.formatSeparator || ",";
+    const s = t.cacheInBuiltFormats ? mt : nr;
+    this.formats = {
+      number: s((i, n) => {
+        const a = new Intl.NumberFormat(i, {
+          ...n
         });
-        return (n) => o.format(n);
+        return (l) => a.format(l);
       }),
-      currency: ce((t, s) => {
-        const o = new Intl.NumberFormat(t, {
-          ...s,
+      currency: s((i, n) => {
+        const a = new Intl.NumberFormat(i, {
+          ...n,
           style: "currency"
         });
-        return (n) => o.format(n);
+        return (l) => a.format(l);
       }),
-      datetime: ce((t, s) => {
-        const o = new Intl.DateTimeFormat(t, {
-          ...s
+      datetime: s((i, n) => {
+        const a = new Intl.DateTimeFormat(i, {
+          ...n
         });
-        return (n) => o.format(n);
+        return (l) => a.format(l);
       }),
-      relativetime: ce((t, s) => {
-        const o = new Intl.RelativeTimeFormat(t, {
-          ...s
+      relativetime: s((i, n) => {
+        const a = new Intl.RelativeTimeFormat(i, {
+          ...n
         });
-        return (n) => o.format(n, s.range || "day");
+        return (l) => a.format(l, n.range || "day");
       }),
-      list: ce((t, s) => {
-        const o = new Intl.ListFormat(t, {
-          ...s
+      list: s((i, n) => {
+        const a = new Intl.ListFormat(i, {
+          ...n
         });
-        return (n) => o.format(n);
+        return (l) => a.format(l);
       })
-    }, this.init(e);
-  }
-  init(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {
-      interpolation: {}
     };
-    this.formatSeparator = t.interpolation.formatSeparator || ",";
   }
   add(e, t) {
     this.formats[e.toLowerCase().trim()] = t;
   }
   addCached(e, t) {
-    this.formats[e.toLowerCase().trim()] = ce(t);
+    this.formats[e.toLowerCase().trim()] = mt(t);
   }
-  format(e, t, s) {
-    let o = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
+  format(e, t, s, i = {}) {
     const n = t.split(this.formatSeparator);
     if (n.length > 1 && n[0].indexOf("(") > 1 && n[0].indexOf(")") < 0 && n.find((l) => l.indexOf(")") > -1)) {
       const l = n.findIndex((d) => d.indexOf(")") > -1);
       n[0] = [n[0], ...n.splice(1, l)].join(this.formatSeparator);
     }
     return n.reduce((l, d) => {
-      var p;
+      var h;
       const {
         formatName: u,
         formatOptions: c
-      } = nr(d);
+      } = or(d);
       if (this.formats[u]) {
-        let h = l;
+        let m = l;
         try {
-          const w = ((p = o == null ? void 0 : o.formatParams) == null ? void 0 : p[o.interpolationkey]) || {}, g = w.locale || w.lng || o.locale || o.lng || s;
-          h = this.formats[u](l, g, {
+          const g = ((h = i == null ? void 0 : i.formatParams) == null ? void 0 : h[i.interpolationkey]) || {}, p = g.locale || g.lng || i.locale || i.lng || s;
+          m = this.formats[u](l, p, {
             ...c,
-            ...o,
-            ...w
+            ...i,
+            ...g
           });
-        } catch (w) {
-          this.logger.warn(w);
+        } catch (g) {
+          this.logger.warn(g);
         }
-        return h;
+        return m;
       } else
         this.logger.warn(`there was no format function for ${u}`);
       return l;
     }, e);
   }
 }
-const ar = (i, e) => {
-  i.pending[e] !== void 0 && (delete i.pending[e], i.pendingCount--);
+const lr = (o, e) => {
+  o.pending[e] !== void 0 && (delete o.pending[e], o.pendingCount--);
 };
-class lr extends $e {
-  constructor(e, t, s) {
+class cr extends Re {
+  constructor(e, t, s, i = {}) {
     var n, a;
-    let o = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
-    super(), this.backend = e, this.store = t, this.services = s, this.languageUtils = s.languageUtils, this.options = o, this.logger = Z.create("backendConnector"), this.waitingReads = [], this.maxParallelReads = o.maxParallelReads || 10, this.readingCalls = 0, this.maxRetries = o.maxRetries >= 0 ? o.maxRetries : 5, this.retryTimeout = o.retryTimeout >= 1 ? o.retryTimeout : 350, this.state = {}, this.queue = [], (a = (n = this.backend) == null ? void 0 : n.init) == null || a.call(n, s, o.backend, o);
+    super(), this.backend = e, this.store = t, this.services = s, this.languageUtils = s.languageUtils, this.options = i, this.logger = Z.create("backendConnector"), this.waitingReads = [], this.maxParallelReads = i.maxParallelReads || 10, this.readingCalls = 0, this.maxRetries = i.maxRetries >= 0 ? i.maxRetries : 5, this.retryTimeout = i.retryTimeout >= 1 ? i.retryTimeout : 350, this.state = {}, this.queue = [], (a = (n = this.backend) == null ? void 0 : n.init) == null || a.call(n, s, i.backend, i);
   }
-  queueLoad(e, t, s, o) {
+  queueLoad(e, t, s, i) {
     const n = {}, a = {}, l = {}, d = {};
     return e.forEach((u) => {
       let c = !0;
-      t.forEach((p) => {
-        const h = `${u}|${p}`;
-        !s.reload && this.store.hasResourceBundle(u, p) ? this.state[h] = 2 : this.state[h] < 0 || (this.state[h] === 1 ? a[h] === void 0 && (a[h] = !0) : (this.state[h] = 1, c = !1, a[h] === void 0 && (a[h] = !0), n[h] === void 0 && (n[h] = !0), d[p] === void 0 && (d[p] = !0)));
+      t.forEach((h) => {
+        const m = `${u}|${h}`;
+        !s.reload && this.store.hasResourceBundle(u, h) ? this.state[m] = 2 : this.state[m] < 0 || (this.state[m] === 1 ? a[m] === void 0 && (a[m] = !0) : (this.state[m] = 1, c = !1, a[m] === void 0 && (a[m] = !0), n[m] === void 0 && (n[m] = !0), d[h] === void 0 && (d[h] = !0)));
       }), c || (l[u] = !0);
     }), (Object.keys(n).length || Object.keys(a).length) && this.queue.push({
       pending: a,
       pendingCount: Object.keys(a).length,
       loaded: {},
       errors: [],
-      callback: o
+      callback: i
     }), {
       toLoad: Object.keys(n),
       pending: Object.keys(a),
@@ -4205,30 +4168,29 @@ class lr extends $e {
     };
   }
   loaded(e, t, s) {
-    const o = e.split("|"), n = o[0], a = o[1];
+    const i = e.split("|"), n = i[0], a = i[1];
     t && this.emit("failedLoading", n, a, t), !t && s && this.store.addResourceBundle(n, a, s, void 0, void 0, {
       skipCopy: !0
     }), this.state[e] = t ? -1 : 2, t && s && (this.state[e] = 0);
     const l = {};
     this.queue.forEach((d) => {
-      Ys(d.loaded, [n], a), ar(d, e), t && d.errors.push(t), d.pendingCount === 0 && !d.done && (Object.keys(d.loaded).forEach((u) => {
+      Ys(d.loaded, [n], a), lr(d, e), t && d.errors.push(t), d.pendingCount === 0 && !d.done && (Object.keys(d.loaded).forEach((u) => {
         l[u] || (l[u] = {});
         const c = d.loaded[u];
-        c.length && c.forEach((p) => {
-          l[u][p] === void 0 && (l[u][p] = !0);
+        c.length && c.forEach((h) => {
+          l[u][h] === void 0 && (l[u][h] = !0);
         });
       }), d.done = !0, d.errors.length ? d.callback(d.errors) : d.callback());
     }), this.emit("loaded", l), this.queue = this.queue.filter((d) => !d.done);
   }
-  read(e, t, s) {
-    let o = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : 0, n = arguments.length > 4 && arguments[4] !== void 0 ? arguments[4] : this.retryTimeout, a = arguments.length > 5 ? arguments[5] : void 0;
+  read(e, t, s, i = 0, n = this.retryTimeout, a) {
     if (!e.length) return a(null, {});
     if (this.readingCalls >= this.maxParallelReads) {
       this.waitingReads.push({
         lng: e,
         ns: t,
         fcName: s,
-        tried: o,
+        tried: i,
         wait: n,
         callback: a
       });
@@ -4237,12 +4199,12 @@ class lr extends $e {
     this.readingCalls++;
     const l = (u, c) => {
       if (this.readingCalls--, this.waitingReads.length > 0) {
-        const p = this.waitingReads.shift();
-        this.read(p.lng, p.ns, p.fcName, p.tried, p.wait, p.callback);
+        const h = this.waitingReads.shift();
+        this.read(h.lng, h.ns, h.fcName, h.tried, h.wait, h.callback);
       }
-      if (u && c && o < this.maxRetries) {
+      if (u && c && i < this.maxRetries) {
         setTimeout(() => {
-          this.read.call(this, e, t, s, o + 1, n * 2, a);
+          this.read.call(this, e, t, s, i + 1, n * 2, a);
         }, n);
         return;
       }
@@ -4259,14 +4221,13 @@ class lr extends $e {
     }
     return d(e, t, l);
   }
-  prepareLoading(e, t) {
-    let s = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {}, o = arguments.length > 3 ? arguments[3] : void 0;
+  prepareLoading(e, t, s = {}, i) {
     if (!this.backend)
-      return this.logger.warn("No backend was added via i18next.use. Will not load resources."), o && o();
-    L(e) && (e = this.languageUtils.toResolveHierarchy(e)), L(t) && (t = [t]);
-    const n = this.queueLoad(e, t, s, o);
+      return this.logger.warn("No backend was added via i18next.use. Will not load resources."), i && i();
+    C(e) && (e = this.languageUtils.toResolveHierarchy(e)), C(t) && (t = [t]);
+    const n = this.queueLoad(e, t, s, i);
     if (!n.toLoad.length)
-      return n.pending.length || o(), null;
+      return n.pending.length || i(), null;
     n.toLoad.forEach((a) => {
       this.loadOne(a);
     });
@@ -4279,38 +4240,36 @@ class lr extends $e {
       reload: !0
     }, s);
   }
-  loadOne(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : "";
-    const s = e.split("|"), o = s[0], n = s[1];
-    this.read(o, n, "read", void 0, void 0, (a, l) => {
-      a && this.logger.warn(`${t}loading namespace ${n} for language ${o} failed`, a), !a && l && this.logger.log(`${t}loaded namespace ${n} for language ${o}`, l), this.loaded(e, a, l);
+  loadOne(e, t = "") {
+    const s = e.split("|"), i = s[0], n = s[1];
+    this.read(i, n, "read", void 0, void 0, (a, l) => {
+      a && this.logger.warn(`${t}loading namespace ${n} for language ${i} failed`, a), !a && l && this.logger.log(`${t}loaded namespace ${n} for language ${i}`, l), this.loaded(e, a, l);
     });
   }
-  saveMissing(e, t, s, o, n) {
-    var d, u, c, p, h;
-    let a = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : {}, l = arguments.length > 6 && arguments[6] !== void 0 ? arguments[6] : () => {
-    };
-    if ((u = (d = this.services) == null ? void 0 : d.utils) != null && u.hasLoadedNamespace && !((p = (c = this.services) == null ? void 0 : c.utils) != null && p.hasLoadedNamespace(t))) {
+  saveMissing(e, t, s, i, n, a = {}, l = () => {
+  }) {
+    var d, u, c, h, m;
+    if ((u = (d = this.services) == null ? void 0 : d.utils) != null && u.hasLoadedNamespace && !((h = (c = this.services) == null ? void 0 : c.utils) != null && h.hasLoadedNamespace(t))) {
       this.logger.warn(`did not save key "${s}" as the namespace "${t}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!");
       return;
     }
     if (!(s == null || s === "")) {
-      if ((h = this.backend) != null && h.create) {
-        const w = {
+      if ((m = this.backend) != null && m.create) {
+        const g = {
           ...a,
           isUpdate: n
-        }, g = this.backend.create.bind(this.backend);
-        if (g.length < 6)
+        }, p = this.backend.create.bind(this.backend);
+        if (p.length < 6)
           try {
-            let x;
-            g.length === 5 ? x = g(e, t, s, o, w) : x = g(e, t, s, o), x && typeof x.then == "function" ? x.then((b) => l(null, b)).catch(l) : l(null, x);
-          } catch (x) {
-            l(x);
+            let b;
+            p.length === 5 ? b = p(e, t, s, i, g) : b = p(e, t, s, i), b && typeof b.then == "function" ? b.then((_) => l(null, _)).catch(l) : l(null, b);
+          } catch (b) {
+            l(b);
           }
         else
-          g(e, t, s, o, l, w);
+          p(e, t, s, i, l, g);
       }
-      !e || !e[0] || this.store.addResource(e[0], t, s, o);
+      !e || !e[0] || this.store.addResource(e[0], t, s, i);
     }
   }
 }
@@ -4347,10 +4306,10 @@ const xt = () => ({
   parseMissingKeyHandler: !1,
   appendNamespaceToMissingKey: !1,
   appendNamespaceToCIMode: !1,
-  overloadTranslationOptionHandler: (i) => {
+  overloadTranslationOptionHandler: (o) => {
     let e = {};
-    if (typeof i[1] == "object" && (e = i[1]), L(i[1]) && (e.defaultValue = i[1]), L(i[2]) && (e.tDescription = i[2]), typeof i[2] == "object" || typeof i[3] == "object") {
-      const t = i[3] || i[2];
+    if (typeof o[1] == "object" && (e = o[1]), C(o[1]) && (e.defaultValue = o[1]), C(o[2]) && (e.tDescription = o[2]), typeof o[2] == "object" || typeof o[3] == "object") {
+      const t = o[3] || o[2];
       Object.keys(t).forEach((s) => {
         e[s] = t[s];
       });
@@ -4359,7 +4318,7 @@ const xt = () => ({
   },
   interpolation: {
     escapeValue: !0,
-    format: (i) => i,
+    format: (o) => o,
     prefix: "{{",
     suffix: "}}",
     formatSeparator: ",",
@@ -4369,22 +4328,22 @@ const xt = () => ({
     nestingOptionsSeparator: ",",
     maxReplaces: 1e3,
     skipOnVariables: !0
-  }
-}), yt = (i) => {
+  },
+  cacheInBuiltFormats: !0
+}), yt = (o) => {
   var e, t;
-  return L(i.ns) && (i.ns = [i.ns]), L(i.fallbackLng) && (i.fallbackLng = [i.fallbackLng]), L(i.fallbackNS) && (i.fallbackNS = [i.fallbackNS]), ((t = (e = i.supportedLngs) == null ? void 0 : e.indexOf) == null ? void 0 : t.call(e, "cimode")) < 0 && (i.supportedLngs = i.supportedLngs.concat(["cimode"])), typeof i.initImmediate == "boolean" && (i.initAsync = i.initImmediate), i;
+  return C(o.ns) && (o.ns = [o.ns]), C(o.fallbackLng) && (o.fallbackLng = [o.fallbackLng]), C(o.fallbackNS) && (o.fallbackNS = [o.fallbackNS]), ((t = (e = o.supportedLngs) == null ? void 0 : e.indexOf) == null ? void 0 : t.call(e, "cimode")) < 0 && (o.supportedLngs = o.supportedLngs.concat(["cimode"])), typeof o.initImmediate == "boolean" && (o.initAsync = o.initImmediate), o;
 }, Se = () => {
-}, cr = (i) => {
-  Object.getOwnPropertyNames(Object.getPrototypeOf(i)).forEach((t) => {
-    typeof i[t] == "function" && (i[t] = i[t].bind(i));
+}, dr = (o) => {
+  Object.getOwnPropertyNames(Object.getPrototypeOf(o)).forEach((t) => {
+    typeof o[t] == "function" && (o[t] = o[t].bind(o));
   });
 };
-class ve extends $e {
-  constructor() {
-    let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 ? arguments[1] : void 0;
+class ve extends Re {
+  constructor(e = {}, t) {
     if (super(), this.options = yt(e), this.services = {}, this.logger = Z, this.modules = {
       external: []
-    }, cr(this), t && !this.isInitialized && !e.isClone) {
+    }, dr(this), t && !this.isInitialized && !e.isClone) {
       if (!this.options.initAsync)
         return this.init(e, t), this;
       setTimeout(() => {
@@ -4392,89 +4351,79 @@ class ve extends $e {
       }, 0);
     }
   }
-  init() {
-    var e = this;
-    let t = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, s = arguments.length > 1 ? arguments[1] : void 0;
-    this.isInitializing = !0, typeof t == "function" && (s = t, t = {}), t.defaultNS == null && t.ns && (L(t.ns) ? t.defaultNS = t.ns : t.ns.indexOf("translation") < 0 && (t.defaultNS = t.ns[0]));
-    const o = xt();
+  init(e = {}, t) {
+    this.isInitializing = !0, typeof e == "function" && (t = e, e = {}), e.defaultNS == null && e.ns && (C(e.ns) ? e.defaultNS = e.ns : e.ns.indexOf("translation") < 0 && (e.defaultNS = e.ns[0]));
+    const s = xt();
     this.options = {
-      ...o,
+      ...s,
       ...this.options,
-      ...yt(t)
+      ...yt(e)
     }, this.options.interpolation = {
-      ...o.interpolation,
+      ...s.interpolation,
       ...this.options.interpolation
-    }, t.keySeparator !== void 0 && (this.options.userDefinedKeySeparator = t.keySeparator), t.nsSeparator !== void 0 && (this.options.userDefinedNsSeparator = t.nsSeparator);
-    const n = (c) => c ? typeof c == "function" ? new c() : c : null;
+    }, e.keySeparator !== void 0 && (this.options.userDefinedKeySeparator = e.keySeparator), e.nsSeparator !== void 0 && (this.options.userDefinedNsSeparator = e.nsSeparator);
+    const i = (u) => u ? typeof u == "function" ? new u() : u : null;
     if (!this.options.isClone) {
-      this.modules.logger ? Z.init(n(this.modules.logger), this.options) : Z.init(null, this.options);
-      let c;
-      this.modules.formatter ? c = this.modules.formatter : c = or;
-      const p = new ft(this.options);
-      this.store = new dt(this.options.resources, this.options);
+      this.modules.logger ? Z.init(i(this.modules.logger), this.options) : Z.init(null, this.options);
+      let u;
+      this.modules.formatter ? u = this.modules.formatter : u = ar;
+      const c = new ht(this.options);
+      this.store = new ct(this.options.resources, this.options);
       const h = this.services;
-      h.logger = Z, h.resourceStore = this.store, h.languageUtils = p, h.pluralResolver = new rr(p, {
+      h.logger = Z, h.resourceStore = this.store, h.languageUtils = c, h.pluralResolver = new rr(c, {
         prepend: this.options.pluralSeparator,
         simplifyPluralSuffix: this.options.simplifyPluralSuffix
-      }), c && (!this.options.interpolation.format || this.options.interpolation.format === o.interpolation.format) && (h.formatter = n(c), h.formatter.init(h, this.options), this.options.interpolation.format = h.formatter.format.bind(h.formatter)), h.interpolator = new ir(this.options), h.utils = {
+      }), this.options.interpolation.format && this.options.interpolation.format !== s.interpolation.format && this.logger.warn("init: you are still using the legacy format function, please use the new approach: https://www.i18next.com/translation-function/formatting"), u && (!this.options.interpolation.format || this.options.interpolation.format === s.interpolation.format) && (h.formatter = i(u), h.formatter.init && h.formatter.init(h, this.options), this.options.interpolation.format = h.formatter.format.bind(h.formatter)), h.interpolator = new ir(this.options), h.utils = {
         hasLoadedNamespace: this.hasLoadedNamespace.bind(this)
-      }, h.backendConnector = new lr(n(this.modules.backend), h.resourceStore, h, this.options), h.backendConnector.on("*", function(w) {
-        for (var g = arguments.length, x = new Array(g > 1 ? g - 1 : 0), b = 1; b < g; b++)
-          x[b - 1] = arguments[b];
-        e.emit(w, ...x);
-      }), this.modules.languageDetector && (h.languageDetector = n(this.modules.languageDetector), h.languageDetector.init && h.languageDetector.init(h, this.options.detection, this.options)), this.modules.i18nFormat && (h.i18nFormat = n(this.modules.i18nFormat), h.i18nFormat.init && h.i18nFormat.init(this)), this.translator = new Re(this.services, this.options), this.translator.on("*", function(w) {
-        for (var g = arguments.length, x = new Array(g > 1 ? g - 1 : 0), b = 1; b < g; b++)
-          x[b - 1] = arguments[b];
-        e.emit(w, ...x);
-      }), this.modules.external.forEach((w) => {
-        w.init && w.init(this);
+      }, h.backendConnector = new cr(i(this.modules.backend), h.resourceStore, h, this.options), h.backendConnector.on("*", (g, ...p) => {
+        this.emit(g, ...p);
+      }), this.modules.languageDetector && (h.languageDetector = i(this.modules.languageDetector), h.languageDetector.init && h.languageDetector.init(h, this.options.detection, this.options)), this.modules.i18nFormat && (h.i18nFormat = i(this.modules.i18nFormat), h.i18nFormat.init && h.i18nFormat.init(this)), this.translator = new Pe(this.services, this.options), this.translator.on("*", (g, ...p) => {
+        this.emit(g, ...p);
+      }), this.modules.external.forEach((g) => {
+        g.init && g.init(this);
       });
     }
-    if (this.format = this.options.interpolation.format, s || (s = Se), this.options.fallbackLng && !this.services.languageDetector && !this.options.lng) {
-      const c = this.services.languageUtils.getFallbackCodes(this.options.fallbackLng);
-      c.length > 0 && c[0] !== "dev" && (this.options.lng = c[0]);
+    if (this.format = this.options.interpolation.format, t || (t = Se), this.options.fallbackLng && !this.services.languageDetector && !this.options.lng) {
+      const u = this.services.languageUtils.getFallbackCodes(this.options.fallbackLng);
+      u.length > 0 && u[0] !== "dev" && (this.options.lng = u[0]);
     }
-    !this.services.languageDetector && !this.options.lng && this.logger.warn("init: no languageDetector is used and no lng is defined"), ["getResource", "hasResourceBundle", "getResourceBundle", "getDataByLanguage"].forEach((c) => {
-      this[c] = function() {
-        return e.store[c](...arguments);
-      };
-    }), ["addResource", "addResources", "addResourceBundle", "removeResourceBundle"].forEach((c) => {
-      this[c] = function() {
-        return e.store[c](...arguments), e;
-      };
+    !this.services.languageDetector && !this.options.lng && this.logger.warn("init: no languageDetector is used and no lng is defined"), ["getResource", "hasResourceBundle", "getResourceBundle", "getDataByLanguage"].forEach((u) => {
+      this[u] = (...c) => this.store[u](...c);
+    }), ["addResource", "addResources", "addResourceBundle", "removeResourceBundle"].forEach((u) => {
+      this[u] = (...c) => (this.store[u](...c), this);
     });
-    const d = xe(), u = () => {
-      const c = (p, h) => {
-        this.isInitializing = !1, this.isInitialized && !this.initializedStoreOnce && this.logger.warn("init: i18next is already initialized. You should call init just once!"), this.isInitialized = !0, this.options.isClone || this.logger.log("initialized", this.options), this.emit("initialized", this.options), d.resolve(h), s(p, h);
+    const l = me(), d = () => {
+      const u = (c, h) => {
+        this.isInitializing = !1, this.isInitialized && !this.initializedStoreOnce && this.logger.warn("init: i18next is already initialized. You should call init just once!"), this.isInitialized = !0, this.options.isClone || this.logger.log("initialized", this.options), this.emit("initialized", this.options), l.resolve(h), t(c, h);
       };
-      if (this.languages && !this.isInitialized) return c(null, this.t.bind(this));
-      this.changeLanguage(this.options.lng, c);
+      if (this.languages && !this.isInitialized) return u(null, this.t.bind(this));
+      this.changeLanguage(this.options.lng, u);
     };
-    return this.options.resources || !this.options.initAsync ? u() : setTimeout(u, 0), d;
+    return this.options.resources || !this.options.initAsync ? d() : setTimeout(d, 0), l;
   }
-  loadResources(e) {
+  loadResources(e, t = Se) {
     var n, a;
-    let s = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : Se;
-    const o = L(e) ? e : this.language;
+    let s = t;
+    const i = C(e) ? e : this.language;
     if (typeof e == "function" && (s = e), !this.options.resources || this.options.partialBundledLanguages) {
-      if ((o == null ? void 0 : o.toLowerCase()) === "cimode" && (!this.options.preload || this.options.preload.length === 0)) return s();
+      if ((i == null ? void 0 : i.toLowerCase()) === "cimode" && (!this.options.preload || this.options.preload.length === 0)) return s();
       const l = [], d = (u) => {
         if (!u || u === "cimode") return;
-        this.services.languageUtils.toResolveHierarchy(u).forEach((p) => {
-          p !== "cimode" && l.indexOf(p) < 0 && l.push(p);
+        this.services.languageUtils.toResolveHierarchy(u).forEach((h) => {
+          h !== "cimode" && l.indexOf(h) < 0 && l.push(h);
         });
       };
-      o ? d(o) : this.services.languageUtils.getFallbackCodes(this.options.fallbackLng).forEach((c) => d(c)), (a = (n = this.options.preload) == null ? void 0 : n.forEach) == null || a.call(n, (u) => d(u)), this.services.backendConnector.load(l, this.options.ns, (u) => {
+      i ? d(i) : this.services.languageUtils.getFallbackCodes(this.options.fallbackLng).forEach((c) => d(c)), (a = (n = this.options.preload) == null ? void 0 : n.forEach) == null || a.call(n, (u) => d(u)), this.services.backendConnector.load(l, this.options.ns, (u) => {
         !u && !this.resolvedLanguage && this.language && this.setResolvedLanguage(this.language), s(u);
       });
     } else
       s(null);
   }
   reloadResources(e, t, s) {
-    const o = xe();
+    const i = me();
     return typeof e == "function" && (s = e, e = void 0), typeof t == "function" && (s = t, t = void 0), e || (e = this.languages), t || (t = this.options.ns), s || (s = Se), this.services.backendConnector.reload(e, t, (n) => {
-      o.resolve(), s(n);
-    }), o;
+      i.resolve(), s(n);
+    }), i;
   }
   use(e) {
     if (!e) throw new Error("You are passing an undefined module! Please check the object you are passing to i18next.use()");
@@ -4494,69 +4443,52 @@ class ve extends $e {
     }
   }
   changeLanguage(e, t) {
-    var s = this;
     this.isLanguageChangingTo = e;
-    const o = xe();
+    const s = me();
     this.emit("languageChanging", e);
-    const n = (d) => {
-      this.language = d, this.languages = this.services.languageUtils.toResolveHierarchy(d), this.resolvedLanguage = void 0, this.setResolvedLanguage(d);
-    }, a = (d, u) => {
-      u ? this.isLanguageChangingTo === e && (n(u), this.translator.changeLanguage(u), this.isLanguageChangingTo = void 0, this.emit("languageChanged", u), this.logger.log("languageChanged", u)) : this.isLanguageChangingTo = void 0, o.resolve(function() {
-        return s.t(...arguments);
-      }), t && t(d, function() {
-        return s.t(...arguments);
-      });
-    }, l = (d) => {
-      var p, h;
-      !e && !d && this.services.languageDetector && (d = []);
-      const u = L(d) ? d : d && d[0], c = this.store.hasLanguageSomeTranslations(u) ? u : this.services.languageUtils.getBestMatchFromCodes(L(d) ? [d] : d);
-      c && (this.language || n(c), this.translator.language || this.translator.changeLanguage(c), (h = (p = this.services.languageDetector) == null ? void 0 : p.cacheUserLanguage) == null || h.call(p, c)), this.loadResources(c, (w) => {
-        a(w, c);
+    const i = (l) => {
+      this.language = l, this.languages = this.services.languageUtils.toResolveHierarchy(l), this.resolvedLanguage = void 0, this.setResolvedLanguage(l);
+    }, n = (l, d) => {
+      d ? this.isLanguageChangingTo === e && (i(d), this.translator.changeLanguage(d), this.isLanguageChangingTo = void 0, this.emit("languageChanged", d), this.logger.log("languageChanged", d)) : this.isLanguageChangingTo = void 0, s.resolve((...u) => this.t(...u)), t && t(l, (...u) => this.t(...u));
+    }, a = (l) => {
+      var c, h;
+      !e && !l && this.services.languageDetector && (l = []);
+      const d = C(l) ? l : l && l[0], u = this.store.hasLanguageSomeTranslations(d) ? d : this.services.languageUtils.getBestMatchFromCodes(C(l) ? [l] : l);
+      u && (this.language || i(u), this.translator.language || this.translator.changeLanguage(u), (h = (c = this.services.languageDetector) == null ? void 0 : c.cacheUserLanguage) == null || h.call(c, u)), this.loadResources(u, (m) => {
+        n(m, u);
       });
     };
-    return !e && this.services.languageDetector && !this.services.languageDetector.async ? l(this.services.languageDetector.detect()) : !e && this.services.languageDetector && this.services.languageDetector.async ? this.services.languageDetector.detect.length === 0 ? this.services.languageDetector.detect().then(l) : this.services.languageDetector.detect(l) : l(e), o;
+    return !e && this.services.languageDetector && !this.services.languageDetector.async ? a(this.services.languageDetector.detect()) : !e && this.services.languageDetector && this.services.languageDetector.async ? this.services.languageDetector.detect.length === 0 ? this.services.languageDetector.detect().then(a) : this.services.languageDetector.detect(a) : a(e), s;
   }
   getFixedT(e, t, s) {
-    var o = this;
-    const n = function(a, l) {
+    const i = (n, a, ...l) => {
       let d;
-      if (typeof l != "object") {
-        for (var u = arguments.length, c = new Array(u > 2 ? u - 2 : 0), p = 2; p < u; p++)
-          c[p - 2] = arguments[p];
-        d = o.options.overloadTranslationOptionHandler([a, l].concat(c));
-      } else
-        d = {
-          ...l
-        };
-      d.lng = d.lng || n.lng, d.lngs = d.lngs || n.lngs, d.ns = d.ns || n.ns, d.keyPrefix !== "" && (d.keyPrefix = d.keyPrefix || s || n.keyPrefix);
-      const h = o.options.keySeparator || ".";
-      let w;
-      return d.keyPrefix && Array.isArray(a) ? w = a.map((g) => `${d.keyPrefix}${h}${g}`) : w = d.keyPrefix ? `${d.keyPrefix}${h}${a}` : a, o.t(w, d);
+      typeof a != "object" ? d = this.options.overloadTranslationOptionHandler([n, a].concat(l)) : d = {
+        ...a
+      }, d.lng = d.lng || i.lng, d.lngs = d.lngs || i.lngs, d.ns = d.ns || i.ns, d.keyPrefix !== "" && (d.keyPrefix = d.keyPrefix || s || i.keyPrefix);
+      const u = this.options.keySeparator || ".";
+      let c;
+      return d.keyPrefix && Array.isArray(n) ? c = n.map((h) => `${d.keyPrefix}${u}${h}`) : c = d.keyPrefix ? `${d.keyPrefix}${u}${n}` : n, this.t(c, d);
     };
-    return L(e) ? n.lng = e : n.lngs = e, n.ns = t, n.keyPrefix = s, n;
+    return C(e) ? i.lng = e : i.lngs = e, i.ns = t, i.keyPrefix = s, i;
   }
-  t() {
-    var o;
-    for (var e = arguments.length, t = new Array(e), s = 0; s < e; s++)
-      t[s] = arguments[s];
-    return (o = this.translator) == null ? void 0 : o.translate(...t);
+  t(...e) {
+    var t;
+    return (t = this.translator) == null ? void 0 : t.translate(...e);
   }
-  exists() {
-    var o;
-    for (var e = arguments.length, t = new Array(e), s = 0; s < e; s++)
-      t[s] = arguments[s];
-    return (o = this.translator) == null ? void 0 : o.exists(...t);
+  exists(...e) {
+    var t;
+    return (t = this.translator) == null ? void 0 : t.exists(...e);
   }
   setDefaultNamespace(e) {
     this.options.defaultNS = e;
   }
-  hasLoadedNamespace(e) {
-    let t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+  hasLoadedNamespace(e, t = {}) {
     if (!this.isInitialized)
       return this.logger.warn("hasLoadedNamespace: i18next was not initialized", this.languages), !1;
     if (!this.languages || !this.languages.length)
       return this.logger.warn("hasLoadedNamespace: i18n.languages were undefined or empty", this.languages), !1;
-    const s = t.lng || this.resolvedLanguage || this.languages[0], o = this.options ? this.options.fallbackLng : !1, n = this.languages[this.languages.length - 1];
+    const s = t.lng || this.resolvedLanguage || this.languages[0], i = this.options ? this.options.fallbackLng : !1, n = this.languages[this.languages.length - 1];
     if (s.toLowerCase() === "cimode") return !0;
     const a = (l, d) => {
       const u = this.services.backendConnector.state[`${l}|${d}`];
@@ -4566,43 +4498,49 @@ class ve extends $e {
       const l = t.precheck(this, a);
       if (l !== void 0) return l;
     }
-    return !!(this.hasResourceBundle(s, e) || !this.services.backendConnector.backend || this.options.resources && !this.options.partialBundledLanguages || a(s, e) && (!o || a(n, e)));
+    return !!(this.hasResourceBundle(s, e) || !this.services.backendConnector.backend || this.options.resources && !this.options.partialBundledLanguages || a(s, e) && (!i || a(n, e)));
   }
   loadNamespaces(e, t) {
-    const s = xe();
-    return this.options.ns ? (L(e) && (e = [e]), e.forEach((o) => {
-      this.options.ns.indexOf(o) < 0 && this.options.ns.push(o);
-    }), this.loadResources((o) => {
-      s.resolve(), t && t(o);
+    const s = me();
+    return this.options.ns ? (C(e) && (e = [e]), e.forEach((i) => {
+      this.options.ns.indexOf(i) < 0 && this.options.ns.push(i);
+    }), this.loadResources((i) => {
+      s.resolve(), t && t(i);
     }), s) : (t && t(), Promise.resolve());
   }
   loadLanguages(e, t) {
-    const s = xe();
-    L(e) && (e = [e]);
-    const o = this.options.preload || [], n = e.filter((a) => o.indexOf(a) < 0 && this.services.languageUtils.isSupportedCode(a));
-    return n.length ? (this.options.preload = o.concat(n), this.loadResources((a) => {
+    const s = me();
+    C(e) && (e = [e]);
+    const i = this.options.preload || [], n = e.filter((a) => i.indexOf(a) < 0 && this.services.languageUtils.isSupportedCode(a));
+    return n.length ? (this.options.preload = i.concat(n), this.loadResources((a) => {
       s.resolve(), t && t(a);
     }), s) : (t && t(), Promise.resolve());
   }
   dir(e) {
-    var o, n;
-    if (e || (e = this.resolvedLanguage || (((o = this.languages) == null ? void 0 : o.length) > 0 ? this.languages[0] : this.language)), !e) return "rtl";
-    const t = ["ar", "shu", "sqr", "ssh", "xaa", "yhd", "yud", "aao", "abh", "abv", "acm", "acq", "acw", "acx", "acy", "adf", "ads", "aeb", "aec", "afb", "ajp", "apc", "apd", "arb", "arq", "ars", "ary", "arz", "auz", "avl", "ayh", "ayl", "ayn", "ayp", "bbz", "pga", "he", "iw", "ps", "pbt", "pbu", "pst", "prp", "prd", "ug", "ur", "ydd", "yds", "yih", "ji", "yi", "hbo", "men", "xmn", "fa", "jpr", "peo", "pes", "prs", "dv", "sam", "ckb"], s = ((n = this.services) == null ? void 0 : n.languageUtils) || new ft(xt());
-    return t.indexOf(s.getLanguagePartFromCode(e)) > -1 || e.toLowerCase().indexOf("-arab") > 1 ? "rtl" : "ltr";
+    var i, n;
+    if (e || (e = this.resolvedLanguage || (((i = this.languages) == null ? void 0 : i.length) > 0 ? this.languages[0] : this.language)), !e) return "rtl";
+    try {
+      const a = new Intl.Locale(e);
+      if (a && a.getTextInfo) {
+        const l = a.getTextInfo();
+        if (l && l.direction) return l.direction;
+      }
+    } catch {
+    }
+    const t = ["ar", "shu", "sqr", "ssh", "xaa", "yhd", "yud", "aao", "abh", "abv", "acm", "acq", "acw", "acx", "acy", "adf", "ads", "aeb", "aec", "afb", "ajp", "apc", "apd", "arb", "arq", "ars", "ary", "arz", "auz", "avl", "ayh", "ayl", "ayn", "ayp", "bbz", "pga", "he", "iw", "ps", "pbt", "pbu", "pst", "prp", "prd", "ug", "ur", "ydd", "yds", "yih", "ji", "yi", "hbo", "men", "xmn", "fa", "jpr", "peo", "pes", "prs", "dv", "sam", "ckb"], s = ((n = this.services) == null ? void 0 : n.languageUtils) || new ht(xt());
+    return e.toLowerCase().indexOf("-latn") > 1 ? "ltr" : t.indexOf(s.getLanguagePartFromCode(e)) > -1 || e.toLowerCase().indexOf("-arab") > 1 ? "rtl" : "ltr";
   }
-  static createInstance() {
-    let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 ? arguments[1] : void 0;
+  static createInstance(e = {}, t) {
     return new ve(e, t);
   }
-  cloneInstance() {
-    let e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : Se;
+  cloneInstance(e = {}, t = Se) {
     const s = e.forkResourceStore;
     s && delete e.forkResourceStore;
-    const o = {
+    const i = {
       ...this.options,
       ...e,
       isClone: !0
-    }, n = new ve(o);
+    }, n = new ve(i);
     if ((e.debug !== void 0 || e.prefix !== void 0) && (n.logger = n.logger.clone(e)), ["store", "services", "language"].forEach((l) => {
       n[l] = this[l];
     }), n.services = {
@@ -4612,16 +4550,14 @@ class ve extends $e {
     }, s) {
       const l = Object.keys(this.store.data).reduce((d, u) => (d[u] = {
         ...this.store.data[u]
-      }, d[u] = Object.keys(d[u]).reduce((c, p) => (c[p] = {
-        ...d[u][p]
+      }, d[u] = Object.keys(d[u]).reduce((c, h) => (c[h] = {
+        ...d[u][h]
       }, c), d[u]), d), {});
-      n.store = new dt(l, o), n.services.resourceStore = n.store;
+      n.store = new ct(l, i), n.services.resourceStore = n.store;
     }
-    return n.translator = new Re(n.services, o), n.translator.on("*", function(l) {
-      for (var d = arguments.length, u = new Array(d > 1 ? d - 1 : 0), c = 1; c < d; c++)
-        u[c - 1] = arguments[c];
-      n.emit(l, ...u);
-    }), n.init(o, t), n.translator.options = o, n.translator.backendConnector.services.utils = {
+    return n.translator = new Pe(n.services, i), n.translator.on("*", (l, ...d) => {
+      n.emit(l, ...d);
+    }), n.init(i, t), n.translator.options = i, n.translator.backendConnector.services.utils = {
       hasLoadedNamespace: n.hasLoadedNamespace.bind(n)
     }, n;
   }
@@ -4635,23 +4571,23 @@ class ve extends $e {
     };
   }
 }
-const Y = ve.createInstance();
-Y.createInstance = ve.createInstance;
-Y.createInstance;
-Y.dir;
-Y.init;
-Y.loadResources;
-Y.reloadResources;
-Y.use;
-Y.changeLanguage;
-Y.getFixedT;
-Y.t;
-Y.exists;
-Y.setDefaultNamespace;
-Y.hasLoadedNamespace;
-Y.loadNamespaces;
-Y.loadLanguages;
-var He = {
+const K = ve.createInstance();
+K.createInstance = ve.createInstance;
+K.createInstance;
+K.dir;
+K.init;
+K.loadResources;
+K.reloadResources;
+K.use;
+K.changeLanguage;
+K.getFixedT;
+K.t;
+K.exists;
+K.setDefaultNamespace;
+K.hasLoadedNamespace;
+K.loadNamespaces;
+K.loadLanguages;
+var Ge = {
   nav: {
     pricing: "Pricing",
     contact: "Contact",
@@ -4783,9 +4719,9 @@ var He = {
     readiness: "SOC2 Type II Readiness"
   }
 };
-He.nav;
-He.footer;
-var Ke = {
+Ge.nav;
+Ge.footer;
+var He = {
   nav: {
     pricing: "Precios",
     contact: "Contacto",
@@ -4915,9 +4851,9 @@ var Ke = {
     readiness: "Preparación para SOC2 Tipo II"
   }
 };
-Ke.nav;
-Ke.footer;
-var Ye = {
+He.nav;
+He.footer;
+var Ke = {
   nav: {
     pricing: "Prezzi",
     contact: "Contatti",
@@ -5047,56 +4983,56 @@ var Ye = {
     readiness: "Conformità SOC2 Tipo II"
   }
 };
-Ye.nav;
-Ye.footer;
-const dr = ["en", "es", "it"];
-Y.use(Bs).init({
+Ke.nav;
+Ke.footer;
+const ur = ["en", "es", "it"];
+K.use(Ws).init({
   lng: "en",
-  supportedLngs: dr,
+  supportedLngs: ur,
   resources: {
-    en: { translation: He },
-    es: { translation: Ke },
-    it: { translation: Ye }
+    en: { translation: Ge },
+    es: { translation: He },
+    it: { translation: Ke }
   },
   fallbackLng: "en",
   react: { useSuspense: !1 }
 });
-const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "https://app.plexicus.ai", pr = ({
-  lang: i,
+const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "https://app.plexicus.ai", gr = ({
+  lang: o,
   fullSiteUrl: e = "http://localhost:8000",
   fullBlogUrl: t = "http://localhost:9000"
 }) => {
-  const [s, o] = de("/"), [n, a] = de(!1), [l, d] = de(null), u = Le(null), { t: c, i18n: p } = At();
-  se(() => {
-    p.changeLanguage(i), o(i !== "en" ? `/${i}/` : "/");
+  const [s, i] = ce("/"), [n, a] = ce(!1), [l, d] = ce(null), u = _e(null), { t: c, i18n: h } = Mt();
+  re(() => {
+    h.changeLanguage(o), i(o !== "en" ? `/${o}/` : "/");
   }, []);
-  const [h, w] = de(!1);
-  se(() => {
-    const k = () => {
-      const P = window.scrollY;
-      w(P > 50);
+  const [m, g] = ce(!1);
+  re(() => {
+    const w = () => {
+      const $ = window.scrollY;
+      g($ > 50);
     };
-    return window.addEventListener("scroll", k), k(), () => {
-      window.removeEventListener("scroll", k);
+    return window.addEventListener("scroll", w), w(), () => {
+      window.removeEventListener("scroll", w);
     };
   }, []);
-  const g = Ce((k) => {
-    u.current && (clearTimeout(u.current), u.current = null), d(k);
-  }, []), x = Le([]), b = Ce(() => {
-    const k = setTimeout(() => {
+  const p = Ce((w) => {
+    u.current && (clearTimeout(u.current), u.current = null), d(w);
+  }, []), b = _e([]), _ = Ce(() => {
+    const w = setTimeout(() => {
       d(null);
     }, 150);
-    u.current = k, x.current.push(k);
+    u.current = w, b.current.push(w);
   }, []);
-  se(() => () => {
-    u.current && clearTimeout(u.current), x.current.forEach(clearTimeout), x.current = [];
+  re(() => () => {
+    u.current && clearTimeout(u.current), b.current.forEach(clearTimeout), b.current = [];
   }, []);
-  const E = Ce(
-    (k) => {
-      d(l === k ? null : k);
+  const M = Ce(
+    (w) => {
+      d(l === w ? null : w);
     },
     [l]
-  ), j = Ne(e, It), T = Ne(t, Ft), A = {
+  ), S = Le(e, It), T = Le(t, Ft), R = {
     products: {
       title: c("nav.product.title"),
       shortTitle: c("footer.sections.products.title"),
@@ -5105,7 +5041,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.platform_overview"),
           description: c("nav.product.platform_overview_desc"),
-          href: `${j}${s}products/platform`,
+          href: `${S}${s}products/platform`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5131,7 +5067,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.benefits"),
           description: c("nav.product.benefits_desc"),
-          href: `${j}${s}products/benefits`,
+          href: `${S}${s}products/benefits`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5157,7 +5093,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.use_cases"),
           description: c("nav.product.use_cases_desc"),
-          href: `${j}${s}products/use-cases`,
+          href: `${S}${s}products/use-cases`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5183,7 +5119,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.aspm"),
           description: c("nav.product.aspm_desc"),
-          href: `${j}${s}products/aspm`,
+          href: `${S}${s}products/aspm`,
           icon: /* @__PURE__ */ r.jsx(
             "svg",
             {
@@ -5205,7 +5141,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.cspm"),
           description: c("nav.product.cspm_desc"),
-          href: `${j}${s}products/cspm`,
+          href: `${S}${s}products/cspm`,
           icon: /* @__PURE__ */ r.jsx(
             "svg",
             {
@@ -5227,7 +5163,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.container_security"),
           description: c("nav.product.container_security_desc"),
-          href: `${j}${s}products/container`,
+          href: `${S}${s}products/container`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5253,7 +5189,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.cwpp"),
           description: c("nav.product.cwpp_desc"),
-          href: `${j}${s}products/cwpp`,
+          href: `${S}${s}products/cwpp`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5279,7 +5215,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.product.ciem"),
           description: c("nav.product.ciem_desc"),
-          href: `${j}${s}products/ciem`,
+          href: `${S}${s}products/ciem`,
           icon: /* @__PURE__ */ r.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round", className: "lucide lucide-cloud-cog-icon lucide-cloud-cog", children: [
             /* @__PURE__ */ r.jsx("path", { d: "m10.852 19.772-.383.924" }),
             /* @__PURE__ */ r.jsx("path", { d: "m13.148 14.228.383-.923" }),
@@ -5303,7 +5239,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.fintech"),
           description: c("nav.solutions.fintech_desc"),
-          href: `${j}${s}solutions/fintech`,
+          href: `${S}${s}solutions/fintech`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5328,7 +5264,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.healthtech"),
           description: c("nav.solutions.healthtech_desc"),
-          href: `${j}${s}solutions/healthtech`,
+          href: `${S}${s}solutions/healthtech`,
           icon: /* @__PURE__ */ r.jsx(
             "svg",
             {
@@ -5350,7 +5286,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.hrtech"),
           description: c("nav.solutions.hrtech_desc"),
-          href: `${j}${s}solutions/hrtech`,
+          href: `${S}${s}solutions/hrtech`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5377,7 +5313,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.group_companies"),
           description: c("nav.solutions.group_companies_desc"),
-          href: `${j}${s}solutions/group-companies`,
+          href: `${S}${s}solutions/group-companies`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5402,7 +5338,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.agencies"),
           description: c("nav.solutions.agencies_desc"),
-          href: `${j}${s}solutions/agencies`,
+          href: `${S}${s}solutions/agencies`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5427,7 +5363,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.startups"),
           description: c("nav.solutions.startups_desc"),
-          href: `${j}${s}solutions/startups`,
+          href: `${S}${s}solutions/startups`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5454,7 +5390,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.enterprise"),
           description: c("nav.solutions.enterprise_desc"),
-          href: `${j}${s}solutions/enterprise`,
+          href: `${S}${s}solutions/enterprise`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5485,7 +5421,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.mobile_apps"),
           description: c("nav.solutions.mobile_apps_desc"),
-          href: `${j}${s}solutions/mobile-apps`,
+          href: `${S}${s}solutions/mobile-apps`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5510,7 +5446,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.manufacturing"),
           description: c("nav.solutions.manufacturing_desc"),
-          href: `${j}${s}solutions/manufacturing`,
+          href: `${S}${s}solutions/manufacturing`,
           icon: /* @__PURE__ */ r.jsx(
             "svg",
             {
@@ -5532,7 +5468,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.government"),
           description: c("nav.solutions.government_desc"),
-          href: `${j}${s}solutions/government`,
+          href: `${S}${s}solutions/government`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5560,7 +5496,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
         {
           title: c("nav.solutions.retailtech"),
           description: c("nav.solutions.retailtech_desc"),
-          href: `${j}${s}solutions/retailtech`,
+          href: `${S}${s}solutions/retailtech`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5748,36 +5684,34 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
             }
           )
         },
-        {
-          title: c("nav.resources.branding_assets"),
-          description: c("nav.resources.branding_assets_desc"),
-          href: `${j}${s}resources/branding`,
-          icon: /* @__PURE__ */ r.jsxs(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: "24",
-              height: "24",
-              viewBox: "0 0 24 24",
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "2",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              className: "text-primary",
-              "aria-hidden": "true",
-              children: [
-                /* @__PURE__ */ r.jsx("path", { d: "M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" }),
-                /* @__PURE__ */ r.jsx("path", { d: "m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" }),
-                /* @__PURE__ */ r.jsx("path", { d: "m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" }),
-                /* @__PURE__ */ r.jsx("path", { d: "m3.5 13.5 5-5" }),
-                /* @__PURE__ */ r.jsx("path", { d: "m5 19 5-5" }),
-                /* @__PURE__ */ r.jsx("path", { d: "m17.5 6.5-5 5" }),
-                /* @__PURE__ */ r.jsx("path", { d: "m16 17-5-5" })
-              ]
-            }
-          )
-        },
+        // {
+        //   title: t("nav.resources.branding_assets"),
+        //   description: t("nav.resources.branding_assets_desc"),
+        //   href: `${WEB_URL}${lang}resources/branding`,
+        //   icon: (
+        //     <svg
+        //       xmlns="http://www.w3.org/2000/svg"
+        //       width="24"
+        //       height="24"
+        //       viewBox="0 0 24 24"
+        //       fill="none"
+        //       stroke="currentColor"
+        //       strokeWidth="2"
+        //       strokeLinecap="round"
+        //       strokeLinejoin="round"
+        //       className="text-primary"
+        //       aria-hidden="true"
+        //     >
+        //       <path d="M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" />
+        //       <path d="m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" />
+        //       <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" />
+        //       <path d="m3.5 13.5 5-5" />
+        //       <path d="m5 19 5-5" />
+        //       <path d="m17.5 6.5-5 5" />
+        //       <path d="m16 17-5-5" />
+        //     </svg>
+        //   ),
+        // },
         {
           title: c("nav.resources.changelogs"),
           description: c("nav.resources.changelogs_desc"),
@@ -5825,38 +5759,36 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
             }
           )
         },
-        {
-          title: c("nav.resources.integrations"),
-          description: c("nav.resources.integrations_desc"),
-          href: `${j}${s}integrations`,
-          icon: /* @__PURE__ */ r.jsxs(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: "24",
-              height: "24",
-              viewBox: "0 0 24 24",
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "2",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              className: "text-primary",
-              "aria-hidden": "true",
-              children: [
-                /* @__PURE__ */ r.jsx("path", { d: "M9 12l2 2 4-4" }),
-                /* @__PURE__ */ r.jsx("path", { d: "M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" }),
-                /* @__PURE__ */ r.jsx("path", { d: "M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" }),
-                /* @__PURE__ */ r.jsx("path", { d: "M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" }),
-                /* @__PURE__ */ r.jsx("path", { d: "M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" })
-              ]
-            }
-          )
-        },
+        // {
+        //   title: t("nav.resources.integrations"),
+        //   description: t("nav.resources.integrations_desc"),
+        //   href: `${WEB_URL}${lang}integrations`,
+        //   icon: (
+        //     <svg
+        //       xmlns="http://www.w3.org/2000/svg"
+        //       width="24"
+        //       height="24"
+        //       viewBox="0 0 24 24"
+        //       fill="none"
+        //       stroke="currentColor"
+        //       strokeWidth="2"
+        //       strokeLinecap="round"
+        //       strokeLinejoin="round"
+        //       className="text-primary"
+        //       aria-hidden="true"
+        //     >
+        //       <path d="M9 12l2 2 4-4" />
+        //       <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+        //       <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+        //       <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+        //       <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+        //     </svg>
+        //   ),
+        // },
         {
           title: c("nav.resources.comparison_overview"),
           description: c("nav.resources.comparison_overview_desc"),
-          href: `${j}${s}comparison/overview`,
+          href: `${S}${s}comparison/overview`,
           icon: /* @__PURE__ */ r.jsxs(
             "svg",
             {
@@ -5886,8 +5818,8 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
     {
       className: "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
       style: {
-        background: h ? "#8220ff" : "transparent",
-        boxShadow: h ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
+        background: m ? "#8220ff" : "transparent",
+        boxShadow: m ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
         transition: "all 0.3s ease-in-out",
         minHeight: "64px"
       },
@@ -5896,7 +5828,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
           /* @__PURE__ */ r.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ r.jsx(
             z,
             {
-              href: `${j}${s}`,
+              href: `${S}${s}`,
               className: "flex items-center gap-2 overflow-visible",
               "aria-label": "Plexicus Home",
               children: /* @__PURE__ */ r.jsx("div", { className: "relative w-auto h-14 flex items-center", children: /* @__PURE__ */ r.jsx(
@@ -5906,7 +5838,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                   alt: "Plexicus Logo",
                   className: "object-contain max-h-full max-w-none",
                   style: {
-                    maxWidth: h ? "180px" : "220px",
+                    maxWidth: m ? "180px" : "220px",
                     transition: "max-width 0.3s ease-in-out"
                   }
                 }
@@ -5914,22 +5846,22 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
             }
           ) }),
           /* @__PURE__ */ r.jsxs("nav", { className: "hidden md:flex md:gap-4 lg:gap-6", "aria-label": "Main Navigation", children: [
-            Object.entries(A).filter(([k]) => k === "products").map(([k, P]) => /* @__PURE__ */ r.jsx(
+            Object.entries(R).filter(([w]) => w === "products").map(([w, $]) => /* @__PURE__ */ r.jsx(
               "div",
               {
                 className: "relative group",
-                onMouseEnter: () => g(k),
-                onMouseLeave: b,
+                onMouseEnter: () => p(w),
+                onMouseLeave: _,
                 children: /* @__PURE__ */ r.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
-                    "aria-expanded": l === k,
+                    "aria-expanded": l === w,
                     "aria-haspopup": "true",
-                    onClick: () => E(k),
+                    onClick: () => M(w),
                     children: [
-                      /* @__PURE__ */ r.jsx("span", { className: "hidden lg:inline", children: P.title }),
-                      /* @__PURE__ */ r.jsx("span", { className: "lg:hidden", children: P.shortTitle }),
+                      /* @__PURE__ */ r.jsx("span", { className: "hidden lg:inline", children: $.title }),
+                      /* @__PURE__ */ r.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
                       /* @__PURE__ */ r.jsx(
                         "svg",
                         {
@@ -5942,7 +5874,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                           strokeWidth: "2",
                           strokeLinecap: "round",
                           strokeLinejoin: "round",
-                          className: `ml-1 transition-transform duration-200 ${l === k ? "transform rotate-180" : ""}`,
+                          className: `ml-1 transition-transform duration-200 ${l === w ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
                           children: /* @__PURE__ */ r.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
@@ -5951,32 +5883,32 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                   }
                 )
               },
-              k
+              w
             )),
             /* @__PURE__ */ r.jsx(
               z,
               {
-                href: `${j}${s}pricing`,
+                href: `${S}${s}pricing`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
                 children: c("nav.pricing")
               }
             ),
-            Object.entries(A).filter(([k]) => k === "solutions" || k === "developers" || k === "resources").map(([k, P]) => /* @__PURE__ */ r.jsx(
+            Object.entries(R).filter(([w]) => w === "solutions" || w === "developers" || w === "resources").map(([w, $]) => /* @__PURE__ */ r.jsx(
               "div",
               {
                 className: "relative group",
-                onMouseEnter: () => g(k),
-                onMouseLeave: b,
+                onMouseEnter: () => p(w),
+                onMouseLeave: _,
                 children: /* @__PURE__ */ r.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
-                    "aria-expanded": l === k,
+                    "aria-expanded": l === w,
                     "aria-haspopup": "true",
-                    onClick: () => E(k),
+                    onClick: () => M(w),
                     children: [
-                      /* @__PURE__ */ r.jsx("span", { className: "hidden lg:inline", children: P.title }),
-                      /* @__PURE__ */ r.jsx("span", { className: "lg:hidden", children: P.shortTitle }),
+                      /* @__PURE__ */ r.jsx("span", { className: "hidden lg:inline", children: $.title }),
+                      /* @__PURE__ */ r.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
                       /* @__PURE__ */ r.jsx(
                         "svg",
                         {
@@ -5989,7 +5921,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                           strokeWidth: "2",
                           strokeLinecap: "round",
                           strokeLinejoin: "round",
-                          className: `ml-1 transition-transform duration-200 ${l === k ? "transform rotate-180" : ""}`,
+                          className: `ml-1 transition-transform duration-200 ${l === w ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
                           children: /* @__PURE__ */ r.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
@@ -5998,12 +5930,12 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                   }
                 )
               },
-              k
+              w
             )),
             /* @__PURE__ */ r.jsx(
               z,
               {
-                href: `${j}${s}contact`,
+                href: `${S}${s}contact`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
                 children: c("nav.contact")
               }
@@ -6018,7 +5950,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                 children: c("nav.login")
               }
             ),
-            /* @__PURE__ */ r.jsx(z, { href: `${vt}/register`, children: /* @__PURE__ */ r.jsx(We, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: c("nav.get_started") }) })
+            /* @__PURE__ */ r.jsx(z, { href: `${vt}/register`, children: /* @__PURE__ */ r.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: c("nav.get_started") }) })
           ] }),
           /* @__PURE__ */ r.jsx(
             "button",
@@ -6084,8 +6016,8 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
             "div",
             {
               className: "absolute left-0 right-0 top-16 z-40 bg-white shadow-xl border-t border-gray-100 transition-all duration-300 transform",
-              onMouseEnter: () => g(l),
-              onMouseLeave: b,
+              onMouseEnter: () => p(l),
+              onMouseLeave: _,
               role: "menu",
               "aria-labelledby": `menu-button-${l}`,
               children: /* @__PURE__ */ r.jsx("div", { className: "container mx-auto py-8 px-4 md:px-6 max-w-7xl", children: /* @__PURE__ */ r.jsxs("div", { className: "flex flex-col md:flex-row", children: [
@@ -6427,25 +6359,25 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                     ) })
                   ] }) }),
                   /* @__PURE__ */ r.jsxs("div", { className: "bg-gray-50 rounded-lg p-4", children: [
-                    /* @__PURE__ */ r.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: A[l].title }),
+                    /* @__PURE__ */ r.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: R[l].title }),
                     /* @__PURE__ */ r.jsx("p", { className: "text-gray-700", children: c(l === "products" ? "nav.product.explore" : l === "solutions" ? "nav.solutions.explore" : "nav.resources.explore") })
                   ] })
                 ] }),
-                /* @__PURE__ */ r.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ r.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: A[l].items.filter((k) => l !== "resources" || !k.title.startsWith("vs ")).map((k, P) => /* @__PURE__ */ r.jsxs(
+                /* @__PURE__ */ r.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ r.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: R[l].items.filter((w) => l !== "resources" || !w.title.startsWith("vs ")).map((w, $) => /* @__PURE__ */ r.jsxs(
                   z,
                   {
-                    href: k.href,
+                    href: w.href,
                     className: "flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors group",
                     onClick: () => d(null),
                     children: [
-                      /* @__PURE__ */ r.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: Me.cloneElement(k.icon, { width: 16, height: 16 }) }),
+                      /* @__PURE__ */ r.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: Me.cloneElement(w.icon, { width: 16, height: 16 }) }),
                       /* @__PURE__ */ r.jsxs("div", { children: [
-                        /* @__PURE__ */ r.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: k.title }),
-                        /* @__PURE__ */ r.jsx("p", { className: "text-sm text-gray-600 mt-1", children: k.description })
+                        /* @__PURE__ */ r.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: w.title }),
+                        /* @__PURE__ */ r.jsx("p", { className: "text-sm text-gray-600 mt-1", children: w.description })
                       ] })
                     ]
                   },
-                  P
+                  $
                 )) }) })
               ] }) })
             }
@@ -6458,26 +6390,26 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
             className: `md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${n ? "translate-x-0" : "translate-x-full"}`,
             style: { top: "64px", height: "calc(100vh - 64px)", overflow: "auto" },
             children: /* @__PURE__ */ r.jsx("div", { className: "overflow-y-auto h-full p-4 pb-20", children: /* @__PURE__ */ r.jsxs("div", { className: "space-y-4", children: [
-              Object.entries(A).map(([k, P]) => /* @__PURE__ */ r.jsxs("div", { className: "space-y-2", children: [
-                /* @__PURE__ */ r.jsx("h3", { className: "font-semibold", children: P.title }),
-                /* @__PURE__ */ r.jsx("div", { className: "grid grid-cols-1 gap-2", children: P.items.map((O, m) => /* @__PURE__ */ r.jsxs(
+              Object.entries(R).map(([w, $]) => /* @__PURE__ */ r.jsxs("div", { className: "space-y-2", children: [
+                /* @__PURE__ */ r.jsx("h3", { className: "font-semibold", children: $.title }),
+                /* @__PURE__ */ r.jsx("div", { className: "grid grid-cols-1 gap-2", children: $.items.map((I, x) => /* @__PURE__ */ r.jsxs(
                   z,
                   {
-                    href: O.href,
+                    href: I.href,
                     className: "flex items-center p-2 rounded-md bg-gray-50 hover:bg-gray-100",
                     onClick: () => a(!1),
                     children: [
-                      /* @__PURE__ */ r.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: Me.cloneElement(O.icon, { width: 16, height: 16 }) }),
-                      /* @__PURE__ */ r.jsx("span", { className: "text-sm", children: O.title })
+                      /* @__PURE__ */ r.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: Me.cloneElement(I.icon, { width: 16, height: 16 }) }),
+                      /* @__PURE__ */ r.jsx("span", { className: "text-sm", children: I.title })
                     ]
                   },
-                  m
+                  x
                 )) })
-              ] }, k)),
+              ] }, w)),
               /* @__PURE__ */ r.jsx(
                 z,
                 {
-                  href: `${j}${s}pricing`,
+                  href: `${S}${s}pricing`,
                   className: "block py-2 text-sm font-medium",
                   onClick: () => a(!1),
                   children: c("nav.pricing")
@@ -6486,13 +6418,13 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
               /* @__PURE__ */ r.jsx(
                 z,
                 {
-                  href: `${j}${s}contact`,
+                  href: `${S}${s}contact`,
                   className: "block py-2 text-sm font-medium",
                   onClick: () => a(!1),
                   children: c("nav.contact")
                 }
               ),
-              /* @__PURE__ */ r.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ r.jsx(We, { className: "w-full bg-gradient-primary", onClick: () => a(!1), children: "Get Started" }) })
+              /* @__PURE__ */ r.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ r.jsx(Fe, { className: "w-full bg-gradient-primary", onClick: () => a(!1), children: "Get Started" }) })
             ] }) })
           }
         )
@@ -6500,15 +6432,15 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
     }
   );
 };
-function ur() {
+function hr() {
   var t;
-  const i = (s) => {
+  const o = (s) => {
     localStorage.setItem("scrollPosition", String(window == null ? void 0 : window.scrollY));
-    const o = window.location.pathname;
-    let a = o.match(/^\/([a-z]{2})\//) ? o.replace(/^\/[a-z]{2}\//, `/${s}/`) : `/${s}${o}`;
+    const i = window.location.pathname;
+    let a = i.match(/^\/([a-z]{2})\//) ? i.replace(/^\/[a-z]{2}\//, `/${s}/`) : `/${s}${i}`;
     a = a.startsWith("/en/") ? a.replace(/^\/en/, "") : a, console.log({ newPath: a }), window.location.href = a;
   };
-  se(() => {
+  re(() => {
     const s = localStorage.getItem("scrollPosition");
     s && (window.scrollTo(0, parseInt(s)), localStorage.removeItem("scrollPosition"));
   }, []);
@@ -6521,7 +6453,7 @@ function ur() {
         defaultValue: e,
         className: "appearance-none w-full  pr-6 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring dark:bg-gray-900 dark:text-white dark:border-gray-700",
         style: { paddingLeft: 30 },
-        onChange: (s) => i(s.target.value),
+        onChange: (s) => o(s.target.value),
         children: [
           /* @__PURE__ */ r.jsx("option", { value: "en", children: "English" }),
           /* @__PURE__ */ r.jsx("option", { value: "es", children: "Spanish" }),
@@ -6543,12 +6475,12 @@ function ur() {
     )
   ] }) });
 }
-function gr({ lang: i, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t = "http://localhost:9000" }) {
-  const [s, o] = de("/"), { t: n, i18n: a } = At();
-  se(() => {
-    a.changeLanguage(i), o(i !== "en" ? `/${i}/` : "/");
+function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t = "http://localhost:9000" }) {
+  const [s, i] = ce("/"), { t: n, i18n: a } = Mt();
+  re(() => {
+    a.changeLanguage(o), i(o !== "en" ? `/${o}/` : "/");
   }, []);
-  const l = Ne(e, It), d = Ne(t, Ft);
+  const l = Le(e, It), d = Le(t, Ft);
   return /* @__PURE__ */ r.jsx("footer", { className: "bg-gray-50 border-t border-gray-200", children: /* @__PURE__ */ r.jsxs("div", { className: "container mx-auto px-4 md:px-6 pt-12 pb-6", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "grid grid-cols-1 gap-8 lg:grid-cols-5", children: [
       /* @__PURE__ */ r.jsxs("div", { className: "lg:col-span-2", children: [
@@ -6582,7 +6514,7 @@ function gr({ lang: i, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
             ) })
           ] })
         ] }),
-        /* @__PURE__ */ r.jsx("div", { className: "mt-6", children: /* @__PURE__ */ r.jsx(ur, {}) })
+        /* @__PURE__ */ r.jsx("div", { className: "mt-6", children: /* @__PURE__ */ r.jsx(hr, {}) })
       ] }),
       /* @__PURE__ */ r.jsxs("div", { children: [
         /* @__PURE__ */ r.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: n("footer.sections.products.title") }),
@@ -6648,7 +6580,7 @@ function gr({ lang: i, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
   ] }) });
 }
 export {
-  gr as FooterPlexicus,
-  pr as NavbarPlexicus,
-  ur as SelectLanguage
+  mr as FooterPlexicus,
+  gr as NavbarPlexicus,
+  hr as SelectLanguage
 };
