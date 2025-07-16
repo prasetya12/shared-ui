@@ -17,7 +17,7 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             -H "Content-Type: application/json" \
             -d '{
-              "ref": "develop",
+              "ref": "main",
               "inputs": {
                 "triggered_by": "ui-repo",
                 "ui_commit": "${{ github.sha }}",
@@ -32,7 +32,7 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             -H "Content-Type: application/json" \
             -d '{
-              "ref": "develop",
+              "ref": "main",
               "inputs": {
                 "triggered_by": "ui-repo",
                 "ui_commit": "${{ github.sha }}",
