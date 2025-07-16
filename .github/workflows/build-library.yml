@@ -4,7 +4,7 @@ name: React Library Build and Push to Main
 # Controls when the workflow will run
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -52,7 +52,7 @@ jobs:
           # Path to the directory containing the files to commit.
           # This will commit all changes within the 'dist' folder.
           commit_message: "CI: Build library [skip ci]" # Use '[skip ci]' to prevent re-triggering the workflow
-          branch: develop # Push to the main branch
+          branch: main # Push to the main branch
           # Add the 'dist' directory to the files to be committed.
           # This ensures only changes in 'dist' are considered for the commit.
           file_pattern: "dist/**"
