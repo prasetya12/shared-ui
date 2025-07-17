@@ -58,6 +58,8 @@ nav:
     plexalyzer_action_desc: "Automatizza la sicurezza nella tua pipeline CI/CD"
   resources:
     title: "Risorse"
+    support: "Supporto"
+    support_desc: "Plexicus offre un supporto completo per aiutarti a ottenere il massimo dalla nostra piattaforma."
     explore: "Esplora le nostre risorse"
     blog: "Blog"
     blog_desc: "Ultime notizie e approfondimenti sulla sicurezza"

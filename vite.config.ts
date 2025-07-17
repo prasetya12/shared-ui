@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import dts from 'vite-plugin-dts';
 import yaml from '@rollup/plugin-yaml';
 import path from 'path';
-
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 // https://vite.dev/config/
 export default defineConfig({
   resolve: {
@@ -12,7 +12,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [react(), tailwindcss(), dts(), yaml()],
+  plugins: [react(), tailwindcss(), dts(), yaml(), cssInjectedByJsPlugin()],
   build: {
     lib: {
       entry: './src/index.ts',
