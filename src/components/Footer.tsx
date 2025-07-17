@@ -131,11 +131,11 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
                   {t('footer.sections.resources.links.documentation')}
                 </Link>
               </li>
-              {/* <li>
-                <Link href={`${WEB_URL}${lang}case-studies`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.resources.links.case_studies')}
+              <li>
+                <Link href={`${WEB_URL}${lang}support`} className="text-gray-600 hover:text-gray-900">
+                {t("nav.resources.support")}
                 </Link>
-              </li> */}
+              </li>
               {/* <li>
                 <Link href={`${WEB_URL}${lang}security-resources`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.resources.links.security_resources')}
