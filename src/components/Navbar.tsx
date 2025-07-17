@@ -848,6 +848,19 @@ export const NavbarPlexicus = ({
             </svg>
           ),
         },
+        {
+          title: t("nav.resources.support"),
+          description: t("nav.resources.support_desc"),
+          href: `${WEB_URL}${lang}support`,
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="text-primary" fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
+          ),
+        },
       ],
     },
   }
@@ -1483,7 +1496,7 @@ export const NavbarPlexicus = ({
                           <div className="w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors">
                             {React.cloneElement(item.icon as React.ReactElement<React.SVGProps<SVGSVGElement>>, { width: 16, height: 16 })}
                           </div>
-                          <div>
+                          <div className="flex-1">
                             <h4 className="font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors">
                               {item.title}
                             </h4>

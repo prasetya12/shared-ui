@@ -77,32 +77,32 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}/products/benefits`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}products/benefits`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.benefits')}
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}/products/use-cases`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}products/use-cases`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.use_cases')}
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}/products/aspm`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}products/aspm`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.aspm')}
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}/products/cspm`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}products/cspm`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.cspm')}
                 </Link>
               </li>
               <li>
-                <Link href={`${WEB_URL}${lang}/products/container`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}products/container`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.container_security')}
                 </Link>
               </li>
                <li>
-                <Link href={`${WEB_URL}${lang}/products/cwpp`} className="text-gray-600 hover:text-gray-900">
+                <Link href={`${WEB_URL}${lang}products/cwpp`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.products.links.cwpp')}
                 </Link>
               </li>
@@ -131,11 +131,11 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
                   {t('footer.sections.resources.links.documentation')}
                 </Link>
               </li>
-              {/* <li>
-                <Link href={`${WEB_URL}${lang}case-studies`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.resources.links.case_studies')}
+              <li>
+                <Link href={`${WEB_URL}${lang}support`} className="text-gray-600 hover:text-gray-900">
+                {t("nav.resources.support")}
                 </Link>
-              </li> */}
+              </li>
               {/* <li>
                 <Link href={`${WEB_URL}${lang}security-resources`} className="text-gray-600 hover:text-gray-900">
                   {t('footer.sections.resources.links.security_resources')}
