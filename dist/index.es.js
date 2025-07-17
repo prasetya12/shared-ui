@@ -54,7 +54,7 @@ function Gt() {
       switch (f) {
         case b:
           return "Fragment";
-        case M:
+        case z:
           return "Profiler";
         case _:
           return "StrictMode";
@@ -237,7 +237,7 @@ React keys must be passed directly to JSX without using spread:
     function h(f) {
       typeof f == "object" && f !== null && f.$$typeof === g && f._store && (f._store.validated = 1);
     }
-    var m = Me, g = Symbol.for("react.transitional.element"), p = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), M = Symbol.for("react.profiler"), S = Symbol.for("react.consumer"), T = Symbol.for("react.context"), R = Symbol.for("react.forward_ref"), w = Symbol.for("react.suspense"), $ = Symbol.for("react.suspense_list"), I = Symbol.for("react.memo"), x = Symbol.for("react.lazy"), O = Symbol.for("react.activity"), E = Symbol.for("react.client.reference"), G = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Q = Object.prototype.hasOwnProperty, Y = Array.isArray, V = console.createTask ? console.createTask : function() {
+    var m = Me, g = Symbol.for("react.transitional.element"), p = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), z = Symbol.for("react.profiler"), S = Symbol.for("react.consumer"), T = Symbol.for("react.context"), R = Symbol.for("react.forward_ref"), w = Symbol.for("react.suspense"), $ = Symbol.for("react.suspense_list"), I = Symbol.for("react.memo"), x = Symbol.for("react.lazy"), O = Symbol.for("react.activity"), E = Symbol.for("react.client.reference"), G = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Q = Object.prototype.hasOwnProperty, Y = Array.isArray, V = console.createTask ? console.createTask : function() {
       return null;
     };
     m = {
@@ -506,23 +506,23 @@ const Xe = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Ze = bt, K
       d = c + (d.length > 0 ? " " + d : d);
       continue;
     }
-    let _ = !!b, M = s(_ ? p.substring(0, b) : p);
-    if (!M) {
+    let _ = !!b, z = s(_ ? p.substring(0, b) : p);
+    if (!z) {
       if (!_) {
         d = c + (d.length > 0 ? " " + d : d);
         continue;
       }
-      if (M = s(p), !M) {
+      if (z = s(p), !z) {
         d = c + (d.length > 0 ? " " + d : d);
         continue;
       }
       _ = !1;
     }
-    const S = n(m).join(":"), T = g ? S + Te : S, R = T + M;
+    const S = n(m).join(":"), T = g ? S + Te : S, R = T + z;
     if (a.includes(R))
       continue;
     a.push(R);
-    const w = i(M, _);
+    const w = i(z, _);
     for (let $ = 0; $ < w.length; ++$) {
       const I = w[$];
       a.push(T + I);
@@ -577,7 +577,7 @@ const U = (o) => {
   const s = Ct.exec(o);
   return s ? s[1] ? e(s[1]) : t : !1;
 }, Lt = (o) => o === "position" || o === "percentage", Nt = (o) => o === "image" || o === "url", Ot = (o) => o === "length" || o === "size" || o === "bg-size", Pt = (o) => o === "length", Ss = (o) => o === "number", Cs = (o) => o === "family-name", Rt = (o) => o === "shadow", _s = () => {
-  const o = U("color"), e = U("font"), t = U("text"), s = U("font-weight"), i = U("tracking"), n = U("leading"), a = U("breakpoint"), l = U("container"), d = U("spacing"), u = U("radius"), c = U("shadow"), h = U("inset-shadow"), m = U("text-shadow"), g = U("drop-shadow"), p = U("blur"), b = U("perspective"), _ = U("aspect"), M = U("ease"), S = U("animate"), T = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], R = () => [
+  const o = U("color"), e = U("font"), t = U("text"), s = U("font-weight"), i = U("tracking"), n = U("leading"), a = U("breakpoint"), l = U("container"), d = U("spacing"), u = U("radius"), c = U("shadow"), h = U("inset-shadow"), m = U("text-shadow"), g = U("drop-shadow"), p = U("blur"), b = U("perspective"), _ = U("aspect"), z = U("ease"), S = U("animate"), T = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], R = () => [
     "center",
     "top",
     "bottom",
@@ -2520,7 +2520,7 @@ const U = (o) => {
        * @see https://tailwindcss.com/docs/transition-timing-function
        */
       ease: [{
-        ease: ["linear", "initial", M, v, y]
+        ease: ["linear", "initial", z, v, y]
       }],
       /**
        * Transition Delay
@@ -3087,7 +3087,7 @@ const Os = Kt(
   ({ className: o, variant: e, size: t, ...s }, i) => /* @__PURE__ */ r.jsx("button", { className: Ns(Os({ variant: e, size: t, className: o })), ref: i, ...s })
 );
 Fe.displayName = "Button";
-const z = ({ href: o, children: e, className: t = "", target: s = "_self", rel: i = "noopener noreferrer", onClick: n }) => {
+const M = ({ href: o, children: e, className: t = "", target: s = "_self", rel: i = "noopener noreferrer", onClick: n }) => {
   const a = (l) => {
     s !== "_blank" && (l.preventDefault(), window.location.href = o), n && n(l);
   };
@@ -3232,7 +3232,7 @@ const Us = (o, e) => {
   const c = (n.isInitialized || n.initializedStoreOnce) && u.every((x) => Rs(x, n, a)), h = Gs(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), m = () => h, g = () => zt(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), [p, b] = ce(m);
   let _ = u.join();
   e.lng && (_ = `${e.lng}${_}`);
-  const M = Us(_), S = _e(!0);
+  const z = Us(_), S = _e(!0);
   re(() => {
     const {
       bindI18n: x,
@@ -3242,7 +3242,7 @@ const Us = (o, e) => {
       S.current && b(g);
     }) : We(n, u, () => {
       S.current && b(g);
-    })), c && M && M !== _ && S.current && b(g);
+    })), c && z && z !== _ && S.current && b(g);
     const E = () => {
       S.current && b(g);
     };
@@ -3598,13 +3598,13 @@ class Pe extends Re {
       } : l;
     const g = this.resolve(e, i);
     let p = g == null ? void 0 : g.res;
-    const b = (g == null ? void 0 : g.usedKey) || l, _ = (g == null ? void 0 : g.exactUsedKey) || l, M = ["[object Number]", "[object Function]", "[object RegExp]"], S = i.joinArrays !== void 0 ? i.joinArrays : this.options.joinArrays, T = !this.i18nFormat || this.i18nFormat.handleAsObject, R = i.count !== void 0 && !C(i.count), w = Pe.hasDefaultValue(i), $ = R ? this.pluralResolver.getSuffix(h, i.count, i) : "", I = i.ordinal && R ? this.pluralResolver.getSuffix(h, i.count, {
+    const b = (g == null ? void 0 : g.usedKey) || l, _ = (g == null ? void 0 : g.exactUsedKey) || l, z = ["[object Number]", "[object Function]", "[object RegExp]"], S = i.joinArrays !== void 0 ? i.joinArrays : this.options.joinArrays, T = !this.i18nFormat || this.i18nFormat.handleAsObject, R = i.count !== void 0 && !C(i.count), w = Pe.hasDefaultValue(i), $ = R ? this.pluralResolver.getSuffix(h, i.count, i) : "", I = i.ordinal && R ? this.pluralResolver.getSuffix(h, i.count, {
       ordinal: !1
     }) : "", x = R && !i.ordinal && i.count === 0, O = x && i[`defaultValue${this.options.pluralSeparator}zero`] || i[`defaultValue${$}`] || i[`defaultValue${I}`] || i.defaultValue;
     let E = p;
     T && !p && w && (E = O);
     const G = ut(E), Q = Object.prototype.toString.apply(E);
-    if (T && E && G && M.indexOf(Q) < 0 && !(C(S) && Array.isArray(E))) {
+    if (T && E && G && z.indexOf(Q) < 0 && !(C(S) && Array.isArray(E))) {
       if (!i.returnObjects && !this.options.returnObjects) {
         this.options.returnedObjectHandler || this.logger.warn("accessing an object - but returnObjects options is not enabled!");
         const Y = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(b, E, {
@@ -3719,8 +3719,8 @@ class Pe extends Re {
       this.options.fallbackNS && (h = h.concat(this.options.fallbackNS));
       const m = t.count !== void 0 && !C(t.count), g = m && !t.ordinal && t.count === 0, p = t.context !== void 0 && (C(t.context) || typeof t.context == "number") && t.context !== "", b = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
       h.forEach((_) => {
-        var M, S;
-        this.isValidLookup(s) || (l = _, !dt[`${b[0]}-${_}`] && ((M = this.utils) != null && M.hasLoadedNamespace) && !((S = this.utils) != null && S.hasLoadedNamespace(l)) && (dt[`${b[0]}-${_}`] = !0, this.logger.warn(`key "${i}" for languages "${b.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), b.forEach((T) => {
+        var z, S;
+        this.isValidLookup(s) || (l = _, !dt[`${b[0]}-${_}`] && ((z = this.utils) != null && z.hasLoadedNamespace) && !((S = this.utils) != null && S.hasLoadedNamespace(l)) && (dt[`${b[0]}-${_}`] = !0, this.logger.warn(`key "${i}" for languages "${b.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), b.forEach((T) => {
           var $;
           if (this.isValidLookup(s)) return;
           a = T;
@@ -3932,10 +3932,10 @@ class ir {
       nestingSuffix: p,
       nestingSuffixEscaped: b,
       nestingOptionsSeparator: _,
-      maxReplaces: M,
+      maxReplaces: z,
       alwaysFormat: S
     } = e.interpolation;
-    this.escape = t !== void 0 ? t : Xs, this.escapeValue = s !== void 0 ? s : !0, this.useRawValueToEscape = i !== void 0 ? i : !1, this.prefix = n ? le(n) : a || "{{", this.suffix = l ? le(l) : d || "}}", this.formatSeparator = u || ",", this.unescapePrefix = c ? "" : h || "-", this.unescapeSuffix = this.unescapePrefix ? "" : c || "", this.nestingPrefix = m ? le(m) : g || le("$t("), this.nestingSuffix = p ? le(p) : b || le(")"), this.nestingOptionsSeparator = _ || ",", this.maxReplaces = M || 1e3, this.alwaysFormat = S !== void 0 ? S : !1, this.resetRegExp();
+    this.escape = t !== void 0 ? t : Xs, this.escapeValue = s !== void 0 ? s : !0, this.useRawValueToEscape = i !== void 0 ? i : !1, this.prefix = n ? le(n) : a || "{{", this.suffix = l ? le(l) : d || "}}", this.formatSeparator = u || ",", this.unescapePrefix = c ? "" : h || "-", this.unescapeSuffix = this.unescapePrefix ? "" : c || "", this.nestingPrefix = m ? le(m) : g || le("$t("), this.nestingSuffix = p ? le(p) : b || le(")"), this.nestingOptionsSeparator = _ || ",", this.maxReplaces = z || 1e3, this.alwaysFormat = S !== void 0 ? S : !1, this.resetRegExp();
   }
   reset() {
     this.options && this.init(this.options);
@@ -3956,8 +3956,8 @@ class ir {
           interpolationkey: p
         }) : S;
       }
-      const b = p.split(this.formatSeparator), _ = b.shift().trim(), M = b.join(this.formatSeparator).trim();
-      return this.format(gt(t, d, _, this.options.keySeparator, this.options.ignoreJSONStructure), M, s, {
+      const b = p.split(this.formatSeparator), _ = b.shift().trim(), z = b.join(this.formatSeparator).trim();
+      return this.format(gt(t, d, _, this.options.keySeparator, this.options.ignoreJSONStructure), z, s, {
         ...i,
         ...t,
         interpolationkey: _
@@ -3976,8 +3976,8 @@ class ir {
         const b = n[1].trim();
         if (a = u(b), a === void 0)
           if (typeof c == "function") {
-            const M = c(e, n, i);
-            a = C(M) ? M : "";
+            const z = c(e, n, i);
+            a = C(z) ? z : "";
           } else if (i && Object.prototype.hasOwnProperty.call(i, b))
             a = "";
           else if (h) {
@@ -5027,7 +5027,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
   re(() => () => {
     u.current && clearTimeout(u.current), b.current.forEach(clearTimeout), b.current = [];
   }, []);
-  const M = Ce(
+  const z = Ce(
     (w) => {
       d(l === w ? null : w);
     },
@@ -5826,7 +5826,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
       children: [
         /* @__PURE__ */ r.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl", children: [
           /* @__PURE__ */ r.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ r.jsx(
-            z,
+            M,
             {
               href: `${S}${s}`,
               className: "flex items-center gap-2 overflow-visible",
@@ -5858,7 +5858,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
                     "aria-expanded": l === w,
                     "aria-haspopup": "true",
-                    onClick: () => M(w),
+                    onClick: () => z(w),
                     children: [
                       /* @__PURE__ */ r.jsx("span", { className: "hidden lg:inline", children: $.title }),
                       /* @__PURE__ */ r.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
@@ -5886,7 +5886,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
               w
             )),
             /* @__PURE__ */ r.jsx(
-              z,
+              M,
               {
                 href: `${S}${s}pricing`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
@@ -5905,7 +5905,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
                     "aria-expanded": l === w,
                     "aria-haspopup": "true",
-                    onClick: () => M(w),
+                    onClick: () => z(w),
                     children: [
                       /* @__PURE__ */ r.jsx("span", { className: "hidden lg:inline", children: $.title }),
                       /* @__PURE__ */ r.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
@@ -5933,7 +5933,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
               w
             )),
             /* @__PURE__ */ r.jsx(
-              z,
+              M,
               {
                 href: `${S}${s}contact`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
@@ -5943,14 +5943,14 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
           ] }),
           /* @__PURE__ */ r.jsxs("div", { className: "hidden md:flex items-center gap-4", children: [
             /* @__PURE__ */ r.jsx(
-              z,
+              M,
               {
                 href: `${vt}/login`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap",
                 children: c("nav.login")
               }
             ),
-            /* @__PURE__ */ r.jsx(z, { href: `${vt}/register`, children: /* @__PURE__ */ r.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: c("nav.get_started") }) })
+            /* @__PURE__ */ r.jsx(M, { href: `${vt}/register`, children: /* @__PURE__ */ r.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: c("nav.get_started") }) })
           ] }),
           /* @__PURE__ */ r.jsx(
             "button",
@@ -6364,7 +6364,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                   ] })
                 ] }),
                 /* @__PURE__ */ r.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ r.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: R[l].items.filter((w) => l !== "resources" || !w.title.startsWith("vs ")).map((w, $) => /* @__PURE__ */ r.jsxs(
-                  z,
+                  M,
                   {
                     href: w.href,
                     className: "flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors group",
@@ -6393,7 +6393,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
               Object.entries(R).map(([w, $]) => /* @__PURE__ */ r.jsxs("div", { className: "space-y-2", children: [
                 /* @__PURE__ */ r.jsx("h3", { className: "font-semibold", children: $.title }),
                 /* @__PURE__ */ r.jsx("div", { className: "grid grid-cols-1 gap-2", children: $.items.map((I, x) => /* @__PURE__ */ r.jsxs(
-                  z,
+                  M,
                   {
                     href: I.href,
                     className: "flex items-center p-2 rounded-md bg-gray-50 hover:bg-gray-100",
@@ -6407,7 +6407,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                 )) })
               ] }, w)),
               /* @__PURE__ */ r.jsx(
-                z,
+                M,
                 {
                   href: `${S}${s}pricing`,
                   className: "block py-2 text-sm font-medium",
@@ -6416,7 +6416,7 @@ const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", vt = "http
                 }
               ),
               /* @__PURE__ */ r.jsx(
-                z,
+                M,
                 {
                   href: `${S}${s}contact`,
                   className: "block py-2 text-sm font-medium",
@@ -6484,14 +6484,14 @@ function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
   return /* @__PURE__ */ r.jsx("footer", { className: "bg-gray-50 border-t border-gray-200", children: /* @__PURE__ */ r.jsxs("div", { className: "container mx-auto px-4 md:px-6 pt-12 pb-6", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "grid grid-cols-1 gap-8 lg:grid-cols-5", children: [
       /* @__PURE__ */ r.jsxs("div", { className: "lg:col-span-2", children: [
-        /* @__PURE__ */ r.jsx(z, { href: `${l}${s}`, className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ r.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus ASPM", className: "h-10 w-auto" }) }),
+        /* @__PURE__ */ r.jsx(M, { href: `${l}${s}`, className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ r.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus ASPM", className: "h-10 w-auto" }) }),
         /* @__PURE__ */ r.jsx("p", { className: "text-gray-600 mb-4 max-w-sm", children: n("footer.tagline") }),
         /* @__PURE__ */ r.jsxs("div", { className: "flex gap-4", children: [
           /* @__PURE__ */ r.jsxs("a", { href: "#", className: "text-gray-400 hover:text-gray-500", children: [
             /* @__PURE__ */ r.jsx("span", { className: "sr-only", children: n("footer.social_media.twitter") }),
             /* @__PURE__ */ r.jsx("svg", { className: "h-6 w-6", fill: "currentColor", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ r.jsx("path", { d: "M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" }) })
           ] }),
-          /* @__PURE__ */ r.jsxs("a", { href: "#", className: "text-gray-400 hover:text-gray-500", children: [
+          /* @__PURE__ */ r.jsxs("a", { href: "https://www.linkedin.com/company/plexicus/", className: "text-gray-400 hover:text-gray-500", children: [
             /* @__PURE__ */ r.jsx("span", { className: "sr-only", children: n("footer.social_media.linkedin") }),
             /* @__PURE__ */ r.jsx("svg", { className: "h-6 w-6", fill: "currentColor", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ r.jsx(
               "path",
@@ -6519,48 +6519,44 @@ function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
       /* @__PURE__ */ r.jsxs("div", { children: [
         /* @__PURE__ */ r.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: n("footer.sections.products.title") }),
         /* @__PURE__ */ r.jsxs("ul", { className: "space-y-2", children: [
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}products/cnapp-platform`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.platform_overview") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/benefits`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.benefits") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/use-cases`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.use_cases") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/aspm`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.aspm") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/cspm`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.cspm") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/container`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.container_security") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/cwpp`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.cwpp") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}/products/ciem`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.ciem") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}pricing`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.pricing") }) })
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}products/cnapp-platform`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.platform_overview") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}/products/benefits`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.benefits") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}/products/use-cases`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.use_cases") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}/products/aspm`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.aspm") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}/products/cspm`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.cspm") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}/products/container`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.container_security") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}/products/cwpp`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.cwpp") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}/products/ciem`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.ciem") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}pricing`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.products.links.pricing") }) })
         ] })
       ] }),
       /* @__PURE__ */ r.jsxs("div", { children: [
         /* @__PURE__ */ r.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: n("footer.sections.resources.title") }),
         /* @__PURE__ */ r.jsxs("ul", { className: "space-y-2", children: [
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${d}`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.resources.links.blog") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: "https://docs.plexicus.com/", className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.resources.links.documentation") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}case-studies`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.resources.links.case_studies") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}security-resources`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.resources.links.security_resources") }) })
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${d}`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.resources.links.blog") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: "https://docs.plexicus.com/", className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.resources.links.documentation") }) })
         ] })
       ] }),
       /* @__PURE__ */ r.jsxs("div", { children: [
         /* @__PURE__ */ r.jsx("h3", { className: "text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4", children: n("footer.sections.company.title") }),
         /* @__PURE__ */ r.jsxs("ul", { className: "space-y-2", children: [
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}about`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.company.links.about_us") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}contact`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.company.links.contact") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}careers`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.company.links.careers") }) }),
-          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(z, { href: `${l}${s}privacy`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.company.links.privacy_policy") }) })
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}contact`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.company.links.contact") }) }),
+          /* @__PURE__ */ r.jsx("li", { children: /* @__PURE__ */ r.jsx(M, { href: `${l}${s}privacy`, className: "text-gray-600 hover:text-gray-900", children: n("footer.sections.company.links.privacy_policy") }) })
         ] })
       ] })
     ] }),
     /* @__PURE__ */ r.jsx("div", { className: "mt-8 pt-6 border-t border-gray-200", children: /* @__PURE__ */ r.jsxs("div", { className: "flex justify-between items-center mb-3", children: [
       /* @__PURE__ */ r.jsxs("p", { className: "text-gray-500 text-sm", children: [
         "© 2025 PLEXICUS, S.L",
-        /* @__PURE__ */ r.jsx(z, { href: `${l}${s}privacy`, className: "underline hover:text-gray-700 ml-4", children: n("footer.policies.privacy_policy") }),
+        /* @__PURE__ */ r.jsx(M, { href: `${l}${s}privacy`, className: "underline hover:text-gray-700 ml-4", children: n("footer.policies.privacy_policy") }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ r.jsx(z, { href: `${l}${s}management`, className: "underline hover:text-gray-700", children: n("footer.policies.management_policy") }),
+        /* @__PURE__ */ r.jsx(M, { href: `${l}${s}management`, className: "underline hover:text-gray-700", children: n("footer.policies.management_policy") }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ r.jsx(z, { href: `${l}${s}legal`, className: "underline hover:text-gray-700", children: n("footer.policies.legal_notice") })
+        /* @__PURE__ */ r.jsx(M, { href: `${l}${s}legal`, className: "underline hover:text-gray-700", children: n("footer.policies.legal_notice") })
       ] }),
       /* @__PURE__ */ r.jsx("div", { children: /* @__PURE__ */ r.jsxs("div", { className: "inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200", children: [
         /* @__PURE__ */ r.jsx("svg", { className: "w-4 h-4 mr-1", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ r.jsx(
