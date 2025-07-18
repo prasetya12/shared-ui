@@ -143,7 +143,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 md:px-6 pt-12 pb-6">
-        <div id="footer-grid" className="grid grid-cols-1 gap-8 lg:grid-cols-5">
+        <div id="footer-grid" className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href={`${WEB_URL}${lang}`} className="flex items-center gap-2 mb-4">
               <img src="/images/plexicus-logo-color.png" alt="Plexicus S.L." className="h-10 w-auto" />
