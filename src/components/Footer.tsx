@@ -27,10 +27,95 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
   const WEB_URL = getFullsiteUrl(fullSiteUrl, API_URL_WEB)
   const BLOG_URL = getFullsiteUrl(fullBlogUrl, API_URL_BLOG)
 
+  const footerItems = [
+    {
+      title: t('footer.sections.products.title'),
+      items: [
+        {
+          link: `${WEB_URL}${lang}products/cnapp-platform`,
+          text: t('footer.sections.products.links.platform_overview')
+        },
+        {
+          link: `${WEB_URL}${lang}products/benefits`,
+          text: t('footer.sections.products.links.benefits')
+        },
+        {
+          link: `${WEB_URL}${lang}products/use-cases`,
+          text: t('footer.sections.products.links.use_cases')
+        },
+        {
+          link: `${WEB_URL}${lang}products/aspm`,
+          text: t('footer.sections.products.links.aspm')
+        },
+        {
+          link: `${WEB_URL}${lang}products/cspm`,
+          text: t('footer.sections.products.links.cspm')
+        },
+        {
+          link: `${WEB_URL}${lang}products/container`,
+          text: t('footer.sections.products.links.container_security')
+        },
+        {
+          link: `${WEB_URL}${lang}products/cwpp`,
+          text: t('footer.sections.products.links.cwpp')
+        },
+        {
+          link: `${WEB_URL}${lang}/products/ciem`,
+          text: t('footer.sections.products.links.ciem')
+        }
+      ]
+    },
+    {
+      title: t('footer.sections.resources.title'),
+      items: [
+        {
+          link: `${BLOG_URL}`,
+          text: t('footer.sections.resources.links.blog')
+        },
+        {
+          link: 'https://docs.plexicus.com/',
+          text: t('footer.sections.resources.links.documentation')
+        },
+        {
+          text: t("nav.resources.changelogs"),
+          link: "https://plexicus.canny.io/changelog",
+        },
+        {
+          text: t("nav.resources.youtube_channel"),
+          link: "https://youtube.com/@plexicus",
+        },
+        {
+          text: t("nav.resources.feature_requests"),
+          link: "https://plexicus.canny.io/feature-requests",
+        }
+      ]
+    },
+    {
+      title: t('footer.sections.company.title'),
+      items: [
+        {
+          link: `${WEB_URL}${lang}contact`,
+          text: t('footer.sections.company.links.contact')
+        },
+        {
+          link: `${WEB_URL}${lang}privacy`,
+          text: t('footer.sections.company.links.privacy_policy')
+        },
+        {
+          link: `${WEB_URL}${lang}pricing`,
+          text: t('footer.sections.products.links.pricing')
+        },
+        {
+          link: `${WEB_URL}${lang}support`,
+          text: t("nav.resources.support")
+        }
+      ]
+    }
+  ]
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 md:px-6 pt-12 pb-6">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
+        <div id="footer-grid" className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href={`${WEB_URL}${lang}`} className="flex items-center gap-2 mb-4">
               <img src="/images/plexicus-logo-color.png" alt="Plexicus ASPM" className="h-10 w-auto" />
@@ -68,106 +153,21 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
               <SelectLanguage />
             </div>
           </div>
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.products.title')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href={`${WEB_URL}${lang}products/cnapp-platform`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.platform_overview')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}products/benefits`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.benefits')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}products/use-cases`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.use_cases')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}products/aspm`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.aspm')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}products/cspm`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.cspm')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}products/container`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.container_security')}
-                </Link>
-              </li>
-               <li>
-                <Link href={`${WEB_URL}${lang}products/cwpp`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.cwpp')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}/products/ciem`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.ciem')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}pricing`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.products.links.pricing')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.resources.title')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href={`${BLOG_URL}`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.resources.links.blog')}
-                </Link>
-              </li>
-              <li>
-                <Link href='https://docs.plexicus.com/' className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.resources.links.documentation')}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${WEB_URL}${lang}support`} className="text-gray-600 hover:text-gray-900">
-                {t("nav.resources.support")}
-                </Link>
-              </li>
-              {/* <li>
-                <Link href={`${WEB_URL}${lang}security-resources`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.resources.links.security_resources')}
-                </Link>
-              </li> */}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">{t('footer.sections.company.title')}</h3>
-            <ul className="space-y-2">
-              {/* <li>
-                <Link href={`${WEB_URL}${lang}about`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.company.links.about_us')}
-                </Link>
-              </li> */}
-              <li>
-                <Link href={`${WEB_URL}${lang}contact`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.company.links.contact')}
-                </Link>
-              </li>
-              {/* <li>
-                <Link href={`${WEB_URL}${lang}careers`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.company.links.careers')}
-                </Link>
-              </li> */}
-              <li>
-                <Link href={`${WEB_URL}${lang}privacy`} className="text-gray-600 hover:text-gray-900">
-                  {t('footer.sections.company.links.privacy_policy')}
-                </Link>
-              </li>
-            </ul>
-          </div>
+
+          {footerItems.map(({title, items}) => (
+            <div>
+               <h3 className="text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4">{title}</h3>
+               <ul className="space-y-2">
+                {items.map(({link, text}) => (
+                      <li>
+                      <Link href={link} className="text-gray-600 hover:text-purple-700">
+                        {text}
+                      </Link>
+                    </li>
+                ))}
+               </ul>
+            </div>
+          ))}
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
