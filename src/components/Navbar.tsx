@@ -896,7 +896,7 @@ export const NavbarPlexicus = ({
           </Link>
         </div>
 
-        <nav className="hidden md:flex md:gap-4 lg:gap-6" aria-label="Main Navigation">
+        <nav className="hidden xl:flex md:gap-4 lg:gap-6" aria-label="Main Navigation">
           {Object.entries(menus)
             .filter(([key]) => key === "products")
             .map(([key, menu]) => (
@@ -981,7 +981,8 @@ export const NavbarPlexicus = ({
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+       <div className="flex">
+         <div className="flex items-center gap-4">
           <Link
             href={`${APP_URL}/login`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
@@ -996,7 +997,7 @@ export const NavbarPlexicus = ({
         </div>
 
         <button
-          className="flex md:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white"
+          className="flex xl:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
@@ -1038,6 +1039,7 @@ export const NavbarPlexicus = ({
             </svg>
           )}
         </button>
+       </div>
       </div>
 
       {/* Mega menu */}
@@ -1513,7 +1515,7 @@ export const NavbarPlexicus = ({
       )}
 
       {/* Mobile menu */}
-      {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 lg:hidden" onClick={() => setMenuOpen(false)}></div>}
+      {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 md:hidden" onClick={() => setMenuOpen(false)}></div>}
       <div
         className={`md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         style={{ top: "64px", height: "calc(100vh - 64px)", overflow: "auto" }}
