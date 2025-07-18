@@ -5006,7 +5006,7 @@ H.use(Ws).init({
   fallbackLng: "en",
   react: { useSuspense: !1 }
 });
-const It = "https://www.plexicus.ai", Ft = "http://blog.plexicus.ai", wt = "https://app.plexicus.ai", gr = ({
+const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "https://app.plexicus.ai", gr = ({
   lang: i,
   fullSiteUrl: e = "http://localhost:8000",
   fullBlogUrl: t = "http://localhost:9000"
