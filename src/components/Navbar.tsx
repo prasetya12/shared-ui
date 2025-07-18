@@ -726,34 +726,34 @@ export const NavbarPlexicus = ({
             </svg>
           ),
         },
-        // {
-        //   title: t("nav.resources.branding_assets"),
-        //   description: t("nav.resources.branding_assets_desc"),
-        //   href: `${WEB_URL}${lang}resources/branding`,
-        //   icon: (
-        //     <svg
-        //       xmlns="http://www.w3.org/2000/svg"
-        //       width="24"
-        //       height="24"
-        //       viewBox="0 0 24 24"
-        //       fill="none"
-        //       stroke="currentColor"
-        //       strokeWidth="2"
-        //       strokeLinecap="round"
-        //       strokeLinejoin="round"
-        //       className="text-primary"
-        //       aria-hidden="true"
-        //     >
-        //       <path d="M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" />
-        //       <path d="m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" />
-        //       <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" />
-        //       <path d="m3.5 13.5 5-5" />
-        //       <path d="m5 19 5-5" />
-        //       <path d="m17.5 6.5-5 5" />
-        //       <path d="m16 17-5-5" />
-        //     </svg>
-        //   ),
-        // },
+        {
+          title: t("nav.resources.branding_assets"),
+          description: t("nav.resources.branding_assets_desc"),
+          href: `${WEB_URL}${lang}branding-assets`,
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              aria-hidden="true"
+            >
+              <path d="M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" />
+              <path d="m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" />
+              <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" />
+              <path d="m3.5 13.5 5-5" />
+              <path d="m5 19 5-5" />
+              <path d="m17.5 6.5-5 5" />
+              <path d="m16 17-5-5" />
+            </svg>
+          ),
+        },
         {
           title: t("nav.resources.changelogs"),
           description: t("nav.resources.changelogs_desc"),
