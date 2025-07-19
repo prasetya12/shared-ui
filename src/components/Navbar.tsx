@@ -726,34 +726,34 @@ export const NavbarPlexicus = ({
             </svg>
           ),
         },
-        // {
-        //   title: t("nav.resources.branding_assets"),
-        //   description: t("nav.resources.branding_assets_desc"),
-        //   href: `${WEB_URL}${lang}resources/branding`,
-        //   icon: (
-        //     <svg
-        //       xmlns="http://www.w3.org/2000/svg"
-        //       width="24"
-        //       height="24"
-        //       viewBox="0 0 24 24"
-        //       fill="none"
-        //       stroke="currentColor"
-        //       strokeWidth="2"
-        //       strokeLinecap="round"
-        //       strokeLinejoin="round"
-        //       className="text-primary"
-        //       aria-hidden="true"
-        //     >
-        //       <path d="M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" />
-        //       <path d="m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" />
-        //       <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" />
-        //       <path d="m3.5 13.5 5-5" />
-        //       <path d="m5 19 5-5" />
-        //       <path d="m17.5 6.5-5 5" />
-        //       <path d="m16 17-5-5" />
-        //     </svg>
-        //   ),
-        // },
+        {
+          title: t("nav.resources.branding_assets"),
+          description: t("nav.resources.branding_assets_desc"),
+          href: `${WEB_URL}${lang}branding-assets`,
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              aria-hidden="true"
+            >
+              <path d="M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" />
+              <path d="m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" />
+              <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" />
+              <path d="m3.5 13.5 5-5" />
+              <path d="m5 19 5-5" />
+              <path d="m17.5 6.5-5 5" />
+              <path d="m16 17-5-5" />
+            </svg>
+          ),
+        },
         {
           title: t("nav.resources.changelogs"),
           description: t("nav.resources.changelogs_desc"),
@@ -896,7 +896,7 @@ export const NavbarPlexicus = ({
           </Link>
         </div>
 
-        <nav className="hidden md:flex md:gap-4 lg:gap-6" aria-label="Main Navigation">
+        <nav className="hidden xl:flex md:gap-4 lg:gap-6" aria-label="Main Navigation">
           {Object.entries(menus)
             .filter(([key]) => key === "products")
             .map(([key, menu]) => (
@@ -981,7 +981,8 @@ export const NavbarPlexicus = ({
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+       <div className="flex">
+         <div className="flex items-center gap-4">
           <Link
             href={`${APP_URL}/login`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
@@ -996,7 +997,7 @@ export const NavbarPlexicus = ({
         </div>
 
         <button
-          className="flex md:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white"
+          className="flex xl:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
@@ -1038,6 +1039,7 @@ export const NavbarPlexicus = ({
             </svg>
           )}
         </button>
+       </div>
       </div>
 
       {/* Mega menu */}
@@ -1513,7 +1515,7 @@ export const NavbarPlexicus = ({
       )}
 
       {/* Mobile menu */}
-      {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 lg:hidden" onClick={() => setMenuOpen(false)}></div>}
+      {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 md:hidden" onClick={() => setMenuOpen(false)}></div>}
       <div
         className={`md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         style={{ top: "64px", height: "calc(100vh - 64px)", overflow: "auto" }}
