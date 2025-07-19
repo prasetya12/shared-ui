@@ -15,7 +15,7 @@ var Ye;
 function Ut() {
   if (Ye) return fe;
   Ye = 1;
-  var i = Symbol.for("react.transitional.element"), e = Symbol.for("react.fragment");
+  var o = Symbol.for("react.transitional.element"), e = Symbol.for("react.fragment");
   function t(s, r, n) {
     var a = null;
     if (n !== void 0 && (a = "" + n), r.key !== void 0 && (a = "" + r.key), "key" in r) {
@@ -24,7 +24,7 @@ function Ut() {
         l !== "key" && (n[l] = r[l]);
     } else n = r;
     return r = n.ref, {
-      $$typeof: i,
+      $$typeof: o,
       type: s,
       key: a,
       ref: r !== void 0 ? r : null,
@@ -46,7 +46,7 @@ var pe = {};
 var qe;
 function Gt() {
   return qe || (qe = 1, process.env.NODE_ENV !== "production" && function() {
-    function i(f) {
+    function o(f) {
       if (f == null) return null;
       if (typeof f == "function")
         return f.$$typeof === z ? null : f.displayName || f.name || null;
@@ -73,17 +73,17 @@ function Gt() {
             return "Portal";
           case A:
             return (f.displayName || "Context") + ".Provider";
-          case S:
+          case j:
             return (f._context.displayName || "Context") + ".Consumer";
           case R:
-            var j = f.render;
-            return f = f.displayName, f || (f = j.displayName || j.name || "", f = f !== "" ? "ForwardRef(" + f + ")" : "ForwardRef"), f;
+            var S = f.render;
+            return f = f.displayName, f || (f = S.displayName || S.name || "", f = f !== "" ? "ForwardRef(" + f + ")" : "ForwardRef"), f;
           case T:
-            return j = f.displayName || null, j !== null ? j : i(f.type) || "Memo";
+            return S = f.displayName || null, S !== null ? S : o(f.type) || "Memo";
           case x:
-            j = f._payload, f = f._init;
+            S = f._payload, f = f._init;
             try {
-              return i(f(j));
+              return o(f(S));
             } catch {
             }
         }
@@ -95,15 +95,15 @@ function Gt() {
     function t(f) {
       try {
         e(f);
-        var j = !1;
+        var S = !1;
       } catch {
-        j = !0;
+        S = !0;
       }
-      if (j) {
-        j = console;
-        var P = j.error, N = typeof Symbol == "function" && Symbol.toStringTag && f[Symbol.toStringTag] || f.constructor.name || "Object";
+      if (S) {
+        S = console;
+        var P = S.error, N = typeof Symbol == "function" && Symbol.toStringTag && f[Symbol.toStringTag] || f.constructor.name || "Object";
         return P.call(
-          j,
+          S,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           N
         ), e(f);
@@ -114,8 +114,8 @@ function Gt() {
       if (typeof f == "object" && f !== null && f.$$typeof === x)
         return "<...>";
       try {
-        var j = i(f);
-        return j ? "<" + j + ">" : "<...>";
+        var S = o(f);
+        return S ? "<" + S + ">" : "<...>";
       } catch {
         return "<...>";
       }
@@ -129,16 +129,16 @@ function Gt() {
     }
     function a(f) {
       if (Q.call(f, "key")) {
-        var j = Object.getOwnPropertyDescriptor(f, "key").get;
-        if (j && j.isReactWarning) return !1;
+        var S = Object.getOwnPropertyDescriptor(f, "key").get;
+        if (S && S.isReactWarning) return !1;
       }
       return f.key !== void 0;
     }
-    function l(f, j) {
+    function l(f, S) {
       function P() {
         q || (q = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
-          j
+          S
         ));
       }
       P.isReactWarning = !0, Object.defineProperty(f, "key", {
@@ -146,22 +146,22 @@ function Gt() {
         configurable: !0
       });
     }
-    function d() {
-      var f = i(this.type);
+    function c() {
+      var f = o(this.type);
       return I[f] || (I[f] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), f = this.props.ref, f !== void 0 ? f : null;
     }
-    function u(f, j, P, N, M, G, ne, F) {
+    function u(f, S, P, N, M, G, ne, F) {
       return P = G.ref, f = {
         $$typeof: g,
         type: f,
-        key: j,
+        key: S,
         props: G,
         _owner: M
       }, (P !== void 0 ? P : null) !== null ? Object.defineProperty(f, "ref", {
         enumerable: !1,
-        get: d
+        get: c
       }) : Object.defineProperty(f, "ref", { enumerable: !1, value: null }), f._store = {}, Object.defineProperty(f._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -184,8 +184,8 @@ function Gt() {
         value: F
       }), Object.freeze && (Object.freeze(f.props), Object.freeze(f)), f;
     }
-    function c(f, j, P, N, M, G, ne, F) {
-      var V = j.children;
+    function d(f, S, P, N, M, G, ne, F) {
+      var V = S.children;
       if (V !== void 0)
         if (N)
           if (K(V)) {
@@ -197,9 +197,9 @@ function Gt() {
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
         else h(V);
-      if (Q.call(j, "key")) {
-        V = i(f);
-        var J = Object.keys(j).filter(function(he) {
+      if (Q.call(S, "key")) {
+        V = o(f);
+        var J = Object.keys(S).filter(function(he) {
           return he !== "key";
         });
         N = 0 < J.length ? "{key: someKey, " + J.join(": ..., ") + ": ...}" : "{key: someKey}", Z[V + N] || (J = 0 < J.length ? "{" + J.join(": ..., ") + ": ...}" : "{}", console.error(
@@ -215,11 +215,11 @@ React keys must be passed directly to JSX without using spread:
           V
         ), Z[V + N] = !0);
       }
-      if (V = null, P !== void 0 && (t(P), V = "" + P), a(j) && (t(j.key), V = "" + j.key), "key" in j) {
+      if (V = null, P !== void 0 && (t(P), V = "" + P), a(S) && (t(S.key), V = "" + S.key), "key" in S) {
         P = {};
-        for (var te in j)
-          te !== "key" && (P[te] = j[te]);
-      } else P = j;
+        for (var te in S)
+          te !== "key" && (P[te] = S[te]);
+      } else P = S;
       return V && l(
         P,
         typeof f == "function" ? f.displayName || f.name || "Unknown" : f
@@ -237,7 +237,7 @@ React keys must be passed directly to JSX without using spread:
     function h(f) {
       typeof f == "object" && f !== null && f.$$typeof === g && f._store && (f._store.validated = 1);
     }
-    var m = Me, g = Symbol.for("react.transitional.element"), p = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), E = Symbol.for("react.profiler"), S = Symbol.for("react.consumer"), A = Symbol.for("react.context"), R = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), $ = Symbol.for("react.suspense_list"), T = Symbol.for("react.memo"), x = Symbol.for("react.lazy"), O = Symbol.for("react.activity"), z = Symbol.for("react.client.reference"), U = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Q = Object.prototype.hasOwnProperty, K = Array.isArray, W = console.createTask ? console.createTask : function() {
+    var m = Me, g = Symbol.for("react.transitional.element"), p = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), E = Symbol.for("react.profiler"), j = Symbol.for("react.consumer"), A = Symbol.for("react.context"), R = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), $ = Symbol.for("react.suspense_list"), T = Symbol.for("react.memo"), x = Symbol.for("react.lazy"), O = Symbol.for("react.activity"), z = Symbol.for("react.client.reference"), U = m.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Q = Object.prototype.hasOwnProperty, K = Array.isArray, W = console.createTask ? console.createTask : function() {
       return null;
     };
     m = {
@@ -249,11 +249,11 @@ React keys must be passed directly to JSX without using spread:
       m,
       n
     )(), k = W(s(n)), Z = {};
-    pe.Fragment = b, pe.jsx = function(f, j, P, N, M) {
+    pe.Fragment = b, pe.jsx = function(f, S, P, N, M) {
       var G = 1e4 > U.recentlyCreatedOwnerStacks++;
-      return c(
+      return d(
         f,
-        j,
+        S,
         P,
         !1,
         N,
@@ -261,11 +261,11 @@ React keys must be passed directly to JSX without using spread:
         G ? Error("react-stack-top-frame") : B,
         G ? W(s(f)) : k
       );
-    }, pe.jsxs = function(f, j, P, N, M) {
+    }, pe.jsxs = function(f, S, P, N, M) {
       var G = 1e4 > U.recentlyCreatedOwnerStacks++;
-      return c(
+      return d(
         f,
-        j,
+        S,
         P,
         !0,
         N,
@@ -280,33 +280,33 @@ var Je;
 function Ht() {
   return Je || (Je = 1, process.env.NODE_ENV === "production" ? be.exports = Ut() : be.exports = Gt()), be.exports;
 }
-var o = Ht();
-function vt(i) {
+var i = Ht();
+function vt(o) {
   var e, t, s = "";
-  if (typeof i == "string" || typeof i == "number") s += i;
-  else if (typeof i == "object") if (Array.isArray(i)) {
-    var r = i.length;
-    for (e = 0; e < r; e++) i[e] && (t = vt(i[e])) && (s && (s += " "), s += t);
-  } else for (t in i) i[t] && (s && (s += " "), s += t);
+  if (typeof o == "string" || typeof o == "number") s += o;
+  else if (typeof o == "object") if (Array.isArray(o)) {
+    var r = o.length;
+    for (e = 0; e < r; e++) o[e] && (t = vt(o[e])) && (s && (s += " "), s += t);
+  } else for (t in o) o[t] && (s && (s += " "), s += t);
   return s;
 }
 function bt() {
-  for (var i, e, t = 0, s = "", r = arguments.length; t < r; t++) (i = arguments[t]) && (e = vt(i)) && (s && (s += " "), s += e);
+  for (var o, e, t = 0, s = "", r = arguments.length; t < r; t++) (o = arguments[t]) && (e = vt(o)) && (s && (s += " "), s += e);
   return s;
 }
-const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, Kt = (i, e) => (t) => {
+const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, Kt = (o, e) => (t) => {
   var s;
-  if ((e == null ? void 0 : e.variants) == null) return Xe(i, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
+  if ((e == null ? void 0 : e.variants) == null) return Xe(o, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
   const { variants: r, defaultVariants: n } = e, a = Object.keys(r).map((u) => {
-    const c = t == null ? void 0 : t[u], h = n == null ? void 0 : n[u];
-    if (c === null) return null;
-    const m = Ze(c) || Ze(h);
+    const d = t == null ? void 0 : t[u], h = n == null ? void 0 : n[u];
+    if (d === null) return null;
+    const m = Ze(d) || Ze(h);
     return r[u][m];
-  }), l = t && Object.entries(t).reduce((u, c) => {
-    let [h, m] = c;
+  }), l = t && Object.entries(t).reduce((u, d) => {
+    let [h, m] = d;
     return m === void 0 || (u[h] = m), u;
-  }, {}), d = e == null || (s = e.compoundVariants) === null || s === void 0 ? void 0 : s.reduce((u, c) => {
-    let { class: h, className: m, ...g } = c;
+  }, {}), c = e == null || (s = e.compoundVariants) === null || s === void 0 ? void 0 : s.reduce((u, d) => {
+    let { class: h, className: m, ...g } = d;
     return Object.entries(g).every((p) => {
       let [b, _] = p;
       return Array.isArray(_) ? _.includes({
@@ -322,54 +322,54 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
       m
     ] : u;
   }, []);
-  return Xe(i, a, d, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
-}, Ue = "-", Yt = (i) => {
-  const e = Jt(i), {
+  return Xe(o, a, c, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
+}, Ue = "-", Yt = (o) => {
+  const e = Jt(o), {
     conflictingClassGroups: t,
     conflictingClassGroupModifiers: s
-  } = i;
+  } = o;
   return {
     getClassGroupId: (a) => {
       const l = a.split(Ue);
       return l[0] === "" && l.length !== 1 && l.shift(), kt(l, e) || qt(a);
     },
     getConflictingClassGroupIds: (a, l) => {
-      const d = t[a] || [];
-      return l && s[a] ? [...d, ...s[a]] : d;
+      const c = t[a] || [];
+      return l && s[a] ? [...c, ...s[a]] : c;
     }
   };
-}, kt = (i, e) => {
+}, kt = (o, e) => {
   var a;
-  if (i.length === 0)
+  if (o.length === 0)
     return e.classGroupId;
-  const t = i[0], s = e.nextPart.get(t), r = s ? kt(i.slice(1), s) : void 0;
+  const t = o[0], s = e.nextPart.get(t), r = s ? kt(o.slice(1), s) : void 0;
   if (r)
     return r;
   if (e.validators.length === 0)
     return;
-  const n = i.join(Ue);
+  const n = o.join(Ue);
   return (a = e.validators.find(({
     validator: l
   }) => l(n))) == null ? void 0 : a.classGroupId;
-}, Qe = /^\[(.+)\]$/, qt = (i) => {
-  if (Qe.test(i)) {
-    const e = Qe.exec(i)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
+}, Qe = /^\[(.+)\]$/, qt = (o) => {
+  if (Qe.test(o)) {
+    const e = Qe.exec(o)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
     if (t)
       return "arbitrary.." + t;
   }
-}, Jt = (i) => {
+}, Jt = (o) => {
   const {
     theme: e,
     classGroups: t
-  } = i, s = {
+  } = o, s = {
     nextPart: /* @__PURE__ */ new Map(),
     validators: []
   };
   for (const r in t)
     Ae(t[r], s, r, e);
   return s;
-}, Ae = (i, e, t, s) => {
-  i.forEach((r) => {
+}, Ae = (o, e, t, s) => {
+  o.forEach((r) => {
     if (typeof r == "string") {
       const n = r === "" ? e : et(e, r);
       n.classGroupId = t;
@@ -390,16 +390,16 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
       Ae(a, et(e, n), t, s);
     });
   });
-}, et = (i, e) => {
-  let t = i;
+}, et = (o, e) => {
+  let t = o;
   return e.split(Ue).forEach((s) => {
     t.nextPart.has(s) || t.nextPart.set(s, {
       nextPart: /* @__PURE__ */ new Map(),
       validators: []
     }), t = t.nextPart.get(s);
   }), t;
-}, Zt = (i) => i.isThemeGetter, Xt = (i) => {
-  if (i < 1)
+}, Zt = (o) => o.isThemeGetter, Xt = (o) => {
+  if (o < 1)
     return {
       get: () => {
       },
@@ -408,7 +408,7 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
     };
   let e = 0, t = /* @__PURE__ */ new Map(), s = /* @__PURE__ */ new Map();
   const r = (n, a) => {
-    t.set(n, a), e++, e > i && (e = 0, s = t, t = /* @__PURE__ */ new Map());
+    t.set(n, a), e++, e > o && (e = 0, s = t, t = /* @__PURE__ */ new Map());
   };
   return {
     get(n) {
@@ -422,19 +422,19 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
       t.has(n) ? t.set(n, a) : r(n, a);
     }
   };
-}, Te = "!", Ie = ":", Qt = Ie.length, es = (i) => {
+}, Te = "!", Ie = ":", Qt = Ie.length, es = (o) => {
   const {
     prefix: e,
     experimentalParseClassName: t
-  } = i;
+  } = o;
   let s = (r) => {
     const n = [];
-    let a = 0, l = 0, d = 0, u;
+    let a = 0, l = 0, c = 0, u;
     for (let p = 0; p < r.length; p++) {
       let b = r[p];
       if (a === 0 && l === 0) {
         if (b === Ie) {
-          n.push(r.slice(d, p)), d = p + Qt;
+          n.push(r.slice(c, p)), c = p + Qt;
           continue;
         }
         if (b === "/") {
@@ -444,7 +444,7 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
       }
       b === "[" ? a++ : b === "]" ? a-- : b === "(" ? l++ : b === ")" && l--;
     }
-    const c = n.length === 0 ? r : r.substring(d), h = ts(c), m = h !== c, g = u && u > d ? u - d : void 0;
+    const d = n.length === 0 ? r : r.substring(c), h = ts(d), m = h !== d, g = u && u > c ? u - c : void 0;
     return {
       modifiers: n,
       hasImportantModifier: m,
@@ -470,8 +470,8 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
     });
   }
   return s;
-}, ts = (i) => i.endsWith(Te) ? i.substring(0, i.length - 1) : i.startsWith(Te) ? i.substring(1) : i, ss = (i) => {
-  const e = Object.fromEntries(i.orderSensitiveModifiers.map((s) => [s, !0]));
+}, ts = (o) => o.endsWith(Te) ? o.substring(0, o.length - 1) : o.startsWith(Te) ? o.substring(1) : o, ss = (o) => {
+  const e = Object.fromEntries(o.orderSensitiveModifiers.map((s) => [s, !0]));
   return (s) => {
     if (s.length <= 1)
       return s;
@@ -481,44 +481,44 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
       a[0] === "[" || e[a] ? (r.push(...n.sort(), a), n = []) : n.push(a);
     }), r.push(...n.sort()), r;
   };
-}, rs = (i) => ({
-  cache: Xt(i.cacheSize),
-  parseClassName: es(i),
-  sortModifiers: ss(i),
-  ...Yt(i)
-}), is = /\s+/, os = (i, e) => {
+}, rs = (o) => ({
+  cache: Xt(o.cacheSize),
+  parseClassName: es(o),
+  sortModifiers: ss(o),
+  ...Yt(o)
+}), is = /\s+/, os = (o, e) => {
   const {
     parseClassName: t,
     getClassGroupId: s,
     getConflictingClassGroupIds: r,
     sortModifiers: n
-  } = e, a = [], l = i.trim().split(is);
-  let d = "";
+  } = e, a = [], l = o.trim().split(is);
+  let c = "";
   for (let u = l.length - 1; u >= 0; u -= 1) {
-    const c = l[u], {
+    const d = l[u], {
       isExternal: h,
       modifiers: m,
       hasImportantModifier: g,
       baseClassName: p,
       maybePostfixModifierPosition: b
-    } = t(c);
+    } = t(d);
     if (h) {
-      d = c + (d.length > 0 ? " " + d : d);
+      c = d + (c.length > 0 ? " " + c : c);
       continue;
     }
     let _ = !!b, E = s(_ ? p.substring(0, b) : p);
     if (!E) {
       if (!_) {
-        d = c + (d.length > 0 ? " " + d : d);
+        c = d + (c.length > 0 ? " " + c : c);
         continue;
       }
       if (E = s(p), !E) {
-        d = c + (d.length > 0 ? " " + d : d);
+        c = d + (c.length > 0 ? " " + c : c);
         continue;
       }
       _ = !1;
     }
-    const S = n(m).join(":"), A = g ? S + Te : S, R = A + E;
+    const j = n(m).join(":"), A = g ? j + Te : j, R = A + E;
     if (a.includes(R))
       continue;
     a.push(R);
@@ -527,57 +527,57 @@ const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, K
       const T = v[$];
       a.push(A + T);
     }
-    d = c + (d.length > 0 ? " " + d : d);
+    c = d + (c.length > 0 ? " " + c : c);
   }
-  return d;
+  return c;
 };
 function ns() {
-  let i = 0, e, t, s = "";
-  for (; i < arguments.length; )
-    (e = arguments[i++]) && (t = jt(e)) && (s && (s += " "), s += t);
+  let o = 0, e, t, s = "";
+  for (; o < arguments.length; )
+    (e = arguments[o++]) && (t = jt(e)) && (s && (s += " "), s += t);
   return s;
 }
-const jt = (i) => {
-  if (typeof i == "string")
-    return i;
+const jt = (o) => {
+  if (typeof o == "string")
+    return o;
   let e, t = "";
-  for (let s = 0; s < i.length; s++)
-    i[s] && (e = jt(i[s])) && (t && (t += " "), t += e);
+  for (let s = 0; s < o.length; s++)
+    o[s] && (e = jt(o[s])) && (t && (t += " "), t += e);
   return t;
 };
-function as(i, ...e) {
+function as(o, ...e) {
   let t, s, r, n = a;
-  function a(d) {
-    const u = e.reduce((c, h) => h(c), i());
-    return t = rs(u), s = t.cache.get, r = t.cache.set, n = l, l(d);
+  function a(c) {
+    const u = e.reduce((d, h) => h(d), o());
+    return t = rs(u), s = t.cache.get, r = t.cache.set, n = l, l(c);
   }
-  function l(d) {
-    const u = s(d);
+  function l(c) {
+    const u = s(c);
     if (u)
       return u;
-    const c = os(d, t);
-    return r(d, c), c;
+    const d = os(c, t);
+    return r(c, d), d;
   }
   return function() {
     return n(ns.apply(null, arguments));
   };
 }
-const D = (i) => {
-  const e = (t) => t[i] || [];
+const D = (o) => {
+  const e = (t) => t[o] || [];
   return e.isThemeGetter = !0, e;
-}, St = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Ct = /^\((?:(\w[\w-]*):)?(.+)\)$/i, ls = /^\d+\/\d+$/, cs = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ds = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, us = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/, hs = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, fs = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (i) => ls.test(i), L = (i) => !!i && !Number.isNaN(Number(i)), se = (i) => !!i && Number.isInteger(Number(i)), $e = (i) => i.endsWith("%") && L(i.slice(0, -1)), ee = (i) => cs.test(i), ps = () => !0, gs = (i) => (
+}, St = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Ct = /^\((?:(\w[\w-]*):)?(.+)\)$/i, ls = /^\d+\/\d+$/, cs = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ds = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, us = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/, hs = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, fs = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (o) => ls.test(o), L = (o) => !!o && !Number.isNaN(Number(o)), se = (o) => !!o && Number.isInteger(Number(o)), $e = (o) => o.endsWith("%") && L(o.slice(0, -1)), ee = (o) => cs.test(o), ps = () => !0, gs = (o) => (
   // `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
   // For example, `hsl(0 0% 0%)` would be classified as a length without this check.
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
-  ds.test(i) && !us.test(i)
-), _t = () => !1, ms = (i) => hs.test(i), xs = (i) => fs.test(i), ys = (i) => !y(i) && !w(i), ws = (i) => de(i, Ot, _t), y = (i) => St.test(i), ie = (i) => de(i, Pt, gs), ze = (i) => de(i, Ss, L), tt = (i) => de(i, Lt, _t), vs = (i) => de(i, Nt, xs), ke = (i) => de(i, Rt, ms), w = (i) => Ct.test(i), ge = (i) => ue(i, Pt), bs = (i) => ue(i, Cs), st = (i) => ue(i, Lt), ks = (i) => ue(i, Ot), js = (i) => ue(i, Nt), je = (i) => ue(i, Rt, !0), de = (i, e, t) => {
-  const s = St.exec(i);
+  ds.test(o) && !us.test(o)
+), _t = () => !1, ms = (o) => hs.test(o), xs = (o) => fs.test(o), ys = (o) => !y(o) && !w(o), ws = (o) => de(o, Ot, _t), y = (o) => St.test(o), ie = (o) => de(o, Pt, gs), ze = (o) => de(o, Ss, L), tt = (o) => de(o, Lt, _t), vs = (o) => de(o, Nt, xs), ke = (o) => de(o, Rt, ms), w = (o) => Ct.test(o), ge = (o) => ue(o, Pt), bs = (o) => ue(o, Cs), st = (o) => ue(o, Lt), ks = (o) => ue(o, Ot), js = (o) => ue(o, Nt), je = (o) => ue(o, Rt, !0), de = (o, e, t) => {
+  const s = St.exec(o);
   return s ? s[1] ? e(s[1]) : t(s[2]) : !1;
-}, ue = (i, e, t = !1) => {
-  const s = Ct.exec(i);
+}, ue = (o, e, t = !1) => {
+  const s = Ct.exec(o);
   return s ? s[1] ? e(s[1]) : t : !1;
-}, Lt = (i) => i === "position" || i === "percentage", Nt = (i) => i === "image" || i === "url", Ot = (i) => i === "length" || i === "size" || i === "bg-size", Pt = (i) => i === "length", Ss = (i) => i === "number", Cs = (i) => i === "family-name", Rt = (i) => i === "shadow", _s = () => {
-  const i = D("color"), e = D("font"), t = D("text"), s = D("font-weight"), r = D("tracking"), n = D("leading"), a = D("breakpoint"), l = D("container"), d = D("spacing"), u = D("radius"), c = D("shadow"), h = D("inset-shadow"), m = D("text-shadow"), g = D("drop-shadow"), p = D("blur"), b = D("perspective"), _ = D("aspect"), E = D("ease"), S = D("animate"), A = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], R = () => [
+}, Lt = (o) => o === "position" || o === "percentage", Nt = (o) => o === "image" || o === "url", Ot = (o) => o === "length" || o === "size" || o === "bg-size", Pt = (o) => o === "length", Ss = (o) => o === "number", Cs = (o) => o === "family-name", Rt = (o) => o === "shadow", _s = () => {
+  const o = D("color"), e = D("font"), t = D("text"), s = D("font-weight"), r = D("tracking"), n = D("leading"), a = D("breakpoint"), l = D("container"), c = D("spacing"), u = D("radius"), d = D("shadow"), h = D("inset-shadow"), m = D("text-shadow"), g = D("drop-shadow"), p = D("blur"), b = D("perspective"), _ = D("aspect"), E = D("ease"), j = D("animate"), A = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], R = () => [
     "center",
     "top",
     "bottom",
@@ -595,13 +595,13 @@ const D = (i) => {
     "bottom-left",
     // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
     "left-bottom"
-  ], v = () => [...R(), w, y], $ = () => ["auto", "hidden", "clip", "visible", "scroll"], T = () => ["auto", "contain", "none"], x = () => [w, y, d], O = () => [ae, "full", "auto", ...x()], z = () => [se, "none", "subgrid", w, y], U = () => ["auto", {
+  ], v = () => [...R(), w, y], $ = () => ["auto", "hidden", "clip", "visible", "scroll"], T = () => ["auto", "contain", "none"], x = () => [w, y, c], O = () => [ae, "full", "auto", ...x()], z = () => [se, "none", "subgrid", w, y], U = () => ["auto", {
     span: ["full", se, w, y]
-  }, se, w, y], Q = () => [se, "auto", w, y], K = () => ["auto", "min", "max", "fr", w, y], W = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], q = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], I = () => ["auto", ...x()], B = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...x()], k = () => [i, w, y], Z = () => [...R(), st, tt, {
+  }, se, w, y], Q = () => [se, "auto", w, y], K = () => ["auto", "min", "max", "fr", w, y], W = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], q = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], I = () => ["auto", ...x()], B = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...x()], k = () => [o, w, y], Z = () => [...R(), st, tt, {
     position: [w, y]
   }], f = () => ["no-repeat", {
     repeat: ["", "x", "y", "space", "round"]
-  }], j = () => ["auto", "cover", "contain", ks, ws, {
+  }], S = () => ["auto", "cover", "contain", ks, ws, {
     size: [w, y]
   }], P = () => [$e, ge, ie], N = () => [
     // Deprecated since Tailwind CSS v4.0.0
@@ -1584,7 +1584,7 @@ const D = (i) => {
        * @see https://tailwindcss.com/docs/background-size
        */
       "bg-size": [{
-        bg: j()
+        bg: S()
       }],
       /**
        * Background Image
@@ -1967,7 +1967,7 @@ const D = (i) => {
           // Deprecated since Tailwind CSS v4.0.0
           "",
           "none",
-          c,
+          d,
           je,
           ke
         ]
@@ -2261,7 +2261,7 @@ const D = (i) => {
        * @see https://tailwindcss.com/docs/mask-size
        */
       "mask-size": [{
-        mask: j()
+        mask: S()
       }],
       /**
        * Mask Type
@@ -2534,7 +2534,7 @@ const D = (i) => {
        * @see https://tailwindcss.com/docs/animation
        */
       animate: [{
-        animate: ["none", S, w, y]
+        animate: ["none", j, w, y]
       }],
       // ------------------
       // --- Transforms ---
@@ -3047,14 +3047,14 @@ const D = (i) => {
     orderSensitiveModifiers: ["*", "**", "after", "backdrop", "before", "details-content", "file", "first-letter", "first-line", "marker", "placeholder", "selection"]
   };
 }, Ls = /* @__PURE__ */ as(_s);
-function Ns(...i) {
-  return Ls(bt(i));
+function Ns(...o) {
+  return Ls(bt(o));
 }
-function Le(i, e) {
-  if (i) {
-    const t = i.split(":");
+function Le(o, e) {
+  if (o) {
+    const t = o.split(":");
     if (t.length >= 3 && t[0] && t[2] !== "443")
-      return i;
+      return o;
   }
   return e;
 }
@@ -3084,17 +3084,17 @@ const Os = Kt(
     }
   }
 ), Fe = Bt.forwardRef(
-  ({ className: i, variant: e, size: t, ...s }, r) => /* @__PURE__ */ o.jsx("button", { className: Ns(Os({ variant: e, size: t, className: i })), ref: r, ...s })
+  ({ className: o, variant: e, size: t, ...s }, r) => /* @__PURE__ */ i.jsx("button", { className: Ns(Os({ variant: e, size: t, className: o })), ref: r, ...s })
 );
 Fe.displayName = "Button";
-const Y = ({ href: i, children: e, className: t = "", target: s = "_self", rel: r = "noopener noreferrer", onClick: n }) => {
+const Y = ({ href: o, children: e, className: t = "", target: s = "_self", rel: r = "noopener noreferrer", onClick: n }) => {
   const a = (l) => {
-    s !== "_blank" && (l.preventDefault(), window.location.href = i), n && n(l);
+    s !== "_blank" && (l.preventDefault(), window.location.href = o), n && n(l);
   };
-  return /* @__PURE__ */ o.jsx(
+  return /* @__PURE__ */ i.jsx(
     "a",
     {
-      href: i,
+      href: o,
       className: t,
       target: s,
       rel: r,
@@ -3103,44 +3103,44 @@ const Y = ({ href: i, children: e, className: t = "", target: s = "_self", rel: 
       children: e
     }
   );
-}, Ps = (i, e, t, s) => {
-  var n, a, l, d;
+}, Ps = (o, e, t, s) => {
+  var n, a, l, c;
   const r = [t, {
     code: e,
     ...s || {}
   }];
-  if ((a = (n = i == null ? void 0 : i.services) == null ? void 0 : n.logger) != null && a.forward)
-    return i.services.logger.forward(r, "warn", "react-i18next::", !0);
-  oe(r[0]) && (r[0] = `react-i18next:: ${r[0]}`), (d = (l = i == null ? void 0 : i.services) == null ? void 0 : l.logger) != null && d.warn ? i.services.logger.warn(...r) : console != null && console.warn && console.warn(...r);
-}, rt = {}, Be = (i, e, t, s) => {
-  oe(t) && rt[t] || (oe(t) && (rt[t] = /* @__PURE__ */ new Date()), Ps(i, e, t, s));
-}, $t = (i, e) => () => {
-  if (i.isInitialized)
+  if ((a = (n = o == null ? void 0 : o.services) == null ? void 0 : n.logger) != null && a.forward)
+    return o.services.logger.forward(r, "warn", "react-i18next::", !0);
+  oe(r[0]) && (r[0] = `react-i18next:: ${r[0]}`), (c = (l = o == null ? void 0 : o.services) == null ? void 0 : l.logger) != null && c.warn ? o.services.logger.warn(...r) : console != null && console.warn && console.warn(...r);
+}, rt = {}, Be = (o, e, t, s) => {
+  oe(t) && rt[t] || (oe(t) && (rt[t] = /* @__PURE__ */ new Date()), Ps(o, e, t, s));
+}, $t = (o, e) => () => {
+  if (o.isInitialized)
     e();
   else {
     const t = () => {
       setTimeout(() => {
-        i.off("initialized", t);
+        o.off("initialized", t);
       }, 0), e();
     };
-    i.on("initialized", t);
+    o.on("initialized", t);
   }
-}, We = (i, e, t) => {
-  i.loadNamespaces(e, $t(i, t));
-}, it = (i, e, t, s) => {
-  if (oe(t) && (t = [t]), i.options.preload && i.options.preload.indexOf(e) > -1) return We(i, t, s);
+}, We = (o, e, t) => {
+  o.loadNamespaces(e, $t(o, t));
+}, it = (o, e, t, s) => {
+  if (oe(t) && (t = [t]), o.options.preload && o.options.preload.indexOf(e) > -1) return We(o, t, s);
   t.forEach((r) => {
-    i.options.ns.indexOf(r) < 0 && i.options.ns.push(r);
-  }), i.loadLanguages(e, $t(i, s));
-}, Rs = (i, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
+    o.options.ns.indexOf(r) < 0 && o.options.ns.push(r);
+  }), o.loadLanguages(e, $t(o, s));
+}, Rs = (o, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
   languages: e.languages
-}), !0) : e.hasLoadedNamespace(i, {
+}), !0) : e.hasLoadedNamespace(o, {
   lng: t.lng,
   precheck: (s, r) => {
     var n;
-    if (((n = t.bindI18n) == null ? void 0 : n.indexOf("languageChanging")) > -1 && s.services.backendConnector.backend && s.isLanguageChangingTo && !r(s.isLanguageChangingTo, i)) return !1;
+    if (((n = t.bindI18n) == null ? void 0 : n.indexOf("languageChanging")) > -1 && s.services.backendConnector.backend && s.isLanguageChangingTo && !r(s.isLanguageChangingTo, o)) return !1;
   }
-}), oe = (i) => typeof i == "string", $s = (i) => typeof i == "object" && i !== null, zs = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, Es = {
+}), oe = (o) => typeof o == "string", $s = (o) => typeof o == "object" && o !== null, zs = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, Es = {
   "&amp;": "&",
   "&#38;": "&",
   "&lt;": "<",
@@ -3161,7 +3161,7 @@ const Y = ({ href: i, children: e, className: t = "", target: s = "_self", rel: 
   "&#8230;": "…",
   "&#x2F;": "/",
   "&#47;": "/"
-}, Ms = (i) => Es[i], As = (i) => i.replace(zs, Ms);
+}, Ms = (o) => Es[o], As = (o) => o.replace(zs, Ms);
 let Ve = {
   bindI18n: "languageChanged",
   bindI18nStore: "",
@@ -3172,19 +3172,19 @@ let Ve = {
   useSuspense: !0,
   unescape: As
 };
-const Ts = (i = {}) => {
+const Ts = (o = {}) => {
   Ve = {
     ...Ve,
-    ...i
+    ...o
   };
 }, Is = () => Ve;
 let zt;
-const Fs = (i) => {
-  zt = i;
+const Fs = (o) => {
+  zt = o;
 }, Bs = () => zt, Ws = {
   type: "3rdParty",
-  init(i) {
-    Ts(i.options.react), Fs(i);
+  init(o) {
+    Ts(o.options.react), Fs(o);
   }
 }, Vs = Wt();
 class Ds {
@@ -3200,12 +3200,12 @@ class Ds {
     return Object.keys(this.usedNamespaces);
   }
 }
-const Us = (i, e) => {
+const Us = (o, e) => {
   const t = _e();
   return re(() => {
-    t.current = i;
-  }, [i, e]), t.current;
-}, Et = (i, e, t, s) => i.getFixedT(e, t, s), Gs = (i, e, t, s) => Ce(Et(i, e, t, s), [i, e, t, s]), Mt = (i, e = {}) => {
+    t.current = o;
+  }, [o, e]), t.current;
+}, Et = (o, e, t, s) => o.getFixedT(e, t, s), Gs = (o, e, t, s) => Ce(Et(o, e, t, s), [o, e, t, s]), Mt = (o, e = {}) => {
   var R, v, $, T;
   const {
     i18n: t
@@ -3225,94 +3225,94 @@ const Us = (i, e) => {
     ...e
   }, {
     useSuspense: l,
-    keyPrefix: d
+    keyPrefix: c
   } = a;
   let u = r || ((v = n.options) == null ? void 0 : v.defaultNS);
   u = oe(u) ? [u] : u || ["translation"], (T = ($ = n.reportNamespaces).addUsedNamespaces) == null || T.call($, u);
-  const c = (n.isInitialized || n.initializedStoreOnce) && u.every((x) => Rs(x, n, a)), h = Gs(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), m = () => h, g = () => Et(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], d), [p, b] = ce(m);
+  const d = (n.isInitialized || n.initializedStoreOnce) && u.every((x) => Rs(x, n, a)), h = Gs(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], c), m = () => h, g = () => Et(n, e.lng || null, a.nsMode === "fallback" ? u : u[0], c), [p, b] = ce(m);
   let _ = u.join();
   e.lng && (_ = `${e.lng}${_}`);
-  const E = Us(_), S = _e(!0);
+  const E = Us(_), j = _e(!0);
   re(() => {
     const {
       bindI18n: x,
       bindI18nStore: O
     } = a;
-    S.current = !0, !c && !l && (e.lng ? it(n, e.lng, u, () => {
-      S.current && b(g);
+    j.current = !0, !d && !l && (e.lng ? it(n, e.lng, u, () => {
+      j.current && b(g);
     }) : We(n, u, () => {
-      S.current && b(g);
-    })), c && E && E !== _ && S.current && b(g);
+      j.current && b(g);
+    })), d && E && E !== _ && j.current && b(g);
     const z = () => {
-      S.current && b(g);
+      j.current && b(g);
     };
     return x && (n == null || n.on(x, z)), O && (n == null || n.store.on(O, z)), () => {
-      S.current = !1, n && (x == null || x.split(" ").forEach((U) => n.off(U, z))), O && n && O.split(" ").forEach((U) => n.store.off(U, z));
+      j.current = !1, n && (x == null || x.split(" ").forEach((U) => n.off(U, z))), O && n && O.split(" ").forEach((U) => n.store.off(U, z));
     };
   }, [n, _]), re(() => {
-    S.current && c && b(m);
-  }, [n, d, c]);
-  const A = [p, n, c];
-  if (A.t = p, A.i18n = n, A.ready = c, c || !c && !l) return A;
+    j.current && d && b(m);
+  }, [n, c, d]);
+  const A = [p, n, d];
+  if (A.t = p, A.i18n = n, A.ready = d, d || !d && !l) return A;
   throw new Promise((x) => {
     e.lng ? it(n, e.lng, u, () => x()) : We(n, u, () => x());
   });
-}, C = (i) => typeof i == "string", me = () => {
-  let i, e;
+}, C = (o) => typeof o == "string", me = () => {
+  let o, e;
   const t = new Promise((s, r) => {
-    i = s, e = r;
+    o = s, e = r;
   });
-  return t.resolve = i, t.reject = e, t;
-}, ot = (i) => i == null ? "" : "" + i, Hs = (i, e, t) => {
-  i.forEach((s) => {
+  return t.resolve = o, t.reject = e, t;
+}, ot = (o) => o == null ? "" : "" + o, Hs = (o, e, t) => {
+  o.forEach((s) => {
     e[s] && (t[s] = e[s]);
   });
-}, Ks = /###/g, nt = (i) => i && i.indexOf("###") > -1 ? i.replace(Ks, ".") : i, at = (i) => !i || C(i), xe = (i, e, t) => {
+}, Ks = /###/g, nt = (o) => o && o.indexOf("###") > -1 ? o.replace(Ks, ".") : o, at = (o) => !o || C(o), xe = (o, e, t) => {
   const s = C(e) ? e.split(".") : e;
   let r = 0;
   for (; r < s.length - 1; ) {
-    if (at(i)) return {};
+    if (at(o)) return {};
     const n = nt(s[r]);
-    !i[n] && t && (i[n] = new t()), Object.prototype.hasOwnProperty.call(i, n) ? i = i[n] : i = {}, ++r;
+    !o[n] && t && (o[n] = new t()), Object.prototype.hasOwnProperty.call(o, n) ? o = o[n] : o = {}, ++r;
   }
-  return at(i) ? {} : {
-    obj: i,
+  return at(o) ? {} : {
+    obj: o,
     k: nt(s[r])
   };
-}, lt = (i, e, t) => {
+}, lt = (o, e, t) => {
   const {
     obj: s,
     k: r
-  } = xe(i, e, Object);
+  } = xe(o, e, Object);
   if (s !== void 0 || e.length === 1) {
     s[r] = t;
     return;
   }
-  let n = e[e.length - 1], a = e.slice(0, e.length - 1), l = xe(i, a, Object);
+  let n = e[e.length - 1], a = e.slice(0, e.length - 1), l = xe(o, a, Object);
   for (; l.obj === void 0 && a.length; )
-    n = `${a[a.length - 1]}.${n}`, a = a.slice(0, a.length - 1), l = xe(i, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${n}`] < "u" && (l.obj = void 0);
+    n = `${a[a.length - 1]}.${n}`, a = a.slice(0, a.length - 1), l = xe(o, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${n}`] < "u" && (l.obj = void 0);
   l.obj[`${l.k}.${n}`] = t;
-}, Ys = (i, e, t, s) => {
+}, Ys = (o, e, t, s) => {
   const {
     obj: r,
     k: n
-  } = xe(i, e, Object);
+  } = xe(o, e, Object);
   r[n] = r[n] || [], r[n].push(t);
-}, Ne = (i, e) => {
+}, Ne = (o, e) => {
   const {
     obj: t,
     k: s
-  } = xe(i, e);
+  } = xe(o, e);
   if (t && Object.prototype.hasOwnProperty.call(t, s))
     return t[s];
-}, qs = (i, e, t) => {
-  const s = Ne(i, t);
+}, qs = (o, e, t) => {
+  const s = Ne(o, t);
   return s !== void 0 ? s : Ne(e, t);
-}, At = (i, e, t) => {
+}, At = (o, e, t) => {
   for (const s in e)
-    s !== "__proto__" && s !== "constructor" && (s in i ? C(i[s]) || i[s] instanceof String || C(e[s]) || e[s] instanceof String ? t && (i[s] = e[s]) : At(i[s], e[s], t) : i[s] = e[s]);
-  return i;
-}, le = (i) => i.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    s !== "__proto__" && s !== "constructor" && (s in o ? C(o[s]) || o[s] instanceof String || C(e[s]) || e[s] instanceof String ? t && (o[s] = e[s]) : At(o[s], e[s], t) : o[s] = e[s]);
+  return o;
+}, le = (o) => o.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 var Js = {
   "&": "&amp;",
   "<": "&lt;",
@@ -3321,7 +3321,7 @@ var Js = {
   "'": "&#39;",
   "/": "&#x2F;"
 };
-const Zs = (i) => C(i) ? i.replace(/[&<>"'\/]/g, (e) => Js[e]) : i;
+const Zs = (o) => C(o) ? o.replace(/[&<>"'\/]/g, (e) => Js[e]) : o;
 class Xs {
   constructor(e) {
     this.capacity = e, this.regExpMap = /* @__PURE__ */ new Map(), this.regExpQueue = [];
@@ -3334,51 +3334,51 @@ class Xs {
     return this.regExpQueue.length === this.capacity && this.regExpMap.delete(this.regExpQueue.shift()), this.regExpMap.set(e, s), this.regExpQueue.push(e), s;
   }
 }
-const Qs = [" ", ",", "?", "!", ";"], er = new Xs(20), tr = (i, e, t) => {
+const Qs = [" ", ",", "?", "!", ";"], er = new Xs(20), tr = (o, e, t) => {
   e = e || "", t = t || "";
   const s = Qs.filter((a) => e.indexOf(a) < 0 && t.indexOf(a) < 0);
   if (s.length === 0) return !0;
   const r = er.getRegExp(`(${s.map((a) => a === "?" ? "\\?" : a).join("|")})`);
-  let n = !r.test(i);
+  let n = !r.test(o);
   if (!n) {
-    const a = i.indexOf(t);
-    a > 0 && !r.test(i.substring(0, a)) && (n = !0);
+    const a = o.indexOf(t);
+    a > 0 && !r.test(o.substring(0, a)) && (n = !0);
   }
   return n;
-}, De = (i, e, t = ".") => {
-  if (!i) return;
-  if (i[e])
-    return Object.prototype.hasOwnProperty.call(i, e) ? i[e] : void 0;
+}, De = (o, e, t = ".") => {
+  if (!o) return;
+  if (o[e])
+    return Object.prototype.hasOwnProperty.call(o, e) ? o[e] : void 0;
   const s = e.split(t);
-  let r = i;
+  let r = o;
   for (let n = 0; n < s.length; ) {
     if (!r || typeof r != "object")
       return;
     let a, l = "";
-    for (let d = n; d < s.length; ++d)
-      if (d !== n && (l += t), l += s[d], a = r[l], a !== void 0) {
-        if (["string", "number", "boolean"].indexOf(typeof a) > -1 && d < s.length - 1)
+    for (let c = n; c < s.length; ++c)
+      if (c !== n && (l += t), l += s[c], a = r[l], a !== void 0) {
+        if (["string", "number", "boolean"].indexOf(typeof a) > -1 && c < s.length - 1)
           continue;
-        n += d - n + 1;
+        n += c - n + 1;
         break;
       }
     r = a;
   }
   return r;
-}, ye = (i) => i == null ? void 0 : i.replace("_", "-"), sr = {
+}, ye = (o) => o == null ? void 0 : o.replace("_", "-"), sr = {
   type: "logger",
-  log(i) {
-    this.output("log", i);
+  log(o) {
+    this.output("log", o);
   },
-  warn(i) {
-    this.output("warn", i);
+  warn(o) {
+    this.output("warn", o);
   },
-  error(i) {
-    this.output("error", i);
+  error(o) {
+    this.output("error", o);
   },
-  output(i, e) {
+  output(o, e) {
     var t, s;
-    (s = (t = console == null ? void 0 : console[i]) == null ? void 0 : t.apply) == null || s.call(t, console, e);
+    (s = (t = console == null ? void 0 : console[o]) == null ? void 0 : t.apply) == null || s.call(t, console, e);
   }
 };
 class Oe {
@@ -3459,12 +3459,12 @@ class ct extends Re {
     t > -1 && this.options.ns.splice(t, 1);
   }
   getResource(e, t, s, r = {}) {
-    var u, c;
+    var u, d;
     const n = r.keySeparator !== void 0 ? r.keySeparator : this.options.keySeparator, a = r.ignoreJSONStructure !== void 0 ? r.ignoreJSONStructure : this.options.ignoreJSONStructure;
     let l;
     e.indexOf(".") > -1 ? l = e.split(".") : (l = [e, t], s && (Array.isArray(s) ? l.push(...s) : C(s) && n ? l.push(...s.split(n)) : l.push(s)));
-    const d = Ne(this.data, l);
-    return !d && !t && !s && e.indexOf(".") > -1 && (e = l[0], t = l[1], s = l.slice(2).join(".")), d || !a || !C(s) ? d : De((c = (u = this.data) == null ? void 0 : u[e]) == null ? void 0 : c[t], s, n);
+    const c = Ne(this.data, l);
+    return !c && !t && !s && e.indexOf(".") > -1 && (e = l[0], t = l[1], s = l.slice(2).join(".")), c || !a || !C(s) ? c : De((d = (u = this.data) == null ? void 0 : u[e]) == null ? void 0 : d[t], s, n);
   }
   addResource(e, t, s, r, n = {
     silent: !1
@@ -3488,11 +3488,11 @@ class ct extends Re {
   }) {
     let l = [e, t];
     e.indexOf(".") > -1 && (l = e.split("."), r = s, s = t, t = l[1]), this.addNamespaces(t);
-    let d = Ne(this.data, l) || {};
-    a.skipCopy || (s = JSON.parse(JSON.stringify(s))), r ? At(d, s, n) : d = {
-      ...d,
+    let c = Ne(this.data, l) || {};
+    a.skipCopy || (s = JSON.parse(JSON.stringify(s))), r ? At(c, s, n) : c = {
+      ...c,
       ...s
-    }, lt(this.data, l, d), a.silent || this.emit("added", e, t, s);
+    }, lt(this.data, l, c), a.silent || this.emit("added", e, t, s);
   }
   removeResourceBundle(e, t) {
     this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t);
@@ -3516,17 +3516,17 @@ class ct extends Re {
 }
 var Tt = {
   processors: {},
-  addPostProcessor(i) {
-    this.processors[i.name] = i;
+  addPostProcessor(o) {
+    this.processors[o.name] = o;
   },
-  handle(i, e, t, s, r) {
-    return i.forEach((n) => {
+  handle(o, e, t, s, r) {
+    return o.forEach((n) => {
       var a;
       e = ((a = this.processors[n]) == null ? void 0 : a.process(e, t, s, r)) ?? e;
     }), e;
   }
 };
-const dt = {}, ut = (i) => !C(i) && typeof i != "boolean" && typeof i != "number";
+const dt = {}, ut = (o) => !C(o) && typeof o != "boolean" && typeof o != "number";
 class Pe extends Re {
   constructor(e, t = {}) {
     super(), Hs(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = X.create("translator");
@@ -3551,8 +3551,8 @@ class Pe extends Re {
     let n = t.ns || this.options.defaultNS || [];
     const a = s && e.indexOf(s) > -1, l = !this.options.userDefinedKeySeparator && !t.keySeparator && !this.options.userDefinedNsSeparator && !t.nsSeparator && !tr(e, s, r);
     if (a && !l) {
-      const d = e.match(this.interpolator.nestingRegexp);
-      if (d && d.length > 0)
+      const c = e.match(this.interpolator.nestingRegexp);
+      if (c && c.length > 0)
         return {
           key: e,
           namespaces: C(n) ? [n] : n
@@ -3575,20 +3575,20 @@ class Pe extends Re {
     Array.isArray(e) || (e = [String(e)]);
     const n = r.returnDetails !== void 0 ? r.returnDetails : this.options.returnDetails, a = r.keySeparator !== void 0 ? r.keySeparator : this.options.keySeparator, {
       key: l,
-      namespaces: d
-    } = this.extractFromKey(e[e.length - 1], r), u = d[d.length - 1];
-    let c = r.nsSeparator !== void 0 ? r.nsSeparator : this.options.nsSeparator;
-    c === void 0 && (c = ":");
+      namespaces: c
+    } = this.extractFromKey(e[e.length - 1], r), u = c[c.length - 1];
+    let d = r.nsSeparator !== void 0 ? r.nsSeparator : this.options.nsSeparator;
+    d === void 0 && (d = ":");
     const h = r.lng || this.language, m = r.appendNamespaceToCIMode || this.options.appendNamespaceToCIMode;
     if ((h == null ? void 0 : h.toLowerCase()) === "cimode")
       return m ? n ? {
-        res: `${u}${c}${l}`,
+        res: `${u}${d}${l}`,
         usedKey: l,
         exactUsedKey: l,
         usedLng: h,
         usedNS: u,
         usedParams: this.getUsedParamsDetails(r)
-      } : `${u}${c}${l}` : n ? {
+      } : `${u}${d}${l}` : n ? {
         res: l,
         usedKey: l,
         exactUsedKey: l,
@@ -3598,18 +3598,18 @@ class Pe extends Re {
       } : l;
     const g = this.resolve(e, r);
     let p = g == null ? void 0 : g.res;
-    const b = (g == null ? void 0 : g.usedKey) || l, _ = (g == null ? void 0 : g.exactUsedKey) || l, E = ["[object Number]", "[object Function]", "[object RegExp]"], S = r.joinArrays !== void 0 ? r.joinArrays : this.options.joinArrays, A = !this.i18nFormat || this.i18nFormat.handleAsObject, R = r.count !== void 0 && !C(r.count), v = Pe.hasDefaultValue(r), $ = R ? this.pluralResolver.getSuffix(h, r.count, r) : "", T = r.ordinal && R ? this.pluralResolver.getSuffix(h, r.count, {
+    const b = (g == null ? void 0 : g.usedKey) || l, _ = (g == null ? void 0 : g.exactUsedKey) || l, E = ["[object Number]", "[object Function]", "[object RegExp]"], j = r.joinArrays !== void 0 ? r.joinArrays : this.options.joinArrays, A = !this.i18nFormat || this.i18nFormat.handleAsObject, R = r.count !== void 0 && !C(r.count), v = Pe.hasDefaultValue(r), $ = R ? this.pluralResolver.getSuffix(h, r.count, r) : "", T = r.ordinal && R ? this.pluralResolver.getSuffix(h, r.count, {
       ordinal: !1
     }) : "", x = R && !r.ordinal && r.count === 0, O = x && r[`defaultValue${this.options.pluralSeparator}zero`] || r[`defaultValue${$}`] || r[`defaultValue${T}`] || r.defaultValue;
     let z = p;
     A && !p && v && (z = O);
     const U = ut(z), Q = Object.prototype.toString.apply(z);
-    if (A && z && U && E.indexOf(Q) < 0 && !(C(S) && Array.isArray(z))) {
+    if (A && z && U && E.indexOf(Q) < 0 && !(C(j) && Array.isArray(z))) {
       if (!r.returnObjects && !this.options.returnObjects) {
         this.options.returnedObjectHandler || this.logger.warn("accessing an object - but returnObjects options is not enabled!");
         const K = this.options.returnedObjectHandler ? this.options.returnedObjectHandler(b, z, {
           ...r,
-          ns: d
+          ns: c
         }) : `key '${l} (${this.language})' returned an object instead of string.`;
         return n ? (g.res = K, g.usedParams = this.getUsedParamsDetails(r), g) : K;
       }
@@ -3622,54 +3622,54 @@ class Pe extends Re {
               ...r,
               defaultValue: ut(O) ? O[I] : void 0,
               joinArrays: !1,
-              ns: d
+              ns: c
             }) : W[I] = this.translate(B, {
               ...r,
               joinArrays: !1,
-              ns: d
+              ns: c
             }), W[I] === B && (W[I] = z[I]);
           }
         p = W;
       }
-    } else if (A && C(S) && Array.isArray(p))
-      p = p.join(S), p && (p = this.extendTranslation(p, e, r, s));
+    } else if (A && C(j) && Array.isArray(p))
+      p = p.join(j), p && (p = this.extendTranslation(p, e, r, s));
     else {
       let K = !1, W = !1;
       !this.isValidLookup(p) && v && (K = !0, p = O), this.isValidLookup(p) || (W = !0, p = l);
       const I = (r.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && W ? void 0 : p, B = v && O !== p && this.options.updateMissing;
       if (W || K || B) {
         if (this.logger.log(B ? "updateKey" : "missingKey", h, u, l, B ? O : p), a) {
-          const j = this.resolve(l, {
+          const S = this.resolve(l, {
             ...r,
             keySeparator: !1
           });
-          j && j.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
+          S && S.res && this.logger.warn("Seems the loaded translations were in flat JSON format instead of nested. Either set keySeparator: false on init or make sure your translations are published in nested format.");
         }
         let k = [];
         const Z = this.languageUtils.getFallbackCodes(this.options.fallbackLng, r.lng || this.language);
         if (this.options.saveMissingTo === "fallback" && Z && Z[0])
-          for (let j = 0; j < Z.length; j++)
-            k.push(Z[j]);
+          for (let S = 0; S < Z.length; S++)
+            k.push(Z[S]);
         else this.options.saveMissingTo === "all" ? k = this.languageUtils.toResolveHierarchy(r.lng || this.language) : k.push(r.lng || this.language);
-        const f = (j, P, N) => {
+        const f = (S, P, N) => {
           var G;
           const M = v && N !== p ? N : I;
-          this.options.missingKeyHandler ? this.options.missingKeyHandler(j, u, P, M, B, r) : (G = this.backendConnector) != null && G.saveMissing && this.backendConnector.saveMissing(j, u, P, M, B, r), this.emit("missingKey", j, u, P, p);
+          this.options.missingKeyHandler ? this.options.missingKeyHandler(S, u, P, M, B, r) : (G = this.backendConnector) != null && G.saveMissing && this.backendConnector.saveMissing(S, u, P, M, B, r), this.emit("missingKey", S, u, P, p);
         };
-        this.options.saveMissing && (this.options.saveMissingPlurals && R ? k.forEach((j) => {
-          const P = this.pluralResolver.getSuffixes(j, r);
+        this.options.saveMissing && (this.options.saveMissingPlurals && R ? k.forEach((S) => {
+          const P = this.pluralResolver.getSuffixes(S, r);
           x && r[`defaultValue${this.options.pluralSeparator}zero`] && P.indexOf(`${this.options.pluralSeparator}zero`) < 0 && P.push(`${this.options.pluralSeparator}zero`), P.forEach((N) => {
-            f([j], l + N, r[`defaultValue${N}`] || O);
+            f([S], l + N, r[`defaultValue${N}`] || O);
           });
         }) : f(k, l, O));
       }
-      p = this.extendTranslation(p, e, r, g, s), W && p === l && this.options.appendNamespaceToMissingKey && (p = `${u}${c}${l}`), (W || K) && this.options.parseMissingKeyHandler && (p = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${u}${c}${l}` : l, K ? p : void 0, r));
+      p = this.extendTranslation(p, e, r, g, s), W && p === l && this.options.appendNamespaceToMissingKey && (p = `${u}${d}${l}`), (W || K) && this.options.parseMissingKeyHandler && (p = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${u}${d}${l}` : l, K ? p : void 0, r));
     }
     return n ? (g.res = p, g.usedParams = this.getUsedParamsDetails(r), g) : p;
   }
   extendTranslation(e, t, s, r, n) {
-    var d, u;
-    if ((d = this.i18nFormat) != null && d.parse)
+    var c, u;
+    if ((c = this.i18nFormat) != null && c.parse)
       e = this.i18nFormat.parse(e, {
         ...this.options.interpolation.defaultVariables,
         ...s
@@ -3684,9 +3684,9 @@ class Pe extends Re {
           ...s.interpolation
         }
       });
-      const c = C(e) && (((u = s == null ? void 0 : s.interpolation) == null ? void 0 : u.skipOnVariables) !== void 0 ? s.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables);
+      const d = C(e) && (((u = s == null ? void 0 : s.interpolation) == null ? void 0 : u.skipOnVariables) !== void 0 ? s.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables);
       let h;
-      if (c) {
+      if (d) {
         const g = e.match(this.interpolator.nestingRegexp);
         h = g && g.length;
       }
@@ -3694,7 +3694,7 @@ class Pe extends Re {
       if (this.options.interpolation.defaultVariables && (m = {
         ...this.options.interpolation.defaultVariables,
         ...m
-      }), e = this.interpolator.interpolate(e, m, s.lng || this.language || r.usedLng, s), c) {
+      }), e = this.interpolator.interpolate(e, m, s.lng || this.language || r.usedLng, s), d) {
         const g = e.match(this.interpolator.nestingRegexp), p = g && g.length;
         h < p && (s.nest = !1);
       }
@@ -3711,28 +3711,28 @@ class Pe extends Re {
   }
   resolve(e, t = {}) {
     let s, r, n, a, l;
-    return C(e) && (e = [e]), e.forEach((d) => {
+    return C(e) && (e = [e]), e.forEach((c) => {
       if (this.isValidLookup(s)) return;
-      const u = this.extractFromKey(d, t), c = u.key;
-      r = c;
+      const u = this.extractFromKey(c, t), d = u.key;
+      r = d;
       let h = u.namespaces;
       this.options.fallbackNS && (h = h.concat(this.options.fallbackNS));
       const m = t.count !== void 0 && !C(t.count), g = m && !t.ordinal && t.count === 0, p = t.context !== void 0 && (C(t.context) || typeof t.context == "number") && t.context !== "", b = t.lngs ? t.lngs : this.languageUtils.toResolveHierarchy(t.lng || this.language, t.fallbackLng);
       h.forEach((_) => {
-        var E, S;
-        this.isValidLookup(s) || (l = _, !dt[`${b[0]}-${_}`] && ((E = this.utils) != null && E.hasLoadedNamespace) && !((S = this.utils) != null && S.hasLoadedNamespace(l)) && (dt[`${b[0]}-${_}`] = !0, this.logger.warn(`key "${r}" for languages "${b.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), b.forEach((A) => {
+        var E, j;
+        this.isValidLookup(s) || (l = _, !dt[`${b[0]}-${_}`] && ((E = this.utils) != null && E.hasLoadedNamespace) && !((j = this.utils) != null && j.hasLoadedNamespace(l)) && (dt[`${b[0]}-${_}`] = !0, this.logger.warn(`key "${r}" for languages "${b.join(", ")}" won't get resolved as namespace "${l}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!")), b.forEach((A) => {
           var $;
           if (this.isValidLookup(s)) return;
           a = A;
-          const R = [c];
+          const R = [d];
           if (($ = this.i18nFormat) != null && $.addLookupKeys)
-            this.i18nFormat.addLookupKeys(R, c, A, _, t);
+            this.i18nFormat.addLookupKeys(R, d, A, _, t);
           else {
             let T;
             m && (T = this.pluralResolver.getSuffix(A, t.count, t));
             const x = `${this.options.pluralSeparator}zero`, O = `${this.options.pluralSeparator}ordinal${this.options.pluralSeparator}`;
-            if (m && (R.push(c + T), t.ordinal && T.indexOf(O) === 0 && R.push(c + T.replace(O, this.options.pluralSeparator)), g && R.push(c + x)), p) {
-              const z = `${c}${this.options.contextSeparator}${t.context}`;
+            if (m && (R.push(d + T), t.ordinal && T.indexOf(O) === 0 && R.push(d + T.replace(O, this.options.pluralSeparator)), g && R.push(d + x)), p) {
+              const z = `${d}${this.options.contextSeparator}${t.context}`;
               R.push(z), m && (R.push(z + T), t.ordinal && T.indexOf(O) === 0 && R.push(z + T.replace(O, this.options.pluralSeparator)), g && R.push(z + x));
             }
           }
@@ -3851,7 +3851,7 @@ const ft = {
   many: 4,
   other: 5
 }, pt = {
-  select: (i) => i === 1 ? "one" : "other",
+  select: (o) => o === 1 ? "one" : "other",
   resolvedOptions: () => ({
     pluralCategories: ["one", "other"]
   })
@@ -3882,8 +3882,8 @@ class rr {
       if (!Intl)
         return this.logger.error("No Intl support, please use an Intl polyfill!"), pt;
       if (!e.match(/-|_/)) return pt;
-      const d = this.languageUtils.getLanguagePartFromCode(e);
-      a = this.getRule(d, t);
+      const c = this.languageUtils.getLanguagePartFromCode(e);
+      a = this.getRule(c, t);
     }
     return this.pluralRulesCache[n] = a, a;
   }
@@ -3903,10 +3903,10 @@ class rr {
     return r ? `${this.options.prepend}${s.ordinal ? `ordinal${this.options.prepend}` : ""}${r.select(t)}` : (this.logger.warn(`no plural rule found for: ${e}`), this.getSuffix("dev", t, s));
   }
 }
-const gt = (i, e, t, s = ".", r = !0) => {
-  let n = qs(i, e, t);
-  return !n && r && C(t) && (n = De(i, t, s), n === void 0 && (n = De(e, t, s))), n;
-}, Ee = (i) => i.replace(/\$/g, "$$$$");
+const gt = (o, e, t, s = ".", r = !0) => {
+  let n = qs(o, e, t);
+  return !n && r && C(t) && (n = De(o, t, s), n === void 0 && (n = De(e, t, s))), n;
+}, Ee = (o) => o.replace(/\$/g, "$$$$");
 class ir {
   constructor(e = {}) {
     var t;
@@ -3923,9 +3923,9 @@ class ir {
       prefix: n,
       prefixEscaped: a,
       suffix: l,
-      suffixEscaped: d,
+      suffixEscaped: c,
       formatSeparator: u,
-      unescapeSuffix: c,
+      unescapeSuffix: d,
       unescapePrefix: h,
       nestingPrefix: m,
       nestingPrefixEscaped: g,
@@ -3933,9 +3933,9 @@ class ir {
       nestingSuffixEscaped: b,
       nestingOptionsSeparator: _,
       maxReplaces: E,
-      alwaysFormat: S
+      alwaysFormat: j
     } = e.interpolation;
-    this.escape = t !== void 0 ? t : Zs, this.escapeValue = s !== void 0 ? s : !0, this.useRawValueToEscape = r !== void 0 ? r : !1, this.prefix = n ? le(n) : a || "{{", this.suffix = l ? le(l) : d || "}}", this.formatSeparator = u || ",", this.unescapePrefix = c ? "" : h || "-", this.unescapeSuffix = this.unescapePrefix ? "" : c || "", this.nestingPrefix = m ? le(m) : g || le("$t("), this.nestingSuffix = p ? le(p) : b || le(")"), this.nestingOptionsSeparator = _ || ",", this.maxReplaces = E || 1e3, this.alwaysFormat = S !== void 0 ? S : !1, this.resetRegExp();
+    this.escape = t !== void 0 ? t : Zs, this.escapeValue = s !== void 0 ? s : !0, this.useRawValueToEscape = r !== void 0 ? r : !1, this.prefix = n ? le(n) : a || "{{", this.suffix = l ? le(l) : c || "}}", this.formatSeparator = u || ",", this.unescapePrefix = d ? "" : h || "-", this.unescapeSuffix = this.unescapePrefix ? "" : d || "", this.nestingPrefix = m ? le(m) : g || le("$t("), this.nestingSuffix = p ? le(p) : b || le(")"), this.nestingOptionsSeparator = _ || ",", this.maxReplaces = E || 1e3, this.alwaysFormat = j !== void 0 ? j : !1, this.resetRegExp();
   }
   reset() {
     this.options && this.init(this.options);
@@ -3947,24 +3947,24 @@ class ir {
   interpolate(e, t, s, r) {
     var g;
     let n, a, l;
-    const d = this.options && this.options.interpolation && this.options.interpolation.defaultVariables || {}, u = (p) => {
+    const c = this.options && this.options.interpolation && this.options.interpolation.defaultVariables || {}, u = (p) => {
       if (p.indexOf(this.formatSeparator) < 0) {
-        const S = gt(t, d, p, this.options.keySeparator, this.options.ignoreJSONStructure);
-        return this.alwaysFormat ? this.format(S, void 0, s, {
+        const j = gt(t, c, p, this.options.keySeparator, this.options.ignoreJSONStructure);
+        return this.alwaysFormat ? this.format(j, void 0, s, {
           ...r,
           ...t,
           interpolationkey: p
-        }) : S;
+        }) : j;
       }
       const b = p.split(this.formatSeparator), _ = b.shift().trim(), E = b.join(this.formatSeparator).trim();
-      return this.format(gt(t, d, _, this.options.keySeparator, this.options.ignoreJSONStructure), E, s, {
+      return this.format(gt(t, c, _, this.options.keySeparator, this.options.ignoreJSONStructure), E, s, {
         ...r,
         ...t,
         interpolationkey: _
       });
     };
     this.resetRegExp();
-    const c = (r == null ? void 0 : r.missingInterpolationHandler) || this.options.missingInterpolationHandler, h = ((g = r == null ? void 0 : r.interpolation) == null ? void 0 : g.skipOnVariables) !== void 0 ? r.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables;
+    const d = (r == null ? void 0 : r.missingInterpolationHandler) || this.options.missingInterpolationHandler, h = ((g = r == null ? void 0 : r.interpolation) == null ? void 0 : g.skipOnVariables) !== void 0 ? r.interpolation.skipOnVariables : this.options.interpolation.skipOnVariables;
     return [{
       regex: this.regexpUnescape,
       safeValue: (p) => Ee(p)
@@ -3975,8 +3975,8 @@ class ir {
       for (l = 0; n = p.regex.exec(e); ) {
         const b = n[1].trim();
         if (a = u(b), a === void 0)
-          if (typeof c == "function") {
-            const E = c(e, n, r);
+          if (typeof d == "function") {
+            const E = d(e, n, r);
             a = C(E) ? E : "";
           } else if (r && Object.prototype.hasOwnProperty.call(r, b))
             a = "";
@@ -3994,12 +3994,12 @@ class ir {
   }
   nest(e, t, s = {}) {
     let r, n, a;
-    const l = (d, u) => {
-      const c = this.nestingOptionsSeparator;
-      if (d.indexOf(c) < 0) return d;
-      const h = d.split(new RegExp(`${c}[ ]*{`));
+    const l = (c, u) => {
+      const d = this.nestingOptionsSeparator;
+      if (c.indexOf(d) < 0) return c;
+      const h = c.split(new RegExp(`${d}[ ]*{`));
       let m = `{${h[1]}`;
-      d = h[0], m = this.interpolate(m, a);
+      c = h[0], m = this.interpolate(m, a);
       const g = m.match(/'/g), p = m.match(/"/g);
       (((g == null ? void 0 : g.length) ?? 0) % 2 === 0 && !p || p.length % 2 !== 0) && (m = m.replace(/'/g, '"'));
       try {
@@ -4008,18 +4008,18 @@ class ir {
           ...a
         });
       } catch (b) {
-        return this.logger.warn(`failed parsing options string in nesting for key ${d}`, b), `${d}${c}${m}`;
+        return this.logger.warn(`failed parsing options string in nesting for key ${c}`, b), `${c}${d}${m}`;
       }
-      return a.defaultValue && a.defaultValue.indexOf(this.prefix) > -1 && delete a.defaultValue, d;
+      return a.defaultValue && a.defaultValue.indexOf(this.prefix) > -1 && delete a.defaultValue, c;
     };
     for (; r = this.nestingRegexp.exec(e); ) {
-      let d = [];
+      let c = [];
       a = {
         ...s
       }, a = a.replace && !C(a.replace) ? a.replace : a, a.applyPostProcessor = !1, delete a.defaultValue;
       const u = /{.*}/.test(r[1]) ? r[1].lastIndexOf("}") + 1 : r[1].indexOf(this.formatSeparator);
-      if (u !== -1 && (d = r[1].slice(u).split(this.formatSeparator).map((c) => c.trim()).filter(Boolean), r[1] = r[1].slice(0, u)), n = t(l.call(this, r[1].trim(), a), a), n && r[0] === e && !C(n)) return n;
-      C(n) || (n = ot(n)), n || (this.logger.warn(`missed to resolve ${r[1]} for nesting ${e}`), n = ""), d.length && (n = d.reduce((c, h) => this.format(c, h, s.lng, {
+      if (u !== -1 && (c = r[1].slice(u).split(this.formatSeparator).map((d) => d.trim()).filter(Boolean), r[1] = r[1].slice(0, u)), n = t(l.call(this, r[1].trim(), a), a), n && r[0] === e && !C(n)) return n;
+      C(n) || (n = ot(n)), n || (this.logger.warn(`missed to resolve ${r[1]} for nesting ${e}`), n = ""), c.length && (n = c.reduce((d, h) => this.format(d, h, s.lng, {
         ...s,
         interpolationkey: r[1].trim()
       }), n.trim())), e = e.replace(r[0], n), this.regexp.lastIndex = 0;
@@ -4027,17 +4027,17 @@ class ir {
     return e;
   }
 }
-const or = (i) => {
-  let e = i.toLowerCase().trim();
+const or = (o) => {
+  let e = o.toLowerCase().trim();
   const t = {};
-  if (i.indexOf("(") > -1) {
-    const s = i.split("(");
+  if (o.indexOf("(") > -1) {
+    const s = o.split("(");
     e = s[0].toLowerCase().trim();
     const r = s[1].substring(0, s[1].length - 1);
     e === "currency" && r.indexOf(":") < 0 ? t.currency || (t.currency = r.trim()) : e === "relativetime" && r.indexOf(":") < 0 ? t.range || (t.range = r.trim()) : r.split(";").forEach((a) => {
       if (a) {
-        const [l, ...d] = a.split(":"), u = d.join(":").trim().replace(/^'+|'+$/g, ""), c = l.trim();
-        t[c] || (t[c] = u), u === "false" && (t[c] = !1), u === "true" && (t[c] = !0), isNaN(u) || (t[c] = parseInt(u, 10));
+        const [l, ...c] = a.split(":"), u = c.join(":").trim().replace(/^'+|'+$/g, ""), d = l.trim();
+        t[d] || (t[d] = u), u === "false" && (t[d] = !1), u === "true" && (t[d] = !0), isNaN(u) || (t[d] = parseInt(u, 10));
       }
     });
   }
@@ -4045,7 +4045,7 @@ const or = (i) => {
     formatName: e,
     formatOptions: t
   };
-}, mt = (i) => {
+}, mt = (o) => {
   const e = {};
   return (t, s, r) => {
     let n = r;
@@ -4055,9 +4055,9 @@ const or = (i) => {
     });
     const a = s + JSON.stringify(n);
     let l = e[a];
-    return l || (l = i(ye(s), r), e[a] = l), l(t);
+    return l || (l = o(ye(s), r), e[a] = l), l(t);
   };
-}, nr = (i) => (e, t, s) => i(ye(t), s)(e);
+}, nr = (o) => (e, t, s) => o(ye(t), s)(e);
 class ar {
   constructor(e = {}) {
     this.logger = X.create("formatter"), this.options = e, this.init(e);
@@ -4110,21 +4110,21 @@ class ar {
   format(e, t, s, r = {}) {
     const n = t.split(this.formatSeparator);
     if (n.length > 1 && n[0].indexOf("(") > 1 && n[0].indexOf(")") < 0 && n.find((l) => l.indexOf(")") > -1)) {
-      const l = n.findIndex((d) => d.indexOf(")") > -1);
+      const l = n.findIndex((c) => c.indexOf(")") > -1);
       n[0] = [n[0], ...n.splice(1, l)].join(this.formatSeparator);
     }
-    return n.reduce((l, d) => {
+    return n.reduce((l, c) => {
       var h;
       const {
         formatName: u,
-        formatOptions: c
-      } = or(d);
+        formatOptions: d
+      } = or(c);
       if (this.formats[u]) {
         let m = l;
         try {
           const g = ((h = r == null ? void 0 : r.formatParams) == null ? void 0 : h[r.interpolationkey]) || {}, p = g.locale || g.lng || r.locale || r.lng || s;
           m = this.formats[u](l, p, {
-            ...c,
+            ...d,
             ...r,
             ...g
           });
@@ -4138,8 +4138,8 @@ class ar {
     }, e);
   }
 }
-const lr = (i, e) => {
-  i.pending[e] !== void 0 && (delete i.pending[e], i.pendingCount--);
+const lr = (o, e) => {
+  o.pending[e] !== void 0 && (delete o.pending[e], o.pendingCount--);
 };
 class cr extends Re {
   constructor(e, t, s, r = {}) {
@@ -4147,13 +4147,13 @@ class cr extends Re {
     super(), this.backend = e, this.store = t, this.services = s, this.languageUtils = s.languageUtils, this.options = r, this.logger = X.create("backendConnector"), this.waitingReads = [], this.maxParallelReads = r.maxParallelReads || 10, this.readingCalls = 0, this.maxRetries = r.maxRetries >= 0 ? r.maxRetries : 5, this.retryTimeout = r.retryTimeout >= 1 ? r.retryTimeout : 350, this.state = {}, this.queue = [], (a = (n = this.backend) == null ? void 0 : n.init) == null || a.call(n, s, r.backend, r);
   }
   queueLoad(e, t, s, r) {
-    const n = {}, a = {}, l = {}, d = {};
+    const n = {}, a = {}, l = {}, c = {};
     return e.forEach((u) => {
-      let c = !0;
+      let d = !0;
       t.forEach((h) => {
         const m = `${u}|${h}`;
-        !s.reload && this.store.hasResourceBundle(u, h) ? this.state[m] = 2 : this.state[m] < 0 || (this.state[m] === 1 ? a[m] === void 0 && (a[m] = !0) : (this.state[m] = 1, c = !1, a[m] === void 0 && (a[m] = !0), n[m] === void 0 && (n[m] = !0), d[h] === void 0 && (d[h] = !0)));
-      }), c || (l[u] = !0);
+        !s.reload && this.store.hasResourceBundle(u, h) ? this.state[m] = 2 : this.state[m] < 0 || (this.state[m] === 1 ? a[m] === void 0 && (a[m] = !0) : (this.state[m] = 1, d = !1, a[m] === void 0 && (a[m] = !0), n[m] === void 0 && (n[m] = !0), c[h] === void 0 && (c[h] = !0)));
+      }), d || (l[u] = !0);
     }), (Object.keys(n).length || Object.keys(a).length) && this.queue.push({
       pending: a,
       pendingCount: Object.keys(a).length,
@@ -4164,7 +4164,7 @@ class cr extends Re {
       toLoad: Object.keys(n),
       pending: Object.keys(a),
       toLoadLanguages: Object.keys(l),
-      toLoadNamespaces: Object.keys(d)
+      toLoadNamespaces: Object.keys(c)
     };
   }
   loaded(e, t, s) {
@@ -4173,15 +4173,15 @@ class cr extends Re {
       skipCopy: !0
     }), this.state[e] = t ? -1 : 2, t && s && (this.state[e] = 0);
     const l = {};
-    this.queue.forEach((d) => {
-      Ys(d.loaded, [n], a), lr(d, e), t && d.errors.push(t), d.pendingCount === 0 && !d.done && (Object.keys(d.loaded).forEach((u) => {
+    this.queue.forEach((c) => {
+      Ys(c.loaded, [n], a), lr(c, e), t && c.errors.push(t), c.pendingCount === 0 && !c.done && (Object.keys(c.loaded).forEach((u) => {
         l[u] || (l[u] = {});
-        const c = d.loaded[u];
-        c.length && c.forEach((h) => {
+        const d = c.loaded[u];
+        d.length && d.forEach((h) => {
           l[u][h] === void 0 && (l[u][h] = !0);
         });
-      }), d.done = !0, d.errors.length ? d.callback(d.errors) : d.callback());
-    }), this.emit("loaded", l), this.queue = this.queue.filter((d) => !d.done);
+      }), c.done = !0, c.errors.length ? c.callback(c.errors) : c.callback());
+    }), this.emit("loaded", l), this.queue = this.queue.filter((c) => !c.done);
   }
   read(e, t, s, r = 0, n = this.retryTimeout, a) {
     if (!e.length) return a(null, {});
@@ -4197,29 +4197,29 @@ class cr extends Re {
       return;
     }
     this.readingCalls++;
-    const l = (u, c) => {
+    const l = (u, d) => {
       if (this.readingCalls--, this.waitingReads.length > 0) {
         const h = this.waitingReads.shift();
         this.read(h.lng, h.ns, h.fcName, h.tried, h.wait, h.callback);
       }
-      if (u && c && r < this.maxRetries) {
+      if (u && d && r < this.maxRetries) {
         setTimeout(() => {
           this.read.call(this, e, t, s, r + 1, n * 2, a);
         }, n);
         return;
       }
-      a(u, c);
-    }, d = this.backend[s].bind(this.backend);
-    if (d.length === 2) {
+      a(u, d);
+    }, c = this.backend[s].bind(this.backend);
+    if (c.length === 2) {
       try {
-        const u = d(e, t);
-        u && typeof u.then == "function" ? u.then((c) => l(null, c)).catch(l) : l(null, u);
+        const u = c(e, t);
+        u && typeof u.then == "function" ? u.then((d) => l(null, d)).catch(l) : l(null, u);
       } catch (u) {
         l(u);
       }
       return;
     }
-    return d(e, t, l);
+    return c(e, t, l);
   }
   prepareLoading(e, t, s = {}, r) {
     if (!this.backend)
@@ -4248,8 +4248,8 @@ class cr extends Re {
   }
   saveMissing(e, t, s, r, n, a = {}, l = () => {
   }) {
-    var d, u, c, h, m;
-    if ((u = (d = this.services) == null ? void 0 : d.utils) != null && u.hasLoadedNamespace && !((h = (c = this.services) == null ? void 0 : c.utils) != null && h.hasLoadedNamespace(t))) {
+    var c, u, d, h, m;
+    if ((u = (c = this.services) == null ? void 0 : c.utils) != null && u.hasLoadedNamespace && !((h = (d = this.services) == null ? void 0 : d.utils) != null && h.hasLoadedNamespace(t))) {
       this.logger.warn(`did not save key "${s}" as the namespace "${t}" was not yet loaded`, "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!");
       return;
     }
@@ -4306,10 +4306,10 @@ const xt = () => ({
   parseMissingKeyHandler: !1,
   appendNamespaceToMissingKey: !1,
   appendNamespaceToCIMode: !1,
-  overloadTranslationOptionHandler: (i) => {
+  overloadTranslationOptionHandler: (o) => {
     let e = {};
-    if (typeof i[1] == "object" && (e = i[1]), C(i[1]) && (e.defaultValue = i[1]), C(i[2]) && (e.tDescription = i[2]), typeof i[2] == "object" || typeof i[3] == "object") {
-      const t = i[3] || i[2];
+    if (typeof o[1] == "object" && (e = o[1]), C(o[1]) && (e.defaultValue = o[1]), C(o[2]) && (e.tDescription = o[2]), typeof o[2] == "object" || typeof o[3] == "object") {
+      const t = o[3] || o[2];
       Object.keys(t).forEach((s) => {
         e[s] = t[s];
       });
@@ -4318,7 +4318,7 @@ const xt = () => ({
   },
   interpolation: {
     escapeValue: !0,
-    format: (i) => i,
+    format: (o) => o,
     prefix: "{{",
     suffix: "}}",
     formatSeparator: ",",
@@ -4330,13 +4330,13 @@ const xt = () => ({
     skipOnVariables: !0
   },
   cacheInBuiltFormats: !0
-}), yt = (i) => {
+}), yt = (o) => {
   var e, t;
-  return C(i.ns) && (i.ns = [i.ns]), C(i.fallbackLng) && (i.fallbackLng = [i.fallbackLng]), C(i.fallbackNS) && (i.fallbackNS = [i.fallbackNS]), ((t = (e = i.supportedLngs) == null ? void 0 : e.indexOf) == null ? void 0 : t.call(e, "cimode")) < 0 && (i.supportedLngs = i.supportedLngs.concat(["cimode"])), typeof i.initImmediate == "boolean" && (i.initAsync = i.initImmediate), i;
+  return C(o.ns) && (o.ns = [o.ns]), C(o.fallbackLng) && (o.fallbackLng = [o.fallbackLng]), C(o.fallbackNS) && (o.fallbackNS = [o.fallbackNS]), ((t = (e = o.supportedLngs) == null ? void 0 : e.indexOf) == null ? void 0 : t.call(e, "cimode")) < 0 && (o.supportedLngs = o.supportedLngs.concat(["cimode"])), typeof o.initImmediate == "boolean" && (o.initAsync = o.initImmediate), o;
 }, Se = () => {
-}, dr = (i) => {
-  Object.getOwnPropertyNames(Object.getPrototypeOf(i)).forEach((t) => {
-    typeof i[t] == "function" && (i[t] = i[t].bind(i));
+}, dr = (o) => {
+  Object.getOwnPropertyNames(Object.getPrototypeOf(o)).forEach((t) => {
+    typeof o[t] == "function" && (o[t] = o[t].bind(o));
   });
 };
 class we extends Re {
@@ -4367,10 +4367,10 @@ class we extends Re {
       this.modules.logger ? X.init(r(this.modules.logger), this.options) : X.init(null, this.options);
       let u;
       this.modules.formatter ? u = this.modules.formatter : u = ar;
-      const c = new ht(this.options);
+      const d = new ht(this.options);
       this.store = new ct(this.options.resources, this.options);
       const h = this.services;
-      h.logger = X, h.resourceStore = this.store, h.languageUtils = c, h.pluralResolver = new rr(c, {
+      h.logger = X, h.resourceStore = this.store, h.languageUtils = d, h.pluralResolver = new rr(d, {
         prepend: this.options.pluralSeparator,
         simplifyPluralSuffix: this.options.simplifyPluralSuffix
       }), this.options.interpolation.format && this.options.interpolation.format !== s.interpolation.format && this.logger.warn("init: you are still using the legacy format function, please use the new approach: https://www.i18next.com/translation-function/formatting"), u && (!this.options.interpolation.format || this.options.interpolation.format === s.interpolation.format) && (h.formatter = r(u), h.formatter.init && h.formatter.init(h, this.options), this.options.interpolation.format = h.formatter.format.bind(h.formatter)), h.interpolator = new ir(this.options), h.utils = {
@@ -4388,18 +4388,18 @@ class we extends Re {
       u.length > 0 && u[0] !== "dev" && (this.options.lng = u[0]);
     }
     !this.services.languageDetector && !this.options.lng && this.logger.warn("init: no languageDetector is used and no lng is defined"), ["getResource", "hasResourceBundle", "getResourceBundle", "getDataByLanguage"].forEach((u) => {
-      this[u] = (...c) => this.store[u](...c);
+      this[u] = (...d) => this.store[u](...d);
     }), ["addResource", "addResources", "addResourceBundle", "removeResourceBundle"].forEach((u) => {
-      this[u] = (...c) => (this.store[u](...c), this);
+      this[u] = (...d) => (this.store[u](...d), this);
     });
-    const l = me(), d = () => {
-      const u = (c, h) => {
-        this.isInitializing = !1, this.isInitialized && !this.initializedStoreOnce && this.logger.warn("init: i18next is already initialized. You should call init just once!"), this.isInitialized = !0, this.options.isClone || this.logger.log("initialized", this.options), this.emit("initialized", this.options), l.resolve(h), t(c, h);
+    const l = me(), c = () => {
+      const u = (d, h) => {
+        this.isInitializing = !1, this.isInitialized && !this.initializedStoreOnce && this.logger.warn("init: i18next is already initialized. You should call init just once!"), this.isInitialized = !0, this.options.isClone || this.logger.log("initialized", this.options), this.emit("initialized", this.options), l.resolve(h), t(d, h);
       };
       if (this.languages && !this.isInitialized) return u(null, this.t.bind(this));
       this.changeLanguage(this.options.lng, u);
     };
-    return this.options.resources || !this.options.initAsync ? d() : setTimeout(d, 0), l;
+    return this.options.resources || !this.options.initAsync ? c() : setTimeout(c, 0), l;
   }
   loadResources(e, t = Se) {
     var n, a;
@@ -4407,13 +4407,13 @@ class we extends Re {
     const r = C(e) ? e : this.language;
     if (typeof e == "function" && (s = e), !this.options.resources || this.options.partialBundledLanguages) {
       if ((r == null ? void 0 : r.toLowerCase()) === "cimode" && (!this.options.preload || this.options.preload.length === 0)) return s();
-      const l = [], d = (u) => {
+      const l = [], c = (u) => {
         if (!u || u === "cimode") return;
         this.services.languageUtils.toResolveHierarchy(u).forEach((h) => {
           h !== "cimode" && l.indexOf(h) < 0 && l.push(h);
         });
       };
-      r ? d(r) : this.services.languageUtils.getFallbackCodes(this.options.fallbackLng).forEach((c) => d(c)), (a = (n = this.options.preload) == null ? void 0 : n.forEach) == null || a.call(n, (u) => d(u)), this.services.backendConnector.load(l, this.options.ns, (u) => {
+      r ? c(r) : this.services.languageUtils.getFallbackCodes(this.options.fallbackLng).forEach((d) => c(d)), (a = (n = this.options.preload) == null ? void 0 : n.forEach) == null || a.call(n, (u) => c(u)), this.services.backendConnector.load(l, this.options.ns, (u) => {
         !u && !this.resolvedLanguage && this.language && this.setResolvedLanguage(this.language), s(u);
       });
     } else
@@ -4448,13 +4448,13 @@ class we extends Re {
     this.emit("languageChanging", e);
     const r = (l) => {
       this.language = l, this.languages = this.services.languageUtils.toResolveHierarchy(l), this.resolvedLanguage = void 0, this.setResolvedLanguage(l);
-    }, n = (l, d) => {
-      d ? this.isLanguageChangingTo === e && (r(d), this.translator.changeLanguage(d), this.isLanguageChangingTo = void 0, this.emit("languageChanged", d), this.logger.log("languageChanged", d)) : this.isLanguageChangingTo = void 0, s.resolve((...u) => this.t(...u)), t && t(l, (...u) => this.t(...u));
+    }, n = (l, c) => {
+      c ? this.isLanguageChangingTo === e && (r(c), this.translator.changeLanguage(c), this.isLanguageChangingTo = void 0, this.emit("languageChanged", c), this.logger.log("languageChanged", c)) : this.isLanguageChangingTo = void 0, s.resolve((...u) => this.t(...u)), t && t(l, (...u) => this.t(...u));
     }, a = (l) => {
-      var c, h;
+      var d, h;
       !e && !l && this.services.languageDetector && (l = []);
-      const d = C(l) ? l : l && l[0], u = this.store.hasLanguageSomeTranslations(d) ? d : this.services.languageUtils.getBestMatchFromCodes(C(l) ? [l] : l);
-      u && (this.language || r(u), this.translator.language || this.translator.changeLanguage(u), (h = (c = this.services.languageDetector) == null ? void 0 : c.cacheUserLanguage) == null || h.call(c, u)), this.loadResources(u, (m) => {
+      const c = C(l) ? l : l && l[0], u = this.store.hasLanguageSomeTranslations(c) ? c : this.services.languageUtils.getBestMatchFromCodes(C(l) ? [l] : l);
+      u && (this.language || r(u), this.translator.language || this.translator.changeLanguage(u), (h = (d = this.services.languageDetector) == null ? void 0 : d.cacheUserLanguage) == null || h.call(d, u)), this.loadResources(u, (m) => {
         n(m, u);
       });
     };
@@ -4462,13 +4462,13 @@ class we extends Re {
   }
   getFixedT(e, t, s) {
     const r = (n, a, ...l) => {
-      let d;
-      typeof a != "object" ? d = this.options.overloadTranslationOptionHandler([n, a].concat(l)) : d = {
-        ...a
-      }, d.lng = d.lng || r.lng, d.lngs = d.lngs || r.lngs, d.ns = d.ns || r.ns, d.keyPrefix !== "" && (d.keyPrefix = d.keyPrefix || s || r.keyPrefix);
-      const u = this.options.keySeparator || ".";
       let c;
-      return d.keyPrefix && Array.isArray(n) ? c = n.map((h) => `${d.keyPrefix}${u}${h}`) : c = d.keyPrefix ? `${d.keyPrefix}${u}${n}` : n, this.t(c, d);
+      typeof a != "object" ? c = this.options.overloadTranslationOptionHandler([n, a].concat(l)) : c = {
+        ...a
+      }, c.lng = c.lng || r.lng, c.lngs = c.lngs || r.lngs, c.ns = c.ns || r.ns, c.keyPrefix !== "" && (c.keyPrefix = c.keyPrefix || s || r.keyPrefix);
+      const u = this.options.keySeparator || ".";
+      let d;
+      return c.keyPrefix && Array.isArray(n) ? d = n.map((h) => `${c.keyPrefix}${u}${h}`) : d = c.keyPrefix ? `${c.keyPrefix}${u}${n}` : n, this.t(d, c);
     };
     return C(e) ? r.lng = e : r.lngs = e, r.ns = t, r.keyPrefix = s, r;
   }
@@ -4490,8 +4490,8 @@ class we extends Re {
       return this.logger.warn("hasLoadedNamespace: i18n.languages were undefined or empty", this.languages), !1;
     const s = t.lng || this.resolvedLanguage || this.languages[0], r = this.options ? this.options.fallbackLng : !1, n = this.languages[this.languages.length - 1];
     if (s.toLowerCase() === "cimode") return !0;
-    const a = (l, d) => {
-      const u = this.services.backendConnector.state[`${l}|${d}`];
+    const a = (l, c) => {
+      const u = this.services.backendConnector.state[`${l}|${c}`];
       return u === -1 || u === 0 || u === 2;
     };
     if (t.precheck) {
@@ -4548,15 +4548,15 @@ class we extends Re {
     }, n.services.utils = {
       hasLoadedNamespace: n.hasLoadedNamespace.bind(n)
     }, s) {
-      const l = Object.keys(this.store.data).reduce((d, u) => (d[u] = {
+      const l = Object.keys(this.store.data).reduce((c, u) => (c[u] = {
         ...this.store.data[u]
-      }, d[u] = Object.keys(d[u]).reduce((c, h) => (c[h] = {
-        ...d[u][h]
-      }, c), d[u]), d), {});
+      }, c[u] = Object.keys(c[u]).reduce((d, h) => (d[h] = {
+        ...c[u][h]
+      }, d), c[u]), c), {});
       n.store = new ct(l, r), n.services.resourceStore = n.store;
     }
-    return n.translator = new Pe(n.services, r), n.translator.on("*", (l, ...d) => {
-      n.emit(l, ...d);
+    return n.translator = new Pe(n.services, r), n.translator.on("*", (l, ...c) => {
+      n.emit(l, ...c);
     }), n.init(r, t), n.translator.options = r, n.translator.backendConnector.services.utils = {
       hasLoadedNamespace: n.hasLoadedNamespace.bind(n)
     }, n;
@@ -5007,13 +5007,13 @@ H.use(Ws).init({
   react: { useSuspense: !1 }
 });
 const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "https://app.plexicus.ai", gr = ({
-  lang: i,
+  lang: o,
   fullSiteUrl: e = "http://localhost:8000",
   fullBlogUrl: t = "http://localhost:9000"
 }) => {
-  const [s, r] = ce("/"), [n, a] = ce(!1), [l, d] = ce(null), u = _e(null), { t: c, i18n: h } = Mt();
+  const [s, r] = ce("/"), [n, a] = ce(!1), [l, c] = ce(null), u = _e(null), { t: d, i18n: h } = Mt();
   re(() => {
-    h.changeLanguage(i), r(i !== "en" ? `/${i}/` : "/");
+    h.changeLanguage(o), r(o !== "en" ? `/${o}/` : "/");
   }, []);
   const [m, g] = ce(!1);
   re(() => {
@@ -5026,10 +5026,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
     };
   }, []);
   const p = Ce((v) => {
-    u.current && (clearTimeout(u.current), u.current = null), d(v);
+    u.current && (clearTimeout(u.current), u.current = null), c(v);
   }, []), b = _e([]), _ = Ce(() => {
     const v = setTimeout(() => {
-      d(null);
+      c(null);
     }, 150);
     u.current = v, b.current.push(v);
   }, []);
@@ -5038,20 +5038,20 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
   }, []);
   const E = Ce(
     (v) => {
-      d(l === v ? null : v);
+      c(l === v ? null : v);
     },
     [l]
-  ), S = Le(e, It), A = Le(t, Ft), R = {
+  ), j = Le(e, It), A = Le(t, Ft), R = {
     products: {
-      title: c("nav.product.title"),
-      shortTitle: c("footer.sections.products.title"),
+      title: d("nav.product.title"),
+      shortTitle: d("footer.sections.products.title"),
       image: "product-diagram",
       items: [
         {
-          title: c("nav.product.platform_overview"),
-          description: c("nav.product.platform_overview_desc"),
-          href: `${S}${s}products/cnapp-platform`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.product.platform_overview"),
+          description: d("nav.product.platform_overview_desc"),
+          href: `${j}${s}products/cnapp-platform`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5066,18 +5066,18 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("circle", { cx: "12", cy: "12", r: "10" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M12 16v-4" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M12 8h.01" })
+                /* @__PURE__ */ i.jsx("circle", { cx: "12", cy: "12", r: "10" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M12 16v-4" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M12 8h.01" })
               ]
             }
           )
         },
         {
-          title: c("nav.product.benefits"),
-          description: c("nav.product.benefits_desc"),
-          href: `${S}${s}products/benefits`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.product.benefits"),
+          description: d("nav.product.benefits_desc"),
+          href: `${j}${s}products/benefits`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5092,18 +5092,18 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "m9 12 2 2 4-4" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M22 19H2" })
+                /* @__PURE__ */ i.jsx("path", { d: "m9 12 2 2 4-4" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M22 19H2" })
               ]
             }
           )
         },
         {
-          title: c("nav.product.use_cases"),
-          description: c("nav.product.use_cases_desc"),
-          href: `${S}${s}products/use-cases`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.product.use_cases"),
+          description: d("nav.product.use_cases_desc"),
+          href: `${j}${s}products/use-cases`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5118,18 +5118,18 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M8 12h8" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M12 8v8" })
+                /* @__PURE__ */ i.jsx("rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M8 12h8" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M12 8v8" })
               ]
             }
           )
         },
         {
-          title: c("nav.product.aspm"),
-          description: c("nav.product.aspm_desc"),
-          href: `${S}${s}products/aspm`,
-          icon: /* @__PURE__ */ o.jsx(
+          title: d("nav.product.aspm"),
+          description: d("nav.product.aspm_desc"),
+          href: `${j}${s}products/aspm`,
+          icon: /* @__PURE__ */ i.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5143,15 +5143,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ o.jsx("path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" })
+              children: /* @__PURE__ */ i.jsx("path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" })
             }
           )
         },
         {
-          title: c("nav.product.cspm"),
-          description: c("nav.product.cspm_desc"),
-          href: `${S}${s}products/cspm`,
-          icon: /* @__PURE__ */ o.jsx(
+          title: d("nav.product.cspm"),
+          description: d("nav.product.cspm_desc"),
+          href: `${j}${s}products/cspm`,
+          icon: /* @__PURE__ */ i.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5165,15 +5165,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ o.jsx("path", { d: "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" })
+              children: /* @__PURE__ */ i.jsx("path", { d: "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" })
             }
           )
         },
         {
-          title: c("nav.product.container_security"),
-          description: c("nav.product.container_security_desc"),
-          href: `${S}${s}products/container`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.product.container_security"),
+          description: d("nav.product.container_security_desc"),
+          href: `${j}${s}products/container`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5188,18 +5188,18 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }),
-                /* @__PURE__ */ o.jsx("polyline", { points: "3.27 6.96 12 12.01 20.73 6.96" }),
-                /* @__PURE__ */ o.jsx("line", { x1: "12", y1: "22.08", x2: "12", y2: "12" })
+                /* @__PURE__ */ i.jsx("path", { d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }),
+                /* @__PURE__ */ i.jsx("polyline", { points: "3.27 6.96 12 12.01 20.73 6.96" }),
+                /* @__PURE__ */ i.jsx("line", { x1: "12", y1: "22.08", x2: "12", y2: "12" })
               ]
             }
           )
         },
         {
-          title: c("nav.product.cwpp"),
-          description: c("nav.product.cwpp_desc"),
-          href: `${S}${s}products/cwpp`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.product.cwpp"),
+          description: d("nav.product.cwpp_desc"),
+          href: `${j}${s}products/cwpp`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5214,42 +5214,42 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
-                /* @__PURE__ */ o.jsx("circle", { cx: "12", cy: "16", r: "1" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
+                /* @__PURE__ */ i.jsx("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
+                /* @__PURE__ */ i.jsx("circle", { cx: "12", cy: "16", r: "1" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
               ]
             }
           )
         },
         {
-          title: c("nav.product.ciem"),
-          description: c("nav.product.ciem_desc"),
-          href: `${S}${s}products/ciem`,
-          icon: /* @__PURE__ */ o.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round", className: "lucide lucide-cloud-cog-icon lucide-cloud-cog", children: [
-            /* @__PURE__ */ o.jsx("path", { d: "m10.852 19.772-.383.924" }),
-            /* @__PURE__ */ o.jsx("path", { d: "m13.148 14.228.383-.923" }),
-            /* @__PURE__ */ o.jsx("path", { d: "M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923" }),
-            /* @__PURE__ */ o.jsx("path", { d: "m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544" }),
-            /* @__PURE__ */ o.jsx("path", { d: "m14.772 15.852.923-.383" }),
-            /* @__PURE__ */ o.jsx("path", { d: "m14.772 18.148.923.383" }),
-            /* @__PURE__ */ o.jsx("path", { d: "M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" }),
-            /* @__PURE__ */ o.jsx("path", { d: "m9.228 15.852-.923-.383" }),
-            /* @__PURE__ */ o.jsx("path", { d: "m9.228 18.148-.923.383" })
+          title: d("nav.product.ciem"),
+          description: d("nav.product.ciem_desc"),
+          href: `${j}${s}products/ciem`,
+          icon: /* @__PURE__ */ i.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round", className: "lucide lucide-cloud-cog-icon lucide-cloud-cog", children: [
+            /* @__PURE__ */ i.jsx("path", { d: "m10.852 19.772-.383.924" }),
+            /* @__PURE__ */ i.jsx("path", { d: "m13.148 14.228.383-.923" }),
+            /* @__PURE__ */ i.jsx("path", { d: "M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923" }),
+            /* @__PURE__ */ i.jsx("path", { d: "m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544" }),
+            /* @__PURE__ */ i.jsx("path", { d: "m14.772 15.852.923-.383" }),
+            /* @__PURE__ */ i.jsx("path", { d: "m14.772 18.148.923.383" }),
+            /* @__PURE__ */ i.jsx("path", { d: "M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" }),
+            /* @__PURE__ */ i.jsx("path", { d: "m9.228 15.852-.923-.383" }),
+            /* @__PURE__ */ i.jsx("path", { d: "m9.228 18.148-.923.383" })
           ] })
         }
       ]
     },
     solutions: {
-      title: c("nav.solutions.title"),
+      title: d("nav.solutions.title"),
       link: "/solutions",
       shortTitle: "Solutions",
       image: "solutions-diagram",
       items: [
         {
-          title: c("nav.solutions.fintech"),
-          description: c("nav.solutions.fintech_desc"),
-          href: `${S}${s}solutions/fintech`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.fintech"),
+          description: d("nav.solutions.fintech_desc"),
+          href: `${j}${s}solutions/fintech`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5264,17 +5264,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("rect", { width: "20", height: "14", x: "2", y: "5", rx: "2" }),
-                /* @__PURE__ */ o.jsx("line", { x1: "2", x2: "22", y1: "10", y2: "10" })
+                /* @__PURE__ */ i.jsx("rect", { width: "20", height: "14", x: "2", y: "5", rx: "2" }),
+                /* @__PURE__ */ i.jsx("line", { x1: "2", x2: "22", y1: "10", y2: "10" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.healthtech"),
-          description: c("nav.solutions.healthtech_desc"),
-          href: `${S}${s}solutions/healthtech`,
-          icon: /* @__PURE__ */ o.jsx(
+          title: d("nav.solutions.healthtech"),
+          description: d("nav.solutions.healthtech_desc"),
+          href: `${j}${s}solutions/healthtech`,
+          icon: /* @__PURE__ */ i.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5288,15 +5288,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ o.jsx("path", { d: "M22 12h-4l-3 9L9 3l-3 9H2" })
+              children: /* @__PURE__ */ i.jsx("path", { d: "M22 12h-4l-3 9L9 3l-3 9H2" })
             }
           )
         },
         {
-          title: c("nav.solutions.hrtech"),
-          description: c("nav.solutions.hrtech_desc"),
-          href: `${S}${s}solutions/hrtech`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.hrtech"),
+          description: d("nav.solutions.hrtech_desc"),
+          href: `${j}${s}solutions/hrtech`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5311,19 +5311,19 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
-                /* @__PURE__ */ o.jsx("circle", { cx: "9", cy: "7", r: "4" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M22 21v-2a4 4 0 0 0-3-3.87" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M16 3.13a4 4 0 0 1 0 7.75" })
+                /* @__PURE__ */ i.jsx("path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
+                /* @__PURE__ */ i.jsx("circle", { cx: "9", cy: "7", r: "4" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M22 21v-2a4 4 0 0 0-3-3.87" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M16 3.13a4 4 0 0 1 0 7.75" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.group_companies"),
-          description: c("nav.solutions.group_companies_desc"),
-          href: `${S}${s}solutions/group-companies`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.group_companies"),
+          description: d("nav.solutions.group_companies_desc"),
+          href: `${j}${s}solutions/group-companies`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5338,17 +5338,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("rect", { x: "2", y: "7", width: "20", height: "14", rx: "2", ry: "2" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" })
+                /* @__PURE__ */ i.jsx("rect", { x: "2", y: "7", width: "20", height: "14", rx: "2", ry: "2" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.agencies"),
-          description: c("nav.solutions.agencies_desc"),
-          href: `${S}${s}solutions/agencies`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.agencies"),
+          description: d("nav.solutions.agencies_desc"),
+          href: `${j}${s}solutions/agencies`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5363,17 +5363,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" })
+                /* @__PURE__ */ i.jsx("path", { d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.startups"),
-          description: c("nav.solutions.startups_desc"),
-          href: `${S}${s}solutions/startups`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.startups"),
+          description: d("nav.solutions.startups_desc"),
+          href: `${j}${s}solutions/startups`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5388,19 +5388,19 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" }),
-                /* @__PURE__ */ o.jsx("path", { d: "m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" })
+                /* @__PURE__ */ i.jsx("path", { d: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.enterprise"),
-          description: c("nav.solutions.enterprise_desc"),
-          href: `${S}${s}solutions/enterprise`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.enterprise"),
+          description: d("nav.solutions.enterprise_desc"),
+          href: `${j}${s}solutions/enterprise`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5415,23 +5415,23 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M2 20h20" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M5 20V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v14" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M12 3v4" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M5 8h14" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M7 14h2" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M15 14h2" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M7 10h2" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M15 10h2" })
+                /* @__PURE__ */ i.jsx("path", { d: "M2 20h20" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M5 20V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v14" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M12 3v4" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M5 8h14" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M7 14h2" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M15 14h2" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M7 10h2" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M15 10h2" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.mobile_apps"),
-          description: c("nav.solutions.mobile_apps_desc"),
-          href: `${S}${s}solutions/mobile-apps`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.mobile_apps"),
+          description: d("nav.solutions.mobile_apps_desc"),
+          href: `${j}${s}solutions/mobile-apps`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5446,17 +5446,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("rect", { x: "5", y: "2", width: "14", height: "20", rx: "2", ry: "2" }),
-                /* @__PURE__ */ o.jsx("line", { x1: "12", y1: "18", x2: "12.01", y2: "18" })
+                /* @__PURE__ */ i.jsx("rect", { x: "5", y: "2", width: "14", height: "20", rx: "2", ry: "2" }),
+                /* @__PURE__ */ i.jsx("line", { x1: "12", y1: "18", x2: "12.01", y2: "18" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.manufacturing"),
-          description: c("nav.solutions.manufacturing_desc"),
-          href: `${S}${s}solutions/manufacturing`,
-          icon: /* @__PURE__ */ o.jsx(
+          title: d("nav.solutions.manufacturing"),
+          description: d("nav.solutions.manufacturing_desc"),
+          href: `${j}${s}solutions/manufacturing`,
+          icon: /* @__PURE__ */ i.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5470,15 +5470,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ o.jsx("path", { d: "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" })
+              children: /* @__PURE__ */ i.jsx("path", { d: "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" })
             }
           )
         },
         {
-          title: c("nav.solutions.government"),
-          description: c("nav.solutions.government_desc"),
-          href: `${S}${s}solutions/government`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.government"),
+          description: d("nav.solutions.government_desc"),
+          href: `${j}${s}solutions/government`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5493,20 +5493,20 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M2 20h20" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M12 4v6" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M4 20V10l8-6 8 6v10" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M15 12v8" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M9 12v8" })
+                /* @__PURE__ */ i.jsx("path", { d: "M2 20h20" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M12 4v6" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M4 20V10l8-6 8 6v10" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M15 12v8" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M9 12v8" })
               ]
             }
           )
         },
         {
-          title: c("nav.solutions.retailtech"),
-          description: c("nav.solutions.retailtech_desc"),
-          href: `${S}${s}solutions/retailtech`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.solutions.retailtech"),
+          description: d("nav.solutions.retailtech_desc"),
+          href: `${j}${s}solutions/retailtech`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5521,9 +5521,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("circle", { cx: "9", cy: "21", r: "1" }),
-                /* @__PURE__ */ o.jsx("circle", { cx: "20", cy: "21", r: "1" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" })
+                /* @__PURE__ */ i.jsx("circle", { cx: "9", cy: "21", r: "1" }),
+                /* @__PURE__ */ i.jsx("circle", { cx: "20", cy: "21", r: "1" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" })
               ]
             }
           )
@@ -5531,15 +5531,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
       ]
     },
     developers: {
-      title: c("nav.developers.title"),
+      title: d("nav.developers.title"),
       shortTitle: "Developers",
       image: "developers-diagram",
       items: [
         {
-          title: c("nav.developers.documentation"),
-          description: c("nav.developers.documentation_desc"),
+          title: d("nav.developers.documentation"),
+          description: d("nav.developers.documentation_desc"),
           href: "https://docs.plexicus.com",
-          icon: /* @__PURE__ */ o.jsxs(
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5554,20 +5554,20 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
-                /* @__PURE__ */ o.jsx("polyline", { points: "14 2 14 8 20 8" }),
-                /* @__PURE__ */ o.jsx("line", { x1: "16", y1: "13", x2: "8", y2: "13" }),
-                /* @__PURE__ */ o.jsx("line", { x1: "16", y1: "17", x2: "8", y2: "17" }),
-                /* @__PURE__ */ o.jsx("polyline", { points: "10 9 9 9 8 9" })
+                /* @__PURE__ */ i.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
+                /* @__PURE__ */ i.jsx("polyline", { points: "14 2 14 8 20 8" }),
+                /* @__PURE__ */ i.jsx("line", { x1: "16", y1: "13", x2: "8", y2: "13" }),
+                /* @__PURE__ */ i.jsx("line", { x1: "16", y1: "17", x2: "8", y2: "17" }),
+                /* @__PURE__ */ i.jsx("polyline", { points: "10 9 9 9 8 9" })
               ]
             }
           )
         },
         {
-          title: c("nav.developers.api_references"),
-          description: c("nav.developers.api_references_desc"),
+          title: d("nav.developers.api_references"),
+          description: d("nav.developers.api_references_desc"),
           href: "https://docs.plexicus.com/api",
-          icon: /* @__PURE__ */ o.jsxs(
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5582,18 +5582,18 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "m18 16 4-4-4-4" }),
-                /* @__PURE__ */ o.jsx("path", { d: "m6 8-4 4 4 4" }),
-                /* @__PURE__ */ o.jsx("path", { d: "m14.5 4-5 16" })
+                /* @__PURE__ */ i.jsx("path", { d: "m18 16 4-4-4-4" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m6 8-4 4 4 4" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m14.5 4-5 16" })
               ]
             }
           )
         },
         {
-          title: c("nav.developers.github_apps"),
-          description: c("nav.developers.github_apps_desc"),
+          title: d("nav.developers.github_apps"),
+          description: d("nav.developers.github_apps_desc"),
           href: "https://github.com/apps/plexicus",
-          icon: /* @__PURE__ */ o.jsxs(
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5608,17 +5608,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M9 18c-4.51 2-5-2-7-2" })
+                /* @__PURE__ */ i.jsx("path", { d: "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M9 18c-4.51 2-5-2-7-2" })
               ]
             }
           )
         },
         {
-          title: c("nav.developers.plexalyzer_action"),
-          description: c("nav.developers.plexalyzer_action_desc"),
+          title: d("nav.developers.plexalyzer_action"),
+          description: d("nav.developers.plexalyzer_action_desc"),
           href: "https://github.com/marketplace/actions/plexicus-runner-action",
-          icon: /* @__PURE__ */ o.jsx(
+          icon: /* @__PURE__ */ i.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5632,22 +5632,22 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ o.jsx("path", { d: "M13 2L3 14h9l-1 8 10-12h-9l1-8z" })
+              children: /* @__PURE__ */ i.jsx("path", { d: "M13 2L3 14h9l-1 8 10-12h-9l1-8z" })
             }
           )
         }
       ]
     },
     resources: {
-      title: c("nav.resources.title"),
-      shortTitle: c("nav.resources.title"),
+      title: d("nav.resources.title"),
+      shortTitle: d("nav.resources.title"),
       image: "resources-diagram",
       items: [
         {
-          title: c("nav.resources.blog"),
-          description: c("nav.resources.blog_desc"),
+          title: d("nav.resources.blog"),
+          description: d("nav.resources.blog_desc"),
           href: A,
-          icon: /* @__PURE__ */ o.jsxs(
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5662,17 +5662,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M14 3v5h5M16 13H8M16 17H8M10 9H8" })
+                /* @__PURE__ */ i.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M14 3v5h5M16 13H8M16 17H8M10 9H8" })
               ]
             }
           )
         },
         {
-          title: c("nav.resources.youtube_channel"),
-          description: c("nav.resources.youtube_channel_desc"),
+          title: d("nav.resources.youtube_channel"),
+          description: d("nav.resources.youtube_channel_desc"),
           href: "https://youtube.com/@plexicus",
-          icon: /* @__PURE__ */ o.jsxs(
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5687,45 +5687,47 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" }),
-                /* @__PURE__ */ o.jsx("path", { d: "m10 15 5-3-5-3z" })
+                /* @__PURE__ */ i.jsx("path", { d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m10 15 5-3-5-3z" })
               ]
             }
           )
         },
-        // {
-        //   title: t("nav.resources.branding_assets"),
-        //   description: t("nav.resources.branding_assets_desc"),
-        //   href: `${WEB_URL}${lang}resources/branding`,
-        //   icon: (
-        //     <svg
-        //       xmlns="http://www.w3.org/2000/svg"
-        //       width="24"
-        //       height="24"
-        //       viewBox="0 0 24 24"
-        //       fill="none"
-        //       stroke="currentColor"
-        //       strokeWidth="2"
-        //       strokeLinecap="round"
-        //       strokeLinejoin="round"
-        //       className="text-primary"
-        //       aria-hidden="true"
-        //     >
-        //       <path d="M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" />
-        //       <path d="m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" />
-        //       <path d="m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" />
-        //       <path d="m3.5 13.5 5-5" />
-        //       <path d="m5 19 5-5" />
-        //       <path d="m17.5 6.5-5 5" />
-        //       <path d="m16 17-5-5" />
-        //     </svg>
-        //   ),
-        // },
         {
-          title: c("nav.resources.changelogs"),
-          description: c("nav.resources.changelogs_desc"),
+          title: d("nav.resources.branding_assets"),
+          description: d("nav.resources.branding_assets_desc"),
+          href: `${j}${s}branding-assets`,
+          icon: /* @__PURE__ */ i.jsxs(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: "24",
+              height: "24",
+              viewBox: "0 0 24 24",
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "2",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              className: "text-primary",
+              "aria-hidden": "true",
+              children: [
+                /* @__PURE__ */ i.jsx("path", { d: "M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m3.5 13.5 5-5" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m5 19 5-5" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m17.5 6.5-5 5" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m16 17-5-5" })
+              ]
+            }
+          )
+        },
+        {
+          title: d("nav.resources.changelogs"),
+          description: d("nav.resources.changelogs_desc"),
           href: "https://plexicus.canny.io/changelog",
-          icon: /* @__PURE__ */ o.jsxs(
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5740,17 +5742,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" }),
-                /* @__PURE__ */ o.jsx("path", { d: "m9 12 2 2 4-4" })
+                /* @__PURE__ */ i.jsx("path", { d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "m9 12 2 2 4-4" })
               ]
             }
           )
         },
         {
-          title: c("nav.resources.feature_requests"),
-          description: c("nav.resources.feature_requests_desc"),
+          title: d("nav.resources.feature_requests"),
+          description: d("nav.resources.feature_requests_desc"),
           href: "https://plexicus.canny.io/feature-requests",
-          icon: /* @__PURE__ */ o.jsx(
+          icon: /* @__PURE__ */ i.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5764,7 +5766,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ o.jsx("path", { d: "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" })
+              children: /* @__PURE__ */ i.jsx("path", { d: "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" })
             }
           )
         },
@@ -5795,10 +5797,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
         //   ),
         // },
         {
-          title: c("nav.resources.comparison_overview"),
-          description: c("nav.resources.comparison_overview_desc"),
-          href: `${S}${s}comparison/overview`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.resources.comparison_overview"),
+          description: d("nav.resources.comparison_overview_desc"),
+          href: `${j}${s}comparison/overview`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5813,17 +5815,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" }),
-                /* @__PURE__ */ o.jsx("circle", { cx: "12", cy: "12", r: "3" })
+                /* @__PURE__ */ i.jsx("path", { d: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" }),
+                /* @__PURE__ */ i.jsx("circle", { cx: "12", cy: "12", r: "3" })
               ]
             }
           )
         },
         {
-          title: c("nav.resources.support"),
-          description: c("nav.resources.support_desc"),
-          href: `${S}${s}support`,
-          icon: /* @__PURE__ */ o.jsxs(
+          title: d("nav.resources.support"),
+          description: d("nav.resources.support_desc"),
+          href: `${j}${s}support`,
+          icon: /* @__PURE__ */ i.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5838,8 +5840,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ o.jsx("path", { d: "M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" }),
-                /* @__PURE__ */ o.jsx("path", { d: "M21 16v2a4 4 0 0 1-4 4h-5" })
+                /* @__PURE__ */ i.jsx("path", { d: "M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" }),
+                /* @__PURE__ */ i.jsx("path", { d: "M21 16v2a4 4 0 0 1-4 4h-5" })
               ]
             }
           )
@@ -5847,7 +5849,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
       ]
     }
   };
-  return /* @__PURE__ */ o.jsxs(
+  return /* @__PURE__ */ i.jsxs(
     "header",
     {
       className: "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
@@ -5858,14 +5860,14 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
         minHeight: "64px"
       },
       children: [
-        /* @__PURE__ */ o.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl", children: [
-          /* @__PURE__ */ o.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ o.jsx(
+        /* @__PURE__ */ i.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl", children: [
+          /* @__PURE__ */ i.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ i.jsx(
             Y,
             {
-              href: `${S}${s}`,
+              href: `${j}${s}`,
               className: "flex items-center gap-2 overflow-visible",
               "aria-label": "Plexicus Home",
-              children: /* @__PURE__ */ o.jsx("div", { className: "relative w-auto h-14 flex items-center", children: /* @__PURE__ */ o.jsx(
+              children: /* @__PURE__ */ i.jsx("div", { className: "relative w-auto h-14 flex items-center", children: /* @__PURE__ */ i.jsx(
                 "img",
                 {
                   src: "/images/plexicus-logo-white.png",
@@ -5879,14 +5881,14 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               ) })
             }
           ) }),
-          /* @__PURE__ */ o.jsxs("nav", { className: "hidden md:flex md:gap-4 lg:gap-6", "aria-label": "Main Navigation", children: [
-            Object.entries(R).filter(([v]) => v === "products").map(([v, $]) => /* @__PURE__ */ o.jsx(
+          /* @__PURE__ */ i.jsxs("nav", { className: "hidden xl:flex md:gap-4 lg:gap-6", "aria-label": "Main Navigation", children: [
+            Object.entries(R).filter(([v]) => v === "products").map(([v, $]) => /* @__PURE__ */ i.jsx(
               "div",
               {
                 className: "relative group",
                 onMouseEnter: () => p(v),
                 onMouseLeave: _,
-                children: /* @__PURE__ */ o.jsxs(
+                children: /* @__PURE__ */ i.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
@@ -5894,9 +5896,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                     "aria-haspopup": "true",
                     onClick: () => E(v),
                     children: [
-                      /* @__PURE__ */ o.jsx("span", { className: "hidden lg:inline", children: $.title }),
-                      /* @__PURE__ */ o.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
-                      /* @__PURE__ */ o.jsx(
+                      /* @__PURE__ */ i.jsx("span", { className: "hidden lg:inline", children: $.title }),
+                      /* @__PURE__ */ i.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
+                      /* @__PURE__ */ i.jsx(
                         "svg",
                         {
                           xmlns: "http://www.w3.org/2000/svg",
@@ -5910,7 +5912,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                           strokeLinejoin: "round",
                           className: `ml-1 transition-transform duration-200 ${l === v ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
-                          children: /* @__PURE__ */ o.jsx("path", { d: "m6 9 6 6 6-6" })
+                          children: /* @__PURE__ */ i.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
                       )
                     ]
@@ -5919,21 +5921,21 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               },
               v
             )),
-            /* @__PURE__ */ o.jsx(
+            /* @__PURE__ */ i.jsx(
               Y,
               {
-                href: `${S}${s}pricing`,
+                href: `${j}${s}pricing`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
-                children: c("nav.pricing")
+                children: d("nav.pricing")
               }
             ),
-            Object.entries(R).filter(([v]) => v === "solutions" || v === "developers" || v === "resources").map(([v, $]) => /* @__PURE__ */ o.jsx(
+            Object.entries(R).filter(([v]) => v === "solutions" || v === "developers" || v === "resources").map(([v, $]) => /* @__PURE__ */ i.jsx(
               "div",
               {
                 className: "relative group",
                 onMouseEnter: () => p(v),
                 onMouseLeave: _,
-                children: /* @__PURE__ */ o.jsxs(
+                children: /* @__PURE__ */ i.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
@@ -5941,9 +5943,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                     "aria-haspopup": "true",
                     onClick: () => E(v),
                     children: [
-                      /* @__PURE__ */ o.jsx("span", { className: "hidden lg:inline", children: $.title }),
-                      /* @__PURE__ */ o.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
-                      /* @__PURE__ */ o.jsx(
+                      /* @__PURE__ */ i.jsx("span", { className: "hidden lg:inline", children: $.title }),
+                      /* @__PURE__ */ i.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
+                      /* @__PURE__ */ i.jsx(
                         "svg",
                         {
                           xmlns: "http://www.w3.org/2000/svg",
@@ -5957,7 +5959,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                           strokeLinejoin: "round",
                           className: `ml-1 transition-transform duration-200 ${l === v ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
-                          children: /* @__PURE__ */ o.jsx("path", { d: "m6 9 6 6 6-6" })
+                          children: /* @__PURE__ */ i.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
                       )
                     ]
@@ -5966,87 +5968,89 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               },
               v
             )),
-            /* @__PURE__ */ o.jsx(
+            /* @__PURE__ */ i.jsx(
               Y,
               {
-                href: `${S}${s}contact`,
+                href: `${j}${s}contact`,
                 className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 whitespace-nowrap",
-                children: c("nav.contact")
+                children: d("nav.contact")
               }
             )
           ] }),
-          /* @__PURE__ */ o.jsxs("div", { className: "hidden md:flex items-center gap-4", children: [
-            /* @__PURE__ */ o.jsx(
-              Y,
+          /* @__PURE__ */ i.jsxs("div", { className: "flex", children: [
+            /* @__PURE__ */ i.jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ i.jsx(
+                Y,
+                {
+                  href: `${wt}/login`,
+                  className: "text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap",
+                  children: d("nav.login")
+                }
+              ),
+              /* @__PURE__ */ i.jsx(Y, { href: `${wt}/register`, children: /* @__PURE__ */ i.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: d("nav.get_started") }) })
+            ] }),
+            /* @__PURE__ */ i.jsx(
+              "button",
               {
-                href: `${wt}/login`,
-                className: "text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap",
-                children: c("nav.login")
+                className: "flex xl:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white",
+                onClick: () => a(!n),
+                "aria-label": n ? "Close menu" : "Open menu",
+                "aria-expanded": n,
+                children: n ? /* @__PURE__ */ i.jsxs(
+                  "svg",
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    strokeWidth: "2",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    className: "h-6 w-6",
+                    "aria-hidden": "true",
+                    children: [
+                      /* @__PURE__ */ i.jsx("line", { x1: "18", y1: "6", x2: "6", y2: "18" }),
+                      /* @__PURE__ */ i.jsx("line", { x1: "6", y1: "6", x2: "18", y2: "18" })
+                    ]
+                  }
+                ) : /* @__PURE__ */ i.jsxs(
+                  "svg",
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    strokeWidth: "2",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    className: "h-6 w-6",
+                    "aria-hidden": "true",
+                    children: [
+                      /* @__PURE__ */ i.jsx("line", { x1: "4", x2: "20", y1: "12", y2: "12" }),
+                      /* @__PURE__ */ i.jsx("line", { x1: "4", x2: "20", y1: "6", y2: "6" }),
+                      /* @__PURE__ */ i.jsx("line", { x1: "4", x2: "20", y1: "18", y2: "18" })
+                    ]
+                  }
+                )
               }
-            ),
-            /* @__PURE__ */ o.jsx(Y, { href: `${wt}/register`, children: /* @__PURE__ */ o.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: c("nav.get_started") }) })
-          ] }),
-          /* @__PURE__ */ o.jsx(
-            "button",
-            {
-              className: "flex md:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white",
-              onClick: () => a(!n),
-              "aria-label": n ? "Close menu" : "Open menu",
-              "aria-expanded": n,
-              children: n ? /* @__PURE__ */ o.jsxs(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "24",
-                  height: "24",
-                  viewBox: "0 0 24 24",
-                  fill: "none",
-                  stroke: "currentColor",
-                  strokeWidth: "2",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  className: "h-6 w-6",
-                  "aria-hidden": "true",
-                  children: [
-                    /* @__PURE__ */ o.jsx("line", { x1: "18", y1: "6", x2: "6", y2: "18" }),
-                    /* @__PURE__ */ o.jsx("line", { x1: "6", y1: "6", x2: "18", y2: "18" })
-                  ]
-                }
-              ) : /* @__PURE__ */ o.jsxs(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "24",
-                  height: "24",
-                  viewBox: "0 0 24 24",
-                  fill: "none",
-                  stroke: "currentColor",
-                  strokeWidth: "2",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  className: "h-6 w-6",
-                  "aria-hidden": "true",
-                  children: [
-                    /* @__PURE__ */ o.jsx("line", { x1: "4", x2: "20", y1: "12", y2: "12" }),
-                    /* @__PURE__ */ o.jsx("line", { x1: "4", x2: "20", y1: "6", y2: "6" }),
-                    /* @__PURE__ */ o.jsx("line", { x1: "4", x2: "20", y1: "18", y2: "18" })
-                  ]
-                }
-              )
-            }
-          )
+            )
+          ] })
         ] }),
-        l && /* @__PURE__ */ o.jsxs(o.Fragment, { children: [
-          /* @__PURE__ */ o.jsx(
+        l && /* @__PURE__ */ i.jsxs(i.Fragment, { children: [
+          /* @__PURE__ */ i.jsx(
             "div",
             {
               className: "fixed inset-0 bg-black/20 z-30",
-              onClick: () => d(null),
+              onClick: () => c(null),
               "aria-hidden": "true",
               style: { top: "64px" }
             }
           ),
-          /* @__PURE__ */ o.jsx(
+          /* @__PURE__ */ i.jsx(
             "div",
             {
               className: "absolute left-0 right-0 top-16 z-40 bg-white shadow-xl border-t border-gray-100 transition-all duration-300 transform",
@@ -6054,10 +6058,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               onMouseLeave: _,
               role: "menu",
               "aria-labelledby": `menu-button-${l}`,
-              children: /* @__PURE__ */ o.jsx("div", { className: "container mx-auto py-8 px-4 md:px-6 max-w-7xl", children: /* @__PURE__ */ o.jsxs("div", { className: "flex flex-col md:flex-row", children: [
-                /* @__PURE__ */ o.jsxs("div", { className: "w-full md:w-1/3 pr-0 md:pr-8 mb-6 md:mb-0 flex flex-col", children: [
-                  /* @__PURE__ */ o.jsx("div", { className: "relative h-36 md:h-40 w-full rounded-lg overflow-hidden bg-white border border-gray-100 mb-4", children: /* @__PURE__ */ o.jsxs("div", { className: "absolute inset-0 flex items-center justify-center", children: [
-                    l === "products" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
+              children: /* @__PURE__ */ i.jsx("div", { className: "container mx-auto py-8 px-4 md:px-6 max-w-7xl", children: /* @__PURE__ */ i.jsxs("div", { className: "flex flex-col md:flex-row", children: [
+                /* @__PURE__ */ i.jsxs("div", { className: "w-full md:w-1/3 pr-0 md:pr-8 mb-6 md:mb-0 flex flex-col", children: [
+                  /* @__PURE__ */ i.jsx("div", { className: "relative h-36 md:h-40 w-full rounded-lg overflow-hidden bg-white border border-gray-100 mb-4", children: /* @__PURE__ */ i.jsxs("div", { className: "absolute inset-0 flex items-center justify-center", children: [
+                    l === "products" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6066,8 +6070,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ i.jsx(
                             "rect",
                             {
                               x: "40",
@@ -6079,23 +6083,23 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               filter: "url(#shadowEffect)"
                             }
                           ),
-                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "30", width: "320", height: "40", rx: "12", fill: "#8220ff", fillOpacity: "0.9" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "65", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "90", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "115", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "70", width: "80", height: "200", fill: "#f5f5f7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "90", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "110", width: "40", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "130", width: "45", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "150", width: "35", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "170", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "140", y: "90", width: "200", height: "70", rx: "8", fill: "#8220ff", fillOpacity: "0.1" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "155", y: "105", width: "170", height: "40", rx: "4", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "175", cy: "125", r: "15", fill: "#8220ff", fillOpacity: "0.8" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "200", y: "115", width: "110", height: "8", rx: "4", fill: "white" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "200", y: "130", width: "80", height: "6", rx: "3", fill: "white", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "140", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
-                          /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "30", width: "320", height: "40", rx: "12", fill: "#8220ff", fillOpacity: "0.9" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "65", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "90", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "115", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "70", width: "80", height: "200", fill: "#f5f5f7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "90", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "110", width: "40", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "130", width: "45", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "150", width: "35", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "170", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "140", y: "90", width: "200", height: "70", rx: "8", fill: "#8220ff", fillOpacity: "0.1" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "155", y: "105", width: "170", height: "40", rx: "4", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "175", cy: "125", r: "15", fill: "#8220ff", fillOpacity: "0.8" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "200", y: "115", width: "110", height: "8", rx: "4", fill: "white" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "200", y: "130", width: "80", height: "6", rx: "3", fill: "white", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "140", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
+                          /* @__PURE__ */ i.jsx(
                             "path",
                             {
                               d: "M150 240 L170 220 L190 230 L210 200",
@@ -6104,11 +6108,11 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeLinecap: "round"
                             }
                           ),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "170", cy: "220", r: "4", fill: "#8220ff" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "190", cy: "230", r: "4", fill: "#8220ff" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "210", cy: "200", r: "4", fill: "#8220ff" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "245", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
-                          /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx("circle", { cx: "170", cy: "220", r: "4", fill: "#8220ff" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "190", cy: "230", r: "4", fill: "#8220ff" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "210", cy: "200", r: "4", fill: "#8220ff" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "245", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
+                          /* @__PURE__ */ i.jsx(
                             "circle",
                             {
                               cx: "293",
@@ -6120,15 +6124,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeDasharray: "120 180"
                             }
                           ),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "293", cy: "220", r: "30", fill: "transparent", stroke: "#e0e0e5", strokeWidth: "8" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "283", y: "225", fontFamily: "Arial", fontSize: "12", fill: "#8220ff", fontWeight: "bold", children: "75%" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "320", cy: "50", r: "12", fill: "white", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx("path", { d: "M314 50 L320 56 L326 50", stroke: "white", strokeWidth: "2", strokeLinecap: "round" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "30", cy: "30", r: "5", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "350", cy: "280", r: "7", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "370", cy: "50", r: "4", fill: "#8220ff", fillOpacity: "0.4" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "20", cy: "250", r: "6", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx("circle", { cx: "293", cy: "220", r: "30", fill: "transparent", stroke: "#e0e0e5", strokeWidth: "8" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "283", y: "225", fontFamily: "Arial", fontSize: "12", fill: "#8220ff", fontWeight: "bold", children: "75%" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "320", cy: "50", r: "12", fill: "white", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx("path", { d: "M314 50 L320 56 L326 50", stroke: "white", strokeWidth: "2", strokeLinecap: "round" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "30", cy: "30", r: "5", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "350", cy: "280", r: "7", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "370", cy: "50", r: "4", fill: "#8220ff", fillOpacity: "0.4" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "20", cy: "250", r: "6", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx(
                             "path",
                             {
                               d: "M15 100 C30 120, 20 150, 35 160",
@@ -6137,7 +6141,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeDasharray: "4 4"
                             }
                           ),
-                          /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx(
                             "path",
                             {
                               d: "M370 120 C350 140, 360 170, 380 190",
@@ -6146,7 +6150,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeDasharray: "4 4"
                             }
                           ),
-                          /* @__PURE__ */ o.jsx("defs", { children: /* @__PURE__ */ o.jsxs(
+                          /* @__PURE__ */ i.jsx("defs", { children: /* @__PURE__ */ i.jsxs(
                             "filter",
                             {
                               id: "shadowEffect",
@@ -6157,8 +6161,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               filterUnits: "userSpaceOnUse",
                               colorInterpolationFilters: "sRGB",
                               children: [
-                                /* @__PURE__ */ o.jsx("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
-                                /* @__PURE__ */ o.jsx(
+                                /* @__PURE__ */ i.jsx("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
+                                /* @__PURE__ */ i.jsx(
                                   "feColorMatrix",
                                   {
                                     in: "SourceAlpha",
@@ -6166,24 +6170,24 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                     values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                                   }
                                 ),
-                                /* @__PURE__ */ o.jsx("feOffset", { dy: "4" }),
-                                /* @__PURE__ */ o.jsx("feGaussianBlur", { stdDeviation: "6" }),
-                                /* @__PURE__ */ o.jsx(
+                                /* @__PURE__ */ i.jsx("feOffset", { dy: "4" }),
+                                /* @__PURE__ */ i.jsx("feGaussianBlur", { stdDeviation: "6" }),
+                                /* @__PURE__ */ i.jsx(
                                   "feColorMatrix",
                                   {
                                     type: "matrix",
                                     values: "0 0 0 0 0.51 0 0 0 0 0.125 0 0 0 0 1 0 0 0 0.15 0"
                                   }
                                 ),
-                                /* @__PURE__ */ o.jsx("feBlend", { mode: "normal", in2: "BackgroundImageFix", result: "effect1_dropShadow" }),
-                                /* @__PURE__ */ o.jsx("feBlend", { mode: "normal", in: "SourceGraphic", in2: "effect1_dropShadow", result: "shape" })
+                                /* @__PURE__ */ i.jsx("feBlend", { mode: "normal", in2: "BackgroundImageFix", result: "effect1_dropShadow" }),
+                                /* @__PURE__ */ i.jsx("feBlend", { mode: "normal", in: "SourceGraphic", in2: "effect1_dropShadow", result: "shape" })
                               ]
                             }
                           ) })
                         ]
                       }
                     ) }),
-                    l === "solutions" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
+                    l === "solutions" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6192,8 +6196,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ i.jsx(
                             "circle",
                             {
                               cx: "200",
@@ -6205,32 +6209,32 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeWidth: "2"
                             }
                           ),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "100", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "300", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "70", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "230", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("path", { d: "M125 150 L160 150", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("path", { d: "M240 150 L275 150", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("path", { d: "M200 95 L200 130", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("path", { d: "M200 170 L200 205", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ o.jsx("polygon", { points: "158,145 158,155 168,150", fill: "#8220ff" }),
-                          /* @__PURE__ */ o.jsx("polygon", { points: "242,145 242,155 232,150", fill: "#8220ff" }),
-                          /* @__PURE__ */ o.jsx("polygon", { points: "195,128 205,128 200,138", fill: "#8220ff" }),
-                          /* @__PURE__ */ o.jsx("polygon", { points: "195,172 205,172 200,162", fill: "#8220ff" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "100", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "300", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "70", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "230", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "150", r: "20", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.4" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "150", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "250", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "150", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "250", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" })
+                          /* @__PURE__ */ i.jsx("circle", { cx: "100", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "300", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "70", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "230", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("path", { d: "M125 150 L160 150", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("path", { d: "M240 150 L275 150", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("path", { d: "M200 95 L200 130", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("path", { d: "M200 170 L200 205", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ i.jsx("polygon", { points: "158,145 158,155 168,150", fill: "#8220ff" }),
+                          /* @__PURE__ */ i.jsx("polygon", { points: "242,145 242,155 232,150", fill: "#8220ff" }),
+                          /* @__PURE__ */ i.jsx("polygon", { points: "195,128 205,128 200,138", fill: "#8220ff" }),
+                          /* @__PURE__ */ i.jsx("polygon", { points: "195,172 205,172 200,162", fill: "#8220ff" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "100", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "300", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "70", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "230", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "150", r: "20", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.4" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "150", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "250", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "150", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "250", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" })
                         ]
                       }
                     ) }),
-                    l === "resources" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
+                    l === "resources" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6239,10 +6243,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ o.jsxs("g", { filter: "url(#resourcesShadow)", children: [
-                            /* @__PURE__ */ o.jsx("rect", { x: "140", y: "80", width: "120", height: "140", rx: "4", fill: "url(#bookGradient)" }),
-                            /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ i.jsxs("g", { filter: "url(#resourcesShadow)", children: [
+                            /* @__PURE__ */ i.jsx("rect", { x: "140", y: "80", width: "120", height: "140", rx: "4", fill: "url(#bookGradient)" }),
+                            /* @__PURE__ */ i.jsx(
                               "rect",
                               {
                                 x: "140",
@@ -6255,14 +6259,14 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                 fill: "none"
                               }
                             ),
-                            /* @__PURE__ */ o.jsx("path", { d: "M160 100 L240 100", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ o.jsx("path", { d: "M160 120 L240 120", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ o.jsx("path", { d: "M160 140 L240 140", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ o.jsx("path", { d: "M160 160 L240 160", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ o.jsx("path", { d: "M160 180 L240 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ o.jsx("path", { d: "M230 80 L230 110 L220 100 L210 110 L210 80", fill: "#8220ff", fillOpacity: "0.3" }),
-                            /* @__PURE__ */ o.jsxs("g", { transform: "translate(-10, -10) rotate(-5)", children: [
-                              /* @__PURE__ */ o.jsx(
+                            /* @__PURE__ */ i.jsx("path", { d: "M160 100 L240 100", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ i.jsx("path", { d: "M160 120 L240 120", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ i.jsx("path", { d: "M160 140 L240 140", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ i.jsx("path", { d: "M160 160 L240 160", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ i.jsx("path", { d: "M160 180 L240 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ i.jsx("path", { d: "M230 80 L230 110 L220 100 L210 110 L210 80", fill: "#8220ff", fillOpacity: "0.3" }),
+                            /* @__PURE__ */ i.jsxs("g", { transform: "translate(-10, -10) rotate(-5)", children: [
+                              /* @__PURE__ */ i.jsx(
                                 "rect",
                                 {
                                   x: "80",
@@ -6275,13 +6279,13 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                   strokeWidth: "1.5"
                                 }
                               ),
-                              /* @__PURE__ */ o.jsx("path", { d: "M90 135 L150 135", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
-                              /* @__PURE__ */ o.jsx("path", { d: "M90 150 L150 150", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
-                              /* @__PURE__ */ o.jsx("path", { d: "M90 165 L150 165", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
-                              /* @__PURE__ */ o.jsx("path", { d: "M90 180 L120 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" })
+                              /* @__PURE__ */ i.jsx("path", { d: "M90 135 L150 135", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
+                              /* @__PURE__ */ i.jsx("path", { d: "M90 150 L150 150", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
+                              /* @__PURE__ */ i.jsx("path", { d: "M90 165 L150 165", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
+                              /* @__PURE__ */ i.jsx("path", { d: "M90 180 L120 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" })
                             ] }),
-                            /* @__PURE__ */ o.jsxs("g", { transform: "translate(10, -10) rotate(5)", children: [
-                              /* @__PURE__ */ o.jsx(
+                            /* @__PURE__ */ i.jsxs("g", { transform: "translate(10, -10) rotate(5)", children: [
+                              /* @__PURE__ */ i.jsx(
                                 "rect",
                                 {
                                   x: "240",
@@ -6294,8 +6298,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                   strokeWidth: "1.5"
                                 }
                               ),
-                              /* @__PURE__ */ o.jsx("polygon", { points: "270,140 290,150 270,160", fill: "#8220ff" }),
-                              /* @__PURE__ */ o.jsx(
+                              /* @__PURE__ */ i.jsx("polygon", { points: "270,140 290,150 270,160", fill: "#8220ff" }),
+                              /* @__PURE__ */ i.jsx(
                                 "rect",
                                 {
                                   x: "245",
@@ -6310,15 +6314,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               )
                             ] })
                           ] }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "50", r: "15", fill: "#8220ff", fillOpacity: "0.1" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "50", r: "10", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "50", r: "5", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "150", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "250", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "120", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "280", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ o.jsxs("defs", { children: [
-                            /* @__PURE__ */ o.jsxs(
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "50", r: "15", fill: "#8220ff", fillOpacity: "0.1" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "50", r: "10", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "50", r: "5", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "150", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "250", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "120", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "280", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ i.jsxs("defs", { children: [
+                            /* @__PURE__ */ i.jsxs(
                               "linearGradient",
                               {
                                 id: "bookGradient",
@@ -6328,17 +6332,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                 y2: "220",
                                 gradientUnits: "userSpaceOnUse",
                                 children: [
-                                  /* @__PURE__ */ o.jsx("stop", { offset: "0%", stopColor: "#f0f0f5" }),
-                                  /* @__PURE__ */ o.jsx("stop", { offset: "100%", stopColor: "#ffffff" })
+                                  /* @__PURE__ */ i.jsx("stop", { offset: "0%", stopColor: "#f0f0f5" }),
+                                  /* @__PURE__ */ i.jsx("stop", { offset: "100%", stopColor: "#ffffff" })
                                 ]
                               }
                             ),
-                            /* @__PURE__ */ o.jsx("filter", { id: "resourcesShadow", x: "-10%", y: "-10%", width: "120%", height: "120%", children: /* @__PURE__ */ o.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "4", floodColor: "#8220ff", floodOpacity: "0.2" }) })
+                            /* @__PURE__ */ i.jsx("filter", { id: "resourcesShadow", x: "-10%", y: "-10%", width: "120%", height: "120%", children: /* @__PURE__ */ i.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "4", floodColor: "#8220ff", floodOpacity: "0.2" }) })
                           ] })
                         ]
                       }
                     ) }),
-                    l === "developers" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
+                    l === "developers" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6347,38 +6351,38 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "20", y: "20", width: "280", height: "200", rx: "8", fill: "#1E1E1E" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "20", y: "20", width: "280", height: "30", rx: "8", fill: "#333333" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "40", cy: "35", r: "6", fill: "#FF5F56" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "60", cy: "35", r: "6", fill: "#FFBD2E" }),
-                          /* @__PURE__ */ o.jsx("circle", { cx: "80", cy: "35", r: "6", fill: "#27C93F" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "70", width: "120", height: "10", rx: "2", fill: "#9CDCFE", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "90", width: "180", height: "10", rx: "2", fill: "#CE9178", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "60", y: "110", width: "200", height: "10", rx: "2", fill: "#6A9955", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "60", y: "130", width: "160", height: "10", rx: "2", fill: "#569CD6", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "150", width: "140", height: "10", rx: "2", fill: "#DCDCAA", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "60", y: "170", width: "180", height: "10", rx: "2", fill: "#4EC9B0", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "190", width: "160", height: "10", rx: "2", fill: "#C586C0", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "75", fontSize: "10", fill: "#858585", children: "1" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "95", fontSize: "10", fill: "#858585", children: "2" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "115", fontSize: "10", fill: "#858585", children: "3" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "135", fontSize: "10", fill: "#858585", children: "4" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "155", fontSize: "10", fill: "#858585", children: "5" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "175", fontSize: "10", fill: "#858585", children: "6" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "195", fontSize: "10", fill: "#858585", children: "7" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "80", y: "130", width: "310", height: "130", rx: "8", fill: "#1E1E1E", filter: "url(#shadow)" }),
-                          /* @__PURE__ */ o.jsx("rect", { x: "80", y: "130", width: "310", height: "25", rx: "8", fill: "#333333" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "235", y: "147", fontSize: "12", fill: "#FFFFFF", textAnchor: "middle", children: "Terminal" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "170", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ git clone https://github.com/plexicus/plexicus-sdk.git" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "185", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "Cloning into 'plexicus-sdk'..." }),
-                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "200", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "remote: Counting objects: 100% (1234/1234)" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "215", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ cd plexicus-sdk && npm install" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "230", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "added 1024 packages in 4.2s" }),
-                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "245", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ npm run dev" }),
-                          /* @__PURE__ */ o.jsxs("g", { transform: "translate(320, 240) scale(0.8)", children: [
-                            /* @__PURE__ */ o.jsx("circle", { cx: "0", cy: "0", r: "25", fill: "white" }),
-                            /* @__PURE__ */ o.jsx(
+                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "20", y: "20", width: "280", height: "200", rx: "8", fill: "#1E1E1E" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "20", y: "20", width: "280", height: "30", rx: "8", fill: "#333333" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "40", cy: "35", r: "6", fill: "#FF5F56" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "60", cy: "35", r: "6", fill: "#FFBD2E" }),
+                          /* @__PURE__ */ i.jsx("circle", { cx: "80", cy: "35", r: "6", fill: "#27C93F" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "70", width: "120", height: "10", rx: "2", fill: "#9CDCFE", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "90", width: "180", height: "10", rx: "2", fill: "#CE9178", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "60", y: "110", width: "200", height: "10", rx: "2", fill: "#6A9955", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "60", y: "130", width: "160", height: "10", rx: "2", fill: "#569CD6", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "150", width: "140", height: "10", rx: "2", fill: "#DCDCAA", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "60", y: "170", width: "180", height: "10", rx: "2", fill: "#4EC9B0", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "190", width: "160", height: "10", rx: "2", fill: "#C586C0", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "75", fontSize: "10", fill: "#858585", children: "1" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "95", fontSize: "10", fill: "#858585", children: "2" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "115", fontSize: "10", fill: "#858585", children: "3" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "135", fontSize: "10", fill: "#858585", children: "4" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "155", fontSize: "10", fill: "#858585", children: "5" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "175", fontSize: "10", fill: "#858585", children: "6" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "195", fontSize: "10", fill: "#858585", children: "7" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "80", y: "130", width: "310", height: "130", rx: "8", fill: "#1E1E1E", filter: "url(#shadow)" }),
+                          /* @__PURE__ */ i.jsx("rect", { x: "80", y: "130", width: "310", height: "25", rx: "8", fill: "#333333" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "235", y: "147", fontSize: "12", fill: "#FFFFFF", textAnchor: "middle", children: "Terminal" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "170", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ git clone https://github.com/plexicus/plexicus-sdk.git" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "185", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "Cloning into 'plexicus-sdk'..." }),
+                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "200", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "remote: Counting objects: 100% (1234/1234)" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "215", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ cd plexicus-sdk && npm install" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "230", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "added 1024 packages in 4.2s" }),
+                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "245", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ npm run dev" }),
+                          /* @__PURE__ */ i.jsxs("g", { transform: "translate(320, 240) scale(0.8)", children: [
+                            /* @__PURE__ */ i.jsx("circle", { cx: "0", cy: "0", r: "25", fill: "white" }),
+                            /* @__PURE__ */ i.jsx(
                               "path",
                               {
                                 d: "M0 -20c-11.046 0-20 8.954-20 20 0 8.837 5.732 16.338 13.678 18.98 1 .184 1.365-.434 1.365-.964 0-.476-.018-1.733-.027-3.4-5.564 1.21-6.736-2.68-6.736-2.68-.91-2.31-2.22-2.924-2.22-2.924-1.815-1.24.137-1.215.137-1.215 2.006.14 3.06 2.06 3.06 2.06 1.783 3.057 4.675 2.174 5.815 1.663.18-1.29.697-2.174 1.268-2.674-4.442-.505-9.112-2.22-9.112-9.87 0-2.18.78-3.964 2.06-5.36-.207-.505-.893-2.54.195-5.29 0 0 1.68-.538 5.5 2.05 1.595-.443 3.305-.665 5.005-.673 1.7.008 3.41.23 5.005.673 3.82-2.588 5.495-2.05 5.495-2.05 1.09 2.75.405 4.785.198 5.29 1.28 1.396 2.055 3.18 2.055 5.36 0 7.67-4.677 9.36-9.13 9.855.718.62 1.358 1.842 1.358 3.712 0 2.68-.024 4.84-.024 5.5 0 .535.36 1.16 1.375.964C14.275 16.33 20 8.83 20 0 20-11.046 11.046-20 0-20z",
@@ -6387,27 +6391,27 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               }
                             )
                           ] }),
-                          /* @__PURE__ */ o.jsx("defs", { children: /* @__PURE__ */ o.jsx("filter", { id: "shadow", x: "0", y: "0", width: "400", height: "300", filterUnits: "userSpaceOnUse", children: /* @__PURE__ */ o.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "3", floodColor: "#000000", floodOpacity: "0.3" }) }) })
+                          /* @__PURE__ */ i.jsx("defs", { children: /* @__PURE__ */ i.jsx("filter", { id: "shadow", x: "0", y: "0", width: "400", height: "300", filterUnits: "userSpaceOnUse", children: /* @__PURE__ */ i.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "3", floodColor: "#000000", floodOpacity: "0.3" }) }) })
                         ]
                       }
                     ) })
                   ] }) }),
-                  /* @__PURE__ */ o.jsxs("div", { className: "bg-gray-50 rounded-lg p-4", children: [
-                    /* @__PURE__ */ o.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: R[l].title }),
-                    /* @__PURE__ */ o.jsx("p", { className: "text-gray-700", children: c(l === "products" ? "nav.product.explore" : l === "solutions" ? "nav.solutions.explore" : "nav.resources.explore") })
+                  /* @__PURE__ */ i.jsxs("div", { className: "bg-gray-50 rounded-lg p-4", children: [
+                    /* @__PURE__ */ i.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: R[l].title }),
+                    /* @__PURE__ */ i.jsx("p", { className: "text-gray-700", children: d(l === "products" ? "nav.product.explore" : l === "solutions" ? "nav.solutions.explore" : "nav.resources.explore") })
                   ] })
                 ] }),
-                /* @__PURE__ */ o.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ o.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: R[l].items.filter((v) => l !== "resources" || !v.title.startsWith("vs ")).map((v, $) => /* @__PURE__ */ o.jsxs(
+                /* @__PURE__ */ i.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ i.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: R[l].items.filter((v) => l !== "resources" || !v.title.startsWith("vs ")).map((v, $) => /* @__PURE__ */ i.jsxs(
                   Y,
                   {
                     href: v.href,
                     className: "flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors group",
-                    onClick: () => d(null),
+                    onClick: () => c(null),
                     children: [
-                      /* @__PURE__ */ o.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: Me.cloneElement(v.icon, { width: 16, height: 16 }) }),
-                      /* @__PURE__ */ o.jsxs("div", { className: "flex-1", children: [
-                        /* @__PURE__ */ o.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: v.title }),
-                        /* @__PURE__ */ o.jsx("p", { className: "text-sm text-gray-600 mt-1", children: v.description })
+                      /* @__PURE__ */ i.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: Me.cloneElement(v.icon, { width: 16, height: 16 }) }),
+                      /* @__PURE__ */ i.jsxs("div", { className: "flex-1", children: [
+                        /* @__PURE__ */ i.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: v.title }),
+                        /* @__PURE__ */ i.jsx("p", { className: "text-sm text-gray-600 mt-1", children: v.description })
                       ] })
                     ]
                   },
@@ -6417,48 +6421,48 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
             }
           )
         ] }),
-        n && /* @__PURE__ */ o.jsx("div", { className: "fixed inset-0 bg-black/20 z-40 lg:hidden", onClick: () => a(!1) }),
-        /* @__PURE__ */ o.jsx(
+        n && /* @__PURE__ */ i.jsx("div", { className: "fixed inset-0 bg-black/20 z-40 md:hidden", onClick: () => a(!1) }),
+        /* @__PURE__ */ i.jsx(
           "div",
           {
             className: `md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${n ? "translate-x-0" : "translate-x-full"}`,
             style: { top: "64px", height: "calc(100vh - 64px)", overflow: "auto" },
-            children: /* @__PURE__ */ o.jsx("div", { className: "overflow-y-auto h-full p-4 pb-20", children: /* @__PURE__ */ o.jsxs("div", { className: "space-y-4", children: [
-              Object.entries(R).map(([v, $]) => /* @__PURE__ */ o.jsxs("div", { className: "space-y-2", children: [
-                /* @__PURE__ */ o.jsx("h3", { className: "font-semibold", children: $.title }),
-                /* @__PURE__ */ o.jsx("div", { className: "grid grid-cols-1 gap-2", children: $.items.map((T, x) => /* @__PURE__ */ o.jsxs(
+            children: /* @__PURE__ */ i.jsx("div", { className: "overflow-y-auto h-full p-4 pb-20", children: /* @__PURE__ */ i.jsxs("div", { className: "space-y-4", children: [
+              Object.entries(R).map(([v, $]) => /* @__PURE__ */ i.jsxs("div", { className: "space-y-2", children: [
+                /* @__PURE__ */ i.jsx("h3", { className: "font-semibold", children: $.title }),
+                /* @__PURE__ */ i.jsx("div", { className: "grid grid-cols-1 gap-2", children: $.items.map((T, x) => /* @__PURE__ */ i.jsxs(
                   Y,
                   {
                     href: T.href,
                     className: "flex items-center p-2 rounded-md bg-gray-50 hover:bg-gray-100",
                     onClick: () => a(!1),
                     children: [
-                      /* @__PURE__ */ o.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: Me.cloneElement(T.icon, { width: 16, height: 16 }) }),
-                      /* @__PURE__ */ o.jsx("span", { className: "text-sm", children: T.title })
+                      /* @__PURE__ */ i.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: Me.cloneElement(T.icon, { width: 16, height: 16 }) }),
+                      /* @__PURE__ */ i.jsx("span", { className: "text-sm", children: T.title })
                     ]
                   },
                   x
                 )) })
               ] }, v)),
-              /* @__PURE__ */ o.jsx(
+              /* @__PURE__ */ i.jsx(
                 Y,
                 {
-                  href: `${S}${s}pricing`,
+                  href: `${j}${s}pricing`,
                   className: "block py-2 text-sm font-medium",
                   onClick: () => a(!1),
-                  children: c("nav.pricing")
+                  children: d("nav.pricing")
                 }
               ),
-              /* @__PURE__ */ o.jsx(
+              /* @__PURE__ */ i.jsx(
                 Y,
                 {
-                  href: `${S}${s}contact`,
+                  href: `${j}${s}contact`,
                   className: "block py-2 text-sm font-medium",
                   onClick: () => a(!1),
-                  children: c("nav.contact")
+                  children: d("nav.contact")
                 }
               ),
-              /* @__PURE__ */ o.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ o.jsx(Fe, { className: "w-full bg-gradient-primary", onClick: () => a(!1), children: "Get Started" }) })
+              /* @__PURE__ */ i.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ i.jsx(Fe, { className: "w-full bg-gradient-primary", onClick: () => a(!1), children: "Get Started" }) })
             ] }) })
           }
         )
@@ -6468,7 +6472,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
 };
 function hr() {
   var t;
-  const i = (s) => {
+  const o = (s) => {
     localStorage.setItem("scrollPosition", String(window == null ? void 0 : window.scrollY));
     const r = window.location.pathname;
     let a = r.match(/^\/([a-z]{2})\//) ? r.replace(/^\/[a-z]{2}\//, `/${s}/`) : `/${s}${r}`;
@@ -6479,23 +6483,23 @@ function hr() {
     s && (window.scrollTo(0, parseInt(s)), localStorage.removeItem("scrollPosition"));
   }, []);
   const e = ((t = window.location.pathname.match(/^\/([a-z]{2})\//)) == null ? void 0 : t[1]) || "en";
-  return /* @__PURE__ */ o.jsx(o.Fragment, { children: /* @__PURE__ */ o.jsxs("div", { className: "relative inline-flex items-center w-[150px]", children: [
-    /* @__PURE__ */ o.jsx(Dt, { className: "absolute  text-muted-foreground pointer-events-none", style: { left: 1, paddingLeft: 6, width: 22 } }),
-    /* @__PURE__ */ o.jsxs(
+  return /* @__PURE__ */ i.jsx(i.Fragment, { children: /* @__PURE__ */ i.jsxs("div", { className: "relative inline-flex items-center w-[150px]", children: [
+    /* @__PURE__ */ i.jsx(Dt, { className: "absolute  text-muted-foreground pointer-events-none", style: { left: 1, paddingLeft: 6, width: 22 } }),
+    /* @__PURE__ */ i.jsxs(
       "select",
       {
         defaultValue: e,
         className: "appearance-none w-full  pr-6 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring dark:bg-gray-900 dark:text-white dark:border-gray-700",
         style: { paddingLeft: 30 },
-        onChange: (s) => i(s.target.value),
+        onChange: (s) => o(s.target.value),
         children: [
-          /* @__PURE__ */ o.jsx("option", { value: "en", children: "English" }),
-          /* @__PURE__ */ o.jsx("option", { value: "es", children: "Spanish" }),
-          /* @__PURE__ */ o.jsx("option", { value: "it", children: "Italian" })
+          /* @__PURE__ */ i.jsx("option", { value: "en", children: "English" }),
+          /* @__PURE__ */ i.jsx("option", { value: "es", children: "Spanish" }),
+          /* @__PURE__ */ i.jsx("option", { value: "it", children: "Italian" })
         ]
       }
     ),
-    /* @__PURE__ */ o.jsx(
+    /* @__PURE__ */ i.jsx(
       "svg",
       {
         className: "pointer-events-none absolute  top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground",
@@ -6504,29 +6508,29 @@ function hr() {
         viewBox: "0 0 24 24",
         stroke: "currentColor",
         style: { right: 3, marginRight: 4 },
-        children: /* @__PURE__ */ o.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M19 9l-7 7-7-7" })
+        children: /* @__PURE__ */ i.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M19 9l-7 7-7-7" })
       }
     )
   ] }) });
 }
-function mr({ lang: i, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t = "http://localhost:9000" }) {
-  const [s, r] = ce("/"), { t: n, i18n: a } = Mt();
+function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t = "http://localhost:9000", showLanguageSelector: s = !0 }) {
+  const [r, n] = ce("/"), { t: a, i18n: l } = Mt();
   re(() => {
-    a.changeLanguage(i), r(i !== "en" ? `/${i}/` : "/");
+    l.changeLanguage(o), n(o !== "en" ? `/${o}/` : "/");
   }, []);
-  const l = Le(e, It), d = Le(t, Ft), u = [
+  const c = Le(e, It), u = Le(t, Ft), d = [
     {
-      alt: n("footer.social_media.twitter"),
+      alt: a("footer.social_media.twitter"),
       link: "https://x.com/plexicus_ai/",
-      icon: /* @__PURE__ */ o.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 24 24", children: /* @__PURE__ */ o.jsxs("g", { fill: "none", "fill-rule": "evenodd", children: [
-        /* @__PURE__ */ o.jsx("path", { d: "m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" }),
-        /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M19.753 4.659a1 1 0 0 0-1.506-1.317l-5.11 5.84L8.8 3.4A1 1 0 0 0 8 3H4a1 1 0 0 0-.8 1.6l6.437 8.582l-5.39 6.16a1 1 0 0 0 1.506 1.317l5.11-5.841L15.2 20.6a1 1 0 0 0 .8.4h4a1 1 0 0 0 .8-1.6l-6.437-8.582l5.39-6.16ZM16.5 19L6 5h1.5L18 19z" })
+      icon: /* @__PURE__ */ i.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 24 24", children: /* @__PURE__ */ i.jsxs("g", { fill: "none", "fill-rule": "evenodd", children: [
+        /* @__PURE__ */ i.jsx("path", { d: "m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" }),
+        /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M19.753 4.659a1 1 0 0 0-1.506-1.317l-5.11 5.84L8.8 3.4A1 1 0 0 0 8 3H4a1 1 0 0 0-.8 1.6l6.437 8.582l-5.39 6.16a1 1 0 0 0 1.506 1.317l5.11-5.841L15.2 20.6a1 1 0 0 0 .8.4h4a1 1 0 0 0 .8-1.6l-6.437-8.582l5.39-6.16ZM16.5 19L6 5h1.5L18 19z" })
       ] }) })
     },
     {
-      alt: n("footer.social_media.linkedin"),
+      alt: a("footer.social_media.linkedin"),
       link: "https://www.linkedin.com/company/plexicus/",
-      icon: /* @__PURE__ */ o.jsx("svg", { className: "h-6 w-6", fill: "currentColor", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ o.jsx(
+      icon: /* @__PURE__ */ i.jsx("svg", { className: "h-6 w-6", fill: "currentColor", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ i.jsx(
         "path",
         {
           fillRule: "evenodd",
@@ -6536,135 +6540,139 @@ function mr({ lang: i, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
       ) })
     },
     {
-      alt: n("footer.social_media.github"),
+      alt: a("footer.social_media.github"),
       link: "https://github.com/apps/plexicus",
-      icon: /* @__PURE__ */ o.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M32 1.8c-17 0-31 13.8-31 31C1 46.4 9.9 58 22.3 62.2c1.6.3 2.1-.7 2.1-1.4s0-2.7-.1-5.4c-8.6 2-10.4-4.2-10.4-4.2c-1.4-3.5-3.5-4.5-3.5-4.5c-2.8-2 .1-2 .1-2c3.1.1 4.8 3.2 4.8 3.2c2.7 4.8 7.3 3.4 9 2.5c.3-2 1.1-3.4 2-4.2c-6.8-.7-14.1-3.4-14.1-15.2c0-3.4 1.3-6.1 3.2-8.2c-.3-.7-1.4-3.9.3-8.2c0 0 2.7-.8 8.6 3.2c2.5-.7 5.1-1.1 7.8-1.1s5.4.3 7.8 1.1c5.9-3.9 8.5-3.2 8.5-3.2c1.7 4.2.7 7.5.3 8.2c2 2.1 3.2 4.9 3.2 8.2c0 11.8-7.3 14.5-14.1 15.2c1.1 1 2.1 3 2.1 5.8c0 4.2-.1 7.5-.1 8.5c0 .8.6 1.7 2.1 1.4C54.1 57.8 63 46.3 63 32.6c-.1-17-14-30.8-31-30.8" }) })
+      icon: /* @__PURE__ */ i.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M32 1.8c-17 0-31 13.8-31 31C1 46.4 9.9 58 22.3 62.2c1.6.3 2.1-.7 2.1-1.4s0-2.7-.1-5.4c-8.6 2-10.4-4.2-10.4-4.2c-1.4-3.5-3.5-4.5-3.5-4.5c-2.8-2 .1-2 .1-2c3.1.1 4.8 3.2 4.8 3.2c2.7 4.8 7.3 3.4 9 2.5c.3-2 1.1-3.4 2-4.2c-6.8-.7-14.1-3.4-14.1-15.2c0-3.4 1.3-6.1 3.2-8.2c-.3-.7-1.4-3.9.3-8.2c0 0 2.7-.8 8.6 3.2c2.5-.7 5.1-1.1 7.8-1.1s5.4.3 7.8 1.1c5.9-3.9 8.5-3.2 8.5-3.2c1.7 4.2.7 7.5.3 8.2c2 2.1 3.2 4.9 3.2 8.2c0 11.8-7.3 14.5-14.1 15.2c1.1 1 2.1 3 2.1 5.8c0 4.2-.1 7.5-.1 8.5c0 .8.6 1.7 2.1 1.4C54.1 57.8 63 46.3 63 32.6c-.1-17-14-30.8-31-30.8" }) })
     },
     {
-      alt: n("footer.social_media.instagram"),
+      alt: a("footer.social_media.instagram"),
       link: "https://www.instagram.com/plexicus_ai/",
-      icon: /* @__PURE__ */ o.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: [
-        /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M62.9 19.2c-.1-3.2-.7-5.5-1.4-7.6S59.7 7.8 58 6.1s-3.4-2.7-5.4-3.5s-4.2-1.3-7.6-1.4C41.5 1 40.5 1 32 1s-9.4 0-12.8.1s-5.5.7-7.6 1.4s-3.8 1.9-5.5 3.6s-2.8 3.4-3.5 5.5c-.8 2-1.3 4.2-1.4 7.6S1 23.5 1 32s0 9.4.1 12.8s.7 5.5 1.4 7.6s1.8 3.8 3.5 5.5s3.5 2.8 5.5 3.5s4.2 1.3 7.6 1.4c3.4.2 4.3.2 12.8.2s9.4 0 12.8-.1s5.5-.7 7.6-1.4s3.8-1.8 5.5-3.5s2.8-3.5 3.5-5.5s1.3-4.2 1.4-7.6c.1-3.2.1-4.2.1-12.7s.2-9.6.1-13m-5.6 25.3c-.1 3-.7 4.6-1.1 5.8c-.6 1.4-1.3 2.5-2.4 3.5c-1.1 1.1-2.1 1.7-3.5 2.4c-1.1.4-2.7 1-5.8 1.1H32.1c-8.2 0-9.3 0-12.5-.1c-3-.1-4.6-.7-5.8-1.1c-1.4-.6-2.5-1.3-3.5-2.4c-1.1-1.1-1.7-2.1-2.4-3.5c-.4-1.1-1-2.7-1.1-5.8V32c0-8.3 0-9.3.1-12.5c.1-3 .7-4.6 1.1-5.8c.6-1.4 1.3-2.5 2.3-3.5c1.1-1.1 2.1-1.7 3.5-2.3c1.1-.4 2.7-1 5.8-1.1c3.2-.1 4.2-.1 12.5-.1s9.3 0 12.5.1c3 .1 4.6.7 5.8 1.1c1.4.6 2.5 1.3 3.5 2.3c1.1 1.1 1.7 2.1 2.4 3.5c.4 1.1 1 2.7 1.1 5.8c.1 3.2.1 4.2.1 12.5s-.1 9.3-.2 12.5" }),
-        /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M32 16.1c-8.9 0-15.9 7.2-15.9 15.9c0 8.9 7.2 15.9 15.9 15.9s16-7 16-15.9s-7.1-15.9-16-15.9m0 26.3c-5.8 0-10.4-4.7-10.4-10.4S26.3 21.6 32 21.6c5.8 0 10.4 4.6 10.4 10.4S37.8 42.4 32 42.4" }),
-        /* @__PURE__ */ o.jsx("circle", { cx: "48.7", cy: "15.4", r: "3.7", fill: "currentColor" })
+      icon: /* @__PURE__ */ i.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: [
+        /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M62.9 19.2c-.1-3.2-.7-5.5-1.4-7.6S59.7 7.8 58 6.1s-3.4-2.7-5.4-3.5s-4.2-1.3-7.6-1.4C41.5 1 40.5 1 32 1s-9.4 0-12.8.1s-5.5.7-7.6 1.4s-3.8 1.9-5.5 3.6s-2.8 3.4-3.5 5.5c-.8 2-1.3 4.2-1.4 7.6S1 23.5 1 32s0 9.4.1 12.8s.7 5.5 1.4 7.6s1.8 3.8 3.5 5.5s3.5 2.8 5.5 3.5s4.2 1.3 7.6 1.4c3.4.2 4.3.2 12.8.2s9.4 0 12.8-.1s5.5-.7 7.6-1.4s3.8-1.8 5.5-3.5s2.8-3.5 3.5-5.5s1.3-4.2 1.4-7.6c.1-3.2.1-4.2.1-12.7s.2-9.6.1-13m-5.6 25.3c-.1 3-.7 4.6-1.1 5.8c-.6 1.4-1.3 2.5-2.4 3.5c-1.1 1.1-2.1 1.7-3.5 2.4c-1.1.4-2.7 1-5.8 1.1H32.1c-8.2 0-9.3 0-12.5-.1c-3-.1-4.6-.7-5.8-1.1c-1.4-.6-2.5-1.3-3.5-2.4c-1.1-1.1-1.7-2.1-2.4-3.5c-.4-1.1-1-2.7-1.1-5.8V32c0-8.3 0-9.3.1-12.5c.1-3 .7-4.6 1.1-5.8c.6-1.4 1.3-2.5 2.3-3.5c1.1-1.1 2.1-1.7 3.5-2.3c1.1-.4 2.7-1 5.8-1.1c3.2-.1 4.2-.1 12.5-.1s9.3 0 12.5.1c3 .1 4.6.7 5.8 1.1c1.4.6 2.5 1.3 3.5 2.3c1.1 1.1 1.7 2.1 2.4 3.5c.4 1.1 1 2.7 1.1 5.8c.1 3.2.1 4.2.1 12.5s-.1 9.3-.2 12.5" }),
+        /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M32 16.1c-8.9 0-15.9 7.2-15.9 15.9c0 8.9 7.2 15.9 15.9 15.9s16-7 16-15.9s-7.1-15.9-16-15.9m0 26.3c-5.8 0-10.4-4.7-10.4-10.4S26.3 21.6 32 21.6c5.8 0 10.4 4.6 10.4 10.4S37.8 42.4 32 42.4" }),
+        /* @__PURE__ */ i.jsx("circle", { cx: "48.7", cy: "15.4", r: "3.7", fill: "currentColor" })
       ] })
     }
-  ], c = [
+  ], h = [
     {
-      title: n("footer.sections.products.title"),
+      title: a("footer.sections.products.title"),
       items: [
         {
-          link: `${l}${s}products/cnapp-platform`,
-          text: n("footer.sections.products.links.platform_overview")
+          link: `${c}${r}products/cnapp-platform`,
+          text: a("footer.sections.products.links.platform_overview")
         },
         {
-          link: `${l}${s}products/benefits`,
-          text: n("footer.sections.products.links.benefits")
+          link: `${c}${r}products/benefits`,
+          text: a("footer.sections.products.links.benefits")
         },
         {
-          link: `${l}${s}products/use-cases`,
-          text: n("footer.sections.products.links.use_cases")
+          link: `${c}${r}products/use-cases`,
+          text: a("footer.sections.products.links.use_cases")
         },
         {
-          link: `${l}${s}products/aspm`,
-          text: n("footer.sections.products.links.aspm")
+          link: `${c}${r}products/aspm`,
+          text: a("footer.sections.products.links.aspm")
         },
         {
-          link: `${l}${s}products/cspm`,
-          text: n("footer.sections.products.links.cspm")
+          link: `${c}${r}products/cspm`,
+          text: a("footer.sections.products.links.cspm")
         },
         {
-          link: `${l}${s}products/container`,
-          text: n("footer.sections.products.links.container_security")
+          link: `${c}${r}products/container`,
+          text: a("footer.sections.products.links.container_security")
         },
         {
-          link: `${l}${s}products/cwpp`,
-          text: n("footer.sections.products.links.cwpp")
+          link: `${c}${r}products/cwpp`,
+          text: a("footer.sections.products.links.cwpp")
         },
         {
-          link: `${l}${s}/products/ciem`,
-          text: n("footer.sections.products.links.ciem")
+          link: `${c}${r}products/ciem`,
+          text: a("footer.sections.products.links.ciem")
         }
       ]
     },
     {
-      title: n("footer.sections.resources.title"),
+      title: a("footer.sections.resources.title"),
       items: [
         {
-          link: `${d}`,
-          text: n("footer.sections.resources.links.blog")
+          link: `${u}`,
+          text: a("footer.sections.resources.links.blog")
         },
         {
           link: "https://docs.plexicus.com/",
-          text: n("footer.sections.resources.links.documentation")
+          text: a("footer.sections.resources.links.documentation")
         },
         {
-          text: n("nav.resources.changelogs"),
+          text: a("nav.resources.branding_assets"),
+          link: `${c}${r}branding-assets`
+        },
+        {
+          text: a("nav.resources.changelogs"),
           link: "https://plexicus.canny.io/changelog"
         },
         {
-          text: n("nav.resources.youtube_channel"),
+          text: a("nav.resources.youtube_channel"),
           link: "https://youtube.com/@plexicus"
         },
         {
-          text: n("nav.resources.feature_requests"),
+          text: a("nav.resources.feature_requests"),
           link: "https://plexicus.canny.io/feature-requests"
         }
       ]
     },
     {
-      title: n("footer.sections.company.title"),
+      title: a("footer.sections.company.title"),
       items: [
         {
-          link: `${l}${s}contact`,
-          text: n("footer.sections.company.links.contact")
+          link: `${c}${r}contact`,
+          text: a("footer.sections.company.links.contact")
         },
         {
-          link: `${l}${s}privacy`,
-          text: n("footer.sections.company.links.privacy_policy")
+          link: `${c}${r}privacy`,
+          text: a("footer.sections.company.links.privacy_policy")
         },
         {
-          link: `${l}${s}pricing`,
-          text: n("footer.sections.products.links.pricing")
+          link: `${c}${r}pricing`,
+          text: a("footer.sections.products.links.pricing")
         },
         {
-          link: `${l}${s}support`,
-          text: n("nav.resources.support")
+          link: `${c}${r}support`,
+          text: a("nav.resources.support")
         }
       ]
     }
   ];
-  return /* @__PURE__ */ o.jsx("footer", { className: "bg-gray-50 border-t border-gray-200", children: /* @__PURE__ */ o.jsxs("div", { className: "container mx-auto px-4 md:px-6 pt-12 pb-6", children: [
-    /* @__PURE__ */ o.jsxs("div", { id: "footer-grid", className: "grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5", children: [
-      /* @__PURE__ */ o.jsxs("div", { className: "lg:col-span-2", children: [
-        /* @__PURE__ */ o.jsx(Y, { href: `${l}${s}`, className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ o.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus S.L.", className: "h-10 w-auto" }) }),
-        /* @__PURE__ */ o.jsx("p", { className: "text-gray-600 mb-4 max-w-sm", children: n("footer.tagline") }),
-        /* @__PURE__ */ o.jsx("div", { id: "social_links", className: "flex justify-start items-center gap-4", children: u.map(({ link: h, icon: m, alt: g }) => /* @__PURE__ */ o.jsxs(Y, { target: "_blank", href: h, className: "text-gray-400 hover:text-gray-500", children: [
-          /* @__PURE__ */ o.jsx("span", { className: "sr-only", children: g }),
-          m
+  return /* @__PURE__ */ i.jsx("footer", { className: "bg-gray-50 border-t border-gray-200", children: /* @__PURE__ */ i.jsxs("div", { className: "container mx-auto px-4 md:px-6 pt-12 pb-6", children: [
+    /* @__PURE__ */ i.jsxs("div", { id: "footer-grid", className: "grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5", children: [
+      /* @__PURE__ */ i.jsxs("div", { className: "lg:col-span-2", children: [
+        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}`, className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ i.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus S.L.", className: "h-10 w-auto" }) }),
+        /* @__PURE__ */ i.jsx("p", { className: "text-gray-600 mb-4 max-w-sm", children: a("footer.tagline") }),
+        /* @__PURE__ */ i.jsx("div", { id: "social_links", className: "flex justify-start items-center gap-4", children: d.map(({ link: m, icon: g, alt: p }) => /* @__PURE__ */ i.jsxs(Y, { target: "_blank", href: m, className: "text-gray-400 hover:text-gray-500", children: [
+          /* @__PURE__ */ i.jsx("span", { className: "sr-only", children: p }),
+          g
         ] })) }),
-        /* @__PURE__ */ o.jsx("div", { className: "mt-6", children: /* @__PURE__ */ o.jsx(hr, {}) })
+        s && /* @__PURE__ */ i.jsx("div", { className: "mt-6", children: /* @__PURE__ */ i.jsx(hr, {}) })
       ] }),
-      c.map(({ title: h, items: m }) => /* @__PURE__ */ o.jsxs("div", { children: [
-        /* @__PURE__ */ o.jsx("h3", { className: "text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4", children: h }),
-        /* @__PURE__ */ o.jsx("ul", { className: "space-y-2", children: m.map(({ link: g, text: p }) => /* @__PURE__ */ o.jsx("li", { children: /* @__PURE__ */ o.jsx(Y, { href: g, className: "text-gray-600 hover:text-purple-700", children: p }) })) })
+      h.map(({ title: m, items: g }) => /* @__PURE__ */ i.jsxs("div", { children: [
+        /* @__PURE__ */ i.jsx("h3", { className: "text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4", children: m }),
+        /* @__PURE__ */ i.jsx("ul", { className: "space-y-2", children: g.map(({ link: p, text: b }) => /* @__PURE__ */ i.jsx("li", { children: /* @__PURE__ */ i.jsx(Y, { href: p, className: "text-gray-600 hover:text-purple-700", children: b }) })) })
       ] }))
     ] }),
-    /* @__PURE__ */ o.jsx("div", { className: "mt-8 pt-6 border-t border-gray-200", children: /* @__PURE__ */ o.jsxs("div", { className: "flex justify-between items-center mb-3", children: [
-      /* @__PURE__ */ o.jsxs("p", { className: "text-gray-500 text-sm", children: [
+    /* @__PURE__ */ i.jsx("div", { className: "mt-8 pt-6 border-t border-gray-200", children: /* @__PURE__ */ i.jsxs("div", { className: "flex justify-between items-center mb-3", children: [
+      /* @__PURE__ */ i.jsxs("p", { className: "text-gray-500 text-sm", children: [
         "© 2025 PLEXICUS, S.L",
-        /* @__PURE__ */ o.jsx(Y, { href: `${l}${s}privacy`, className: "underline hover:text-gray-700 ml-4", children: n("footer.policies.privacy_policy") }),
+        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}privacy`, className: "underline hover:text-gray-700 ml-4", children: a("footer.policies.privacy_policy") }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ o.jsx(Y, { href: `${l}${s}management`, className: "underline hover:text-gray-700", children: n("footer.policies.management_policy") }),
+        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}management`, className: "underline hover:text-gray-700", children: a("footer.policies.management_policy") }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ o.jsx(Y, { href: `${l}${s}legal`, className: "underline hover:text-gray-700", children: n("footer.policies.legal_notice") })
+        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}legal`, className: "underline hover:text-gray-700", children: a("footer.policies.legal_notice") })
       ] }),
-      /* @__PURE__ */ o.jsx("div", { children: /* @__PURE__ */ o.jsxs("div", { className: "inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200", children: [
-        /* @__PURE__ */ o.jsx("svg", { className: "w-4 h-4 mr-1", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ o.jsx(
+      /* @__PURE__ */ i.jsx("div", { children: /* @__PURE__ */ i.jsxs("div", { className: "inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200", children: [
+        /* @__PURE__ */ i.jsx("svg", { className: "w-4 h-4 mr-1", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ i.jsx(
           "path",
           {
             d: "M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
@@ -6674,7 +6682,7 @@ function mr({ lang: i, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
             strokeLinejoin: "round"
           }
         ) }),
-        n("footer.readiness")
+        a("footer.readiness")
       ] }) })
     ] }) })
   ] }) });
