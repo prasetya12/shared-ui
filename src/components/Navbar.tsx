@@ -912,8 +912,8 @@ export const NavbarPlexicus = ({
                   aria-haspopup="true"
                   onClick={() => handleMenuClick(key)}
                 >
-                  <span className="hidden lg:inline">{menu.title}</span>
-                  <span className="lg:hidden">{menu.shortTitle}</span>
+                  <span className="hidden xl:inline">{menu.title}</span>
+                  <span className="xl:hidden">{menu.shortTitle}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -953,8 +953,8 @@ export const NavbarPlexicus = ({
                   aria-haspopup="true"
                   onClick={() => handleMenuClick(key)}
                 >
-                  <span className="hidden lg:inline">{menu.title}</span>
-                  <span className="lg:hidden">{menu.shortTitle}</span>
+                  <span className="hidden xl:inline">{menu.title}</span>
+                  <span className="xl:hidden">{menu.shortTitle}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -981,8 +981,7 @@ export const NavbarPlexicus = ({
           </Link>
         </nav>
 
-       <div className="flex">
-         <div className="flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           <Link
             href={`${APP_URL}/login`}
             className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
@@ -1040,7 +1039,6 @@ export const NavbarPlexicus = ({
           )}
         </button>
        </div>
-      </div>
 
       {/* Mega menu */}
       {activeMenu && (
@@ -1515,9 +1513,9 @@ export const NavbarPlexicus = ({
       )}
 
       {/* Mobile menu */}
-      {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 md:hidden" onClick={() => setMenuOpen(false)}></div>}
+      {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 xl:hidden" onClick={() => setMenuOpen(false)}></div>}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`xl:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         style={{ top: "64px", height: "calc(100vh - 64px)", overflow: "auto" }}
       >
         <div className="overflow-y-auto h-full p-4 pb-20">
