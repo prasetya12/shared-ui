@@ -182,7 +182,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
               <h3 className="text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4">{title}</h3>
               <ul className="space-y-2">
                 {items.map(({ link, text }) => (
-                  <li>
+                  <li key={text}>
                     <Link href={link} className="text-gray-600 hover:text-purple-700">
                       {text}
                     </Link>
