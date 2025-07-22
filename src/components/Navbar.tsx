@@ -5,7 +5,7 @@ import Link from "./ui/link"
 import { useTranslation } from "react-i18next"
 import "../i18n"
 import { getFullsiteUrl } from "../lib/utils"
-import { API_URL_WEB, API_URL_BLOG,APP_URL } from "../contants/SiteUrl"
+import { API_URL_WEB, API_URL_BLOG,APP_URL } from "../constants/SiteUrl"
 
 // Extract types to improve maintainability
 type MenuItemType = {
