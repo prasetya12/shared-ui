@@ -1,3 +1,4 @@
+(function(){"use strict";try{if(typeof document<"u"){var i=document.createElement("style");i.appendChild(document.createTextNode('/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){.ui-lib *,.ui-lib :before,.ui-lib :after,.ui-lib ::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-pan-x:initial;--tw-pan-y:initial;--tw-pinch-zoom:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-divide-x-reverse:0;--tw-border-style:solid;--tw-divide-y-reverse:0;--tw-gradient-position:initial;--tw-gradient-from:#0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gradient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-font-weight:initial;--tw-tracking:initial;--tw-ordinal:initial;--tw-slashed-zero:initial;--tw-numeric-figure:initial;--tw-numeric-spacing:initial;--tw-numeric-fraction:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-ease:initial;--tw-animation-delay:0s;--tw-animation-direction:normal;--tw-animation-duration:initial;--tw-animation-fill-mode:none;--tw-animation-iteration-count:1;--tw-enter-opacity:1;--tw-enter-rotate:0;--tw-enter-scale:1;--tw-enter-translate-x:0;--tw-enter-translate-y:0;--tw-exit-opacity:1;--tw-exit-rotate:0;--tw-exit-scale:1;--tw-exit-translate-x:0;--tw-exit-translate-y:0}}}@layer theme{.ui-lib,.ui-lib :host{--font-sans:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-green-100:oklch(96.2% .044 156.743);--color-green-200:oklch(92.5% .084 155.995);--color-green-800:oklch(44.8% .119 151.328);--color-purple-300:oklch(82.7% .119 306.383);--color-purple-700:oklch(49.6% .265 301.924);--color-gray-50:oklch(98.5% .002 247.839);--color-gray-100:oklch(96.7% .003 264.542);--color-gray-200:oklch(92.8% .006 264.531);--color-gray-300:oklch(87.2% .01 258.338);--color-gray-400:oklch(70.7% .022 261.325);--color-gray-500:oklch(55.1% .027 264.364);--color-gray-600:oklch(44.6% .03 256.802);--color-gray-700:oklch(37.3% .034 259.733);--color-gray-900:oklch(21% .034 264.665);--color-black:#000;--color-white:#fff;--spacing:.25rem;--container-sm:24rem;--container-7xl:80rem;--text-xs:.75rem;--text-xs--line-height:calc(1/.75);--text-sm:.875rem;--text-sm--line-height:calc(1.25/.875);--text-xl:1.25rem;--text-xl--line-height:calc(1.75/1.25);--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--tracking-wider:.05em;--ease-in-out:cubic-bezier(.4,0,.2,1);--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{.ui-lib *,.ui-lib :after,.ui-lib :before,.ui-lib ::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}.ui-lib ::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}.ui-lib html,.ui-lib :host{-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}.ui-lib hr{height:0;color:inherit;border-top-width:1px}.ui-lib abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}.ui-lib h1,.ui-lib h2,.ui-lib h3,.ui-lib h4,.ui-lib h5,.ui-lib h6{font-size:inherit;font-weight:inherit}.ui-lib a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}.ui-lib b,.ui-lib strong{font-weight:bolder}.ui-lib code,.ui-lib kbd,.ui-lib samp,.ui-lib pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}.ui-lib small{font-size:80%}.ui-lib sub,.ui-lib sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}.ui-lib sub{bottom:-.25em}.ui-lib sup{top:-.5em}.ui-lib table{text-indent:0;border-color:inherit;border-collapse:collapse}.ui-lib :-moz-focusring{outline:auto}.ui-lib progress{vertical-align:baseline}.ui-lib summary{display:list-item}.ui-lib ol,.ui-lib ul,.ui-lib menu{list-style:none}.ui-lib img,.ui-lib svg,.ui-lib video,.ui-lib canvas,.ui-lib audio,.ui-lib iframe,.ui-lib embed,.ui-lib object{vertical-align:middle;display:block}.ui-lib img,.ui-lib video{max-width:100%;height:auto}.ui-lib button,.ui-lib input,.ui-lib select,.ui-lib optgroup,.ui-lib textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}.ui-lib ::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}.ui-lib :where(select:is([multiple],[size])) optgroup{font-weight:bolder}.ui-lib :where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}.ui-lib ::file-selector-button{margin-inline-end:4px}.ui-lib ::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){.ui-lib ::placeholder{color:currentColor}@supports (color:color-mix(in lab,red,red)){.ui-lib ::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}.ui-lib textarea{resize:vertical}.ui-lib ::-webkit-search-decoration{-webkit-appearance:none}.ui-lib ::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}.ui-lib ::-webkit-datetime-edit{display:inline-flex}.ui-lib ::-webkit-datetime-edit-fields-wrapper{padding:0}.ui-lib ::-webkit-datetime-edit{padding-block:0}.ui-lib ::-webkit-datetime-edit-year-field{padding-block:0}.ui-lib ::-webkit-datetime-edit-month-field{padding-block:0}.ui-lib ::-webkit-datetime-edit-day-field{padding-block:0}.ui-lib ::-webkit-datetime-edit-hour-field{padding-block:0}.ui-lib ::-webkit-datetime-edit-minute-field{padding-block:0}.ui-lib ::-webkit-datetime-edit-second-field{padding-block:0}.ui-lib ::-webkit-datetime-edit-millisecond-field{padding-block:0}.ui-lib ::-webkit-datetime-edit-meridiem-field{padding-block:0}.ui-lib :-moz-ui-invalid{box-shadow:none}.ui-lib button,.ui-lib input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}.ui-lib ::file-selector-button{-webkit-appearance:button;-moz-appearance:button;appearance:button}.ui-lib ::-webkit-inner-spin-button{height:auto}.ui-lib ::-webkit-outer-spin-button{height:auto}.ui-lib [hidden]:where(:not([hidden=until-found])){display:none!important}.ui-lib *{border-color:var(--border);outline-color:var(--ring)}@supports (color:color-mix(in lab,red,red)){.ui-lib *{outline-color:color-mix(in oklab,var(--ring)50%,transparent)}}.ui-lib{background-color:var(--background);color:var(--foreground)}}@layer components;@layer utilities{.ui-lib .pointer-events-none{pointer-events:none}.ui-lib .collapse{visibility:collapse}.ui-lib .invisible{visibility:hidden}.ui-lib .visible{visibility:visible}.ui-lib .sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.ui-lib .not-sr-only{clip:auto;white-space:normal;width:auto;height:auto;margin:0;padding:0;position:static;overflow:visible}.ui-lib .absolute{position:absolute}.ui-lib .fixed{position:fixed}.ui-lib .relative{position:relative}.ui-lib .static{position:static}.ui-lib .sticky{position:sticky}.ui-lib .inset-0{inset:calc(var(--spacing)*0)}.ui-lib .top-0{top:calc(var(--spacing)*0)}.ui-lib .top-1{top:calc(var(--spacing)*1)}.ui-lib .top-1\\/2{top:50%}.ui-lib .top-16{top:calc(var(--spacing)*16)}.ui-lib .right-0{right:calc(var(--spacing)*0)}.ui-lib .right-2{right:calc(var(--spacing)*2)}.ui-lib .left-0{left:calc(var(--spacing)*0)}.ui-lib .isolate{isolation:isolate}.ui-lib .isolation-auto{isolation:auto}.ui-lib .z-30{z-index:30}.ui-lib .z-40{z-index:40}.ui-lib .z-50{z-index:50}.ui-lib .container{width:100%}@media (min-width:40rem){.ui-lib .container{max-width:40rem}}@media (min-width:48rem){.ui-lib .container{max-width:48rem}}@media (min-width:64rem){.ui-lib .container{max-width:64rem}}@media (min-width:80rem){.ui-lib .container{max-width:80rem}}@media (min-width:96rem){.ui-lib .container{max-width:96rem}}.ui-lib .-mx-1{margin-inline:calc(var(--spacing)*-1)}.ui-lib .mx-auto{margin-inline:auto}.ui-lib .my-1{margin-block:calc(var(--spacing)*1)}.ui-lib .mt-1{margin-top:calc(var(--spacing)*1)}.ui-lib .mt-6{margin-top:calc(var(--spacing)*6)}.ui-lib .mt-8{margin-top:calc(var(--spacing)*8)}.ui-lib .mt-24{margin-top:calc(var(--spacing)*24)}.ui-lib .mr-1{margin-right:calc(var(--spacing)*1)}.ui-lib .mr-2{margin-right:calc(var(--spacing)*2)}.ui-lib .mr-4{margin-right:calc(var(--spacing)*4)}.ui-lib .mb-3{margin-bottom:calc(var(--spacing)*3)}.ui-lib .mb-4{margin-bottom:calc(var(--spacing)*4)}.ui-lib .mb-6{margin-bottom:calc(var(--spacing)*6)}.ui-lib .ml-1{margin-left:calc(var(--spacing)*1)}.ui-lib .ml-4{margin-left:calc(var(--spacing)*4)}.ui-lib .block{display:block}.ui-lib .contents{display:contents}.ui-lib .flex{display:flex}.ui-lib .flow-root{display:flow-root}.ui-lib .grid{display:grid}.ui-lib .hidden{display:none}.ui-lib .inline{display:inline}.ui-lib .inline-block{display:inline-block}.ui-lib .inline-flex{display:inline-flex}.ui-lib .inline-grid{display:inline-grid}.ui-lib .inline-table{display:inline-table}.ui-lib .list-item{display:list-item}.ui-lib .table{display:table}.ui-lib .table-caption{display:table-caption}.ui-lib .table-cell{display:table-cell}.ui-lib .table-column{display:table-column}.ui-lib .table-column-group{display:table-column-group}.ui-lib .table-footer-group{display:table-footer-group}.ui-lib .table-header-group{display:table-header-group}.ui-lib .table-row{display:table-row}.ui-lib .table-row-group{display:table-row-group}.ui-lib .h-3{height:calc(var(--spacing)*3)}.ui-lib .h-3\\.5{height:calc(var(--spacing)*3.5)}.ui-lib .h-4{height:calc(var(--spacing)*4)}.ui-lib .h-6{height:calc(var(--spacing)*6)}.ui-lib .h-8{height:calc(var(--spacing)*8)}.ui-lib .h-9{height:calc(var(--spacing)*9)}.ui-lib .h-10{height:calc(var(--spacing)*10)}.ui-lib .h-11{height:calc(var(--spacing)*11)}.ui-lib .h-12{height:calc(var(--spacing)*12)}.ui-lib .h-14{height:calc(var(--spacing)*14)}.ui-lib .h-16{height:calc(var(--spacing)*16)}.ui-lib .h-36{height:calc(var(--spacing)*36)}.ui-lib .h-\\[var\\(--radix-select-trigger-height\\)\\]{height:var(--radix-select-trigger-height)}.ui-lib .h-full{height:100%}.ui-lib .h-px{height:1px}.ui-lib .h-screen{height:100vh}.ui-lib .max-h-\\[--radix-select-content-available-height\\]{max-height:--radix-select-content-available-height}.ui-lib .max-h-full{max-height:100%}.ui-lib .w-3{width:calc(var(--spacing)*3)}.ui-lib .w-3\\.5{width:calc(var(--spacing)*3.5)}.ui-lib .w-4{width:calc(var(--spacing)*4)}.ui-lib .w-6{width:calc(var(--spacing)*6)}.ui-lib .w-8{width:calc(var(--spacing)*8)}.ui-lib .w-10{width:calc(var(--spacing)*10)}.ui-lib .w-12{width:calc(var(--spacing)*12)}.ui-lib .w-\\[150px\\]{width:150px}.ui-lib .w-auto{width:auto}.ui-lib .w-full{width:100%}.ui-lib .max-w-7xl{max-width:var(--container-7xl)}.ui-lib .max-w-none{max-width:none}.ui-lib .max-w-sm{max-width:var(--container-sm)}.ui-lib .min-w-\\[8rem\\]{min-width:8rem}.ui-lib .min-w-\\[var\\(--radix-select-trigger-width\\)\\]{min-width:var(--radix-select-trigger-width)}.ui-lib .flex-1{flex:1}.ui-lib .shrink{flex-shrink:1}.ui-lib .grow{flex-grow:1}.ui-lib .border-collapse{border-collapse:collapse}.ui-lib .origin-\\[--radix-select-content-transform-origin\\]{transform-origin:--radix-select-content-transform-origin}.ui-lib .translate-x-0{--tw-translate-x:calc(var(--spacing)*0);translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .translate-x-full{--tw-translate-x:100%;translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .-translate-y-1{--tw-translate-y:calc(var(--spacing)*-1);translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .-translate-y-1\\/2{--tw-translate-y: -50% ;translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .translate-none{translate:none}.ui-lib .scale-3d{scale:var(--tw-scale-x)var(--tw-scale-y)var(--tw-scale-z)}.ui-lib .rotate-180{rotate:180deg}.ui-lib .transform{transform:var(--tw-rotate-x,)var(--tw-rotate-y,)var(--tw-rotate-z,)var(--tw-skew-x,)var(--tw-skew-y,)}.ui-lib .cursor-default{cursor:default}.ui-lib .touch-pinch-zoom{--tw-pinch-zoom:pinch-zoom;touch-action:var(--tw-pan-x,)var(--tw-pan-y,)var(--tw-pinch-zoom,)}.ui-lib .resize{resize:both}.ui-lib .appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.ui-lib .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.ui-lib .flex-col{flex-direction:column}.ui-lib .flex-wrap{flex-wrap:wrap}.ui-lib .items-center{align-items:center}.ui-lib .items-start{align-items:flex-start}.ui-lib .justify-between{justify-content:space-between}.ui-lib .justify-center{justify-content:center}.ui-lib .justify-start{justify-content:flex-start}.ui-lib .gap-2{gap:calc(var(--spacing)*2)}.ui-lib .gap-4{gap:calc(var(--spacing)*4)}.ui-lib .gap-6{gap:calc(var(--spacing)*6)}.ui-lib .gap-8{gap:calc(var(--spacing)*8)}.ui-lib :where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))}.ui-lib :where(.space-y-4>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*4)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*4)*calc(1 - var(--tw-space-y-reverse)))}.ui-lib :where(.space-y-reverse>:not(:last-child)){--tw-space-y-reverse:1}.ui-lib :where(.space-x-reverse>:not(:last-child)){--tw-space-x-reverse:1}.ui-lib :where(.divide-x>:not(:last-child)){--tw-divide-x-reverse:0;border-inline-style:var(--tw-border-style);border-inline-start-width:calc(1px*var(--tw-divide-x-reverse));border-inline-end-width:calc(1px*calc(1 - var(--tw-divide-x-reverse)))}.ui-lib :where(.divide-y>:not(:last-child)){--tw-divide-y-reverse:0;border-bottom-style:var(--tw-border-style);border-top-style:var(--tw-border-style);border-top-width:calc(1px*var(--tw-divide-y-reverse));border-bottom-width:calc(1px*calc(1 - var(--tw-divide-y-reverse)))}.ui-lib :where(.divide-y-reverse>:not(:last-child)){--tw-divide-y-reverse:1}.ui-lib .truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.ui-lib .overflow-hidden{overflow:hidden}.ui-lib .overflow-visible{overflow:visible}.ui-lib .overflow-x-hidden{overflow-x:hidden}.ui-lib .overflow-y-auto{overflow-y:auto}.ui-lib .rounded{border-radius:.25rem}.ui-lib .rounded-full{border-radius:3.40282e38px}.ui-lib .rounded-lg{border-radius:var(--radius)}.ui-lib .rounded-md{border-radius:calc(var(--radius) - 2px)}.ui-lib .rounded-sm{border-radius:calc(var(--radius) - 4px)}.ui-lib .rounded-s{border-start-start-radius:.25rem;border-end-start-radius:.25rem}.ui-lib .rounded-ss{border-start-start-radius:.25rem}.ui-lib .rounded-e{border-start-end-radius:.25rem;border-end-end-radius:.25rem}.ui-lib .rounded-se{border-start-end-radius:.25rem}.ui-lib .rounded-ee{border-end-end-radius:.25rem}.ui-lib .rounded-es{border-end-start-radius:.25rem}.ui-lib .rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.ui-lib .rounded-l{border-top-left-radius:.25rem;border-bottom-left-radius:.25rem}.ui-lib .rounded-tl{border-top-left-radius:.25rem}.ui-lib .rounded-r{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem}.ui-lib .rounded-tr{border-top-right-radius:.25rem}.ui-lib .rounded-b{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.ui-lib .rounded-br{border-bottom-right-radius:.25rem}.ui-lib .rounded-bl{border-bottom-left-radius:.25rem}.ui-lib .border{border-style:var(--tw-border-style);border-width:1px}.ui-lib .border-x{border-inline-style:var(--tw-border-style);border-inline-width:1px}.ui-lib .border-y{border-block-style:var(--tw-border-style);border-block-width:1px}.ui-lib .border-s{border-inline-start-style:var(--tw-border-style);border-inline-start-width:1px}.ui-lib .border-e{border-inline-end-style:var(--tw-border-style);border-inline-end-width:1px}.ui-lib .border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.ui-lib .border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.ui-lib .border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.ui-lib .border-l{border-left-style:var(--tw-border-style);border-left-width:1px}.ui-lib .border-gray-100{border-color:var(--color-gray-100)}.ui-lib .border-gray-200{border-color:var(--color-gray-200)}.ui-lib .border-gray-300{border-color:var(--color-gray-300)}.ui-lib .border-green-200{border-color:var(--color-green-200)}.ui-lib .border-input{border-color:var(--input)}.ui-lib .border-purple-300{border-color:var(--color-purple-300)}.ui-lib .border-white{border-color:var(--color-white)}.ui-lib .border-white\\/30{border-color:#ffffff4d}@supports (color:color-mix(in lab,red,red)){.ui-lib .border-white\\/30{border-color:color-mix(in oklab,var(--color-white)30%,transparent)}}.ui-lib .bg-\\[\\#8220ff\\]\\/10{background-color:#8220ff1a}.ui-lib .bg-black{background-color:var(--color-black)}.ui-lib .bg-black\\/20{background-color:#0003}@supports (color:color-mix(in lab,red,red)){.ui-lib .bg-black\\/20{background-color:color-mix(in oklab,var(--color-black)20%,transparent)}}.ui-lib .bg-destructive{background-color:var(--destructive)}.ui-lib .bg-gray-50{background-color:var(--color-gray-50)}.ui-lib .bg-green-100{background-color:var(--color-green-100)}.ui-lib .bg-muted{background-color:var(--muted)}.ui-lib .bg-popover{background-color:var(--popover)}.ui-lib .bg-primary,.ui-lib .bg-primary\\/10{background-color:var(--primary)}@supports (color:color-mix(in lab,red,red)){.ui-lib .bg-primary\\/10{background-color:color-mix(in oklab,var(--primary)10%,transparent)}}.ui-lib .bg-secondary{background-color:var(--secondary)}.ui-lib .bg-transparent{background-color:#0000}.ui-lib .bg-white{background-color:var(--color-white)}.ui-lib .bg-gradient-to-r{--tw-gradient-position:to right in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.ui-lib .from-\\[\\#8220ff\\]{--tw-gradient-from:#8220ff;--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))}.ui-lib .to-\\[\\#a020f0\\]{--tw-gradient-to:#a020f0;--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))}.ui-lib .bg-repeat{background-repeat:repeat}.ui-lib .mask-no-clip{-webkit-mask-clip:no-clip;mask-clip:no-clip}.ui-lib .mask-repeat{-webkit-mask-repeat:repeat;mask-repeat:repeat}.ui-lib .object-contain{object-fit:contain}.ui-lib .p-1{padding:calc(var(--spacing)*1)}.ui-lib .p-2{padding:calc(var(--spacing)*2)}.ui-lib .p-4{padding:calc(var(--spacing)*4)}.ui-lib .px-2{padding-inline:calc(var(--spacing)*2)}.ui-lib .px-3{padding-inline:calc(var(--spacing)*3)}.ui-lib .px-4{padding-inline:calc(var(--spacing)*4)}.ui-lib .px-8{padding-inline:calc(var(--spacing)*8)}.ui-lib .py-1{padding-block:calc(var(--spacing)*1)}.ui-lib .py-1\\.5{padding-block:calc(var(--spacing)*1.5)}.ui-lib .py-2{padding-block:calc(var(--spacing)*2)}.ui-lib .py-8{padding-block:calc(var(--spacing)*8)}.ui-lib .pt-4{padding-top:calc(var(--spacing)*4)}.ui-lib .pt-6{padding-top:calc(var(--spacing)*6)}.ui-lib .pt-12{padding-top:calc(var(--spacing)*12)}.ui-lib .pr-0{padding-right:calc(var(--spacing)*0)}.ui-lib .pr-6{padding-right:calc(var(--spacing)*6)}.ui-lib .pr-8{padding-right:calc(var(--spacing)*8)}.ui-lib .pb-6{padding-bottom:calc(var(--spacing)*6)}.ui-lib .pb-20{padding-bottom:calc(var(--spacing)*20)}.ui-lib .pl-2{padding-left:calc(var(--spacing)*2)}.ui-lib .text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.ui-lib .text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.ui-lib .text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.ui-lib .font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.ui-lib .font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.ui-lib .font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.ui-lib .tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}.ui-lib .text-wrap{text-wrap:wrap}.ui-lib .text-clip{text-overflow:clip}.ui-lib .text-ellipsis{text-overflow:ellipsis}.ui-lib .whitespace-nowrap{white-space:nowrap}.ui-lib .text-\\[\\#8220ff\\]{color:#8220ff}.ui-lib .text-gray-400{color:var(--color-gray-400)}.ui-lib .text-gray-500{color:var(--color-gray-500)}.ui-lib .text-gray-600{color:var(--color-gray-600)}.ui-lib .text-gray-700{color:var(--color-gray-700)}.ui-lib .text-gray-900{color:var(--color-gray-900)}.ui-lib .text-green-800{color:var(--color-green-800)}.ui-lib .text-muted-foreground{color:var(--muted-foreground)}.ui-lib .text-popover-foreground{color:var(--popover-foreground)}.ui-lib .text-primary{color:var(--primary)}.ui-lib .text-primary-foreground{color:var(--primary-foreground)}.ui-lib .text-purple-700{color:var(--color-purple-700)}.ui-lib .text-secondary-foreground{color:var(--secondary-foreground)}.ui-lib .text-white{color:var(--color-white)}.ui-lib .capitalize{text-transform:capitalize}.ui-lib .lowercase{text-transform:lowercase}.ui-lib .normal-case{text-transform:none}.ui-lib .uppercase{text-transform:uppercase}.ui-lib .italic{font-style:italic}.ui-lib .not-italic{font-style:normal}.ui-lib .diagonal-fractions{--tw-numeric-fraction:diagonal-fractions;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .lining-nums{--tw-numeric-figure:lining-nums;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .oldstyle-nums{--tw-numeric-figure:oldstyle-nums;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .ordinal{--tw-ordinal:ordinal;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .proportional-nums{--tw-numeric-spacing:proportional-nums;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .slashed-zero{--tw-slashed-zero:slashed-zero;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .stacked-fractions{--tw-numeric-fraction:stacked-fractions;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal,)var(--tw-slashed-zero,)var(--tw-numeric-figure,)var(--tw-numeric-spacing,)var(--tw-numeric-fraction,)}.ui-lib .normal-nums{font-variant-numeric:normal}.ui-lib .line-through{text-decoration-line:line-through}.ui-lib .no-underline{text-decoration-line:none}.ui-lib .overline{text-decoration-line:overline}.ui-lib .underline{text-decoration-line:underline}.ui-lib .underline-offset-4{text-underline-offset:4px}.ui-lib .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.ui-lib .subpixel-antialiased{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto}.ui-lib .opacity-50{opacity:.5}.ui-lib .shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a),0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .shadow-sm{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a),0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a),0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .ring{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .inset-ring{--tw-inset-ring-shadow:inset 0 0 0 1px var(--tw-inset-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .outline{outline-style:var(--tw-outline-style);outline-width:1px}.ui-lib .blur{--tw-blur:blur(8px);filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.ui-lib .drop-shadow{--tw-drop-shadow-size:drop-shadow(0 1px 2px var(--tw-drop-shadow-color,#0000001a))drop-shadow(0 1px 1px var(--tw-drop-shadow-color,#0000000f));--tw-drop-shadow:drop-shadow(0 1px 2px #0000001a)drop-shadow(0 1px 1px #0000000f);filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.ui-lib .grayscale{--tw-grayscale:grayscale(100%);filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.ui-lib .invert{--tw-invert:invert(100%);filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.ui-lib .sepia{--tw-sepia:sepia(100%);filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.ui-lib .filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.ui-lib .backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.ui-lib .backdrop-grayscale{--tw-backdrop-grayscale:grayscale(100%);-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.ui-lib .backdrop-invert{--tw-backdrop-invert:invert(100%);-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.ui-lib .backdrop-sepia{--tw-backdrop-sepia:sepia(100%);-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.ui-lib .backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.ui-lib .transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.ui-lib .transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.ui-lib .transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.ui-lib .transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.ui-lib .duration-200{--tw-duration:.2s;transition-duration:.2s}.ui-lib .duration-300{--tw-duration:.3s;transition-duration:.3s}.ui-lib .ease-in-out{--tw-ease:var(--ease-in-out);transition-timing-function:var(--ease-in-out)}.ui-lib .outline-none{--tw-outline-style:none;outline-style:none}.ui-lib .select-none{-webkit-user-select:none;user-select:none}.ui-lib :where(.divide-x-reverse>:not(:last-child)){--tw-divide-x-reverse:1}.ui-lib .ring-inset{--tw-ring-inset:inset}.ui-lib .zoom-in{--tw-enter-scale:0}.ui-lib .zoom-out{--tw-exit-scale:0}@media (hover:hover){.ui-lib .group-hover\\:bg-\\[\\#8220ff\\]\\/20:is(:where(.group):hover *){background-color:#8220ff33}.ui-lib .group-hover\\:text-\\[\\#8220ff\\]:is(:where(.group):hover *){color:#8220ff}.ui-lib .hover\\:scale-105:hover{--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x)var(--tw-scale-y)}.ui-lib .hover\\:bg-accent:hover{background-color:var(--accent)}.ui-lib .hover\\:bg-destructive\\/90:hover{background-color:var(--destructive)}@supports (color:color-mix(in lab,red,red)){.ui-lib .hover\\:bg-destructive\\/90:hover{background-color:color-mix(in oklab,var(--destructive)90%,transparent)}}.ui-lib .hover\\:bg-gray-50:hover{background-color:var(--color-gray-50)}.ui-lib .hover\\:bg-gray-100:hover{background-color:var(--color-gray-100)}.ui-lib .hover\\:bg-primary\\/90:hover{background-color:var(--primary)}@supports (color:color-mix(in lab,red,red)){.ui-lib .hover\\:bg-primary\\/90:hover{background-color:color-mix(in oklab,var(--primary)90%,transparent)}}.ui-lib .hover\\:bg-secondary\\/50:hover{background-color:var(--secondary)}@supports (color:color-mix(in lab,red,red)){.ui-lib .hover\\:bg-secondary\\/50:hover{background-color:color-mix(in oklab,var(--secondary)50%,transparent)}}.ui-lib .hover\\:bg-secondary\\/80:hover{background-color:var(--secondary)}@supports (color:color-mix(in lab,red,red)){.ui-lib .hover\\:bg-secondary\\/80:hover{background-color:color-mix(in oklab,var(--secondary)80%,transparent)}}.ui-lib .hover\\:bg-white\\/10:hover{background-color:#ffffff1a}@supports (color:color-mix(in lab,red,red)){.ui-lib .hover\\:bg-white\\/10:hover{background-color:color-mix(in oklab,var(--color-white)10%,transparent)}}.ui-lib .hover\\:text-accent-foreground:hover{color:var(--accent-foreground)}.ui-lib .hover\\:text-gray-500:hover{color:var(--color-gray-500)}.ui-lib .hover\\:text-gray-700:hover{color:var(--color-gray-700)}.ui-lib .hover\\:text-purple-700:hover{color:var(--color-purple-700)}.ui-lib .hover\\:text-white\\/80:hover{color:#fffc}@supports (color:color-mix(in lab,red,red)){.ui-lib .hover\\:text-white\\/80:hover{color:color-mix(in oklab,var(--color-white)80%,transparent)}}.ui-lib .hover\\:underline:hover{text-decoration-line:underline}.ui-lib .hover\\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a),0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.ui-lib .focus\\:border-ring:focus{border-color:var(--ring)}.ui-lib .focus\\:bg-accent:focus{background-color:var(--accent)}.ui-lib .focus\\:text-accent-foreground:focus{color:var(--accent-foreground)}.ui-lib .focus\\:ring-1:focus{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .focus\\:ring-2:focus{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .focus\\:ring-ring:focus{--tw-ring-color:var(--ring)}.ui-lib .focus\\:outline-none:focus{--tw-outline-style:none;outline-style:none}.ui-lib .focus-visible\\:ring-2:focus-visible{--tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ui-lib .focus-visible\\:ring-ring:focus-visible{--tw-ring-color:var(--ring)}.ui-lib .focus-visible\\:ring-offset-2:focus-visible{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color)}.ui-lib .focus-visible\\:outline-none:focus-visible{--tw-outline-style:none;outline-style:none}.ui-lib .disabled\\:pointer-events-none:disabled{pointer-events:none}.ui-lib .disabled\\:cursor-not-allowed:disabled{cursor:not-allowed}.ui-lib .disabled\\:opacity-50:disabled{opacity:.5}.ui-lib .data-\\[disabled\\]\\:pointer-events-none[data-disabled]{pointer-events:none}.ui-lib .data-\\[disabled\\]\\:opacity-50[data-disabled]{opacity:.5}.ui-lib .data-\\[placeholder\\]\\:text-muted-foreground[data-placeholder]{color:var(--muted-foreground)}.ui-lib .data-\\[side\\=bottom\\]\\:translate-y-1[data-side=bottom]{--tw-translate-y:calc(var(--spacing)*1);translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .data-\\[side\\=bottom\\]\\:slide-in-from-top-2[data-side=bottom]{--tw-enter-translate-y:calc(2*var(--spacing)*-1)}.ui-lib .data-\\[side\\=left\\]\\:-translate-x-1[data-side=left]{--tw-translate-x:calc(var(--spacing)*-1);translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .data-\\[side\\=left\\]\\:slide-in-from-right-2[data-side=left]{--tw-enter-translate-x:calc(2*var(--spacing))}.ui-lib .data-\\[side\\=right\\]\\:translate-x-1[data-side=right]{--tw-translate-x:calc(var(--spacing)*1);translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .data-\\[side\\=right\\]\\:slide-in-from-left-2[data-side=right]{--tw-enter-translate-x:calc(2*var(--spacing)*-1)}.ui-lib .data-\\[side\\=top\\]\\:-translate-y-1[data-side=top]{--tw-translate-y:calc(var(--spacing)*-1);translate:var(--tw-translate-x)var(--tw-translate-y)}.ui-lib .data-\\[side\\=top\\]\\:slide-in-from-bottom-2[data-side=top]{--tw-enter-translate-y:calc(2*var(--spacing))}.ui-lib .data-\\[state\\=closed\\]\\:animate-out[data-state=closed]{animation:exit var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.ui-lib .data-\\[state\\=closed\\]\\:fade-out-0[data-state=closed]{--tw-exit-opacity:0}.ui-lib .data-\\[state\\=closed\\]\\:zoom-out-95[data-state=closed]{--tw-exit-scale:.95}.ui-lib .data-\\[state\\=open\\]\\:animate-in[data-state=open]{animation:enter var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.ui-lib .data-\\[state\\=open\\]\\:bg-secondary\\/50[data-state=open]{background-color:var(--secondary)}@supports (color:color-mix(in lab,red,red)){.ui-lib .data-\\[state\\=open\\]\\:bg-secondary\\/50[data-state=open]{background-color:color-mix(in oklab,var(--secondary)50%,transparent)}}.ui-lib .data-\\[state\\=open\\]\\:fade-in-0[data-state=open]{--tw-enter-opacity:0}.ui-lib .data-\\[state\\=open\\]\\:zoom-in-95[data-state=open]{--tw-enter-scale:.95}@media (min-width:40rem){.ui-lib .sm\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.ui-lib .sm\\:px-6{padding-inline:calc(var(--spacing)*6)}}@media (min-width:48rem){.ui-lib .md\\:mb-0{margin-bottom:calc(var(--spacing)*0)}.ui-lib .md\\:h-40{height:calc(var(--spacing)*40)}.ui-lib .md\\:w-1\\/3{width:33.3333%}.ui-lib .md\\:w-2\\/3{width:66.6667%}.ui-lib .md\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.ui-lib .md\\:flex-row{flex-direction:row}.ui-lib .md\\:gap-4{gap:calc(var(--spacing)*4)}.ui-lib .md\\:px-6{padding-inline:calc(var(--spacing)*6)}.ui-lib .md\\:pr-8{padding-right:calc(var(--spacing)*8)}}@media (min-width:64rem){.ui-lib .lg\\:col-span-2{grid-column:span 2/span 2}.ui-lib .lg\\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.ui-lib .lg\\:gap-6{gap:calc(var(--spacing)*6)}.ui-lib .lg\\:px-6{padding-inline:calc(var(--spacing)*6)}.ui-lib .lg\\:px-8{padding-inline:calc(var(--spacing)*8)}}@media (min-width:80rem){.ui-lib .xl\\:flex{display:flex}.ui-lib .xl\\:hidden{display:none}.ui-lib .xl\\:inline{display:inline}}.ui-lib .dark\\:border-gray-700:is(.dark *){border-color:var(--color-gray-700)}.ui-lib .dark\\:bg-gray-900:is(.dark *){background-color:var(--color-gray-900)}.ui-lib .dark\\:text-white:is(.dark *){color:var(--color-white)}.ui-lib .\\[\\&\\>span\\]\\:line-clamp-1>span{-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}}@property --tw-animation-delay{syntax:"*";inherits:false;initial-value:0s}@property --tw-animation-direction{syntax:"*";inherits:false;initial-value:normal}@property --tw-animation-duration{syntax:"*";inherits:false}@property --tw-animation-fill-mode{syntax:"*";inherits:false;initial-value:none}@property --tw-animation-iteration-count{syntax:"*";inherits:false;initial-value:1}@property --tw-enter-opacity{syntax:"*";inherits:false;initial-value:1}@property --tw-enter-rotate{syntax:"*";inherits:false;initial-value:0}@property --tw-enter-scale{syntax:"*";inherits:false;initial-value:1}@property --tw-enter-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-enter-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-exit-opacity{syntax:"*";inherits:false;initial-value:1}@property --tw-exit-rotate{syntax:"*";inherits:false;initial-value:0}@property --tw-exit-scale{syntax:"*";inherits:false;initial-value:1}@property --tw-exit-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-exit-translate-y{syntax:"*";inherits:false;initial-value:0}.ui-lib{--radius:.625rem;--background:oklch(100% 0 0);--foreground:oklch(14.5% 0 0);--card:oklch(100% 0 0);--card-foreground:oklch(14.5% 0 0);--popover:oklch(100% 0 0);--popover-foreground:oklch(14.5% 0 0);--primary:oklch(20.5% 0 0);--primary-foreground:oklch(98.5% 0 0);--secondary:oklch(97% 0 0);--secondary-foreground:oklch(20.5% 0 0);--muted:oklch(97% 0 0);--muted-foreground:oklch(55.6% 0 0);--accent:oklch(97% 0 0);--accent-foreground:oklch(20.5% 0 0);--destructive:oklch(57.7% .245 27.325);--border:oklch(92.2% 0 0);--input:oklch(92.2% 0 0);--ring:oklch(70.8% 0 0);--chart-1:oklch(64.6% .222 41.116);--chart-2:oklch(60% .118 184.704);--chart-3:oklch(39.8% .07 227.392);--chart-4:oklch(82.8% .189 84.429);--chart-5:oklch(76.9% .188 70.08);--sidebar:oklch(98.5% 0 0);--sidebar-foreground:oklch(14.5% 0 0);--sidebar-primary:oklch(20.5% 0 0);--sidebar-primary-foreground:oklch(98.5% 0 0);--sidebar-accent:oklch(97% 0 0);--sidebar-accent-foreground:oklch(20.5% 0 0);--sidebar-border:oklch(92.2% 0 0);--sidebar-ring:oklch(70.8% 0 0);font-family:system-ui,Avenir,Helvetica,Arial,sans-serif;font-weight:400;line-height:1.5}.ui-lib .dark{--background:oklch(14.5% 0 0);--foreground:oklch(98.5% 0 0);--card:oklch(20.5% 0 0);--card-foreground:oklch(98.5% 0 0);--popover:oklch(20.5% 0 0);--popover-foreground:oklch(98.5% 0 0);--primary:oklch(92.2% 0 0);--primary-foreground:oklch(20.5% 0 0);--secondary:oklch(26.9% 0 0);--secondary-foreground:oklch(98.5% 0 0);--muted:oklch(26.9% 0 0);--muted-foreground:oklch(70.8% 0 0);--accent:oklch(26.9% 0 0);--accent-foreground:oklch(98.5% 0 0);--destructive:oklch(70.4% .191 22.216);--border:oklch(100% 0 0/.1);--input:oklch(100% 0 0/.15);--ring:oklch(55.6% 0 0);--chart-1:oklch(48.8% .243 264.376);--chart-2:oklch(69.6% .17 162.48);--chart-3:oklch(76.9% .188 70.08);--chart-4:oklch(62.7% .265 303.9);--chart-5:oklch(64.5% .246 16.439);--sidebar:oklch(20.5% 0 0);--sidebar-foreground:oklch(98.5% 0 0);--sidebar-primary:oklch(48.8% .243 264.376);--sidebar-primary-foreground:oklch(98.5% 0 0);--sidebar-accent:oklch(26.9% 0 0);--sidebar-accent-foreground:oklch(98.5% 0 0);--sidebar-border:oklch(100% 0 0/.1);--sidebar-ring:oklch(55.6% 0 0)}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-pan-x{syntax:"*";inherits:false}@property --tw-pan-y{syntax:"*";inherits:false}@property --tw-pinch-zoom{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-divide-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-divide-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-gradient-position{syntax:"*";inherits:false}@property --tw-gradient-from{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-via{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-to{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-stops{syntax:"*";inherits:false}@property --tw-gradient-via-stops{syntax:"*";inherits:false}@property --tw-gradient-from-position{syntax:"<length-percentage>";inherits:false;initial-value:0%}@property --tw-gradient-via-position{syntax:"<length-percentage>";inherits:false;initial-value:50%}@property --tw-gradient-to-position{syntax:"<length-percentage>";inherits:false;initial-value:100%}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-tracking{syntax:"*";inherits:false}@property --tw-ordinal{syntax:"*";inherits:false}@property --tw-slashed-zero{syntax:"*";inherits:false}@property --tw-numeric-figure{syntax:"*";inherits:false}@property --tw-numeric-spacing{syntax:"*";inherits:false}@property --tw-numeric-fraction{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-ease{syntax:"*";inherits:false}@keyframes enter{0%{opacity:var(--tw-enter-opacity,1);transform:translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0)scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1))rotate(var(--tw-enter-rotate,0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity,1);transform:translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0)scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1))rotate(var(--tw-exit-rotate,0))}}')),document.head.appendChild(i)}}catch(r){console.error("vite-plugin-css-injected-by-js",r)}})();
 import * as Bt from "react";
 import Me, { createContext as Wt, useContext as Vt, useCallback as Ce, useState as ce, useRef as _e, useEffect as re } from "react";
 import { Globe as Dt } from "lucide-react";
@@ -15,7 +16,7 @@ var Ye;
 function Ut() {
   if (Ye) return fe;
   Ye = 1;
-  var o = Symbol.for("react.transitional.element"), e = Symbol.for("react.fragment");
+  var i = Symbol.for("react.transitional.element"), e = Symbol.for("react.fragment");
   function t(s, r, n) {
     var a = null;
     if (n !== void 0 && (a = "" + n), r.key !== void 0 && (a = "" + r.key), "key" in r) {
@@ -24,7 +25,7 @@ function Ut() {
         l !== "key" && (n[l] = r[l]);
     } else n = r;
     return r = n.ref, {
-      $$typeof: o,
+      $$typeof: i,
       type: s,
       key: a,
       ref: r !== void 0 ? r : null,
@@ -46,7 +47,7 @@ var pe = {};
 var qe;
 function Gt() {
   return qe || (qe = 1, process.env.NODE_ENV !== "production" && function() {
-    function o(f) {
+    function i(f) {
       if (f == null) return null;
       if (typeof f == "function")
         return f.$$typeof === z ? null : f.displayName || f.name || null;
@@ -79,11 +80,11 @@ function Gt() {
             var S = f.render;
             return f = f.displayName, f || (f = S.displayName || S.name || "", f = f !== "" ? "ForwardRef(" + f + ")" : "ForwardRef"), f;
           case T:
-            return S = f.displayName || null, S !== null ? S : o(f.type) || "Memo";
+            return S = f.displayName || null, S !== null ? S : i(f.type) || "Memo";
           case x:
             S = f._payload, f = f._init;
             try {
-              return o(f(S));
+              return i(f(S));
             } catch {
             }
         }
@@ -114,7 +115,7 @@ function Gt() {
       if (typeof f == "object" && f !== null && f.$$typeof === x)
         return "<...>";
       try {
-        var S = o(f);
+        var S = i(f);
         return S ? "<" + S + ">" : "<...>";
       } catch {
         return "<...>";
@@ -147,7 +148,7 @@ function Gt() {
       });
     }
     function c() {
-      var f = o(this.type);
+      var f = i(this.type);
       return I[f] || (I[f] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), f = this.props.ref, f !== void 0 ? f : null;
@@ -198,7 +199,7 @@ function Gt() {
             );
         else h(V);
       if (Q.call(S, "key")) {
-        V = o(f);
+        V = i(f);
         var J = Object.keys(S).filter(function(he) {
           return he !== "key";
         });
@@ -280,23 +281,23 @@ var Je;
 function Ht() {
   return Je || (Je = 1, process.env.NODE_ENV === "production" ? be.exports = Ut() : be.exports = Gt()), be.exports;
 }
-var i = Ht();
-function vt(o) {
+var o = Ht();
+function vt(i) {
   var e, t, s = "";
-  if (typeof o == "string" || typeof o == "number") s += o;
-  else if (typeof o == "object") if (Array.isArray(o)) {
-    var r = o.length;
-    for (e = 0; e < r; e++) o[e] && (t = vt(o[e])) && (s && (s += " "), s += t);
-  } else for (t in o) o[t] && (s && (s += " "), s += t);
+  if (typeof i == "string" || typeof i == "number") s += i;
+  else if (typeof i == "object") if (Array.isArray(i)) {
+    var r = i.length;
+    for (e = 0; e < r; e++) i[e] && (t = vt(i[e])) && (s && (s += " "), s += t);
+  } else for (t in i) i[t] && (s && (s += " "), s += t);
   return s;
 }
 function bt() {
-  for (var o, e, t = 0, s = "", r = arguments.length; t < r; t++) (o = arguments[t]) && (e = vt(o)) && (s && (s += " "), s += e);
+  for (var i, e, t = 0, s = "", r = arguments.length; t < r; t++) (i = arguments[t]) && (e = vt(i)) && (s && (s += " "), s += e);
   return s;
 }
-const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, Kt = (o, e) => (t) => {
+const Ze = (i) => typeof i == "boolean" ? `${i}` : i === 0 ? "0" : i, Xe = bt, Kt = (i, e) => (t) => {
   var s;
-  if ((e == null ? void 0 : e.variants) == null) return Xe(o, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
+  if ((e == null ? void 0 : e.variants) == null) return Xe(i, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
   const { variants: r, defaultVariants: n } = e, a = Object.keys(r).map((u) => {
     const d = t == null ? void 0 : t[u], h = n == null ? void 0 : n[u];
     if (d === null) return null;
@@ -322,12 +323,12 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
       m
     ] : u;
   }, []);
-  return Xe(o, a, c, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
-}, Ue = "-", Yt = (o) => {
-  const e = Jt(o), {
+  return Xe(i, a, c, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
+}, Ue = "-", Yt = (i) => {
+  const e = Jt(i), {
     conflictingClassGroups: t,
     conflictingClassGroupModifiers: s
-  } = o;
+  } = i;
   return {
     getClassGroupId: (a) => {
       const l = a.split(Ue);
@@ -338,38 +339,38 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
       return l && s[a] ? [...c, ...s[a]] : c;
     }
   };
-}, kt = (o, e) => {
+}, kt = (i, e) => {
   var a;
-  if (o.length === 0)
+  if (i.length === 0)
     return e.classGroupId;
-  const t = o[0], s = e.nextPart.get(t), r = s ? kt(o.slice(1), s) : void 0;
+  const t = i[0], s = e.nextPart.get(t), r = s ? kt(i.slice(1), s) : void 0;
   if (r)
     return r;
   if (e.validators.length === 0)
     return;
-  const n = o.join(Ue);
+  const n = i.join(Ue);
   return (a = e.validators.find(({
     validator: l
   }) => l(n))) == null ? void 0 : a.classGroupId;
-}, Qe = /^\[(.+)\]$/, qt = (o) => {
-  if (Qe.test(o)) {
-    const e = Qe.exec(o)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
+}, Qe = /^\[(.+)\]$/, qt = (i) => {
+  if (Qe.test(i)) {
+    const e = Qe.exec(i)[1], t = e == null ? void 0 : e.substring(0, e.indexOf(":"));
     if (t)
       return "arbitrary.." + t;
   }
-}, Jt = (o) => {
+}, Jt = (i) => {
   const {
     theme: e,
     classGroups: t
-  } = o, s = {
+  } = i, s = {
     nextPart: /* @__PURE__ */ new Map(),
     validators: []
   };
   for (const r in t)
     Ae(t[r], s, r, e);
   return s;
-}, Ae = (o, e, t, s) => {
-  o.forEach((r) => {
+}, Ae = (i, e, t, s) => {
+  i.forEach((r) => {
     if (typeof r == "string") {
       const n = r === "" ? e : et(e, r);
       n.classGroupId = t;
@@ -390,16 +391,16 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
       Ae(a, et(e, n), t, s);
     });
   });
-}, et = (o, e) => {
-  let t = o;
+}, et = (i, e) => {
+  let t = i;
   return e.split(Ue).forEach((s) => {
     t.nextPart.has(s) || t.nextPart.set(s, {
       nextPart: /* @__PURE__ */ new Map(),
       validators: []
     }), t = t.nextPart.get(s);
   }), t;
-}, Zt = (o) => o.isThemeGetter, Xt = (o) => {
-  if (o < 1)
+}, Zt = (i) => i.isThemeGetter, Xt = (i) => {
+  if (i < 1)
     return {
       get: () => {
       },
@@ -408,7 +409,7 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
     };
   let e = 0, t = /* @__PURE__ */ new Map(), s = /* @__PURE__ */ new Map();
   const r = (n, a) => {
-    t.set(n, a), e++, e > o && (e = 0, s = t, t = /* @__PURE__ */ new Map());
+    t.set(n, a), e++, e > i && (e = 0, s = t, t = /* @__PURE__ */ new Map());
   };
   return {
     get(n) {
@@ -422,11 +423,11 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
       t.has(n) ? t.set(n, a) : r(n, a);
     }
   };
-}, Te = "!", Ie = ":", Qt = Ie.length, es = (o) => {
+}, Te = "!", Ie = ":", Qt = Ie.length, es = (i) => {
   const {
     prefix: e,
     experimentalParseClassName: t
-  } = o;
+  } = i;
   let s = (r) => {
     const n = [];
     let a = 0, l = 0, c = 0, u;
@@ -470,8 +471,8 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
     });
   }
   return s;
-}, ts = (o) => o.endsWith(Te) ? o.substring(0, o.length - 1) : o.startsWith(Te) ? o.substring(1) : o, ss = (o) => {
-  const e = Object.fromEntries(o.orderSensitiveModifiers.map((s) => [s, !0]));
+}, ts = (i) => i.endsWith(Te) ? i.substring(0, i.length - 1) : i.startsWith(Te) ? i.substring(1) : i, ss = (i) => {
+  const e = Object.fromEntries(i.orderSensitiveModifiers.map((s) => [s, !0]));
   return (s) => {
     if (s.length <= 1)
       return s;
@@ -481,18 +482,18 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
       a[0] === "[" || e[a] ? (r.push(...n.sort(), a), n = []) : n.push(a);
     }), r.push(...n.sort()), r;
   };
-}, rs = (o) => ({
-  cache: Xt(o.cacheSize),
-  parseClassName: es(o),
-  sortModifiers: ss(o),
-  ...Yt(o)
-}), is = /\s+/, os = (o, e) => {
+}, rs = (i) => ({
+  cache: Xt(i.cacheSize),
+  parseClassName: es(i),
+  sortModifiers: ss(i),
+  ...Yt(i)
+}), is = /\s+/, os = (i, e) => {
   const {
     parseClassName: t,
     getClassGroupId: s,
     getConflictingClassGroupIds: r,
     sortModifiers: n
-  } = e, a = [], l = o.trim().split(is);
+  } = e, a = [], l = i.trim().split(is);
   let c = "";
   for (let u = l.length - 1; u >= 0; u -= 1) {
     const d = l[u], {
@@ -532,23 +533,23 @@ const Ze = (o) => typeof o == "boolean" ? `${o}` : o === 0 ? "0" : o, Xe = bt, K
   return c;
 };
 function ns() {
-  let o = 0, e, t, s = "";
-  for (; o < arguments.length; )
-    (e = arguments[o++]) && (t = jt(e)) && (s && (s += " "), s += t);
+  let i = 0, e, t, s = "";
+  for (; i < arguments.length; )
+    (e = arguments[i++]) && (t = jt(e)) && (s && (s += " "), s += t);
   return s;
 }
-const jt = (o) => {
-  if (typeof o == "string")
-    return o;
+const jt = (i) => {
+  if (typeof i == "string")
+    return i;
   let e, t = "";
-  for (let s = 0; s < o.length; s++)
-    o[s] && (e = jt(o[s])) && (t && (t += " "), t += e);
+  for (let s = 0; s < i.length; s++)
+    i[s] && (e = jt(i[s])) && (t && (t += " "), t += e);
   return t;
 };
-function as(o, ...e) {
+function as(i, ...e) {
   let t, s, r, n = a;
   function a(c) {
-    const u = e.reduce((d, h) => h(d), o());
+    const u = e.reduce((d, h) => h(d), i());
     return t = rs(u), s = t.cache.get, r = t.cache.set, n = l, l(c);
   }
   function l(c) {
@@ -562,22 +563,22 @@ function as(o, ...e) {
     return n(ns.apply(null, arguments));
   };
 }
-const D = (o) => {
-  const e = (t) => t[o] || [];
+const D = (i) => {
+  const e = (t) => t[i] || [];
   return e.isThemeGetter = !0, e;
-}, St = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Ct = /^\((?:(\w[\w-]*):)?(.+)\)$/i, ls = /^\d+\/\d+$/, cs = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ds = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, us = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/, hs = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, fs = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (o) => ls.test(o), L = (o) => !!o && !Number.isNaN(Number(o)), se = (o) => !!o && Number.isInteger(Number(o)), $e = (o) => o.endsWith("%") && L(o.slice(0, -1)), ee = (o) => cs.test(o), ps = () => !0, gs = (o) => (
+}, St = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Ct = /^\((?:(\w[\w-]*):)?(.+)\)$/i, ls = /^\d+\/\d+$/, cs = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, ds = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, us = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/, hs = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, fs = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, ae = (i) => ls.test(i), L = (i) => !!i && !Number.isNaN(Number(i)), se = (i) => !!i && Number.isInteger(Number(i)), $e = (i) => i.endsWith("%") && L(i.slice(0, -1)), ee = (i) => cs.test(i), ps = () => !0, gs = (i) => (
   // `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
   // For example, `hsl(0 0% 0%)` would be classified as a length without this check.
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
-  ds.test(o) && !us.test(o)
-), _t = () => !1, ms = (o) => hs.test(o), xs = (o) => fs.test(o), ys = (o) => !y(o) && !w(o), ws = (o) => de(o, Ot, _t), y = (o) => St.test(o), ie = (o) => de(o, Pt, gs), ze = (o) => de(o, Ss, L), tt = (o) => de(o, Lt, _t), vs = (o) => de(o, Nt, xs), ke = (o) => de(o, Rt, ms), w = (o) => Ct.test(o), ge = (o) => ue(o, Pt), bs = (o) => ue(o, Cs), st = (o) => ue(o, Lt), ks = (o) => ue(o, Ot), js = (o) => ue(o, Nt), je = (o) => ue(o, Rt, !0), de = (o, e, t) => {
-  const s = St.exec(o);
+  ds.test(i) && !us.test(i)
+), _t = () => !1, ms = (i) => hs.test(i), xs = (i) => fs.test(i), ys = (i) => !y(i) && !w(i), ws = (i) => de(i, Ot, _t), y = (i) => St.test(i), ie = (i) => de(i, Pt, gs), ze = (i) => de(i, Ss, L), tt = (i) => de(i, Lt, _t), vs = (i) => de(i, Nt, xs), ke = (i) => de(i, Rt, ms), w = (i) => Ct.test(i), ge = (i) => ue(i, Pt), bs = (i) => ue(i, Cs), st = (i) => ue(i, Lt), ks = (i) => ue(i, Ot), js = (i) => ue(i, Nt), je = (i) => ue(i, Rt, !0), de = (i, e, t) => {
+  const s = St.exec(i);
   return s ? s[1] ? e(s[1]) : t(s[2]) : !1;
-}, ue = (o, e, t = !1) => {
-  const s = Ct.exec(o);
+}, ue = (i, e, t = !1) => {
+  const s = Ct.exec(i);
   return s ? s[1] ? e(s[1]) : t : !1;
-}, Lt = (o) => o === "position" || o === "percentage", Nt = (o) => o === "image" || o === "url", Ot = (o) => o === "length" || o === "size" || o === "bg-size", Pt = (o) => o === "length", Ss = (o) => o === "number", Cs = (o) => o === "family-name", Rt = (o) => o === "shadow", _s = () => {
-  const o = D("color"), e = D("font"), t = D("text"), s = D("font-weight"), r = D("tracking"), n = D("leading"), a = D("breakpoint"), l = D("container"), c = D("spacing"), u = D("radius"), d = D("shadow"), h = D("inset-shadow"), m = D("text-shadow"), g = D("drop-shadow"), p = D("blur"), b = D("perspective"), _ = D("aspect"), E = D("ease"), j = D("animate"), A = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], R = () => [
+}, Lt = (i) => i === "position" || i === "percentage", Nt = (i) => i === "image" || i === "url", Ot = (i) => i === "length" || i === "size" || i === "bg-size", Pt = (i) => i === "length", Ss = (i) => i === "number", Cs = (i) => i === "family-name", Rt = (i) => i === "shadow", _s = () => {
+  const i = D("color"), e = D("font"), t = D("text"), s = D("font-weight"), r = D("tracking"), n = D("leading"), a = D("breakpoint"), l = D("container"), c = D("spacing"), u = D("radius"), d = D("shadow"), h = D("inset-shadow"), m = D("text-shadow"), g = D("drop-shadow"), p = D("blur"), b = D("perspective"), _ = D("aspect"), E = D("ease"), j = D("animate"), A = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], R = () => [
     "center",
     "top",
     "bottom",
@@ -597,7 +598,7 @@ const D = (o) => {
     "left-bottom"
   ], v = () => [...R(), w, y], $ = () => ["auto", "hidden", "clip", "visible", "scroll"], T = () => ["auto", "contain", "none"], x = () => [w, y, c], O = () => [ae, "full", "auto", ...x()], z = () => [se, "none", "subgrid", w, y], U = () => ["auto", {
     span: ["full", se, w, y]
-  }, se, w, y], Q = () => [se, "auto", w, y], K = () => ["auto", "min", "max", "fr", w, y], W = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], q = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], I = () => ["auto", ...x()], B = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...x()], k = () => [o, w, y], Z = () => [...R(), st, tt, {
+  }, se, w, y], Q = () => [se, "auto", w, y], K = () => ["auto", "min", "max", "fr", w, y], W = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], q = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], I = () => ["auto", ...x()], B = () => [ae, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...x()], k = () => [i, w, y], Z = () => [...R(), st, tt, {
     position: [w, y]
   }], f = () => ["no-repeat", {
     repeat: ["", "x", "y", "space", "round"]
@@ -3047,14 +3048,14 @@ const D = (o) => {
     orderSensitiveModifiers: ["*", "**", "after", "backdrop", "before", "details-content", "file", "first-letter", "first-line", "marker", "placeholder", "selection"]
   };
 }, Ls = /* @__PURE__ */ as(_s);
-function Ns(...o) {
-  return Ls(bt(o));
+function Ns(...i) {
+  return Ls(bt(i));
 }
-function Le(o, e) {
-  if (o) {
-    const t = o.split(":");
+function Le(i, e) {
+  if (i) {
+    const t = i.split(":");
     if (t.length >= 3 && t[0] && t[2] !== "443")
-      return o;
+      return i;
   }
   return e;
 }
@@ -3084,17 +3085,17 @@ const Os = Kt(
     }
   }
 ), Fe = Bt.forwardRef(
-  ({ className: o, variant: e, size: t, ...s }, r) => /* @__PURE__ */ i.jsx("button", { className: Ns(Os({ variant: e, size: t, className: o })), ref: r, ...s })
+  ({ className: i, variant: e, size: t, ...s }, r) => /* @__PURE__ */ o.jsx("button", { className: Ns(Os({ variant: e, size: t, className: i })), ref: r, ...s })
 );
 Fe.displayName = "Button";
-const Y = ({ href: o, children: e, className: t = "", target: s = "_self", rel: r = "noopener noreferrer", onClick: n }) => {
+const Y = ({ href: i, children: e, className: t = "", target: s = "_self", rel: r = "noopener noreferrer", onClick: n }) => {
   const a = (l) => {
-    s !== "_blank" && (l.preventDefault(), window.location.href = o), n && n(l);
+    s !== "_blank" && (l.preventDefault(), window.location.href = i), n && n(l);
   };
-  return /* @__PURE__ */ i.jsx(
+  return /* @__PURE__ */ o.jsx(
     "a",
     {
-      href: o,
+      href: i,
       className: t,
       target: s,
       rel: r,
@@ -3103,44 +3104,44 @@ const Y = ({ href: o, children: e, className: t = "", target: s = "_self", rel: 
       children: e
     }
   );
-}, Ps = (o, e, t, s) => {
+}, Ps = (i, e, t, s) => {
   var n, a, l, c;
   const r = [t, {
     code: e,
     ...s || {}
   }];
-  if ((a = (n = o == null ? void 0 : o.services) == null ? void 0 : n.logger) != null && a.forward)
-    return o.services.logger.forward(r, "warn", "react-i18next::", !0);
-  oe(r[0]) && (r[0] = `react-i18next:: ${r[0]}`), (c = (l = o == null ? void 0 : o.services) == null ? void 0 : l.logger) != null && c.warn ? o.services.logger.warn(...r) : console != null && console.warn && console.warn(...r);
-}, rt = {}, Be = (o, e, t, s) => {
-  oe(t) && rt[t] || (oe(t) && (rt[t] = /* @__PURE__ */ new Date()), Ps(o, e, t, s));
-}, $t = (o, e) => () => {
-  if (o.isInitialized)
+  if ((a = (n = i == null ? void 0 : i.services) == null ? void 0 : n.logger) != null && a.forward)
+    return i.services.logger.forward(r, "warn", "react-i18next::", !0);
+  oe(r[0]) && (r[0] = `react-i18next:: ${r[0]}`), (c = (l = i == null ? void 0 : i.services) == null ? void 0 : l.logger) != null && c.warn ? i.services.logger.warn(...r) : console != null && console.warn && console.warn(...r);
+}, rt = {}, Be = (i, e, t, s) => {
+  oe(t) && rt[t] || (oe(t) && (rt[t] = /* @__PURE__ */ new Date()), Ps(i, e, t, s));
+}, $t = (i, e) => () => {
+  if (i.isInitialized)
     e();
   else {
     const t = () => {
       setTimeout(() => {
-        o.off("initialized", t);
+        i.off("initialized", t);
       }, 0), e();
     };
-    o.on("initialized", t);
+    i.on("initialized", t);
   }
-}, We = (o, e, t) => {
-  o.loadNamespaces(e, $t(o, t));
-}, it = (o, e, t, s) => {
-  if (oe(t) && (t = [t]), o.options.preload && o.options.preload.indexOf(e) > -1) return We(o, t, s);
+}, We = (i, e, t) => {
+  i.loadNamespaces(e, $t(i, t));
+}, it = (i, e, t, s) => {
+  if (oe(t) && (t = [t]), i.options.preload && i.options.preload.indexOf(e) > -1) return We(i, t, s);
   t.forEach((r) => {
-    o.options.ns.indexOf(r) < 0 && o.options.ns.push(r);
-  }), o.loadLanguages(e, $t(o, s));
-}, Rs = (o, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
+    i.options.ns.indexOf(r) < 0 && i.options.ns.push(r);
+  }), i.loadLanguages(e, $t(i, s));
+}, Rs = (i, e, t = {}) => !e.languages || !e.languages.length ? (Be(e, "NO_LANGUAGES", "i18n.languages were undefined or empty", {
   languages: e.languages
-}), !0) : e.hasLoadedNamespace(o, {
+}), !0) : e.hasLoadedNamespace(i, {
   lng: t.lng,
   precheck: (s, r) => {
     var n;
-    if (((n = t.bindI18n) == null ? void 0 : n.indexOf("languageChanging")) > -1 && s.services.backendConnector.backend && s.isLanguageChangingTo && !r(s.isLanguageChangingTo, o)) return !1;
+    if (((n = t.bindI18n) == null ? void 0 : n.indexOf("languageChanging")) > -1 && s.services.backendConnector.backend && s.isLanguageChangingTo && !r(s.isLanguageChangingTo, i)) return !1;
   }
-}), oe = (o) => typeof o == "string", $s = (o) => typeof o == "object" && o !== null, zs = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, Es = {
+}), oe = (i) => typeof i == "string", $s = (i) => typeof i == "object" && i !== null, zs = /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g, Es = {
   "&amp;": "&",
   "&#38;": "&",
   "&lt;": "<",
@@ -3161,7 +3162,7 @@ const Y = ({ href: o, children: e, className: t = "", target: s = "_self", rel: 
   "&#8230;": "…",
   "&#x2F;": "/",
   "&#47;": "/"
-}, Ms = (o) => Es[o], As = (o) => o.replace(zs, Ms);
+}, Ms = (i) => Es[i], As = (i) => i.replace(zs, Ms);
 let Ve = {
   bindI18n: "languageChanged",
   bindI18nStore: "",
@@ -3172,19 +3173,19 @@ let Ve = {
   useSuspense: !0,
   unescape: As
 };
-const Ts = (o = {}) => {
+const Ts = (i = {}) => {
   Ve = {
     ...Ve,
-    ...o
+    ...i
   };
 }, Is = () => Ve;
 let zt;
-const Fs = (o) => {
-  zt = o;
+const Fs = (i) => {
+  zt = i;
 }, Bs = () => zt, Ws = {
   type: "3rdParty",
-  init(o) {
-    Ts(o.options.react), Fs(o);
+  init(i) {
+    Ts(i.options.react), Fs(i);
   }
 }, Vs = Wt();
 class Ds {
@@ -3200,12 +3201,12 @@ class Ds {
     return Object.keys(this.usedNamespaces);
   }
 }
-const Us = (o, e) => {
+const Us = (i, e) => {
   const t = _e();
   return re(() => {
-    t.current = o;
-  }, [o, e]), t.current;
-}, Et = (o, e, t, s) => o.getFixedT(e, t, s), Gs = (o, e, t, s) => Ce(Et(o, e, t, s), [o, e, t, s]), Mt = (o, e = {}) => {
+    t.current = i;
+  }, [i, e]), t.current;
+}, Et = (i, e, t, s) => i.getFixedT(e, t, s), Gs = (i, e, t, s) => Ce(Et(i, e, t, s), [i, e, t, s]), Mt = (i, e = {}) => {
   var R, v, $, T;
   const {
     i18n: t
@@ -3257,62 +3258,62 @@ const Us = (o, e) => {
   throw new Promise((x) => {
     e.lng ? it(n, e.lng, u, () => x()) : We(n, u, () => x());
   });
-}, C = (o) => typeof o == "string", me = () => {
-  let o, e;
+}, C = (i) => typeof i == "string", me = () => {
+  let i, e;
   const t = new Promise((s, r) => {
-    o = s, e = r;
+    i = s, e = r;
   });
-  return t.resolve = o, t.reject = e, t;
-}, ot = (o) => o == null ? "" : "" + o, Hs = (o, e, t) => {
-  o.forEach((s) => {
+  return t.resolve = i, t.reject = e, t;
+}, ot = (i) => i == null ? "" : "" + i, Hs = (i, e, t) => {
+  i.forEach((s) => {
     e[s] && (t[s] = e[s]);
   });
-}, Ks = /###/g, nt = (o) => o && o.indexOf("###") > -1 ? o.replace(Ks, ".") : o, at = (o) => !o || C(o), xe = (o, e, t) => {
+}, Ks = /###/g, nt = (i) => i && i.indexOf("###") > -1 ? i.replace(Ks, ".") : i, at = (i) => !i || C(i), xe = (i, e, t) => {
   const s = C(e) ? e.split(".") : e;
   let r = 0;
   for (; r < s.length - 1; ) {
-    if (at(o)) return {};
+    if (at(i)) return {};
     const n = nt(s[r]);
-    !o[n] && t && (o[n] = new t()), Object.prototype.hasOwnProperty.call(o, n) ? o = o[n] : o = {}, ++r;
+    !i[n] && t && (i[n] = new t()), Object.prototype.hasOwnProperty.call(i, n) ? i = i[n] : i = {}, ++r;
   }
-  return at(o) ? {} : {
-    obj: o,
+  return at(i) ? {} : {
+    obj: i,
     k: nt(s[r])
   };
-}, lt = (o, e, t) => {
+}, lt = (i, e, t) => {
   const {
     obj: s,
     k: r
-  } = xe(o, e, Object);
+  } = xe(i, e, Object);
   if (s !== void 0 || e.length === 1) {
     s[r] = t;
     return;
   }
-  let n = e[e.length - 1], a = e.slice(0, e.length - 1), l = xe(o, a, Object);
+  let n = e[e.length - 1], a = e.slice(0, e.length - 1), l = xe(i, a, Object);
   for (; l.obj === void 0 && a.length; )
-    n = `${a[a.length - 1]}.${n}`, a = a.slice(0, a.length - 1), l = xe(o, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${n}`] < "u" && (l.obj = void 0);
+    n = `${a[a.length - 1]}.${n}`, a = a.slice(0, a.length - 1), l = xe(i, a, Object), l != null && l.obj && typeof l.obj[`${l.k}.${n}`] < "u" && (l.obj = void 0);
   l.obj[`${l.k}.${n}`] = t;
-}, Ys = (o, e, t, s) => {
+}, Ys = (i, e, t, s) => {
   const {
     obj: r,
     k: n
-  } = xe(o, e, Object);
+  } = xe(i, e, Object);
   r[n] = r[n] || [], r[n].push(t);
-}, Ne = (o, e) => {
+}, Ne = (i, e) => {
   const {
     obj: t,
     k: s
-  } = xe(o, e);
+  } = xe(i, e);
   if (t && Object.prototype.hasOwnProperty.call(t, s))
     return t[s];
-}, qs = (o, e, t) => {
-  const s = Ne(o, t);
+}, qs = (i, e, t) => {
+  const s = Ne(i, t);
   return s !== void 0 ? s : Ne(e, t);
-}, At = (o, e, t) => {
+}, At = (i, e, t) => {
   for (const s in e)
-    s !== "__proto__" && s !== "constructor" && (s in o ? C(o[s]) || o[s] instanceof String || C(e[s]) || e[s] instanceof String ? t && (o[s] = e[s]) : At(o[s], e[s], t) : o[s] = e[s]);
-  return o;
-}, le = (o) => o.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    s !== "__proto__" && s !== "constructor" && (s in i ? C(i[s]) || i[s] instanceof String || C(e[s]) || e[s] instanceof String ? t && (i[s] = e[s]) : At(i[s], e[s], t) : i[s] = e[s]);
+  return i;
+}, le = (i) => i.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 var Js = {
   "&": "&amp;",
   "<": "&lt;",
@@ -3321,7 +3322,7 @@ var Js = {
   "'": "&#39;",
   "/": "&#x2F;"
 };
-const Zs = (o) => C(o) ? o.replace(/[&<>"'\/]/g, (e) => Js[e]) : o;
+const Zs = (i) => C(i) ? i.replace(/[&<>"'\/]/g, (e) => Js[e]) : i;
 class Xs {
   constructor(e) {
     this.capacity = e, this.regExpMap = /* @__PURE__ */ new Map(), this.regExpQueue = [];
@@ -3334,23 +3335,23 @@ class Xs {
     return this.regExpQueue.length === this.capacity && this.regExpMap.delete(this.regExpQueue.shift()), this.regExpMap.set(e, s), this.regExpQueue.push(e), s;
   }
 }
-const Qs = [" ", ",", "?", "!", ";"], er = new Xs(20), tr = (o, e, t) => {
+const Qs = [" ", ",", "?", "!", ";"], er = new Xs(20), tr = (i, e, t) => {
   e = e || "", t = t || "";
   const s = Qs.filter((a) => e.indexOf(a) < 0 && t.indexOf(a) < 0);
   if (s.length === 0) return !0;
   const r = er.getRegExp(`(${s.map((a) => a === "?" ? "\\?" : a).join("|")})`);
-  let n = !r.test(o);
+  let n = !r.test(i);
   if (!n) {
-    const a = o.indexOf(t);
-    a > 0 && !r.test(o.substring(0, a)) && (n = !0);
+    const a = i.indexOf(t);
+    a > 0 && !r.test(i.substring(0, a)) && (n = !0);
   }
   return n;
-}, De = (o, e, t = ".") => {
-  if (!o) return;
-  if (o[e])
-    return Object.prototype.hasOwnProperty.call(o, e) ? o[e] : void 0;
+}, De = (i, e, t = ".") => {
+  if (!i) return;
+  if (i[e])
+    return Object.prototype.hasOwnProperty.call(i, e) ? i[e] : void 0;
   const s = e.split(t);
-  let r = o;
+  let r = i;
   for (let n = 0; n < s.length; ) {
     if (!r || typeof r != "object")
       return;
@@ -3365,20 +3366,20 @@ const Qs = [" ", ",", "?", "!", ";"], er = new Xs(20), tr = (o, e, t) => {
     r = a;
   }
   return r;
-}, ye = (o) => o == null ? void 0 : o.replace("_", "-"), sr = {
+}, ye = (i) => i == null ? void 0 : i.replace("_", "-"), sr = {
   type: "logger",
-  log(o) {
-    this.output("log", o);
+  log(i) {
+    this.output("log", i);
   },
-  warn(o) {
-    this.output("warn", o);
+  warn(i) {
+    this.output("warn", i);
   },
-  error(o) {
-    this.output("error", o);
+  error(i) {
+    this.output("error", i);
   },
-  output(o, e) {
+  output(i, e) {
     var t, s;
-    (s = (t = console == null ? void 0 : console[o]) == null ? void 0 : t.apply) == null || s.call(t, console, e);
+    (s = (t = console == null ? void 0 : console[i]) == null ? void 0 : t.apply) == null || s.call(t, console, e);
   }
 };
 class Oe {
@@ -3516,17 +3517,17 @@ class ct extends Re {
 }
 var Tt = {
   processors: {},
-  addPostProcessor(o) {
-    this.processors[o.name] = o;
+  addPostProcessor(i) {
+    this.processors[i.name] = i;
   },
-  handle(o, e, t, s, r) {
-    return o.forEach((n) => {
+  handle(i, e, t, s, r) {
+    return i.forEach((n) => {
       var a;
       e = ((a = this.processors[n]) == null ? void 0 : a.process(e, t, s, r)) ?? e;
     }), e;
   }
 };
-const dt = {}, ut = (o) => !C(o) && typeof o != "boolean" && typeof o != "number";
+const dt = {}, ut = (i) => !C(i) && typeof i != "boolean" && typeof i != "number";
 class Pe extends Re {
   constructor(e, t = {}) {
     super(), Hs(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector", "i18nFormat", "utils"], e, this), this.options = t, this.options.keySeparator === void 0 && (this.options.keySeparator = "."), this.logger = X.create("translator");
@@ -3851,7 +3852,7 @@ const ft = {
   many: 4,
   other: 5
 }, pt = {
-  select: (o) => o === 1 ? "one" : "other",
+  select: (i) => i === 1 ? "one" : "other",
   resolvedOptions: () => ({
     pluralCategories: ["one", "other"]
   })
@@ -3903,10 +3904,10 @@ class rr {
     return r ? `${this.options.prepend}${s.ordinal ? `ordinal${this.options.prepend}` : ""}${r.select(t)}` : (this.logger.warn(`no plural rule found for: ${e}`), this.getSuffix("dev", t, s));
   }
 }
-const gt = (o, e, t, s = ".", r = !0) => {
-  let n = qs(o, e, t);
-  return !n && r && C(t) && (n = De(o, t, s), n === void 0 && (n = De(e, t, s))), n;
-}, Ee = (o) => o.replace(/\$/g, "$$$$");
+const gt = (i, e, t, s = ".", r = !0) => {
+  let n = qs(i, e, t);
+  return !n && r && C(t) && (n = De(i, t, s), n === void 0 && (n = De(e, t, s))), n;
+}, Ee = (i) => i.replace(/\$/g, "$$$$");
 class ir {
   constructor(e = {}) {
     var t;
@@ -4027,11 +4028,11 @@ class ir {
     return e;
   }
 }
-const or = (o) => {
-  let e = o.toLowerCase().trim();
+const or = (i) => {
+  let e = i.toLowerCase().trim();
   const t = {};
-  if (o.indexOf("(") > -1) {
-    const s = o.split("(");
+  if (i.indexOf("(") > -1) {
+    const s = i.split("(");
     e = s[0].toLowerCase().trim();
     const r = s[1].substring(0, s[1].length - 1);
     e === "currency" && r.indexOf(":") < 0 ? t.currency || (t.currency = r.trim()) : e === "relativetime" && r.indexOf(":") < 0 ? t.range || (t.range = r.trim()) : r.split(";").forEach((a) => {
@@ -4045,7 +4046,7 @@ const or = (o) => {
     formatName: e,
     formatOptions: t
   };
-}, mt = (o) => {
+}, mt = (i) => {
   const e = {};
   return (t, s, r) => {
     let n = r;
@@ -4055,9 +4056,9 @@ const or = (o) => {
     });
     const a = s + JSON.stringify(n);
     let l = e[a];
-    return l || (l = o(ye(s), r), e[a] = l), l(t);
+    return l || (l = i(ye(s), r), e[a] = l), l(t);
   };
-}, nr = (o) => (e, t, s) => o(ye(t), s)(e);
+}, nr = (i) => (e, t, s) => i(ye(t), s)(e);
 class ar {
   constructor(e = {}) {
     this.logger = X.create("formatter"), this.options = e, this.init(e);
@@ -4138,8 +4139,8 @@ class ar {
     }, e);
   }
 }
-const lr = (o, e) => {
-  o.pending[e] !== void 0 && (delete o.pending[e], o.pendingCount--);
+const lr = (i, e) => {
+  i.pending[e] !== void 0 && (delete i.pending[e], i.pendingCount--);
 };
 class cr extends Re {
   constructor(e, t, s, r = {}) {
@@ -4306,10 +4307,10 @@ const xt = () => ({
   parseMissingKeyHandler: !1,
   appendNamespaceToMissingKey: !1,
   appendNamespaceToCIMode: !1,
-  overloadTranslationOptionHandler: (o) => {
+  overloadTranslationOptionHandler: (i) => {
     let e = {};
-    if (typeof o[1] == "object" && (e = o[1]), C(o[1]) && (e.defaultValue = o[1]), C(o[2]) && (e.tDescription = o[2]), typeof o[2] == "object" || typeof o[3] == "object") {
-      const t = o[3] || o[2];
+    if (typeof i[1] == "object" && (e = i[1]), C(i[1]) && (e.defaultValue = i[1]), C(i[2]) && (e.tDescription = i[2]), typeof i[2] == "object" || typeof i[3] == "object") {
+      const t = i[3] || i[2];
       Object.keys(t).forEach((s) => {
         e[s] = t[s];
       });
@@ -4318,7 +4319,7 @@ const xt = () => ({
   },
   interpolation: {
     escapeValue: !0,
-    format: (o) => o,
+    format: (i) => i,
     prefix: "{{",
     suffix: "}}",
     formatSeparator: ",",
@@ -4330,13 +4331,13 @@ const xt = () => ({
     skipOnVariables: !0
   },
   cacheInBuiltFormats: !0
-}), yt = (o) => {
+}), yt = (i) => {
   var e, t;
-  return C(o.ns) && (o.ns = [o.ns]), C(o.fallbackLng) && (o.fallbackLng = [o.fallbackLng]), C(o.fallbackNS) && (o.fallbackNS = [o.fallbackNS]), ((t = (e = o.supportedLngs) == null ? void 0 : e.indexOf) == null ? void 0 : t.call(e, "cimode")) < 0 && (o.supportedLngs = o.supportedLngs.concat(["cimode"])), typeof o.initImmediate == "boolean" && (o.initAsync = o.initImmediate), o;
+  return C(i.ns) && (i.ns = [i.ns]), C(i.fallbackLng) && (i.fallbackLng = [i.fallbackLng]), C(i.fallbackNS) && (i.fallbackNS = [i.fallbackNS]), ((t = (e = i.supportedLngs) == null ? void 0 : e.indexOf) == null ? void 0 : t.call(e, "cimode")) < 0 && (i.supportedLngs = i.supportedLngs.concat(["cimode"])), typeof i.initImmediate == "boolean" && (i.initAsync = i.initImmediate), i;
 }, Se = () => {
-}, dr = (o) => {
-  Object.getOwnPropertyNames(Object.getPrototypeOf(o)).forEach((t) => {
-    typeof o[t] == "function" && (o[t] = o[t].bind(o));
+}, dr = (i) => {
+  Object.getOwnPropertyNames(Object.getPrototypeOf(i)).forEach((t) => {
+    typeof i[t] == "function" && (i[t] = i[t].bind(i));
   });
 };
 class we extends Re {
@@ -5007,13 +5008,13 @@ H.use(Ws).init({
   react: { useSuspense: !1 }
 });
 const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "https://app.plexicus.ai", gr = ({
-  lang: o,
+  lang: i,
   fullSiteUrl: e = "http://localhost:8000",
   fullBlogUrl: t = "http://localhost:9000"
 }) => {
   const [s, r] = ce("/"), [n, a] = ce(!1), [l, c] = ce(null), u = _e(null), { t: d, i18n: h } = Mt();
   re(() => {
-    h.changeLanguage(o), r(o !== "en" ? `/${o}/` : "/");
+    h.changeLanguage(i), r(i !== "en" ? `/${i}/` : "/");
   }, []);
   const [m, g] = ce(!1);
   re(() => {
@@ -5051,7 +5052,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.platform_overview"),
           description: d("nav.product.platform_overview_desc"),
           href: `${j}${s}products/cnapp-platform`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5066,9 +5067,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("circle", { cx: "12", cy: "12", r: "10" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M12 16v-4" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M12 8h.01" })
+                /* @__PURE__ */ o.jsx("circle", { cx: "12", cy: "12", r: "10" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M12 16v-4" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M12 8h.01" })
               ]
             }
           )
@@ -5077,7 +5078,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.benefits"),
           description: d("nav.product.benefits_desc"),
           href: `${j}${s}products/benefits`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5092,9 +5093,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "m9 12 2 2 4-4" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M22 19H2" })
+                /* @__PURE__ */ o.jsx("path", { d: "m9 12 2 2 4-4" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M22 19H2" })
               ]
             }
           )
@@ -5103,7 +5104,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.use_cases"),
           description: d("nav.product.use_cases_desc"),
           href: `${j}${s}products/use-cases`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5118,9 +5119,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M8 12h8" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M12 8v8" })
+                /* @__PURE__ */ o.jsx("rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M8 12h8" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M12 8v8" })
               ]
             }
           )
@@ -5129,7 +5130,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.aspm"),
           description: d("nav.product.aspm_desc"),
           href: `${j}${s}products/aspm`,
-          icon: /* @__PURE__ */ i.jsx(
+          icon: /* @__PURE__ */ o.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5143,7 +5144,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ i.jsx("path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" })
+              children: /* @__PURE__ */ o.jsx("path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" })
             }
           )
         },
@@ -5151,7 +5152,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.cspm"),
           description: d("nav.product.cspm_desc"),
           href: `${j}${s}products/cspm`,
-          icon: /* @__PURE__ */ i.jsx(
+          icon: /* @__PURE__ */ o.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5165,7 +5166,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ i.jsx("path", { d: "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" })
+              children: /* @__PURE__ */ o.jsx("path", { d: "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" })
             }
           )
         },
@@ -5173,7 +5174,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.container_security"),
           description: d("nav.product.container_security_desc"),
           href: `${j}${s}products/container`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5188,9 +5189,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }),
-                /* @__PURE__ */ i.jsx("polyline", { points: "3.27 6.96 12 12.01 20.73 6.96" }),
-                /* @__PURE__ */ i.jsx("line", { x1: "12", y1: "22.08", x2: "12", y2: "12" })
+                /* @__PURE__ */ o.jsx("path", { d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }),
+                /* @__PURE__ */ o.jsx("polyline", { points: "3.27 6.96 12 12.01 20.73 6.96" }),
+                /* @__PURE__ */ o.jsx("line", { x1: "12", y1: "22.08", x2: "12", y2: "12" })
               ]
             }
           )
@@ -5199,7 +5200,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.cwpp"),
           description: d("nav.product.cwpp_desc"),
           href: `${j}${s}products/cwpp`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5214,9 +5215,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
-                /* @__PURE__ */ i.jsx("circle", { cx: "12", cy: "16", r: "1" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
+                /* @__PURE__ */ o.jsx("rect", { x: "3", y: "11", width: "18", height: "11", rx: "2", ry: "2" }),
+                /* @__PURE__ */ o.jsx("circle", { cx: "12", cy: "16", r: "1" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M7 11V7a5 5 0 0 1 10 0v4" })
               ]
             }
           )
@@ -5225,16 +5226,16 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.product.ciem"),
           description: d("nav.product.ciem_desc"),
           href: `${j}${s}products/ciem`,
-          icon: /* @__PURE__ */ i.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round", className: "lucide lucide-cloud-cog-icon lucide-cloud-cog", children: [
-            /* @__PURE__ */ i.jsx("path", { d: "m10.852 19.772-.383.924" }),
-            /* @__PURE__ */ i.jsx("path", { d: "m13.148 14.228.383-.923" }),
-            /* @__PURE__ */ i.jsx("path", { d: "M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923" }),
-            /* @__PURE__ */ i.jsx("path", { d: "m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544" }),
-            /* @__PURE__ */ i.jsx("path", { d: "m14.772 15.852.923-.383" }),
-            /* @__PURE__ */ i.jsx("path", { d: "m14.772 18.148.923.383" }),
-            /* @__PURE__ */ i.jsx("path", { d: "M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" }),
-            /* @__PURE__ */ i.jsx("path", { d: "m9.228 15.852-.923-.383" }),
-            /* @__PURE__ */ i.jsx("path", { d: "m9.228 18.148-.923.383" })
+          icon: /* @__PURE__ */ o.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round", className: "lucide lucide-cloud-cog-icon lucide-cloud-cog", children: [
+            /* @__PURE__ */ o.jsx("path", { d: "m10.852 19.772-.383.924" }),
+            /* @__PURE__ */ o.jsx("path", { d: "m13.148 14.228.383-.923" }),
+            /* @__PURE__ */ o.jsx("path", { d: "M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923" }),
+            /* @__PURE__ */ o.jsx("path", { d: "m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544" }),
+            /* @__PURE__ */ o.jsx("path", { d: "m14.772 15.852.923-.383" }),
+            /* @__PURE__ */ o.jsx("path", { d: "m14.772 18.148.923.383" }),
+            /* @__PURE__ */ o.jsx("path", { d: "M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" }),
+            /* @__PURE__ */ o.jsx("path", { d: "m9.228 15.852-.923-.383" }),
+            /* @__PURE__ */ o.jsx("path", { d: "m9.228 18.148-.923.383" })
           ] })
         }
       ]
@@ -5249,7 +5250,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.fintech"),
           description: d("nav.solutions.fintech_desc"),
           href: `${j}${s}solutions/fintech`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5264,8 +5265,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("rect", { width: "20", height: "14", x: "2", y: "5", rx: "2" }),
-                /* @__PURE__ */ i.jsx("line", { x1: "2", x2: "22", y1: "10", y2: "10" })
+                /* @__PURE__ */ o.jsx("rect", { width: "20", height: "14", x: "2", y: "5", rx: "2" }),
+                /* @__PURE__ */ o.jsx("line", { x1: "2", x2: "22", y1: "10", y2: "10" })
               ]
             }
           )
@@ -5274,7 +5275,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.healthtech"),
           description: d("nav.solutions.healthtech_desc"),
           href: `${j}${s}solutions/healthtech`,
-          icon: /* @__PURE__ */ i.jsx(
+          icon: /* @__PURE__ */ o.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5288,7 +5289,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ i.jsx("path", { d: "M22 12h-4l-3 9L9 3l-3 9H2" })
+              children: /* @__PURE__ */ o.jsx("path", { d: "M22 12h-4l-3 9L9 3l-3 9H2" })
             }
           )
         },
@@ -5296,7 +5297,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.hrtech"),
           description: d("nav.solutions.hrtech_desc"),
           href: `${j}${s}solutions/hrtech`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5311,10 +5312,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
-                /* @__PURE__ */ i.jsx("circle", { cx: "9", cy: "7", r: "4" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M22 21v-2a4 4 0 0 0-3-3.87" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M16 3.13a4 4 0 0 1 0 7.75" })
+                /* @__PURE__ */ o.jsx("path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
+                /* @__PURE__ */ o.jsx("circle", { cx: "9", cy: "7", r: "4" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M22 21v-2a4 4 0 0 0-3-3.87" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M16 3.13a4 4 0 0 1 0 7.75" })
               ]
             }
           )
@@ -5323,7 +5324,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.group_companies"),
           description: d("nav.solutions.group_companies_desc"),
           href: `${j}${s}solutions/group-companies`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5338,8 +5339,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("rect", { x: "2", y: "7", width: "20", height: "14", rx: "2", ry: "2" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" })
+                /* @__PURE__ */ o.jsx("rect", { x: "2", y: "7", width: "20", height: "14", rx: "2", ry: "2" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" })
               ]
             }
           )
@@ -5348,7 +5349,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.agencies"),
           description: d("nav.solutions.agencies_desc"),
           href: `${j}${s}solutions/agencies`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5363,8 +5364,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" })
+                /* @__PURE__ */ o.jsx("path", { d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" })
               ]
             }
           )
@@ -5373,7 +5374,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.startups"),
           description: d("nav.solutions.startups_desc"),
           href: `${j}${s}solutions/startups`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5388,10 +5389,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" })
+                /* @__PURE__ */ o.jsx("path", { d: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" })
               ]
             }
           )
@@ -5400,7 +5401,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.enterprise"),
           description: d("nav.solutions.enterprise_desc"),
           href: `${j}${s}solutions/enterprise`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5415,14 +5416,14 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M2 20h20" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M5 20V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v14" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M12 3v4" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M5 8h14" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M7 14h2" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M15 14h2" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M7 10h2" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M15 10h2" })
+                /* @__PURE__ */ o.jsx("path", { d: "M2 20h20" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M5 20V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v14" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M12 3v4" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M5 8h14" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M7 14h2" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M15 14h2" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M7 10h2" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M15 10h2" })
               ]
             }
           )
@@ -5431,7 +5432,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.mobile_apps"),
           description: d("nav.solutions.mobile_apps_desc"),
           href: `${j}${s}solutions/mobile-apps`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5446,8 +5447,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("rect", { x: "5", y: "2", width: "14", height: "20", rx: "2", ry: "2" }),
-                /* @__PURE__ */ i.jsx("line", { x1: "12", y1: "18", x2: "12.01", y2: "18" })
+                /* @__PURE__ */ o.jsx("rect", { x: "5", y: "2", width: "14", height: "20", rx: "2", ry: "2" }),
+                /* @__PURE__ */ o.jsx("line", { x1: "12", y1: "18", x2: "12.01", y2: "18" })
               ]
             }
           )
@@ -5456,7 +5457,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.manufacturing"),
           description: d("nav.solutions.manufacturing_desc"),
           href: `${j}${s}solutions/manufacturing`,
-          icon: /* @__PURE__ */ i.jsx(
+          icon: /* @__PURE__ */ o.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5470,7 +5471,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ i.jsx("path", { d: "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" })
+              children: /* @__PURE__ */ o.jsx("path", { d: "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" })
             }
           )
         },
@@ -5478,7 +5479,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.government"),
           description: d("nav.solutions.government_desc"),
           href: `${j}${s}solutions/government`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5493,11 +5494,11 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M2 20h20" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M12 4v6" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M4 20V10l8-6 8 6v10" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M15 12v8" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M9 12v8" })
+                /* @__PURE__ */ o.jsx("path", { d: "M2 20h20" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M12 4v6" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M4 20V10l8-6 8 6v10" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M15 12v8" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M9 12v8" })
               ]
             }
           )
@@ -5506,7 +5507,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.solutions.retailtech"),
           description: d("nav.solutions.retailtech_desc"),
           href: `${j}${s}solutions/retailtech`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5521,9 +5522,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("circle", { cx: "9", cy: "21", r: "1" }),
-                /* @__PURE__ */ i.jsx("circle", { cx: "20", cy: "21", r: "1" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" })
+                /* @__PURE__ */ o.jsx("circle", { cx: "9", cy: "21", r: "1" }),
+                /* @__PURE__ */ o.jsx("circle", { cx: "20", cy: "21", r: "1" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" })
               ]
             }
           )
@@ -5539,7 +5540,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.developers.documentation"),
           description: d("nav.developers.documentation_desc"),
           href: "https://docs.plexicus.com",
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5554,11 +5555,11 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
-                /* @__PURE__ */ i.jsx("polyline", { points: "14 2 14 8 20 8" }),
-                /* @__PURE__ */ i.jsx("line", { x1: "16", y1: "13", x2: "8", y2: "13" }),
-                /* @__PURE__ */ i.jsx("line", { x1: "16", y1: "17", x2: "8", y2: "17" }),
-                /* @__PURE__ */ i.jsx("polyline", { points: "10 9 9 9 8 9" })
+                /* @__PURE__ */ o.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
+                /* @__PURE__ */ o.jsx("polyline", { points: "14 2 14 8 20 8" }),
+                /* @__PURE__ */ o.jsx("line", { x1: "16", y1: "13", x2: "8", y2: "13" }),
+                /* @__PURE__ */ o.jsx("line", { x1: "16", y1: "17", x2: "8", y2: "17" }),
+                /* @__PURE__ */ o.jsx("polyline", { points: "10 9 9 9 8 9" })
               ]
             }
           )
@@ -5567,7 +5568,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.developers.api_references"),
           description: d("nav.developers.api_references_desc"),
           href: "https://docs.plexicus.com/api",
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5582,9 +5583,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "m18 16 4-4-4-4" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m6 8-4 4 4 4" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m14.5 4-5 16" })
+                /* @__PURE__ */ o.jsx("path", { d: "m18 16 4-4-4-4" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m6 8-4 4 4 4" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m14.5 4-5 16" })
               ]
             }
           )
@@ -5593,7 +5594,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.developers.github_apps"),
           description: d("nav.developers.github_apps_desc"),
           href: "https://github.com/apps/plexicus",
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5608,8 +5609,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M9 18c-4.51 2-5-2-7-2" })
+                /* @__PURE__ */ o.jsx("path", { d: "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M9 18c-4.51 2-5-2-7-2" })
               ]
             }
           )
@@ -5618,7 +5619,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.developers.plexalyzer_action"),
           description: d("nav.developers.plexalyzer_action_desc"),
           href: "https://github.com/marketplace/actions/plexicus-runner-action",
-          icon: /* @__PURE__ */ i.jsx(
+          icon: /* @__PURE__ */ o.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5632,7 +5633,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ i.jsx("path", { d: "M13 2L3 14h9l-1 8 10-12h-9l1-8z" })
+              children: /* @__PURE__ */ o.jsx("path", { d: "M13 2L3 14h9l-1 8 10-12h-9l1-8z" })
             }
           )
         }
@@ -5647,7 +5648,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.resources.blog"),
           description: d("nav.resources.blog_desc"),
           href: A,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5662,8 +5663,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M14 3v5h5M16 13H8M16 17H8M10 9H8" })
+                /* @__PURE__ */ o.jsx("path", { d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M14 3v5h5M16 13H8M16 17H8M10 9H8" })
               ]
             }
           )
@@ -5672,7 +5673,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.resources.youtube_channel"),
           description: d("nav.resources.youtube_channel_desc"),
           href: "https://youtube.com/@plexicus",
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5687,8 +5688,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m10 15 5-3-5-3z" })
+                /* @__PURE__ */ o.jsx("path", { d: "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m10 15 5-3-5-3z" })
               ]
             }
           )
@@ -5697,7 +5698,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.resources.branding_assets"),
           description: d("nav.resources.branding_assets_desc"),
           href: `${j}${s}branding-assets`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5712,13 +5713,13 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m3.5 13.5 5-5" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m5 19 5-5" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m17.5 6.5-5 5" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m16 17-5-5" })
+                /* @__PURE__ */ o.jsx("path", { d: "M12 19c.5 0 1-.1 1.4-.4.8-.4 1.4-1.1 1.6-2 .3-1.4-.5-2.8-1.9-3.2-.3-.1-.6-.1-.9-.1-.5 0-1 .1-1.4.4-.8.4-1.4 1.1-1.6 2-.3 1.4.5 2.8 1.9 3.2.3.1.6.1.9.1z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m14.5 12.5 2.7-2.7c1.2-1.2 1.8-2.7 1.8-4.3 0-3.1-2.5-5.5-5.5-5.5-1.6 0-3.1.6-4.3 1.8L6.5 4.5" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m4.5 6.5 2.7-2.7c.3-.3.6-.4 1-.4.8 0 1.5.7 1.5 0 .4-.1.7-.4 1 0L6.5 8.5" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m3.5 13.5 5-5" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m5 19 5-5" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m17.5 6.5-5 5" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m16 17-5-5" })
               ]
             }
           )
@@ -5727,7 +5728,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.resources.changelogs"),
           description: d("nav.resources.changelogs_desc"),
           href: "https://plexicus.canny.io/changelog",
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5742,8 +5743,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "m9 12 2 2 4-4" })
+                /* @__PURE__ */ o.jsx("path", { d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "m9 12 2 2 4-4" })
               ]
             }
           )
@@ -5752,7 +5753,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.resources.feature_requests"),
           description: d("nav.resources.feature_requests_desc"),
           href: "https://plexicus.canny.io/feature-requests",
-          icon: /* @__PURE__ */ i.jsx(
+          icon: /* @__PURE__ */ o.jsx(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5766,7 +5767,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               className: "text-primary",
               "aria-hidden": "true",
-              children: /* @__PURE__ */ i.jsx("path", { d: "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" })
+              children: /* @__PURE__ */ o.jsx("path", { d: "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" })
             }
           )
         },
@@ -5800,7 +5801,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.resources.comparison_overview"),
           description: d("nav.resources.comparison_overview_desc"),
           href: `${j}${s}comparison/overview`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5815,8 +5816,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               className: "text-primary",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" }),
-                /* @__PURE__ */ i.jsx("circle", { cx: "12", cy: "12", r: "3" })
+                /* @__PURE__ */ o.jsx("path", { d: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" }),
+                /* @__PURE__ */ o.jsx("circle", { cx: "12", cy: "12", r: "3" })
               ]
             }
           )
@@ -5825,7 +5826,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
           title: d("nav.resources.support"),
           description: d("nav.resources.support_desc"),
           href: `${j}${s}support`,
-          icon: /* @__PURE__ */ i.jsxs(
+          icon: /* @__PURE__ */ o.jsxs(
             "svg",
             {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5840,8 +5841,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               strokeLinejoin: "round",
               "aria-hidden": "true",
               children: [
-                /* @__PURE__ */ i.jsx("path", { d: "M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" }),
-                /* @__PURE__ */ i.jsx("path", { d: "M21 16v2a4 4 0 0 1-4 4h-5" })
+                /* @__PURE__ */ o.jsx("path", { d: "M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" }),
+                /* @__PURE__ */ o.jsx("path", { d: "M21 16v2a4 4 0 0 1-4 4h-5" })
               ]
             }
           )
@@ -5849,7 +5850,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
       ]
     }
   };
-  return /* @__PURE__ */ i.jsxs(
+  return /* @__PURE__ */ o.jsxs(
     "header",
     {
       className: "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
@@ -5860,14 +5861,14 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
         minHeight: "64px"
       },
       children: [
-        /* @__PURE__ */ i.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl", children: [
-          /* @__PURE__ */ i.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ i.jsx(
+        /* @__PURE__ */ o.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl", children: [
+          /* @__PURE__ */ o.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ o.jsx(
             Y,
             {
               href: `${j}${s}`,
               className: "flex items-center gap-2 overflow-visible",
               "aria-label": "Plexicus Home",
-              children: /* @__PURE__ */ i.jsx("div", { className: "relative w-auto h-14 flex items-center", children: /* @__PURE__ */ i.jsx(
+              children: /* @__PURE__ */ o.jsx("div", { className: "relative w-auto h-14 flex items-center", children: /* @__PURE__ */ o.jsx(
                 "img",
                 {
                   src: "/images/plexicus-logo-white.png",
@@ -5881,14 +5882,14 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               ) })
             }
           ) }),
-          /* @__PURE__ */ i.jsxs("nav", { className: "hidden xl:flex md:gap-4 lg:gap-6", "aria-label": "Main Navigation", children: [
-            Object.entries(R).filter(([v]) => v === "products").map(([v, $]) => /* @__PURE__ */ i.jsx(
+          /* @__PURE__ */ o.jsxs("nav", { className: "hidden xl:flex md:gap-4 lg:gap-6", "aria-label": "Main Navigation", children: [
+            Object.entries(R).filter(([v]) => v === "products").map(([v, $]) => /* @__PURE__ */ o.jsx(
               "div",
               {
                 className: "relative group",
                 onMouseEnter: () => p(v),
                 onMouseLeave: _,
-                children: /* @__PURE__ */ i.jsxs(
+                children: /* @__PURE__ */ o.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
@@ -5896,9 +5897,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                     "aria-haspopup": "true",
                     onClick: () => E(v),
                     children: [
-                      /* @__PURE__ */ i.jsx("span", { className: "hidden lg:inline", children: $.title }),
-                      /* @__PURE__ */ i.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
-                      /* @__PURE__ */ i.jsx(
+                      /* @__PURE__ */ o.jsx("span", { className: "hidden xl:inline", children: $.title }),
+                      /* @__PURE__ */ o.jsx("span", { className: "xl:hidden", children: $.shortTitle }),
+                      /* @__PURE__ */ o.jsx(
                         "svg",
                         {
                           xmlns: "http://www.w3.org/2000/svg",
@@ -5912,7 +5913,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                           strokeLinejoin: "round",
                           className: `ml-1 transition-transform duration-200 ${l === v ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
-                          children: /* @__PURE__ */ i.jsx("path", { d: "m6 9 6 6 6-6" })
+                          children: /* @__PURE__ */ o.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
                       )
                     ]
@@ -5921,7 +5922,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               },
               v
             )),
-            /* @__PURE__ */ i.jsx(
+            /* @__PURE__ */ o.jsx(
               Y,
               {
                 href: `${j}${s}pricing`,
@@ -5929,13 +5930,13 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                 children: d("nav.pricing")
               }
             ),
-            Object.entries(R).filter(([v]) => v === "solutions" || v === "developers" || v === "resources").map(([v, $]) => /* @__PURE__ */ i.jsx(
+            Object.entries(R).filter(([v]) => v === "solutions" || v === "developers" || v === "resources").map(([v, $]) => /* @__PURE__ */ o.jsx(
               "div",
               {
                 className: "relative group",
                 onMouseEnter: () => p(v),
                 onMouseLeave: _,
-                children: /* @__PURE__ */ i.jsxs(
+                children: /* @__PURE__ */ o.jsxs(
                   "button",
                   {
                     className: "text-sm font-medium text-white hover:text-white/80 transition-colors py-2 px-2 flex items-center whitespace-nowrap",
@@ -5943,9 +5944,9 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                     "aria-haspopup": "true",
                     onClick: () => E(v),
                     children: [
-                      /* @__PURE__ */ i.jsx("span", { className: "hidden lg:inline", children: $.title }),
-                      /* @__PURE__ */ i.jsx("span", { className: "lg:hidden", children: $.shortTitle }),
-                      /* @__PURE__ */ i.jsx(
+                      /* @__PURE__ */ o.jsx("span", { className: "hidden xl:inline", children: $.title }),
+                      /* @__PURE__ */ o.jsx("span", { className: "xl:hidden", children: $.shortTitle }),
+                      /* @__PURE__ */ o.jsx(
                         "svg",
                         {
                           xmlns: "http://www.w3.org/2000/svg",
@@ -5959,7 +5960,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                           strokeLinejoin: "round",
                           className: `ml-1 transition-transform duration-200 ${l === v ? "transform rotate-180" : ""}`,
                           "aria-hidden": "true",
-                          children: /* @__PURE__ */ i.jsx("path", { d: "m6 9 6 6 6-6" })
+                          children: /* @__PURE__ */ o.jsx("path", { d: "m6 9 6 6 6-6" })
                         }
                       )
                     ]
@@ -5968,7 +5969,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               },
               v
             )),
-            /* @__PURE__ */ i.jsx(
+            /* @__PURE__ */ o.jsx(
               Y,
               {
                 href: `${j}${s}contact`,
@@ -5977,71 +5978,69 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               }
             )
           ] }),
-          /* @__PURE__ */ i.jsxs("div", { className: "flex", children: [
-            /* @__PURE__ */ i.jsxs("div", { className: "flex items-center gap-4", children: [
-              /* @__PURE__ */ i.jsx(
-                Y,
-                {
-                  href: `${wt}/login`,
-                  className: "text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap",
-                  children: d("nav.login")
-                }
-              ),
-              /* @__PURE__ */ i.jsx(Y, { href: `${wt}/register`, children: /* @__PURE__ */ i.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: d("nav.get_started") }) })
-            ] }),
-            /* @__PURE__ */ i.jsx(
-              "button",
+          /* @__PURE__ */ o.jsxs("div", { className: "hidden xl:flex items-center gap-4", children: [
+            /* @__PURE__ */ o.jsx(
+              Y,
               {
-                className: "flex xl:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white",
-                onClick: () => a(!n),
-                "aria-label": n ? "Close menu" : "Open menu",
-                "aria-expanded": n,
-                children: n ? /* @__PURE__ */ i.jsxs(
-                  "svg",
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: "24",
-                    height: "24",
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    stroke: "currentColor",
-                    strokeWidth: "2",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    className: "h-6 w-6",
-                    "aria-hidden": "true",
-                    children: [
-                      /* @__PURE__ */ i.jsx("line", { x1: "18", y1: "6", x2: "6", y2: "18" }),
-                      /* @__PURE__ */ i.jsx("line", { x1: "6", y1: "6", x2: "18", y2: "18" })
-                    ]
-                  }
-                ) : /* @__PURE__ */ i.jsxs(
-                  "svg",
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: "24",
-                    height: "24",
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    stroke: "currentColor",
-                    strokeWidth: "2",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    className: "h-6 w-6",
-                    "aria-hidden": "true",
-                    children: [
-                      /* @__PURE__ */ i.jsx("line", { x1: "4", x2: "20", y1: "12", y2: "12" }),
-                      /* @__PURE__ */ i.jsx("line", { x1: "4", x2: "20", y1: "6", y2: "6" }),
-                      /* @__PURE__ */ i.jsx("line", { x1: "4", x2: "20", y1: "18", y2: "18" })
-                    ]
-                  }
-                )
+                href: `${wt}/login`,
+                className: "text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap",
+                children: d("nav.login")
               }
-            )
-          ] })
+            ),
+            /* @__PURE__ */ o.jsx(Y, { href: `${wt}/register`, children: /* @__PURE__ */ o.jsx(Fe, { className: "bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap", children: d("nav.get_started") }) })
+          ] }),
+          /* @__PURE__ */ o.jsx(
+            "button",
+            {
+              className: "flex xl:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white",
+              onClick: () => a(!n),
+              "aria-label": n ? "Close menu" : "Open menu",
+              "aria-expanded": n,
+              children: n ? /* @__PURE__ */ o.jsxs(
+                "svg",
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "24",
+                  height: "24",
+                  viewBox: "0 0 24 24",
+                  fill: "none",
+                  stroke: "currentColor",
+                  strokeWidth: "2",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  className: "h-6 w-6",
+                  "aria-hidden": "true",
+                  children: [
+                    /* @__PURE__ */ o.jsx("line", { x1: "18", y1: "6", x2: "6", y2: "18" }),
+                    /* @__PURE__ */ o.jsx("line", { x1: "6", y1: "6", x2: "18", y2: "18" })
+                  ]
+                }
+              ) : /* @__PURE__ */ o.jsxs(
+                "svg",
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "24",
+                  height: "24",
+                  viewBox: "0 0 24 24",
+                  fill: "none",
+                  stroke: "currentColor",
+                  strokeWidth: "2",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  className: "h-6 w-6",
+                  "aria-hidden": "true",
+                  children: [
+                    /* @__PURE__ */ o.jsx("line", { x1: "4", x2: "20", y1: "12", y2: "12" }),
+                    /* @__PURE__ */ o.jsx("line", { x1: "4", x2: "20", y1: "6", y2: "6" }),
+                    /* @__PURE__ */ o.jsx("line", { x1: "4", x2: "20", y1: "18", y2: "18" })
+                  ]
+                }
+              )
+            }
+          )
         ] }),
-        l && /* @__PURE__ */ i.jsxs(i.Fragment, { children: [
-          /* @__PURE__ */ i.jsx(
+        l && /* @__PURE__ */ o.jsxs(o.Fragment, { children: [
+          /* @__PURE__ */ o.jsx(
             "div",
             {
               className: "fixed inset-0 bg-black/20 z-30",
@@ -6050,7 +6049,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               style: { top: "64px" }
             }
           ),
-          /* @__PURE__ */ i.jsx(
+          /* @__PURE__ */ o.jsx(
             "div",
             {
               className: "absolute left-0 right-0 top-16 z-40 bg-white shadow-xl border-t border-gray-100 transition-all duration-300 transform",
@@ -6058,10 +6057,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
               onMouseLeave: _,
               role: "menu",
               "aria-labelledby": `menu-button-${l}`,
-              children: /* @__PURE__ */ i.jsx("div", { className: "container mx-auto py-8 px-4 md:px-6 max-w-7xl", children: /* @__PURE__ */ i.jsxs("div", { className: "flex flex-col md:flex-row", children: [
-                /* @__PURE__ */ i.jsxs("div", { className: "w-full md:w-1/3 pr-0 md:pr-8 mb-6 md:mb-0 flex flex-col", children: [
-                  /* @__PURE__ */ i.jsx("div", { className: "relative h-36 md:h-40 w-full rounded-lg overflow-hidden bg-white border border-gray-100 mb-4", children: /* @__PURE__ */ i.jsxs("div", { className: "absolute inset-0 flex items-center justify-center", children: [
-                    l === "products" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
+              children: /* @__PURE__ */ o.jsx("div", { className: "container mx-auto py-8 px-4 md:px-6 max-w-7xl", children: /* @__PURE__ */ o.jsxs("div", { className: "flex flex-col md:flex-row", children: [
+                /* @__PURE__ */ o.jsxs("div", { className: "w-full md:w-1/3 pr-0 md:pr-8 mb-6 md:mb-0 flex flex-col", children: [
+                  /* @__PURE__ */ o.jsx("div", { className: "relative h-36 md:h-40 w-full rounded-lg overflow-hidden bg-white border border-gray-100 mb-4", children: /* @__PURE__ */ o.jsxs("div", { className: "absolute inset-0 flex items-center justify-center", children: [
+                    l === "products" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6070,8 +6069,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ o.jsx(
                             "rect",
                             {
                               x: "40",
@@ -6083,23 +6082,23 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               filter: "url(#shadowEffect)"
                             }
                           ),
-                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "30", width: "320", height: "40", rx: "12", fill: "#8220ff", fillOpacity: "0.9" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "65", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "90", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "115", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "70", width: "80", height: "200", fill: "#f5f5f7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "90", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "110", width: "40", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "130", width: "45", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "150", width: "35", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "55", y: "170", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "140", y: "90", width: "200", height: "70", rx: "8", fill: "#8220ff", fillOpacity: "0.1" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "155", y: "105", width: "170", height: "40", rx: "4", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "175", cy: "125", r: "15", fill: "#8220ff", fillOpacity: "0.8" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "200", y: "115", width: "110", height: "8", rx: "4", fill: "white" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "200", y: "130", width: "80", height: "6", rx: "3", fill: "white", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "140", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
-                          /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "30", width: "320", height: "40", rx: "12", fill: "#8220ff", fillOpacity: "0.9" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "65", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "90", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "115", cy: "50", r: "8", fill: "white", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "70", width: "80", height: "200", fill: "#f5f5f7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "90", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "110", width: "40", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "130", width: "45", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "150", width: "35", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "55", y: "170", width: "50", height: "8", rx: "4", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "140", y: "90", width: "200", height: "70", rx: "8", fill: "#8220ff", fillOpacity: "0.1" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "155", y: "105", width: "170", height: "40", rx: "4", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "175", cy: "125", r: "15", fill: "#8220ff", fillOpacity: "0.8" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "200", y: "115", width: "110", height: "8", rx: "4", fill: "white" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "200", y: "130", width: "80", height: "6", rx: "3", fill: "white", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "140", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
+                          /* @__PURE__ */ o.jsx(
                             "path",
                             {
                               d: "M150 240 L170 220 L190 230 L210 200",
@@ -6108,11 +6107,11 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeLinecap: "round"
                             }
                           ),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "170", cy: "220", r: "4", fill: "#8220ff" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "190", cy: "230", r: "4", fill: "#8220ff" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "210", cy: "200", r: "4", fill: "#8220ff" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "245", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
-                          /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx("circle", { cx: "170", cy: "220", r: "4", fill: "#8220ff" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "190", cy: "230", r: "4", fill: "#8220ff" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "210", cy: "200", r: "4", fill: "#8220ff" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "245", y: "180", width: "95", height: "80", rx: "8", fill: "#f0f0f5" }),
+                          /* @__PURE__ */ o.jsx(
                             "circle",
                             {
                               cx: "293",
@@ -6124,15 +6123,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeDasharray: "120 180"
                             }
                           ),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "293", cy: "220", r: "30", fill: "transparent", stroke: "#e0e0e5", strokeWidth: "8" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "283", y: "225", fontFamily: "Arial", fontSize: "12", fill: "#8220ff", fontWeight: "bold", children: "75%" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "320", cy: "50", r: "12", fill: "white", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx("path", { d: "M314 50 L320 56 L326 50", stroke: "white", strokeWidth: "2", strokeLinecap: "round" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "30", cy: "30", r: "5", fill: "#8220ff", fillOpacity: "0.5" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "350", cy: "280", r: "7", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "370", cy: "50", r: "4", fill: "#8220ff", fillOpacity: "0.4" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "20", cy: "250", r: "6", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx("circle", { cx: "293", cy: "220", r: "30", fill: "transparent", stroke: "#e0e0e5", strokeWidth: "8" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "283", y: "225", fontFamily: "Arial", fontSize: "12", fill: "#8220ff", fontWeight: "bold", children: "75%" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "320", cy: "50", r: "12", fill: "white", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx("path", { d: "M314 50 L320 56 L326 50", stroke: "white", strokeWidth: "2", strokeLinecap: "round" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "30", cy: "30", r: "5", fill: "#8220ff", fillOpacity: "0.5" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "350", cy: "280", r: "7", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "370", cy: "50", r: "4", fill: "#8220ff", fillOpacity: "0.4" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "20", cy: "250", r: "6", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx(
                             "path",
                             {
                               d: "M15 100 C30 120, 20 150, 35 160",
@@ -6141,7 +6140,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeDasharray: "4 4"
                             }
                           ),
-                          /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx(
                             "path",
                             {
                               d: "M370 120 C350 140, 360 170, 380 190",
@@ -6150,7 +6149,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeDasharray: "4 4"
                             }
                           ),
-                          /* @__PURE__ */ i.jsx("defs", { children: /* @__PURE__ */ i.jsxs(
+                          /* @__PURE__ */ o.jsx("defs", { children: /* @__PURE__ */ o.jsxs(
                             "filter",
                             {
                               id: "shadowEffect",
@@ -6161,8 +6160,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               filterUnits: "userSpaceOnUse",
                               colorInterpolationFilters: "sRGB",
                               children: [
-                                /* @__PURE__ */ i.jsx("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
-                                /* @__PURE__ */ i.jsx(
+                                /* @__PURE__ */ o.jsx("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
+                                /* @__PURE__ */ o.jsx(
                                   "feColorMatrix",
                                   {
                                     in: "SourceAlpha",
@@ -6170,24 +6169,24 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                     values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                                   }
                                 ),
-                                /* @__PURE__ */ i.jsx("feOffset", { dy: "4" }),
-                                /* @__PURE__ */ i.jsx("feGaussianBlur", { stdDeviation: "6" }),
-                                /* @__PURE__ */ i.jsx(
+                                /* @__PURE__ */ o.jsx("feOffset", { dy: "4" }),
+                                /* @__PURE__ */ o.jsx("feGaussianBlur", { stdDeviation: "6" }),
+                                /* @__PURE__ */ o.jsx(
                                   "feColorMatrix",
                                   {
                                     type: "matrix",
                                     values: "0 0 0 0 0.51 0 0 0 0 0.125 0 0 0 0 1 0 0 0 0.15 0"
                                   }
                                 ),
-                                /* @__PURE__ */ i.jsx("feBlend", { mode: "normal", in2: "BackgroundImageFix", result: "effect1_dropShadow" }),
-                                /* @__PURE__ */ i.jsx("feBlend", { mode: "normal", in: "SourceGraphic", in2: "effect1_dropShadow", result: "shape" })
+                                /* @__PURE__ */ o.jsx("feBlend", { mode: "normal", in2: "BackgroundImageFix", result: "effect1_dropShadow" }),
+                                /* @__PURE__ */ o.jsx("feBlend", { mode: "normal", in: "SourceGraphic", in2: "effect1_dropShadow", result: "shape" })
                               ]
                             }
                           ) })
                         ]
                       }
                     ) }),
-                    l === "solutions" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
+                    l === "solutions" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6196,8 +6195,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ o.jsx(
                             "circle",
                             {
                               cx: "200",
@@ -6209,32 +6208,32 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               strokeWidth: "2"
                             }
                           ),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "100", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "300", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "70", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "230", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("path", { d: "M125 150 L160 150", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("path", { d: "M240 150 L275 150", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("path", { d: "M200 95 L200 130", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("path", { d: "M200 170 L200 205", stroke: "#8220ff", strokeWidth: "2" }),
-                          /* @__PURE__ */ i.jsx("polygon", { points: "158,145 158,155 168,150", fill: "#8220ff" }),
-                          /* @__PURE__ */ i.jsx("polygon", { points: "242,145 242,155 232,150", fill: "#8220ff" }),
-                          /* @__PURE__ */ i.jsx("polygon", { points: "195,128 205,128 200,138", fill: "#8220ff" }),
-                          /* @__PURE__ */ i.jsx("polygon", { points: "195,172 205,172 200,162", fill: "#8220ff" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "100", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "300", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "70", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "230", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "150", r: "20", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.4" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "150", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "250", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "150", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "250", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" })
+                          /* @__PURE__ */ o.jsx("circle", { cx: "100", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "300", cy: "150", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "70", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "230", r: "25", fill: "white", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("path", { d: "M125 150 L160 150", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("path", { d: "M240 150 L275 150", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("path", { d: "M200 95 L200 130", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("path", { d: "M200 170 L200 205", stroke: "#8220ff", strokeWidth: "2" }),
+                          /* @__PURE__ */ o.jsx("polygon", { points: "158,145 158,155 168,150", fill: "#8220ff" }),
+                          /* @__PURE__ */ o.jsx("polygon", { points: "242,145 242,155 232,150", fill: "#8220ff" }),
+                          /* @__PURE__ */ o.jsx("polygon", { points: "195,128 205,128 200,138", fill: "#8220ff" }),
+                          /* @__PURE__ */ o.jsx("polygon", { points: "195,172 205,172 200,162", fill: "#8220ff" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "100", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "300", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "70", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "230", r: "10", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "150", r: "20", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "150", r: "10", fill: "#8220ff", fillOpacity: "0.4" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "150", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "250", cy: "100", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "150", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "250", cy: "200", r: "5", fill: "#8220ff", fillOpacity: "0.2" })
                         ]
                       }
                     ) }),
-                    l === "resources" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
+                    l === "resources" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6243,10 +6242,10 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ i.jsxs("g", { filter: "url(#resourcesShadow)", children: [
-                            /* @__PURE__ */ i.jsx("rect", { x: "140", y: "80", width: "120", height: "140", rx: "4", fill: "url(#bookGradient)" }),
-                            /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ o.jsxs("g", { filter: "url(#resourcesShadow)", children: [
+                            /* @__PURE__ */ o.jsx("rect", { x: "140", y: "80", width: "120", height: "140", rx: "4", fill: "url(#bookGradient)" }),
+                            /* @__PURE__ */ o.jsx(
                               "rect",
                               {
                                 x: "140",
@@ -6259,14 +6258,14 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                 fill: "none"
                               }
                             ),
-                            /* @__PURE__ */ i.jsx("path", { d: "M160 100 L240 100", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ i.jsx("path", { d: "M160 120 L240 120", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ i.jsx("path", { d: "M160 140 L240 140", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ i.jsx("path", { d: "M160 160 L240 160", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ i.jsx("path", { d: "M160 180 L240 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
-                            /* @__PURE__ */ i.jsx("path", { d: "M230 80 L230 110 L220 100 L210 110 L210 80", fill: "#8220ff", fillOpacity: "0.3" }),
-                            /* @__PURE__ */ i.jsxs("g", { transform: "translate(-10, -10) rotate(-5)", children: [
-                              /* @__PURE__ */ i.jsx(
+                            /* @__PURE__ */ o.jsx("path", { d: "M160 100 L240 100", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ o.jsx("path", { d: "M160 120 L240 120", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ o.jsx("path", { d: "M160 140 L240 140", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ o.jsx("path", { d: "M160 160 L240 160", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ o.jsx("path", { d: "M160 180 L240 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.3" }),
+                            /* @__PURE__ */ o.jsx("path", { d: "M230 80 L230 110 L220 100 L210 110 L210 80", fill: "#8220ff", fillOpacity: "0.3" }),
+                            /* @__PURE__ */ o.jsxs("g", { transform: "translate(-10, -10) rotate(-5)", children: [
+                              /* @__PURE__ */ o.jsx(
                                 "rect",
                                 {
                                   x: "80",
@@ -6279,13 +6278,13 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                   strokeWidth: "1.5"
                                 }
                               ),
-                              /* @__PURE__ */ i.jsx("path", { d: "M90 135 L150 135", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
-                              /* @__PURE__ */ i.jsx("path", { d: "M90 150 L150 150", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
-                              /* @__PURE__ */ i.jsx("path", { d: "M90 165 L150 165", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
-                              /* @__PURE__ */ i.jsx("path", { d: "M90 180 L120 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" })
+                              /* @__PURE__ */ o.jsx("path", { d: "M90 135 L150 135", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
+                              /* @__PURE__ */ o.jsx("path", { d: "M90 150 L150 150", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
+                              /* @__PURE__ */ o.jsx("path", { d: "M90 165 L150 165", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" }),
+                              /* @__PURE__ */ o.jsx("path", { d: "M90 180 L120 180", stroke: "#8220ff", strokeWidth: "1", strokeOpacity: "0.5" })
                             ] }),
-                            /* @__PURE__ */ i.jsxs("g", { transform: "translate(10, -10) rotate(5)", children: [
-                              /* @__PURE__ */ i.jsx(
+                            /* @__PURE__ */ o.jsxs("g", { transform: "translate(10, -10) rotate(5)", children: [
+                              /* @__PURE__ */ o.jsx(
                                 "rect",
                                 {
                                   x: "240",
@@ -6298,8 +6297,8 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                   strokeWidth: "1.5"
                                 }
                               ),
-                              /* @__PURE__ */ i.jsx("polygon", { points: "270,140 290,150 270,160", fill: "#8220ff" }),
-                              /* @__PURE__ */ i.jsx(
+                              /* @__PURE__ */ o.jsx("polygon", { points: "270,140 290,150 270,160", fill: "#8220ff" }),
+                              /* @__PURE__ */ o.jsx(
                                 "rect",
                                 {
                                   x: "245",
@@ -6314,15 +6313,15 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               )
                             ] })
                           ] }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "50", r: "15", fill: "#8220ff", fillOpacity: "0.1" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "50", r: "10", fill: "#8220ff", fillOpacity: "0.2" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "200", cy: "50", r: "5", fill: "#8220ff", fillOpacity: "0.3" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "150", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "250", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "120", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "280", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
-                          /* @__PURE__ */ i.jsxs("defs", { children: [
-                            /* @__PURE__ */ i.jsxs(
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "50", r: "15", fill: "#8220ff", fillOpacity: "0.1" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "50", r: "10", fill: "#8220ff", fillOpacity: "0.2" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "200", cy: "50", r: "5", fill: "#8220ff", fillOpacity: "0.3" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "150", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "250", cy: "60", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "120", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "280", cy: "150", r: "2", fill: "#8220ff", fillOpacity: "0.6" }),
+                          /* @__PURE__ */ o.jsxs("defs", { children: [
+                            /* @__PURE__ */ o.jsxs(
                               "linearGradient",
                               {
                                 id: "bookGradient",
@@ -6332,17 +6331,17 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                                 y2: "220",
                                 gradientUnits: "userSpaceOnUse",
                                 children: [
-                                  /* @__PURE__ */ i.jsx("stop", { offset: "0%", stopColor: "#f0f0f5" }),
-                                  /* @__PURE__ */ i.jsx("stop", { offset: "100%", stopColor: "#ffffff" })
+                                  /* @__PURE__ */ o.jsx("stop", { offset: "0%", stopColor: "#f0f0f5" }),
+                                  /* @__PURE__ */ o.jsx("stop", { offset: "100%", stopColor: "#ffffff" })
                                 ]
                               }
                             ),
-                            /* @__PURE__ */ i.jsx("filter", { id: "resourcesShadow", x: "-10%", y: "-10%", width: "120%", height: "120%", children: /* @__PURE__ */ i.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "4", floodColor: "#8220ff", floodOpacity: "0.2" }) })
+                            /* @__PURE__ */ o.jsx("filter", { id: "resourcesShadow", x: "-10%", y: "-10%", width: "120%", height: "120%", children: /* @__PURE__ */ o.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "4", floodColor: "#8220ff", floodOpacity: "0.2" }) })
                           ] })
                         ]
                       }
                     ) }),
-                    l === "developers" && /* @__PURE__ */ i.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ i.jsxs(
+                    l === "developers" && /* @__PURE__ */ o.jsx("div", { className: "w-full h-full flex items-center justify-center", children: /* @__PURE__ */ o.jsxs(
                       "svg",
                       {
                         width: "100%",
@@ -6351,38 +6350,38 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: [
-                          /* @__PURE__ */ i.jsx("rect", { width: "400", height: "300", fill: "white" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "20", y: "20", width: "280", height: "200", rx: "8", fill: "#1E1E1E" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "20", y: "20", width: "280", height: "30", rx: "8", fill: "#333333" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "40", cy: "35", r: "6", fill: "#FF5F56" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "60", cy: "35", r: "6", fill: "#FFBD2E" }),
-                          /* @__PURE__ */ i.jsx("circle", { cx: "80", cy: "35", r: "6", fill: "#27C93F" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "70", width: "120", height: "10", rx: "2", fill: "#9CDCFE", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "90", width: "180", height: "10", rx: "2", fill: "#CE9178", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "60", y: "110", width: "200", height: "10", rx: "2", fill: "#6A9955", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "60", y: "130", width: "160", height: "10", rx: "2", fill: "#569CD6", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "150", width: "140", height: "10", rx: "2", fill: "#DCDCAA", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "60", y: "170", width: "180", height: "10", rx: "2", fill: "#4EC9B0", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "40", y: "190", width: "160", height: "10", rx: "2", fill: "#C586C0", fillOpacity: "0.7" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "75", fontSize: "10", fill: "#858585", children: "1" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "95", fontSize: "10", fill: "#858585", children: "2" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "115", fontSize: "10", fill: "#858585", children: "3" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "135", fontSize: "10", fill: "#858585", children: "4" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "155", fontSize: "10", fill: "#858585", children: "5" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "175", fontSize: "10", fill: "#858585", children: "6" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "30", y: "195", fontSize: "10", fill: "#858585", children: "7" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "80", y: "130", width: "310", height: "130", rx: "8", fill: "#1E1E1E", filter: "url(#shadow)" }),
-                          /* @__PURE__ */ i.jsx("rect", { x: "80", y: "130", width: "310", height: "25", rx: "8", fill: "#333333" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "235", y: "147", fontSize: "12", fill: "#FFFFFF", textAnchor: "middle", children: "Terminal" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "170", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ git clone https://github.com/plexicus/plexicus-sdk.git" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "185", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "Cloning into 'plexicus-sdk'..." }),
-                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "200", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "remote: Counting objects: 100% (1234/1234)" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "215", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ cd plexicus-sdk && npm install" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "230", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "added 1024 packages in 4.2s" }),
-                          /* @__PURE__ */ i.jsx("text", { x: "90", y: "245", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ npm run dev" }),
-                          /* @__PURE__ */ i.jsxs("g", { transform: "translate(320, 240) scale(0.8)", children: [
-                            /* @__PURE__ */ i.jsx("circle", { cx: "0", cy: "0", r: "25", fill: "white" }),
-                            /* @__PURE__ */ i.jsx(
+                          /* @__PURE__ */ o.jsx("rect", { width: "400", height: "300", fill: "white" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "20", y: "20", width: "280", height: "200", rx: "8", fill: "#1E1E1E" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "20", y: "20", width: "280", height: "30", rx: "8", fill: "#333333" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "40", cy: "35", r: "6", fill: "#FF5F56" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "60", cy: "35", r: "6", fill: "#FFBD2E" }),
+                          /* @__PURE__ */ o.jsx("circle", { cx: "80", cy: "35", r: "6", fill: "#27C93F" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "70", width: "120", height: "10", rx: "2", fill: "#9CDCFE", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "90", width: "180", height: "10", rx: "2", fill: "#CE9178", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "60", y: "110", width: "200", height: "10", rx: "2", fill: "#6A9955", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "60", y: "130", width: "160", height: "10", rx: "2", fill: "#569CD6", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "150", width: "140", height: "10", rx: "2", fill: "#DCDCAA", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "60", y: "170", width: "180", height: "10", rx: "2", fill: "#4EC9B0", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "40", y: "190", width: "160", height: "10", rx: "2", fill: "#C586C0", fillOpacity: "0.7" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "75", fontSize: "10", fill: "#858585", children: "1" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "95", fontSize: "10", fill: "#858585", children: "2" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "115", fontSize: "10", fill: "#858585", children: "3" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "135", fontSize: "10", fill: "#858585", children: "4" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "155", fontSize: "10", fill: "#858585", children: "5" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "175", fontSize: "10", fill: "#858585", children: "6" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "30", y: "195", fontSize: "10", fill: "#858585", children: "7" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "80", y: "130", width: "310", height: "130", rx: "8", fill: "#1E1E1E", filter: "url(#shadow)" }),
+                          /* @__PURE__ */ o.jsx("rect", { x: "80", y: "130", width: "310", height: "25", rx: "8", fill: "#333333" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "235", y: "147", fontSize: "12", fill: "#FFFFFF", textAnchor: "middle", children: "Terminal" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "170", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ git clone https://github.com/plexicus/plexicus-sdk.git" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "185", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "Cloning into 'plexicus-sdk'..." }),
+                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "200", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "remote: Counting objects: 100% (1234/1234)" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "215", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ cd plexicus-sdk && npm install" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "230", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "added 1024 packages in 4.2s" }),
+                          /* @__PURE__ */ o.jsx("text", { x: "90", y: "245", fontSize: "9", fill: "#CCCCCC", fontFamily: "monospace", children: "$ npm run dev" }),
+                          /* @__PURE__ */ o.jsxs("g", { transform: "translate(320, 240) scale(0.8)", children: [
+                            /* @__PURE__ */ o.jsx("circle", { cx: "0", cy: "0", r: "25", fill: "white" }),
+                            /* @__PURE__ */ o.jsx(
                               "path",
                               {
                                 d: "M0 -20c-11.046 0-20 8.954-20 20 0 8.837 5.732 16.338 13.678 18.98 1 .184 1.365-.434 1.365-.964 0-.476-.018-1.733-.027-3.4-5.564 1.21-6.736-2.68-6.736-2.68-.91-2.31-2.22-2.924-2.22-2.924-1.815-1.24.137-1.215.137-1.215 2.006.14 3.06 2.06 3.06 2.06 1.783 3.057 4.675 2.174 5.815 1.663.18-1.29.697-2.174 1.268-2.674-4.442-.505-9.112-2.22-9.112-9.87 0-2.18.78-3.964 2.06-5.36-.207-.505-.893-2.54.195-5.29 0 0 1.68-.538 5.5 2.05 1.595-.443 3.305-.665 5.005-.673 1.7.008 3.41.23 5.005.673 3.82-2.588 5.495-2.05 5.495-2.05 1.09 2.75.405 4.785.198 5.29 1.28 1.396 2.055 3.18 2.055 5.36 0 7.67-4.677 9.36-9.13 9.855.718.62 1.358 1.842 1.358 3.712 0 2.68-.024 4.84-.024 5.5 0 .535.36 1.16 1.375.964C14.275 16.33 20 8.83 20 0 20-11.046 11.046-20 0-20z",
@@ -6391,27 +6390,27 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                               }
                             )
                           ] }),
-                          /* @__PURE__ */ i.jsx("defs", { children: /* @__PURE__ */ i.jsx("filter", { id: "shadow", x: "0", y: "0", width: "400", height: "300", filterUnits: "userSpaceOnUse", children: /* @__PURE__ */ i.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "3", floodColor: "#000000", floodOpacity: "0.3" }) }) })
+                          /* @__PURE__ */ o.jsx("defs", { children: /* @__PURE__ */ o.jsx("filter", { id: "shadow", x: "0", y: "0", width: "400", height: "300", filterUnits: "userSpaceOnUse", children: /* @__PURE__ */ o.jsx("feDropShadow", { dx: "2", dy: "4", stdDeviation: "3", floodColor: "#000000", floodOpacity: "0.3" }) }) })
                         ]
                       }
                     ) })
                   ] }) }),
-                  /* @__PURE__ */ i.jsxs("div", { className: "bg-gray-50 rounded-lg p-4", children: [
-                    /* @__PURE__ */ i.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: R[l].title }),
-                    /* @__PURE__ */ i.jsx("p", { className: "text-gray-700", children: d(l === "products" ? "nav.product.explore" : l === "solutions" ? "nav.solutions.explore" : "nav.resources.explore") })
+                  /* @__PURE__ */ o.jsxs("div", { className: "bg-gray-50 rounded-lg p-4", children: [
+                    /* @__PURE__ */ o.jsx("h3", { className: "text-xl font-bold text-[#8220ff]", children: R[l].title }),
+                    /* @__PURE__ */ o.jsx("p", { className: "text-gray-700", children: d(l === "products" ? "nav.product.explore" : l === "solutions" ? "nav.solutions.explore" : "nav.resources.explore") })
                   ] })
                 ] }),
-                /* @__PURE__ */ i.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ i.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: R[l].items.filter((v) => l !== "resources" || !v.title.startsWith("vs ")).map((v, $) => /* @__PURE__ */ i.jsxs(
+                /* @__PURE__ */ o.jsx("div", { className: "w-full md:w-2/3", children: /* @__PURE__ */ o.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-6", children: R[l].items.filter((v) => l !== "resources" || !v.title.startsWith("vs ")).map((v, $) => /* @__PURE__ */ o.jsxs(
                   Y,
                   {
                     href: v.href,
                     className: "flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors group",
                     onClick: () => c(null),
                     children: [
-                      /* @__PURE__ */ i.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: Me.cloneElement(v.icon, { width: 16, height: 16 }) }),
-                      /* @__PURE__ */ i.jsxs("div", { className: "flex-1", children: [
-                        /* @__PURE__ */ i.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: v.title }),
-                        /* @__PURE__ */ i.jsx("p", { className: "text-sm text-gray-600 mt-1", children: v.description })
+                      /* @__PURE__ */ o.jsx("div", { className: "w-12 h-12 bg-[#8220ff]/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-[#8220ff]/20 transition-colors", children: Me.cloneElement(v.icon, { width: 16, height: 16 }) }),
+                      /* @__PURE__ */ o.jsxs("div", { className: "flex-1", children: [
+                        /* @__PURE__ */ o.jsx("h4", { className: "font-semibold text-gray-900 group-hover:text-[#8220ff] transition-colors", children: v.title }),
+                        /* @__PURE__ */ o.jsx("p", { className: "text-sm text-gray-600 mt-1", children: v.description })
                       ] })
                     ]
                   },
@@ -6421,30 +6420,30 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
             }
           )
         ] }),
-        n && /* @__PURE__ */ i.jsx("div", { className: "fixed inset-0 bg-black/20 z-40 md:hidden", onClick: () => a(!1) }),
-        /* @__PURE__ */ i.jsx(
+        n && /* @__PURE__ */ o.jsx("div", { className: "fixed inset-0 bg-black/20 z-40 xl:hidden", onClick: () => a(!1) }),
+        /* @__PURE__ */ o.jsx(
           "div",
           {
-            className: `md:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${n ? "translate-x-0" : "translate-x-full"}`,
+            className: `xl:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${n ? "translate-x-0" : "translate-x-full"}`,
             style: { top: "64px", height: "calc(100vh - 64px)", overflow: "auto" },
-            children: /* @__PURE__ */ i.jsx("div", { className: "overflow-y-auto h-full p-4 pb-20", children: /* @__PURE__ */ i.jsxs("div", { className: "space-y-4", children: [
-              Object.entries(R).map(([v, $]) => /* @__PURE__ */ i.jsxs("div", { className: "space-y-2", children: [
-                /* @__PURE__ */ i.jsx("h3", { className: "font-semibold", children: $.title }),
-                /* @__PURE__ */ i.jsx("div", { className: "grid grid-cols-1 gap-2", children: $.items.map((T, x) => /* @__PURE__ */ i.jsxs(
+            children: /* @__PURE__ */ o.jsx("div", { className: "overflow-y-auto h-full p-4 pb-20", children: /* @__PURE__ */ o.jsxs("div", { className: "space-y-4", children: [
+              Object.entries(R).map(([v, $]) => /* @__PURE__ */ o.jsxs("div", { className: "space-y-2", children: [
+                /* @__PURE__ */ o.jsx("h3", { className: "font-semibold", children: $.title }),
+                /* @__PURE__ */ o.jsx("div", { className: "grid grid-cols-1 gap-2", children: $.items.map((T, x) => /* @__PURE__ */ o.jsxs(
                   Y,
                   {
                     href: T.href,
                     className: "flex items-center p-2 rounded-md bg-gray-50 hover:bg-gray-100",
                     onClick: () => a(!1),
                     children: [
-                      /* @__PURE__ */ i.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: Me.cloneElement(T.icon, { width: 16, height: 16 }) }),
-                      /* @__PURE__ */ i.jsx("span", { className: "text-sm", children: T.title })
+                      /* @__PURE__ */ o.jsx("div", { className: "w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center", children: Me.cloneElement(T.icon, { width: 16, height: 16 }) }),
+                      /* @__PURE__ */ o.jsx("span", { className: "text-sm", children: T.title })
                     ]
                   },
                   x
                 )) })
               ] }, v)),
-              /* @__PURE__ */ i.jsx(
+              /* @__PURE__ */ o.jsx(
                 Y,
                 {
                   href: `${j}${s}pricing`,
@@ -6453,7 +6452,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                   children: d("nav.pricing")
                 }
               ),
-              /* @__PURE__ */ i.jsx(
+              /* @__PURE__ */ o.jsx(
                 Y,
                 {
                   href: `${j}${s}contact`,
@@ -6462,7 +6461,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
                   children: d("nav.contact")
                 }
               ),
-              /* @__PURE__ */ i.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ i.jsx(Fe, { className: "w-full bg-gradient-primary", onClick: () => a(!1), children: "Get Started" }) })
+              /* @__PURE__ */ o.jsx("div", { className: "pt-4 border-t border-gray-100", children: /* @__PURE__ */ o.jsx(Fe, { className: "w-full bg-gradient-primary", onClick: () => a(!1), children: "Get Started" }) })
             ] }) })
           }
         )
@@ -6472,7 +6471,7 @@ const It = "https://www.plexicus.ai", Ft = "https://blog.plexicus.ai", wt = "htt
 };
 function hr() {
   var t;
-  const o = (s) => {
+  const i = (s) => {
     localStorage.setItem("scrollPosition", String(window == null ? void 0 : window.scrollY));
     const r = window.location.pathname;
     let a = r.match(/^\/([a-z]{2})\//) ? r.replace(/^\/[a-z]{2}\//, `/${s}/`) : `/${s}${r}`;
@@ -6483,23 +6482,23 @@ function hr() {
     s && (window.scrollTo(0, parseInt(s)), localStorage.removeItem("scrollPosition"));
   }, []);
   const e = ((t = window.location.pathname.match(/^\/([a-z]{2})\//)) == null ? void 0 : t[1]) || "en";
-  return /* @__PURE__ */ i.jsx(i.Fragment, { children: /* @__PURE__ */ i.jsxs("div", { className: "relative inline-flex items-center w-[150px]", children: [
-    /* @__PURE__ */ i.jsx(Dt, { className: "absolute  text-muted-foreground pointer-events-none", style: { left: 1, paddingLeft: 6, width: 22 } }),
-    /* @__PURE__ */ i.jsxs(
+  return /* @__PURE__ */ o.jsx(o.Fragment, { children: /* @__PURE__ */ o.jsxs("div", { className: "relative inline-flex items-center w-[150px]", children: [
+    /* @__PURE__ */ o.jsx(Dt, { className: "absolute  text-muted-foreground pointer-events-none", style: { left: 1, paddingLeft: 6, width: 22 } }),
+    /* @__PURE__ */ o.jsxs(
       "select",
       {
         defaultValue: e,
         className: "appearance-none w-full  pr-6 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring dark:bg-gray-900 dark:text-white dark:border-gray-700",
         style: { paddingLeft: 30 },
-        onChange: (s) => o(s.target.value),
+        onChange: (s) => i(s.target.value),
         children: [
-          /* @__PURE__ */ i.jsx("option", { value: "en", children: "English" }),
-          /* @__PURE__ */ i.jsx("option", { value: "es", children: "Spanish" }),
-          /* @__PURE__ */ i.jsx("option", { value: "it", children: "Italian" })
+          /* @__PURE__ */ o.jsx("option", { value: "en", children: "English" }),
+          /* @__PURE__ */ o.jsx("option", { value: "es", children: "Spanish" }),
+          /* @__PURE__ */ o.jsx("option", { value: "it", children: "Italian" })
         ]
       }
     ),
-    /* @__PURE__ */ i.jsx(
+    /* @__PURE__ */ o.jsx(
       "svg",
       {
         className: "pointer-events-none absolute  top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground",
@@ -6508,29 +6507,29 @@ function hr() {
         viewBox: "0 0 24 24",
         stroke: "currentColor",
         style: { right: 3, marginRight: 4 },
-        children: /* @__PURE__ */ i.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M19 9l-7 7-7-7" })
+        children: /* @__PURE__ */ o.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M19 9l-7 7-7-7" })
       }
     )
   ] }) });
 }
-function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t = "http://localhost:9000", showLanguageSelector: s = !0 }) {
+function mr({ lang: i, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t = "http://localhost:9000", showLanguageSelector: s = !0 }) {
   const [r, n] = ce("/"), { t: a, i18n: l } = Mt();
   re(() => {
-    l.changeLanguage(o), n(o !== "en" ? `/${o}/` : "/");
+    l.changeLanguage(i), n(i !== "en" ? `/${i}/` : "/");
   }, []);
   const c = Le(e, It), u = Le(t, Ft), d = [
     {
       alt: a("footer.social_media.twitter"),
       link: "https://x.com/plexicus_ai/",
-      icon: /* @__PURE__ */ i.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 24 24", children: /* @__PURE__ */ i.jsxs("g", { fill: "none", "fill-rule": "evenodd", children: [
-        /* @__PURE__ */ i.jsx("path", { d: "m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" }),
-        /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M19.753 4.659a1 1 0 0 0-1.506-1.317l-5.11 5.84L8.8 3.4A1 1 0 0 0 8 3H4a1 1 0 0 0-.8 1.6l6.437 8.582l-5.39 6.16a1 1 0 0 0 1.506 1.317l5.11-5.841L15.2 20.6a1 1 0 0 0 .8.4h4a1 1 0 0 0 .8-1.6l-6.437-8.582l5.39-6.16ZM16.5 19L6 5h1.5L18 19z" })
+      icon: /* @__PURE__ */ o.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 24 24", children: /* @__PURE__ */ o.jsxs("g", { fill: "none", "fill-rule": "evenodd", children: [
+        /* @__PURE__ */ o.jsx("path", { d: "m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" }),
+        /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M19.753 4.659a1 1 0 0 0-1.506-1.317l-5.11 5.84L8.8 3.4A1 1 0 0 0 8 3H4a1 1 0 0 0-.8 1.6l6.437 8.582l-5.39 6.16a1 1 0 0 0 1.506 1.317l5.11-5.841L15.2 20.6a1 1 0 0 0 .8.4h4a1 1 0 0 0 .8-1.6l-6.437-8.582l5.39-6.16ZM16.5 19L6 5h1.5L18 19z" })
       ] }) })
     },
     {
       alt: a("footer.social_media.linkedin"),
       link: "https://www.linkedin.com/company/plexicus/",
-      icon: /* @__PURE__ */ i.jsx("svg", { className: "h-6 w-6", fill: "currentColor", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ i.jsx(
+      icon: /* @__PURE__ */ o.jsx("svg", { className: "h-6 w-6", fill: "currentColor", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ o.jsx(
         "path",
         {
           fillRule: "evenodd",
@@ -6542,15 +6541,15 @@ function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
     {
       alt: a("footer.social_media.github"),
       link: "https://github.com/apps/plexicus",
-      icon: /* @__PURE__ */ i.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M32 1.8c-17 0-31 13.8-31 31C1 46.4 9.9 58 22.3 62.2c1.6.3 2.1-.7 2.1-1.4s0-2.7-.1-5.4c-8.6 2-10.4-4.2-10.4-4.2c-1.4-3.5-3.5-4.5-3.5-4.5c-2.8-2 .1-2 .1-2c3.1.1 4.8 3.2 4.8 3.2c2.7 4.8 7.3 3.4 9 2.5c.3-2 1.1-3.4 2-4.2c-6.8-.7-14.1-3.4-14.1-15.2c0-3.4 1.3-6.1 3.2-8.2c-.3-.7-1.4-3.9.3-8.2c0 0 2.7-.8 8.6 3.2c2.5-.7 5.1-1.1 7.8-1.1s5.4.3 7.8 1.1c5.9-3.9 8.5-3.2 8.5-3.2c1.7 4.2.7 7.5.3 8.2c2 2.1 3.2 4.9 3.2 8.2c0 11.8-7.3 14.5-14.1 15.2c1.1 1 2.1 3 2.1 5.8c0 4.2-.1 7.5-.1 8.5c0 .8.6 1.7 2.1 1.4C54.1 57.8 63 46.3 63 32.6c-.1-17-14-30.8-31-30.8" }) })
+      icon: /* @__PURE__ */ o.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M32 1.8c-17 0-31 13.8-31 31C1 46.4 9.9 58 22.3 62.2c1.6.3 2.1-.7 2.1-1.4s0-2.7-.1-5.4c-8.6 2-10.4-4.2-10.4-4.2c-1.4-3.5-3.5-4.5-3.5-4.5c-2.8-2 .1-2 .1-2c3.1.1 4.8 3.2 4.8 3.2c2.7 4.8 7.3 3.4 9 2.5c.3-2 1.1-3.4 2-4.2c-6.8-.7-14.1-3.4-14.1-15.2c0-3.4 1.3-6.1 3.2-8.2c-.3-.7-1.4-3.9.3-8.2c0 0 2.7-.8 8.6 3.2c2.5-.7 5.1-1.1 7.8-1.1s5.4.3 7.8 1.1c5.9-3.9 8.5-3.2 8.5-3.2c1.7 4.2.7 7.5.3 8.2c2 2.1 3.2 4.9 3.2 8.2c0 11.8-7.3 14.5-14.1 15.2c1.1 1 2.1 3 2.1 5.8c0 4.2-.1 7.5-.1 8.5c0 .8.6 1.7 2.1 1.4C54.1 57.8 63 46.3 63 32.6c-.1-17-14-30.8-31-30.8" }) })
     },
     {
       alt: a("footer.social_media.instagram"),
       link: "https://www.instagram.com/plexicus_ai/",
-      icon: /* @__PURE__ */ i.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: [
-        /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M62.9 19.2c-.1-3.2-.7-5.5-1.4-7.6S59.7 7.8 58 6.1s-3.4-2.7-5.4-3.5s-4.2-1.3-7.6-1.4C41.5 1 40.5 1 32 1s-9.4 0-12.8.1s-5.5.7-7.6 1.4s-3.8 1.9-5.5 3.6s-2.8 3.4-3.5 5.5c-.8 2-1.3 4.2-1.4 7.6S1 23.5 1 32s0 9.4.1 12.8s.7 5.5 1.4 7.6s1.8 3.8 3.5 5.5s3.5 2.8 5.5 3.5s4.2 1.3 7.6 1.4c3.4.2 4.3.2 12.8.2s9.4 0 12.8-.1s5.5-.7 7.6-1.4s3.8-1.8 5.5-3.5s2.8-3.5 3.5-5.5s1.3-4.2 1.4-7.6c.1-3.2.1-4.2.1-12.7s.2-9.6.1-13m-5.6 25.3c-.1 3-.7 4.6-1.1 5.8c-.6 1.4-1.3 2.5-2.4 3.5c-1.1 1.1-2.1 1.7-3.5 2.4c-1.1.4-2.7 1-5.8 1.1H32.1c-8.2 0-9.3 0-12.5-.1c-3-.1-4.6-.7-5.8-1.1c-1.4-.6-2.5-1.3-3.5-2.4c-1.1-1.1-1.7-2.1-2.4-3.5c-.4-1.1-1-2.7-1.1-5.8V32c0-8.3 0-9.3.1-12.5c.1-3 .7-4.6 1.1-5.8c.6-1.4 1.3-2.5 2.3-3.5c1.1-1.1 2.1-1.7 3.5-2.3c1.1-.4 2.7-1 5.8-1.1c3.2-.1 4.2-.1 12.5-.1s9.3 0 12.5.1c3 .1 4.6.7 5.8 1.1c1.4.6 2.5 1.3 3.5 2.3c1.1 1.1 1.7 2.1 2.4 3.5c.4 1.1 1 2.7 1.1 5.8c.1 3.2.1 4.2.1 12.5s-.1 9.3-.2 12.5" }),
-        /* @__PURE__ */ i.jsx("path", { fill: "currentColor", d: "M32 16.1c-8.9 0-15.9 7.2-15.9 15.9c0 8.9 7.2 15.9 15.9 15.9s16-7 16-15.9s-7.1-15.9-16-15.9m0 26.3c-5.8 0-10.4-4.7-10.4-10.4S26.3 21.6 32 21.6c5.8 0 10.4 4.6 10.4 10.4S37.8 42.4 32 42.4" }),
-        /* @__PURE__ */ i.jsx("circle", { cx: "48.7", cy: "15.4", r: "3.7", fill: "currentColor" })
+      icon: /* @__PURE__ */ o.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: "32", height: "32", viewBox: "0 0 64 64", children: [
+        /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M62.9 19.2c-.1-3.2-.7-5.5-1.4-7.6S59.7 7.8 58 6.1s-3.4-2.7-5.4-3.5s-4.2-1.3-7.6-1.4C41.5 1 40.5 1 32 1s-9.4 0-12.8.1s-5.5.7-7.6 1.4s-3.8 1.9-5.5 3.6s-2.8 3.4-3.5 5.5c-.8 2-1.3 4.2-1.4 7.6S1 23.5 1 32s0 9.4.1 12.8s.7 5.5 1.4 7.6s1.8 3.8 3.5 5.5s3.5 2.8 5.5 3.5s4.2 1.3 7.6 1.4c3.4.2 4.3.2 12.8.2s9.4 0 12.8-.1s5.5-.7 7.6-1.4s3.8-1.8 5.5-3.5s2.8-3.5 3.5-5.5s1.3-4.2 1.4-7.6c.1-3.2.1-4.2.1-12.7s.2-9.6.1-13m-5.6 25.3c-.1 3-.7 4.6-1.1 5.8c-.6 1.4-1.3 2.5-2.4 3.5c-1.1 1.1-2.1 1.7-3.5 2.4c-1.1.4-2.7 1-5.8 1.1H32.1c-8.2 0-9.3 0-12.5-.1c-3-.1-4.6-.7-5.8-1.1c-1.4-.6-2.5-1.3-3.5-2.4c-1.1-1.1-1.7-2.1-2.4-3.5c-.4-1.1-1-2.7-1.1-5.8V32c0-8.3 0-9.3.1-12.5c.1-3 .7-4.6 1.1-5.8c.6-1.4 1.3-2.5 2.3-3.5c1.1-1.1 2.1-1.7 3.5-2.3c1.1-.4 2.7-1 5.8-1.1c3.2-.1 4.2-.1 12.5-.1s9.3 0 12.5.1c3 .1 4.6.7 5.8 1.1c1.4.6 2.5 1.3 3.5 2.3c1.1 1.1 1.7 2.1 2.4 3.5c.4 1.1 1 2.7 1.1 5.8c.1 3.2.1 4.2.1 12.5s-.1 9.3-.2 12.5" }),
+        /* @__PURE__ */ o.jsx("path", { fill: "currentColor", d: "M32 16.1c-8.9 0-15.9 7.2-15.9 15.9c0 8.9 7.2 15.9 15.9 15.9s16-7 16-15.9s-7.1-15.9-16-15.9m0 26.3c-5.8 0-10.4-4.7-10.4-10.4S26.3 21.6 32 21.6c5.8 0 10.4 4.6 10.4 10.4S37.8 42.4 32 42.4" }),
+        /* @__PURE__ */ o.jsx("circle", { cx: "48.7", cy: "15.4", r: "3.7", fill: "currentColor" })
       ] })
     }
   ], h = [
@@ -6642,37 +6641,37 @@ function mr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
       ]
     }
   ];
-  return /* @__PURE__ */ i.jsx("footer", { className: "bg-gray-50 border-t border-gray-200", children: /* @__PURE__ */ i.jsxs("div", { className: "container mx-auto px-4 md:px-6 pt-12 pb-6", children: [
-    /* @__PURE__ */ i.jsxs("div", { id: "footer-grid", className: "grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5", children: [
-      /* @__PURE__ */ i.jsxs("div", { className: "lg:col-span-2", children: [
-        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}`, className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ i.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus S.L.", className: "h-10 w-auto" }) }),
-        /* @__PURE__ */ i.jsx("p", { className: "text-gray-600 mb-4 max-w-sm", children: a("footer.tagline") }),
-        /* @__PURE__ */ i.jsx("div", { id: "social_links", className: "flex justify-start items-center gap-4", children: d.map(({ link: m, icon: g, alt: p }) => /* @__PURE__ */ i.jsxs(Y, { target: "_blank", href: m, className: "text-gray-400 hover:text-gray-500", children: [
-          /* @__PURE__ */ i.jsx("span", { className: "sr-only", children: p }),
+  return /* @__PURE__ */ o.jsx("footer", { className: "bg-gray-50 border-t border-gray-200", children: /* @__PURE__ */ o.jsxs("div", { className: "container mx-auto px-4 md:px-6 pt-12 pb-6", children: [
+    /* @__PURE__ */ o.jsxs("div", { id: "footer-grid", className: "grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5", children: [
+      /* @__PURE__ */ o.jsxs("div", { className: "lg:col-span-2", children: [
+        /* @__PURE__ */ o.jsx(Y, { href: `${c}${r}`, className: "flex items-center gap-2 mb-4", children: /* @__PURE__ */ o.jsx("img", { src: "/images/plexicus-logo-color.png", alt: "Plexicus S.L.", className: "h-10 w-auto" }) }),
+        /* @__PURE__ */ o.jsx("p", { className: "text-gray-600 mb-4 max-w-sm", children: a("footer.tagline") }),
+        /* @__PURE__ */ o.jsx("div", { id: "social_links", className: "flex justify-start items-center gap-4", children: d.map(({ link: m, icon: g, alt: p }) => /* @__PURE__ */ o.jsxs(Y, { target: "_blank", href: m, className: "text-gray-400 hover:text-gray-500", children: [
+          /* @__PURE__ */ o.jsx("span", { className: "sr-only", children: p }),
           g
         ] })) }),
-        s && /* @__PURE__ */ i.jsx("div", { className: "mt-6", children: /* @__PURE__ */ i.jsx(hr, {}) })
+        s && /* @__PURE__ */ o.jsx("div", { className: "mt-6", children: /* @__PURE__ */ o.jsx(hr, {}) })
       ] }),
-      h.map(({ title: m, items: g }) => /* @__PURE__ */ i.jsxs("div", { children: [
-        /* @__PURE__ */ i.jsx("h3", { className: "text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4", children: m }),
-        /* @__PURE__ */ i.jsx("ul", { className: "space-y-2", children: g.map(({ link: p, text: b }) => /* @__PURE__ */ i.jsx("li", { children: /* @__PURE__ */ i.jsx(Y, { href: p, className: "text-gray-600 hover:text-purple-700", children: b }) })) })
+      h.map(({ title: m, items: g }) => /* @__PURE__ */ o.jsxs("div", { children: [
+        /* @__PURE__ */ o.jsx("h3", { className: "text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4", children: m }),
+        /* @__PURE__ */ o.jsx("ul", { className: "space-y-2", children: g.map(({ link: p, text: b }) => /* @__PURE__ */ o.jsx("li", { children: /* @__PURE__ */ o.jsx(Y, { href: p, className: "text-gray-600 hover:text-purple-700", children: b }) })) })
       ] }))
     ] }),
-    /* @__PURE__ */ i.jsx("div", { className: "mt-8 pt-6 border-t border-gray-200", children: /* @__PURE__ */ i.jsxs("div", { className: "flex justify-between items-center mb-3", children: [
-      /* @__PURE__ */ i.jsxs("p", { className: "text-gray-500 text-sm", children: [
+    /* @__PURE__ */ o.jsx("div", { className: "mt-8 pt-6 border-t border-gray-200", children: /* @__PURE__ */ o.jsxs("div", { className: "flex justify-between items-center mb-3", children: [
+      /* @__PURE__ */ o.jsxs("p", { className: "text-gray-500 text-sm", children: [
         "© 2025 PLEXICUS, S.L",
-        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}privacy`, className: "underline hover:text-gray-700 ml-4", children: a("footer.policies.privacy_policy") }),
+        /* @__PURE__ */ o.jsx(Y, { href: `${c}${r}privacy`, className: "underline hover:text-gray-700 ml-4", children: a("footer.policies.privacy_policy") }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}management`, className: "underline hover:text-gray-700", children: a("footer.policies.management_policy") }),
+        /* @__PURE__ */ o.jsx(Y, { href: `${c}${r}management`, className: "underline hover:text-gray-700", children: a("footer.policies.management_policy") }),
         " ",
         "·",
         " ",
-        /* @__PURE__ */ i.jsx(Y, { href: `${c}${r}legal`, className: "underline hover:text-gray-700", children: a("footer.policies.legal_notice") })
+        /* @__PURE__ */ o.jsx(Y, { href: `${c}${r}legal`, className: "underline hover:text-gray-700", children: a("footer.policies.legal_notice") })
       ] }),
-      /* @__PURE__ */ i.jsx("div", { children: /* @__PURE__ */ i.jsxs("div", { className: "inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200", children: [
-        /* @__PURE__ */ i.jsx("svg", { className: "w-4 h-4 mr-1", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ i.jsx(
+      /* @__PURE__ */ o.jsx("div", { children: /* @__PURE__ */ o.jsxs("div", { className: "inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200", children: [
+        /* @__PURE__ */ o.jsx("svg", { className: "w-4 h-4 mr-1", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ o.jsx(
           "path",
           {
             d: "M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
