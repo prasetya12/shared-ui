@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../i18n';
 import { getFullsiteUrl } from '../lib/utils';
-import { API_URL_WEB, API_URL_BLOG } from '../contants/SiteUrl';
+import { API_URL_WEB, API_URL_BLOG } from '../constants/SiteUrl';
 
 interface FooterProps {
   lang: string,
