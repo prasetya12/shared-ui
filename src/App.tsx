@@ -4,7 +4,7 @@ import i18n from "i18next";
 import { supportedLngs } from "./i18n";
 import {GoogleAnalytics} from "./components/GTM";
 
-import useTrackClick from "./hooks/gtm-event-tracker";
+import {useTrackClick} from "./hooks/gtm-event-tracker";
 function getLanguageFromUrl(): string {
   const path = window.location.pathname;
   const parts = path.split("/");
