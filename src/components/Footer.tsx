@@ -120,7 +120,16 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           text: t("nav.resources.feature_requests"),
           link: "https://plexicus.canny.io/feature-requests",
-        }
+        },
+        {
+          text: t("nav.resources.integrations"),
+          link: `${WEB_URL}${lang}integrations`,
+        },
+        {
+          text: t("nav.resources.comparison_overview"),
+          link: `${WEB_URL}${lang}comparison/overview`,
+        },
+        
       ]
     },
     {
