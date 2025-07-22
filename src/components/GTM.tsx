@@ -12,11 +12,7 @@ import { gtmTrackingCode } from '../constants/Gtm';
  */
 export const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId = gtmTrackingCode}) => {
   useEffect(() => {
-    // Create the external gtag.js script element
-    const externalScript = document.createElement('script');
-    externalScript.async = true;
-    externalScript.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-    document.head.appendChild(externalScript);
+ 
 
     // Create the inline script element for dataLayer configuration
     const inlineScript = document.createElement('script');
@@ -31,8 +27,14 @@ export const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId = 
       gtag('js', new Date());
       gtag('config', '${trackingId}');
     `;
-    document.head.appendChild(inlineScript);
+    document.head.prepend(inlineScript);
 
+
+       // Create the external gtag.js script element
+       const externalScript = document.createElement('script');
+       externalScript.async = true;
+       externalScript.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+       document.head.prepend(externalScript);
     // Cleanup function: Remove the scripts when the component unmounts
     return () => {
       document.head.removeChild(externalScript);
