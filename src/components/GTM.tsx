@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { gtmTrackingCode } from '../constants/Gtm';
 /**
  * GoogleAnalytics Component
  *
@@ -9,7 +10,7 @@ import React, { useEffect } from 'react';
  * @param {string} trackingId - The Google Analytics Measurement ID (e.g., "G-XXXXXXXXXX").
  * This ID will be used to configure gtag.
  */
-const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId}) => {
+export const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId = gtmTrackingCode}) => {
   useEffect(() => {
     // Create the external gtag.js script element
     const externalScript = document.createElement('script');
@@ -42,6 +43,4 @@ const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId}) => {
   // This component does not render any visible elements, so it returns null.
   return null;
 };
-
-export default GoogleAnalytics;
 
