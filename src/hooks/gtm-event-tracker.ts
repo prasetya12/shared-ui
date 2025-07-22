@@ -15,7 +15,7 @@ import { useCallback } from 'react';
  * - eventLabel: A label for the event (e.g., 'Submit Button', 'Product Link').
  * - value (optional): A numerical value associated with the event.
  */
-const useTrackClick = () => {
+export const useTrackClick = () => {
   const trackClick = useCallback(
     (eventName: string, eventCategory: string, eventLabel: string, value?: number) => {
       // Check if gtag is defined before calling it
@@ -40,4 +40,3 @@ const useTrackClick = () => {
   return trackClick;
 };
 
-export default useTrackClick;
