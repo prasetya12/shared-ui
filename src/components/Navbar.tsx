@@ -5,7 +5,7 @@ import Link from "./ui/link"
 import { useTranslation } from "react-i18next"
 import "../i18n"
 import { getFullsiteUrl } from "../lib/utils"
-import { API_URL_WEB, API_URL_BLOG,APP_URL } from "../contants/SiteUrl"
+import { API_URL_WEB, API_URL_BLOG, APP_URL } from "../contants/SiteUrl"
 
 // Extract types to improve maintainability
 type MenuItemType = {
@@ -799,32 +799,32 @@ export const NavbarPlexicus = ({
             </svg>
           ),
         },
-        // {
-        //   title: t("nav.resources.integrations"),
-        //   description: t("nav.resources.integrations_desc"),
-        //   href: `${WEB_URL}${lang}integrations`,
-        //   icon: (
-        //     <svg
-        //       xmlns="http://www.w3.org/2000/svg"
-        //       width="24"
-        //       height="24"
-        //       viewBox="0 0 24 24"
-        //       fill="none"
-        //       stroke="currentColor"
-        //       strokeWidth="2"
-        //       strokeLinecap="round"
-        //       strokeLinejoin="round"
-        //       className="text-primary"
-        //       aria-hidden="true"
-        //     >
-        //       <path d="M9 12l2 2 4-4" />
-        //       <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
-        //       <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
-        //       <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
-        //       <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
-        //     </svg>
-        //   ),
-        // },
+        {
+          title: t("nav.resources.integrations"),
+          description: t("nav.resources.integrations_desc"),
+          href: `${WEB_URL}${lang}integrations`,
+          icon: (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+              aria-hidden="true"
+            >
+              <path d="M9 12l2 2 4-4" />
+              <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+              <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+              <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+              <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z" />
+            </svg>
+          ),
+        },
         {
           title: t("nav.resources.comparison_overview"),
           description: t("nav.resources.comparison_overview_desc"),
@@ -854,11 +854,11 @@ export const NavbarPlexicus = ({
           href: `${WEB_URL}${lang}support`,
           icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="text-primary" fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" /><path d="M21 16v2a4 4 0 0 1-4 4h-5" /></svg>
           ),
         },
       ],
@@ -981,64 +981,68 @@ export const NavbarPlexicus = ({
           </Link>
         </nav>
 
-        <div className="hidden xl:flex items-center gap-4">
-          <Link
-            href={`${APP_URL}/login`}
-            className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
+        <div className="flex flex-end">
+          <div className="flex items-center gap-4">
+            <Link
+              href={`${APP_URL}/login`}
+              className="text-sm font-medium text-white hover:text-white/80 transition-colors whitespace-nowrap"
+            >
+              {t("nav.login")}
+            </Link>
+            <Link href={`${APP_URL}/register`}>
+              <Button className="bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap">
+                {t("nav.get_started")}
+              </Button>
+            </Link>
+          </div>
+          <button
+            className="flex xl:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
           >
-            {t("nav.login")}
-          </Link>
-          <Link   href={`${APP_URL}/register`}>
-            <Button className="bg-white text-[#8220ff] font-medium px-4 lg:px-6 py-2 rounded-md shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/30 whitespace-nowrap">
-            {t("nav.get_started")}
-          </Button>
-          </Link>
+            {menuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6"
+                aria-hidden="true"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6"
+                aria-hidden="true"
+              >
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            )}
+          </button>
         </div>
 
-        <button
-          className="flex xl:hidden p-2 rounded-md hover:bg-white/10 transition-colors text-white"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-              aria-hidden="true"
-            >
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-              aria-hidden="true"
-            >
-              <line x1="4" x2="20" y1="12" y2="12"></line>
-              <line x1="4" x2="20" y1="6" y2="6"></line>
-              <line x1="4" x2="20" y1="18" y2="18"></line>
-            </svg>
-          )}
-        </button>
-       </div>
+
+
+      </div>
 
       {/* Mega menu */}
       {activeMenu && (
