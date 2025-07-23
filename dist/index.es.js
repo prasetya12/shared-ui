@@ -6660,13 +6660,13 @@ function xr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
         /* @__PURE__ */ i.jsx("div", { id: "social_links", className: "flex justify-start items-center gap-4", children: d.map(({ link: m, icon: g, alt: p }) => /* @__PURE__ */ i.jsxs(Y, { target: "_blank", href: m, className: "text-gray-400 hover:text-gray-500", children: [
           /* @__PURE__ */ i.jsx("span", { className: "sr-only", children: p }),
           g
-        ] })) }),
+        ] }, m)) }),
         s && /* @__PURE__ */ i.jsx("div", { className: "mt-6", children: /* @__PURE__ */ i.jsx(hr, {}) })
       ] }),
       h.map(({ title: m, items: g }) => /* @__PURE__ */ i.jsxs("div", { children: [
         /* @__PURE__ */ i.jsx("h3", { className: "text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4", children: m }),
-        /* @__PURE__ */ i.jsx("ul", { className: "space-y-2", children: g.map(({ link: p, text: b }) => /* @__PURE__ */ i.jsx("li", { children: /* @__PURE__ */ i.jsx(Y, { href: p, className: "text-gray-600 hover:text-purple-700", children: b }) })) })
-      ] }))
+        /* @__PURE__ */ i.jsx("ul", { className: "space-y-2", children: g.map(({ link: p, text: b }) => /* @__PURE__ */ i.jsx("li", { children: /* @__PURE__ */ i.jsx(Y, { href: p, className: "text-gray-600 hover:text-purple-700", children: b }) }, b)) })
+      ] }, m))
     ] }),
     /* @__PURE__ */ i.jsx("div", { className: "mt-8 pt-6 border-t border-gray-200", children: /* @__PURE__ */ i.jsxs("div", { className: "flex justify-between items-center mb-3", children: [
       /* @__PURE__ */ i.jsxs("p", { className: "text-gray-500 text-sm", children: [
@@ -6699,17 +6699,17 @@ function xr({ lang: o, fullSiteUrl: e = "http://localhost:8000", fullBlogUrl: t 
 }
 const fr = "G-Y274FMXQNP", yr = ({ trackingId: o = fr }) => (te(() => {
   const e = document.createElement("script");
-  e.async = !0, e.src = `https://www.googletagmanager.com/gtag/js?id=${o}`, document.head.appendChild(e);
-  const t = document.createElement("script");
-  return t.setAttribute("is:inline", ""), t.innerHTML = `
+  e.setAttribute("is:inline", ""), e.innerHTML = `
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
       gtag('config', '${o}');
-    `, document.head.appendChild(t), () => {
-    document.head.removeChild(e), document.head.removeChild(t);
+    `, document.head.prepend(e);
+  const t = document.createElement("script");
+  return t.async = !0, t.src = `https://www.googletagmanager.com/gtag/js?id=${o}`, document.head.prepend(t), () => {
+    document.head.removeChild(t), document.head.removeChild(e);
   };
 }, [o]), null), wr = () => xe(
   (e, t, s, r) => {
