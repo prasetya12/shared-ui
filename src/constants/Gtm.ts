@@ -1,0 +1,1 @@
+export const gtmTrackingCode : string = 'G-Y274FMXQNP'

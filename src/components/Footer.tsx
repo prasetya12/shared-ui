@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../i18n';
 import { getFullsiteUrl } from '../lib/utils';
-import { API_URL_WEB, API_URL_BLOG } from '../contants/SiteUrl';
+import { API_URL_WEB, API_URL_BLOG } from '../constants/SiteUrl';
 
 interface FooterProps {
   lang: string,
@@ -120,7 +120,16 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
         {
           text: t("nav.resources.feature_requests"),
           link: "https://plexicus.canny.io/feature-requests",
-        }
+        },
+        {
+          text: t("nav.resources.integrations"),
+          link: `${WEB_URL}${lang}integrations`,
+        },
+        {
+          text: t("nav.resources.comparison_overview"),
+          link: `${WEB_URL}${lang}comparison/overview`,
+        },
+        
       ]
     },
     {
@@ -156,7 +165,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
             <p className="text-gray-600 mb-4 max-w-sm">{t('footer.tagline')}</p>
             <div id="social_links" className="flex justify-start items-center gap-4">
               {socialItems.map(({ link, icon, alt }) => (
-                <Link target='_blank' href={link} className="text-gray-400 hover:text-gray-500">
+                <Link key={link} target='_blank' href={link} className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">{alt}</span>
                   {icon}
                 </Link>
@@ -169,11 +178,11 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
           </div>
 
           {footerItems.map(({ title, items }) => (
-            <div>
+            <div key={title}>
               <h3 className="text-sm font-semibold text-purple-700 tracking-wider uppercase mb-4">{title}</h3>
               <ul className="space-y-2">
                 {items.map(({ link, text }) => (
-                  <li>
+                  <li key={text}>
                     <Link href={link} className="text-gray-600 hover:text-purple-700">
                       {text}
                     </Link>
