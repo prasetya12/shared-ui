@@ -4,7 +4,7 @@ import Link from "./ui/link"
 
 import { useTranslation } from "react-i18next"
 import "../i18n"
-import { getFullsiteUrl } from "../lib/utils"
+import { getFullsiteUrl,cn } from "../lib/utils"
 import { API_URL_WEB, API_URL_BLOG,APP_URL } from "../constants/SiteUrl"
 
 // Extract types to improve maintainability
@@ -886,9 +886,9 @@ export const NavbarPlexicus = ({
               <img
                 src="/images/plexicus-logo-white.png"
                 alt="Plexicus Logo"
-                className="object-contain max-h-full max-w-none"
+                className={cn(`object-contain max-h-full max-w-none w-28`,isScrolled?'md:w-44':`md:w-48`)}
                 style={{
-                  maxWidth: isScrolled ? "180px" : "220px",
+                  // maxWidth: isScrolled ? "180px" : "220px",
                   transition: "max-width 0.3s ease-in-out",
                 }}
               />
