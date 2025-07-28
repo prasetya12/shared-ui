@@ -242,11 +242,11 @@ React keys must be passed directly to JSX without using spread:
       return null;
     };
     m = {
-      "react-stack-bottom-frame": function(f) {
+      react_stack_bottom_frame: function(f) {
         return f();
       }
     };
-    var q, I = {}, B = m["react-stack-bottom-frame"].bind(
+    var q, I = {}, B = m.react_stack_bottom_frame.bind(
       m,
       n
     )(), j = W(s(n)), X = {};
