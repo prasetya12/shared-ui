@@ -1,5 +1,8 @@
 import React from 'react';
 import { gtmTrackingCode } from '../constants/Gtm';
+
+ 
+
 /**
  * GoogleAnalytics Component
  *
@@ -10,7 +13,7 @@ import { gtmTrackingCode } from '../constants/Gtm';
  * @param {string} trackingId - The Google Analytics Measurement ID (e.g., "G-XXXXXXXXXX").
  * This ID will be used to configure gtag.
  */
-export const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId = gtmTrackingCode}) => {
+export const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId = gtmTrackingCode, ...props}) => {
   return (
     <>
       {/* External gtag.js script */}
@@ -18,7 +21,7 @@ export const GoogleAnalytics: React.FC<{ trackingId: string }> = ({trackingId = 
 
       {/* Inline script for dataLayer configuration */}
       <script
-        is:inline // This attribute is for Astro, but harmless in React.
+        {...props}// This attribute is for Astro, but harmless in React.
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
