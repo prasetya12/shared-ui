@@ -4,8 +4,9 @@ import Link from "./ui/link"
 
 import { useTranslation } from "react-i18next"
 import "../i18n"
-import { getFullsiteUrl,cn } from "../lib/utils"
-import { API_URL_WEB, API_URL_BLOG,APP_URL } from "../constants/SiteUrl"
+import { getFullsiteUrl, cn } from "../lib/utils"
+import { API_URL_WEB, API_URL_BLOG, APP_URL } from "../constants/SiteUrl"
+import { useMediaQuery } from "../hooks/useMediaQuery"
 
 // Extract types to improve maintainability
 type MenuItemType = {
@@ -38,8 +39,16 @@ export const NavbarPlexicus = ({
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const [mounted, setMounted] = useState(false)
 
+
+  const isMobile = useMediaQuery("(max-width: 1279px)")
   const { t, i18n } = useTranslation()
+
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     i18n.changeLanguage(currentLang)
@@ -886,7 +895,7 @@ export const NavbarPlexicus = ({
               <img
                 src="/images/plexicus-logo-white.png"
                 alt="Plexicus Logo"
-                className={cn(`object-contain max-h-full max-w-none w-28`,isScrolled?'md:w-40':`md:w-42`)}
+                className={cn(`object-contain max-h-full max-w-none w-28`, isScrolled ? 'md:w-40' : `md:w-42`)}
                 style={{
                   // maxWidth: isScrolled ? "180px" : "220px",
                   transition: "max-width 0.3s ease-in-out",
@@ -1517,56 +1526,58 @@ export const NavbarPlexicus = ({
       )}
 
       {/* Mobile menu */}
-      {menuOpen && <div className="fixed inset-0 bg-black/20 z-40 xl:hidden" onClick={() => setMenuOpen(false)}></div>}
-      <div
-        className={`xl:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
-        style={{ top: "64px", height: "calc(100vh - 64px)", overflow: "auto" }}
-      >
-        <div className="overflow-y-auto h-full p-4 pb-20">
-          <div className="space-y-4">
-            {Object.entries(menus).map(([key, menu]) => (
-              <div key={key} className="space-y-2">
-                <h3 className="font-semibold">{menu.title}</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {menu.items.map((item, index) => (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className="flex items-center p-2 rounded-md bg-gray-50 hover:bg-gray-100"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      <div className="w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center">
-                        {React.cloneElement(item.icon as React.ReactElement<React.SVGProps<SVGSVGElement>>, { width: 16, height: 16 })}
-                      </div>
-                      <span className="text-sm">{item.title}</span>
-                    </Link>
-                  ))}
+      {mounted && isMobile && menuOpen && <div className="fixed inset-0 bg-black/20 z-40 xl:hidden" onClick={() => setMenuOpen(false)}></div>}
+      {mounted && isMobile && (
+        <div
+          className={`xl:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+          style={{ top: "64px", height: "calc(100vh - 64px)", overflow: "auto" }}
+        >
+          <div className="overflow-y-auto h-full p-4 pb-20">
+            <div className="space-y-4">
+              {Object.entries(menus).map(([key, menu]) => (
+                <div key={key} className="space-y-2">
+                  <h3 className="font-semibold">{menu.title}</h3>
+                  <div className="grid grid-cols-1 gap-2">
+                    {menu.items.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className="flex items-center p-2 rounded-md bg-gray-50 hover:bg-gray-100"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        <div className="w-8 h-8 bg-primary/10 rounded-md mr-2 flex items-center justify-center">
+                          {React.cloneElement(item.icon as React.ReactElement<React.SVGProps<SVGSVGElement>>, { width: 16, height: 16 })}
+                        </div>
+                        <span className="text-sm">{item.title}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
 
-            <Link
-              href={`${WEB_URL}${lang}pricing`}
-              className="block py-2 text-sm font-medium"
-              onClick={() => setMenuOpen(false)}
-            >
-              {t("nav.pricing")}
-            </Link>
-            <Link
-              href={`${WEB_URL}${lang}contact`}
-              className="block py-2 text-sm font-medium"
-              onClick={() => setMenuOpen(false)}
-            >
-              {t("nav.contact")}
-            </Link>
-            <div className="pt-4 border-t border-gray-100">
-              <Button className="w-full bg-gradient-primary" onClick={() => setMenuOpen(false)}>
-                Get Started
-              </Button>
+              <Link
+                href={`${WEB_URL}${lang}pricing`}
+                className="block py-2 text-sm font-medium"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t("nav.pricing")}
+              </Link>
+              <Link
+                href={`${WEB_URL}${lang}contact`}
+                className="block py-2 text-sm font-medium"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t("nav.contact")}
+              </Link>
+              <div className="pt-4 border-t border-gray-100">
+                <Button className="w-full bg-gradient-primary" onClick={() => setMenuOpen(false)}>
+                  Get Started
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   )
 }
