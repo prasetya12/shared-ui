@@ -194,10 +194,13 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
-          <div className="flex justify-between items-center mb-3">
-            <p className="text-gray-500 text-sm">
-              &copy; 2025 PLEXICUS, S.L
-              <Link href={`${WEB_URL}${lang}privacy`} className="underline hover:text-gray-700 ml-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-3 gap-4">
+            <p className="text-gray-500 text-sm flex flex-col md:flex-row gap-3 ">
+              <div>
+                &copy; 2025 PLEXICUS, S.L
+              </div>
+              <div>
+                <Link href={`${WEB_URL}${lang}privacy`} className="underline hover:text-gray-700 ml-0 ">
                 {t('footer.policies.privacy_policy')}
               </Link>{' '}
               ·{' '}
@@ -208,6 +211,7 @@ export function FooterPlexicus({ lang: currentLang, fullSiteUrl = 'http://localh
               <Link href={`${WEB_URL}${lang}legal`} className="underline hover:text-gray-700">
                 {t('footer.policies.legal_notice')}
               </Link>
+              </div>
             </p>
             <div>
               <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200">
