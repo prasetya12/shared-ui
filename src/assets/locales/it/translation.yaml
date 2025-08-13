@@ -46,6 +46,8 @@ nav:
     government_desc: "Soluzioni di sicurezza per enti governativi"
     retailtech: "RetailTech"
     retailtech_desc: "Sicurezza per piattaforme di e-commerce e vendita al dettaglio"
+    legaltech: "LegalTech"
+    legal_desc: "Sicurezza per aziende legali"
   developers:
     title: "Sviluppatori"
     documentation: "Documentazione"
