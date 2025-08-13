@@ -1,54 +1,107 @@
-# React + TypeScript + Vite
+### Plexicus UI-Lib
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Plexicus Ui-Lib repository\! A reusable and responsive React component library for building beautiful and accessible web applications and blogs. This library is built with **React Vite** and **Tailwind** for a fast development experience for interactive components. It also supports **internationalization (i18n)** with `yaml` files for multi-language content.
 
-Currently, two official plugins are available:
+-----
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 💻 Installation and Setup
 
-## Expanding the ESLint configuration
+To get a local copy up and running, follow these simple steps.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository:**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+    ```bash
+    https://github.com/plexicus/ui-lib.git
+    cd ui-lib
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Your site will now be running at `http://localhost:5173/`.
+
+-----
+### 💻 How to use UI-Lib
+
+#### Install UI-Lib
+```bash
+    # Using npm from GitHub (e.g., the 'main' branch)
+    npm install https://github.com/plexicus/ui-lib.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### Example 
+```bash
+    import { NavbarPlexicuss } from "shared-ui";
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    const lang = getLangFromUrl(Astro.url);
+    const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+    <NavbarPlexicus
+        client:load
+        lang={lang}
+        fullSiteUrl={`${SITE_URL}:${SITE_PORT}`}
+        fullBlogUrl={`${BLOG_SITE_URL}:${BLOG_PORT}`}
+      />
 ```
+-----
+
+### 🛠️ Development
+
+#### Scripts
+
+  * `npm run dev`: Starts the development server with hot-reloading.
+  * `npm run build`: Builds the production-ready static site into the `dist/` directory.
+  * `npm run preview`: Locally previews your production build.
+  * `npm run lint`: Runs ESLint to check for code quality and style issues.
+  * `npm run lib`: Specifically builds the project as a library with a defined entry point.
+
+#### Linting and Formatting
+
+This project uses **ESLint** with the **`@stylistic`** plugin to enforce consistent code style and best practices.
+
+  * **ESLint**: Checks for potential errors and code smells.
+  * **`@stylistic/eslint-plugin`**: Provides highly configurable rules for code formatting.
+
+-----
+
+### 🌐 Internationalization (i18n)
+
+Translations are handled using `yaml` files located in the `src/assets/locales` directory.
+
+  * `en/translation.yaml`: English translations
+  * `fr/translation.yaml`: French translations
+  * `es/translation.yaml`: Spanish translations
+
+To add a new language, simply create a new `[lang]/translation.yaml` file in the same directory.
+
+-----
+
+### ⚙️ Environment Variables
+
+The project uses environment variables for configuration. You can create a `.env` file in the root directory to override the defaults.
+
+```
+# .env
+VITE_BLOG_URL=http://localhost:9000
+VITE_WEB_URL=http://localhost:8000
+```
+
+### ⚙️ Automated Builds
+This library utilizes an automated build process to ensure that changes are tested, built, and published efficiently. A Continuous Integration/Continuous Deployment (CI/CD) pipeline is configured to automatically run tests, compile code, and publish the library to a package registry after a successful build on the main branch.
+
+
+### 🤝 How to Contribute
+
+Read our [contribution guidelines](https://github.com/plexicus/web/blob/main/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to prepare your code for submission.
+
+
+
